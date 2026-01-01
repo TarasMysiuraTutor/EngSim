@@ -8,7 +8,8 @@ export const translations = {
     navContact: "Контакти",
     heroPreTitle: "Вітаю, я Віктор, інженер-розрахунковець.",
     heroTitle: "Професійні інженерні розрахунки",
-    heroPostTitle: "Представляю свої послуги з професійних інженерних розрахунків для різних галузей промисловості:",
+    heroPostTitle:
+      "Пропоную свої послуги з професійних інженерних розрахунків для різних галузей промисловості:",
     heroSubtitle:
       "Опір матеріалів • Термодинаміка • Теплові процеси • Промислові розрахунки",
     heroCTA: "Замовити розрахунок",
@@ -59,7 +60,8 @@ export const translations = {
     navContact: "Контакты",
     heroPreTitle: "Добро пожаловать, я Виктор, инженер-расчетчик.",
     heroTitle: "Профессиональные инженерные расчеты",
-    heroPostTitle: "Представляю свои услуги по профессиональным инженерным расчетам для различных отраслей промышленности:",
+    heroPostTitle:
+      "Предлагаю свои услуги по профессиональным инженерным расчетам для различных отраслей промышленности:",
     heroSubtitle:
       "Сопротивление материалов • Термодинамика • Тепловые процессы • Промышленные расчеты",
     heroCTA: "Заказать расчет",
@@ -110,7 +112,8 @@ export const translations = {
     navContact: "Contact",
     heroPreTitle: "Welcome, I am Viktor, an engineering calculator.",
     heroTitle: "Professional Engineering Calculations",
-    heroPostTitle: "I offer my services for professional engineering calculations in various industries:",
+    heroPostTitle:
+      "I offer my services for professional engineering calculations in various industries:",
     heroSubtitle:
       "Strength of Materials • Thermodynamics • Thermal Processes • Industrial Calculations",
     heroCTA: "Order Calculation",
@@ -137,7 +140,7 @@ export const translations = {
     calcCat1: "Strength of Materials",
     calcCat2: "Thermodynamics",
     calcCat3: "Hydraulics",
-    calcCat4: 'Energy',
+    calcCat4: "Energy",
     projectsTitle: "Completed Projects",
     project1Title: "Metal Structure",
     project2Title: "Heat Exchanger",
@@ -161,7 +164,8 @@ export const translations = {
     navContact: "Kontakt",
     heroPreTitle: "Willkommen, ich bin Viktor, ein Ingenieurkalkulator.",
     heroTitle: "Professionelle Ingenieurberechnungen",
-    heroPostTitle: "Ich biete meine Dienstleistungen für professionelle Ingenieurberechnungen in verschiedenen Branchen an:",
+    heroPostTitle:
+      "Ich biete meine Dienste im Bereich professioneller ingenieurtechnischer Berechnungen für verschiedene Industriezweige an:",
     heroSubtitle:
       "Festigkeitslehre • Thermodynamik • Thermische Prozesse • Industrieberechnungen",
     heroCTA: "Berechnung bestellen",
@@ -188,7 +192,7 @@ export const translations = {
     calcCat1: "Festigkeitslehre",
     calcCat2: "Thermodynamik",
     calcCat3: "Hydraulik",
-    calcCat4: 'Energie',
+    calcCat4: "Energie",
     projectsTitle: "Abgeschlossene Projekte",
     project1Title: "Metallkonstruktion",
     project2Title: "Wärmetauscher",
