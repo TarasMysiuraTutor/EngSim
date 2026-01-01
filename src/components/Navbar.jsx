@@ -28,7 +28,7 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
         <div className="flex items-center text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
           <img
             className="w-12 h-12 mr-2"
-            src="./public/logo-192x192.png"
+            src="../public/logo-192x192.png"
             alt="logo-icon"
           />
           {t.logo}
