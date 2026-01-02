@@ -6,12 +6,15 @@ export default defineConfig({
   base: "/EngSim/",
   build: {
     sourcemap: false, // Вимкнути source maps
-    minify: "terser", // Використовувати terser замість esbuild
-    terserOptions: {
-      compress: {
-        drop_console: true, // Видалити console.log
-        drop_debugger: true,
-      },
-    },
+    minify: "esbuild", // ← ВИПРАВЛЕНО: змінено з terser на esbuild
+    // Видалив terserOptions, бо використовуємо esbuild
+    target: 'es2015',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+        }
+      }
+    }
   },
 });
