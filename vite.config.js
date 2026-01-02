@@ -1,8 +1,17 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/EngSim/', 
-})
+  base: "/EngSim/",
+  build: {
+    sourcemap: false, // Вимкнути source maps
+    minify: "terser", // Використовувати terser замість esbuild
+    terserOptions: {
+      compress: {
+        drop_console: true, // Видалити console.log
+        drop_debugger: true,
+      },
+    },
+  },
+});
