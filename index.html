@@ -1,18 +1,209 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src-elem 'self' 'sha256-XS6XAQwafb8hH7hhHCNLAjE23+V8hrRwVKUBGACXq/s=' 'sha256-1Fjj7nmIAJgmAsvAiUITqkbImY6OCCBvw9bwbcTeAAQ='; style-src-elem 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://formspree.io https://api.formspree.io;">
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/EngSim/assets/favicon-bWeSLF2J.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/EngSim/assets/favicon-32x32-DjkFk7B4.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/EngSim/assets/favicon-16x16-CBTc6z3X.png">
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Professional fengineering calculations</title>
-    <script type="module" crossorigin="" src="/EngSim/assets/index-B6_AiqV6.js"></script>
-    <link rel="modulepreload" crossorigin="" href="/EngSim/assets/react-vendor-DltokNpz.js">
-    <link rel="stylesheet" crossorigin="" href="/EngSim/assets/index-BQ5oSiVb.css">
-  </head>
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/EngSim/vite.svg" />
+
+    <!-- Primary Meta Tags (німецькою як основна) -->
+    <title>
+      EngSim - Ingenieurtechnische Rechner | 32 Professionelle Berechnungen
+    </title>
+    <meta
+      name="title"
+      content="EngSim - Ingenieurtechnische Rechner | 32 Professionelle Berechnungen"
+    />
+    <meta
+      name="description"
+      content="Kostenlose professionelle Rechner für ingenieurtechnische Berechnungen: Festigkeitslehre, Hydraulik, Thermodynamik, Energietechnik. 32 Rechner in 4 Sprachen. Präzise Online-Berechnungen."
+    />
+    <meta
+      name="keywords"
+      content="Ingenieurrechner, Festigkeitsberechnung, Hydraulikrechner, Thermodynamik, Balkenberechnung, Spannungsberechnung, online Rechner, engineering calculators, Ingenieur Software"
+    />
+    <meta name="author" content="Viktor Sukaylo" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="German" />
+    <meta name="geo.region" content="DE" />
+    <meta name="geo.placename" content="Germany" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://tarasmysiuratutor.github.io/EngSim/"
+    />
+    <meta
+      property="og:title"
+      content="EngSim - Ingenieurtechnische Rechner | 32 Professionelle Berechnungen"
+    />
+    <meta
+      property="og:description"
+      content="Kostenlose professionelle Rechner für ingenieurtechnische Berechnungen: Festigkeitslehre, Hydraulik, Thermodynamik, Energietechnik. 32 Rechner in 4 Sprachen."
+    />
+    <meta
+      property="og:image"
+      content="https://tarasmysiuratutor.github.io/EngSim/og-image.png"
+    />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="uk_UA" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://tarasmysiuratutor.github.io/EngSim/"
+    />
+    <meta
+      property="twitter:title"
+      content="EngSim - Ingenieurtechnische Rechner"
+    />
+    <meta
+      property="twitter:description"
+      content="32 professionelle Rechner für ingenieurtechnische Berechnungen. Festigkeitslehre, Hydraulik, Thermodynamik, Energietechnik."
+    />
+    <meta
+      property="twitter:image"
+      content="https://tarasmysiuratutor.github.io/EngSim/og-image.png"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tarasmysiuratutor.github.io/EngSim/" />
+
+    <!-- Alternate languages (німецька як основна) -->
+    <link
+      rel="alternate"
+      hreflang="de"
+      href="https://tarasmysiuratutor.github.io/EngSim/?lang=de"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://tarasmysiuratutor.github.io/EngSim/?lang=en"
+    />
+    <link
+      rel="alternate"
+      hreflang="uk"
+      href="https://tarasmysiuratutor.github.io/EngSim/?lang=uk"
+    />
+    <link
+      rel="alternate"
+      hreflang="ru"
+      href="https://tarasmysiuratutor.github.io/EngSim/?lang=ru"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://tarasmysiuratutor.github.io/EngSim/"
+    />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#1e293b" />
+    <meta name="msapplication-TileColor" content="#1e293b" />
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://formspree.io" />
+
+    <!-- Preload критичних ресурсів -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://formspree.io" />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/EngSim/manifest.json" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/icon-192x192.png" />
+
+    <!-- Preconnect -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://formspree.io" />
+
+    <!-- Schema.org structured data (німецькою) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "EngSim - Ingenieurtechnische Rechner",
+        "alternateName": "EngSim - Engineering Simulation Calculators",
+        "description": "Professionelle Rechner für ingenieurtechnische Berechnungen in Festigkeitslehre, Hydraulik, Thermodynamik und Energietechnik",
+        "url": "https://tarasmysiuratutor.github.io/EngSim/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Viktor Sukaylo",
+          "url": "https://github.com/TarasMysiuraTutor"
+        },
+        "inLanguage": ["de", "en", "uk", "ru"],
+        "availableLanguage": [
+          {
+            "@type": "Language",
+            "name": "Deutsch",
+            "alternateName": "de"
+          },
+          {
+            "@type": "Language",
+            "name": "English",
+            "alternateName": "en"
+          },
+          {
+            "@type": "Language",
+            "name": "Українська",
+            "alternateName": "uk"
+          },
+          {
+            "@type": "Language",
+            "name": "Русский",
+            "alternateName": "ru"
+          }
+        ],
+        "featureList": [
+          "Festigkeitslehre - 8 Rechner (Spannung, Biegung, Torsion, Verformung)",
+          "Hydraulik - 8 Rechner (Rohrberechnung, Pumpenauslegung, Strömung)",
+          "Thermodynamik - 8 Rechner (Wärmeübertragung, Wirkungsgrad, Carnot-Prozess)",
+          "Energietechnik - 8 Rechner (Energieeffizienz, Solartechnik, Windkraft)"
+        ],
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Ingenieure, Studenten, Techniker",
+          "geographicArea": {
+            "@type": "Place",
+            "name": "Europa"
+          }
+        }
+      }
+    </script>
+
+    <!-- Google Analytics (додайте свій ID) -->
+    <!-- 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->  <script type="module" crossorigin src="/EngSim/assets/index-CZRG9rBr.js"></script>
+  <link rel="modulepreload" crossorigin href="/EngSim/assets/react-vendor-DltokNpz.js">
+  <link rel="stylesheet" crossorigin href="/EngSim/assets/style-Cn5Pw8UN.css">
+</head>
   <body>
     <div id="root"></div>
-  
-
-</body></html>
+  </body>
+</html>
