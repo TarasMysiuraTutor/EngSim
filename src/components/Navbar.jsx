@@ -29,7 +29,7 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
           <img className="w-12 h-12 mr-3 rounded-full border-2 border-blue-400" src="././public/logo.svg" alt="logo-icon" />
           {/* <img
             className="w-12 h-12 mr-2"
-            src="./public/logo-192x192.png"
+            src="../public/logo-192x192.png"
             alt="logo-icon"
           /> */}
           {t.logo}
