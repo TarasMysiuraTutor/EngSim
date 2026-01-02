@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../assets/logo.svg";
 
 const Navbar = ({ currentLang, setCurrentLang, t }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,15 +26,22 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
   return (
     <nav className="fixed top-0 w-full bg-[#0a0e27]/95 backdrop-blur-lg border-b border-blue-500/30 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
-        <div className="flex items-center text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-          <img className="w-12 h-12 mr-3 rounded-full border-2 border-blue-400" src="../assets/logo.svg" alt="logo-icon" />
-          {/* <img
+        <a href="#">
+          {" "}
+          <div className="flex items-center text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <img
+              className="w-12 h-12 mr-3 rounded-full border-2 border-blue-400"
+              src={logo}
+              alt="logo-icon"
+            />
+            {/* <img
             className="w-12 h-12 mr-2"
             src="../public/logo-192x192.png"
             alt="logo-icon"
           /> */}
-          {t.logo}
-        </div>
+            {t.logo}
+          </div>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-8 items-center">
