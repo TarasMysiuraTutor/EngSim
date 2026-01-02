@@ -125,6 +125,7 @@ const Contact = ({ t, currentLang }) => {
               value={formData.name}
               onChange={handleChange}
               placeholder={t.contactName}
+             autoComplete="name"
               className={`w-full px-6 py-4 bg-white/5 border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 transition-all duration-300 ${
                 errors.name 
                   ? 'border-red-500/50 focus:border-red-500 focus:ring-red-500/50' 
@@ -143,6 +144,7 @@ const Contact = ({ t, currentLang }) => {
               value={formData.email}
               onChange={handleChange}
               placeholder={t.contactEmail}
+              autoComplete="email"
               className={`w-full px-6 py-4 bg-white/5 border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 transition-all duration-300 ${
                 errors.email 
                   ? 'border-red-500/50 focus:border-red-500 focus:ring-red-500/50' 

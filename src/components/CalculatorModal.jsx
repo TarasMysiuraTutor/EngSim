@@ -134,6 +134,7 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
                 type="number"
                 step="0.01"
                 value={formData[field.id] || ''}
+                autoComplete="off"
                 onChange={(e) => handleInputChange(field.id, e.target.value)}
                 onKeyPress={handleKeyPress}
                 className={`w-full px-4 py-3 bg-white/5 border rounded-xl text-white focus:outline-none focus:ring-2 transition-all duration-300 ${
