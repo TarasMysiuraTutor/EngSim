@@ -5,9 +5,8 @@ export default defineConfig({
   plugins: [react()],
   base: "/EngSim/",
   build: {
-    sourcemap: false, // Вимкнути source maps
-    minify: "esbuild", // ← ВИПРАВЛЕНО: змінено з terser на esbuild
-    // Видалив terserOptions, бо використовуємо esbuild
+    sourcemap: false,
+    minify: "esbuild",
     target: 'es2015',
     rollupOptions: {
       output: {
@@ -17,4 +16,13 @@ export default defineConfig({
       }
     }
   },
+  // ← ДОДАЙТЕ ЦЕ:
+  esbuild: {
+    // Вимкнути eval для продакшену
+    pure: ['console.log', 'console.error', 'console.warn'],
+    legalComments: 'none'
+  },
+  define: {
+    'process.env.NODE_ENV': JSON.stringify('production')
+  }
 });
