@@ -1,6 +1,6 @@
 <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
   <!-- Фон -->
-  <rect x="6" y="6" width="500" height="500" rx="100" stroke-width="6"  fill="#1d2d52ff" stroke="#82c7e4ff"/>
+  <rect x="6" y="6" width="500" height="500" rx="100" stroke-width="4"  fill="#1d2d52ff" stroke="#82c7e4ff"/>
   
   <!-- Літери ESP -->
   <text x="256" y="220" 

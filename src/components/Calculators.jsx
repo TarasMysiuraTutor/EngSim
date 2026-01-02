@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { getCategorySchema, injectSchema } from '../utils/structuredData';
 
 const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
   const [visibleCategories, setVisibleCategories] = useState([]);
@@ -8,24 +9,71 @@ const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
     {
       titleKey: 'calcCat1',
       icon: '⚙️',
+      categoryId: 'strength',
       calcs: ['stress', 'beam', 'shaft', 'bolt', 'deformation', 'column', 'shear', 'weld']
     },
     {
       titleKey: 'calcCat3',
       icon: '💧',
+      categoryId: 'hydraulic',
       calcs: ['pipe', 'pump', 'ventilation', 'pressure_loss', 'orifice', 'valve', 'tank', 'hydraulic_cylinder']
     },
     {
       titleKey: 'calcCat2',
       icon: '🌡️',
+      categoryId: 'thermodynamic',
       calcs: ['heattransfer', 'insulation', 'efficiency', 'carnot', 'heat_exchanger', 'convection', 'radiation', 'enthalpy']
     },
     {
       titleKey: 'calcCat4',
       icon: '💡',
+      categoryId: 'energy',
       calcs: ['energy', 'power', 'solar', 'wind', 'transformer', 'motor', 'battery', 'cable']
     }
   ];
+
+  // Додаємо structured data для всіх категорій
+  useEffect(() => {
+    // Створюємо structured data для кожної категорії
+    categories.forEach(category => {
+      const categoryData = {
+        name: t[category.titleKey],
+        description: `${t[category.titleKey]} - Професійні інженерні калькулятори`,
+        calculators: category.calcs.map(calcKey => {
+          const calc = calculators[calcKey];
+          return {
+            id: calcKey,
+            name: calc.title[currentLang],
+            description: calc.desc[currentLang]
+          };
+        }),
+        lang: currentLang
+      };
+
+      const schema = getCategorySchema(categoryData);
+      
+      // Інжектуємо schema для кожної категорії
+      const scriptId = `category-schema-${category.categoryId}`;
+      const oldScript = document.getElementById(scriptId);
+      if (oldScript) {
+        oldScript.remove();
+      }
+
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+    });
+
+    // Очищення при unmount
+    return () => {
+      categories.forEach(category => {
+        const script = document.getElementById(`category-schema-${category.categoryId}`);
+        if (script) script.remove();
+      });
+    };
+  }, [currentLang, calculators]); // Оновлюємо при зміні мови
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -98,7 +146,12 @@ const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
                     
                     {/* Click indicator */}
                     <div className="mt-4 flex items-center gap-2 text-blue-500 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span>Click to calculate</span>
+                      <span>
+                        {currentLang === 'de' && 'Klicken zum Berechnen'}
+                        {currentLang === 'en' && 'Click to calculate'}
+                        {currentLang === 'uk' && 'Натисніть для розрахунку'}
+                        {currentLang === 'ru' && 'Нажмите для расчета'}
+                      </span>
                       <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
