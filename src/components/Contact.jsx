@@ -187,7 +187,7 @@ const Contact = ({ t, currentLang }) => {
   };
 
   return (
-    <section id="contact" className="py-20 px-8 relative overflow-hidden">
+    <section id="contact" className="py-20 px-8 relative overflow-hidden bg-[#0a0e27]/40">
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse-custom"></div>
       
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent animate-fadeInUp">

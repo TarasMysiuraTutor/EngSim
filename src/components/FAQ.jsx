@@ -168,7 +168,7 @@ const FAQ = ({ currentLang }) => {
   };
 
   return (
-    <section id="faq" className="py-20 px-8 relative overflow-hidden">
+    <section id="faq" className="py-20 px-8 relative overflow-hidden bg-[#1a1f3a]/50">
       <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
       
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
@@ -214,7 +214,7 @@ const FAQ = ({ currentLang }) => {
       </div>
 
       {/* Підказка внизу */}
-      <div className="max-w-4xl mx-auto mt-12 text-center">
+      <div className="max-w-4xl mx-auto mt-12 text-center ">
         <p className="text-gray-400 text-sm">
           {currentLang === 'de' && 'Weitere Fragen? Kontaktieren Sie uns über das Kontaktformular.'}
           {currentLang === 'en' && 'More questions? Contact us via the contact form.'}

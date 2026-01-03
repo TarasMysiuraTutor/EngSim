@@ -97,7 +97,7 @@ const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
   }, []);
 
   return (
-    <section id="calculators" className="py-20 px-8 relative overflow-hidden" ref={sectionRef}>
+    <section id="calculators" className="py-20 px-8 relative overflow-hidden bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a]" ref={sectionRef}>
       {/* Animated background elements */}
       <div className="absolute top-20 left-0 w-72 h-72 bg-cyan-500/5 rounded-full blur-3xl animate-floatSlow"></div>
       <div className="absolute bottom-20 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-float"></div>
