@@ -112,6 +112,7 @@ const Contact = ({ t, currentLang }) => {
                     type="text"
                     id="name"
                     name="name"
+                    autoComplete='username'
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -131,6 +132,7 @@ const Contact = ({ t, currentLang }) => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    autoComplete='email'
                     required
                     className="w-full px-4 py-3 bg-white/5 border border-blue-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"
                     placeholder={t.contactPlaceholderEmail}
@@ -146,6 +148,7 @@ const Contact = ({ t, currentLang }) => {
                     type="tel"
                     id="phone"
                     name="phone"
+                    autoComplete='tel'
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-blue-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"

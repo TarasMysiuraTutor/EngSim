@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import LegalModal from './LegalModal';
 
-const Footer = ({ t }) => {
+const Footer = ({ t, currentLang }) => {
+  const [modalType, setModalType] = useState(null); // 'privacy' or 'terms'
+  
   const currentYear = new Date().getFullYear();
 
   const navigationLinks = [
@@ -12,8 +15,8 @@ const Footer = ({ t }) => {
   ];
 
   const legalLinks = [
-    { label: t.footerPrivacy, href: '#privacy' },
-    { label: t.footerTerms, href: '#terms' },
+    { label: t.footerPrivacy, onClick: () => setModalType('privacy') },
+    { label: t.footerTerms, onClick: () => setModalType('terms') },
   ];
 
   const contactInfo = [
@@ -158,13 +161,13 @@ const Footer = ({ t }) => {
             <ul className="space-y-2">
               {legalLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center group"
+                  <button
+                    onClick={link.onClick}
+                    className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center group text-left"
                   >
                     <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                     {link.label}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -197,6 +200,15 @@ const Footer = ({ t }) => {
           </div>
         </div>
       </div>
+      
+      {/* Legal Modal */}
+      <LegalModal 
+        isOpen={modalType !== null}
+        onClose={() => setModalType(null)}
+        type={modalType}
+        t={t}
+        currentLang={currentLang}
+      />
     </footer>
   );
 };

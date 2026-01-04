@@ -103,7 +103,7 @@ function HomePage({ currentLang, openCalculator }) {
 
       <Contact t={translations[currentLang]} currentLang={currentLang} />
 
-      <Footer t={translations[currentLang]} />
+      <Footer t={translations[currentLang]} currentLang={currentLang} />
     </>
   );
 }
