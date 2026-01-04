@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.svg";
 
 const Navbar = ({ currentLang, setCurrentLang, t }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [langDropdown, setLangDropdown] = useState(false);
+  const navigate = useNavigate();
 
   const languages = [
     { code: "en", flag: "🇬🇧", name: "English" },
@@ -16,10 +18,13 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
 
   const scrollToSection = (e, id) => {
     e.preventDefault();
+    // Отримуємо базовий URL з Vite
+    const baseUrl = import.meta.env.BASE_URL;
+    
     // Перевіряємо чи ми на головній сторінці
-    if (window.location.pathname !== '/' && window.location.pathname !== '/EngSim/') {
+    if (window.location.pathname !== baseUrl && window.location.pathname !== `${baseUrl}index.html`) {
       // Якщо ні - переходимо на головну з якорем
-      window.location.href = `/#${id}`;
+      window.location.href = `${baseUrl}#${id}`;
       return;
     }
     
@@ -33,14 +38,17 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
   return (
     <nav className="fixed top-0 w-full bg-[#0a0e27]/95 backdrop-blur-lg border-b border-blue-500/30 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
-        <a href="/" className="flex items-center text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
+        <button 
+          onClick={() => navigate('/')}
+          className="flex items-center text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer"
+        >
           <img
             className="w-12 h-12 mr-3 rounded-full border-2 border-blue-400"
             src={logo}
             alt="logo-icon"
           />
           {t.logo}
-        </a>
+        </button>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-8 items-center">
