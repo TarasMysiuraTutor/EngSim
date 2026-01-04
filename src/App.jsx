@@ -149,7 +149,7 @@ function App() {
   const basename = import.meta.env.MODE === 'production' ? '/EngSim' : '';
 
   return (
-    <BrowserRouter basename="/EngSim">
+    <BrowserRouter basename={basename}>
       <div className="App">
         <Routes>
           {/* ГОЛОВНА СТОРІНКА - існуюча структура */}
