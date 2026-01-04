@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 
 const Navbar = ({ currentLang, setCurrentLang, t }) => {
@@ -84,15 +84,15 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
           </a>
           
           {/* Калькулятори - окрема сторінка */}
-          <a
-            href="/calculators"
+          <Link
+            to="/calculators"
             className="flex items-center gap-2 hover:text-blue-400 transition-colors duration-300 group"
           >
             <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
             </svg>
             {t.navCalc}
-          </a>
+          </Link>
           
           <a
             href="/#contact"
@@ -221,15 +221,16 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
             </a>
             
             {/* Калькулятори для мобільного */}
-            <a
-              href="/calculators"
+            <Link
+              to="/calculators"
               className="flex items-center gap-2 py-2 hover:text-blue-400 transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
               {t.navCalc}
-            </a>
+            </Link>
             
             <a
               href="/#contact"
