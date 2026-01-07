@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+.formula {
+  opacity: 0.3; /* Напівпрозорі */
+  transition: opacity 0.3s;
+}
+
+.formula:hover {
+  opacity: 0.8; /* Яскравіші при наведенні */
+}

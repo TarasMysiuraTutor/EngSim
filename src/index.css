@@ -359,6 +359,37 @@ body {
   animation: slideUp 0.3s ease-out;
 }
 
+.formula {
+  opacity: 0.15; /* Замість 0.3 - ще тонше */
+  color: rgba(100, 150, 255, 0.4); /* Ледь блакитний відтінок */
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.formula {
+  animation: float 15s ease-in-out infinite;
+}
+
+.formula:nth-child(2n) {
+  animation-duration: 18s;
+  animation-delay: -3s;
+}
+
+.formula:nth-child(3n) {
+  animation-duration: 20s;
+  animation-delay: -6s;
+}
+
+.formula {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 
 
 
