@@ -126,9 +126,7 @@ const formulas = [
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          {/* <p className="text-blue-400 text-sm md:text-base font-semibold tracking-wider uppercase mb-2">
-            {t.heroLabel || 'Професійні інженерні послуги'}
-          </p> */}
+          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent">
             {t.heroTitle}
           </h1>
