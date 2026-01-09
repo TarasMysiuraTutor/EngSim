@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { exportToPDF } from '../utils/pdfExport';
+import { useCalculationHistory } from '../hooks/useCalculationHistory';
 
 const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) => {
   const [formData, setFormData] = useState({});
@@ -7,11 +8,21 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
   const [errors, setErrors] = useState({});
   const [isCalculating, setIsCalculating] = useState(false);
   const [showResult, setShowResult] = useState(false);
+  const [showHistory, setShowHistory] = useState(false);
+
+  // Використовуємо хук історії
+  const {
+    addCalculation,
+    getCalculatorHistory,
+    removeCalculation,
+    clearHistory,
+    formatTime
+  } = useCalculationHistory();
 
   const calc = calculators[currentCalc];
+  const calcHistory = getCalculatorHistory(currentCalc);
 
   useEffect(() => {
-    // Анімація відкриття
     document.body.style.overflow = 'hidden';
     return () => {
       document.body.style.overflow = 'auto';
@@ -24,7 +35,6 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
       [fieldId]: value === '' ? '' : parseFloat(value)
     });
     
-    // Очищаємо помилку
     if (errors[fieldId]) {
       setErrors({
         ...errors,
@@ -66,13 +76,20 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
     setIsCalculating(true);
     setShowResult(false);
     
-    // Симуляція розрахунку з затримкою для анімації
     setTimeout(() => {
       const calculatedResult = calc.calculate(formData);
-      // ВАЖЛИВО: Зберігаємо весь об'єкт з усіма мовами, а не тільки поточну
       setResult(calculatedResult);
-      setIsCalculating(false);
       
+      // Зберігаємо в історію
+      addCalculation(
+        currentCalc,
+        calc.title[currentLang],
+        formData,
+        calculatedResult,
+        currentLang
+      );
+      
+      setIsCalculating(false);
       setTimeout(() => {
         setShowResult(true);
       }, 100);
@@ -92,57 +109,38 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
     }
   };
 
-  // Експорт в PDF
   const handleExportPDF = () => {
-    // Визначаємо мову для PDF (німецька або англійська)
     const pdfLang = currentLang === 'de' ? 'de' : 'en';
     
-    // Підготовка даних для PDF
     const inputs = {};
-    const results = {};
-
-    // Збираємо вхідні дані з лейблами на потрібній мові
     calc.fields.forEach(field => {
       if (formData[field.id]) {
-        // Беремо лейбл німецькою або англійською
         const label = field.label[pdfLang] || field.label['en'] || field.label[currentLang];
         inputs[label] = `${formData[field.id]} ${field.unit || ''}`;
       }
     });
 
-    // Отримуємо результат на потрібній мові для PDF
     const resultLabel = pdfLang === 'de' ? 'Ergebnis' : 'Result';
-    
-    // Якщо result це об'єкт з мовами - беремо потрібну мову
-    // Якщо це рядок - просто беремо його
     const pdfResult = typeof result === 'object' 
       ? (result[pdfLang] || result['en'] || result[currentLang])
       : result;
     
-    results[resultLabel] = pdfResult;
-
-    // Формуємо дані для PDF
     const pdfData = {
       calculatorName: calc.title[pdfLang] || calc.title['en'] || calc.title[currentLang],
       inputs: inputs,
-      results: results,
+      results: { [resultLabel]: pdfResult },
       formula: calc.formula?.[pdfLang] || calc.formula?.['en'] || '',
       notes: calc.notes?.[pdfLang] || calc.notes?.['en'] || calc.desc[pdfLang] || calc.desc['en']
     };
 
-    // Викликаємо функцію експорту з правильною мовою
     exportToPDF(pdfData, pdfLang);
   };
 
-  // Кнопка друку
-  const handlePrint = () => {
-    // Додаємо клас для друку тільки модального вікна
-    document.body.classList.add('printing-modal');
-    window.print();
-    // Видаляємо клас після друку
-    setTimeout(() => {
-      document.body.classList.remove('printing-modal');
-    }, 100);
+  const handleLoadFromHistory = (historyItem) => {
+    setFormData(historyItem.inputs);
+    setResult(historyItem.result);
+    setShowResult(true);
+    setShowHistory(false);
   };
 
   return (
@@ -151,7 +149,7 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
       onClick={onClose}
     >
       <div
-        className="bg-gradient-to-br from-[#1a1f3a]/98 to-[#0f1428]/98 border border-blue-500/40 rounded-3xl p-6 md:p-8 max-w-3xl w-full max-h-[90vh] overflow-y-auto animate-scaleIn print:bg-white print:text-black print:border-none print:max-h-none print:overflow-visible"
+        className="bg-gradient-to-br from-[#1a1f3a]/98 to-[#0f1428]/98 border border-blue-500/40 rounded-3xl p-6 md:p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto animate-scaleIn print:bg-white print:text-black print:border-none print:max-h-none print:overflow-visible"
         onClick={(e) => e.stopPropagation()}
         data-print-content
       >
@@ -159,17 +157,115 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
         <div className="flex justify-between items-center mb-6 print:border-b print:border-gray-300 print:pb-4">
           <div className="flex items-center gap-4">
             <span className="text-5xl animate-bounce-custom print:hidden">{calc.icon}</span>
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-400 print:text-black">
-              {calc.title[currentLang]}
-            </h2>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-blue-400 print:text-black">
+                {calc.title[currentLang]}
+              </h2>
+              <p className="text-sm text-gray-500 mt-1 print:hidden">
+                {calcHistory.length > 0 && (
+                  <span>
+                    {currentLang === 'uk' && `${calcHistory.length} розрахунків в історії`}
+                    {currentLang === 'ru' && `${calcHistory.length} расчетов в истории`}
+                    {currentLang === 'en' && `${calcHistory.length} calculations in history`}
+                    {currentLang === 'de' && `${calcHistory.length} Berechnungen im Verlauf`}
+                  </span>
+                )}
+              </p>
+            </div>
           </div>
-          <button
-            onClick={onClose}
-            className="text-3xl hover:text-blue-400 transition-all duration-300 w-10 h-10 flex items-center justify-center hover:bg-blue-500/20 rounded-full hover:rotate-90 print:hidden"
-          >
-            ×
-          </button>
+          <div className="flex gap-2 print:hidden">
+            {/* Кнопка історії */}
+            {calcHistory.length > 0 && (
+              <button
+                onClick={() => setShowHistory(!showHistory)}
+                className="text-2xl hover:text-blue-400 transition-all duration-300 w-10 h-10 flex items-center justify-center hover:bg-blue-500/20 rounded-full relative"
+                title={currentLang === 'uk' ? 'Історія' : currentLang === 'ru' ? 'История' : currentLang === 'en' ? 'History' : 'Verlauf'}
+              >
+                🕐
+                <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {calcHistory.length}
+                </span>
+              </button>
+            )}
+            <button
+              onClick={onClose}
+              className="text-3xl hover:text-blue-400 transition-all duration-300 w-10 h-10 flex items-center justify-center hover:bg-blue-500/20 rounded-full hover:rotate-90"
+            >
+              ×
+            </button>
+          </div>
         </div>
+
+        {/* History Sidebar */}
+        {showHistory && (
+          <div className="mb-6 bg-white/5 border border-blue-500/30 rounded-xl p-4 animate-fadeIn">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-lg font-bold text-cyan-400">
+                {currentLang === 'uk' && '📜 Історія розрахунків'}
+                {currentLang === 'ru' && '📜 История расчетов'}
+                {currentLang === 'en' && '📜 Calculation History'}
+                {currentLang === 'de' && '📜 Berechnungsverlauf'}
+              </h3>
+              <button
+                onClick={() => {
+                  if (window.confirm(
+                    currentLang === 'uk' ? 'Очистити всю історію?' :
+                    currentLang === 'ru' ? 'Очистить всю историю?' :
+                    currentLang === 'en' ? 'Clear all history?' :
+                    'Gesamten Verlauf löschen?'
+                  )) {
+                    clearHistory();
+                    setShowHistory(false);
+                  }
+                }}
+                className="text-sm text-red-400 hover:text-red-300 transition-colors"
+              >
+                {currentLang === 'uk' && 'Очистити'}
+                {currentLang === 'ru' && 'Очистить'}
+                {currentLang === 'en' && 'Clear'}
+                {currentLang === 'de' && 'Löschen'}
+              </button>
+            </div>
+
+            <div className="space-y-2 max-h-64 overflow-y-auto">
+              {calcHistory.map((item) => (
+                <div
+                  key={item.id}
+                  className="bg-white/5 border border-blue-500/20 rounded-lg p-3 hover:bg-white/10 transition-all cursor-pointer group"
+                  onClick={() => handleLoadFromHistory(item)}
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <span className="text-xs text-gray-400">
+                      {formatTime(item.timestamp)[currentLang]}
+                    </span>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        removeCalculation(item.id);
+                      }}
+                      className="text-red-400 hover:text-red-300 opacity-0 group-hover:opacity-100 transition-opacity"
+                    >
+                      ×
+                    </button>
+                  </div>
+                  <div className="text-sm">
+                    {Object.entries(item.inputs).map(([key, value]) => {
+                      const field = calc.fields.find(f => f.id === key);
+                      return (
+                        <div key={key} className="text-gray-300">
+                          <span className="text-gray-500">{field?.label[currentLang]}:</span> {value}
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="mt-2 pt-2 border-t border-white/10 text-xs font-mono text-cyan-400">
+                    {typeof item.result === 'object' ? item.result[currentLang] : item.result}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Description */}
         <p className="text-gray-400 mb-6 print:text-gray-700">{calc.desc[currentLang]}</p>
@@ -263,7 +359,6 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
               </h3>
             </div>
             
-            {/* Visual Result Display */}
             <div className="bg-[#0a0e27]/50 p-4 rounded-lg border border-blue-500/20 print:bg-white print:border-gray-200">
               <p className="text-white text-lg whitespace-pre-line leading-relaxed font-mono print:text-black">
                 {typeof result === 'object' ? result[currentLang] : result}
@@ -272,7 +367,6 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
 
             {/* Export Buttons */}
             <div className="flex gap-3 mt-6 print:hidden">
-              {/* PDF Export Button */}
               <button
                 onClick={handleExportPDF}
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
@@ -287,22 +381,6 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
                   {currentLang === 'ru' && 'Как PDF'}
                 </span>
               </button>
-
-              {/* Print Button */}
-              {/* <button
-                onClick={handlePrint}
-                className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gray-600 hover:bg-gray-500 text-white rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
-                </svg>
-                <span>
-                  {currentLang === 'de' && 'Drucken'}
-                  {currentLang === 'en' && 'Print'}
-                  {currentLang === 'uk' && 'Друк'}
-                  {currentLang === 'ru' && 'Печать'}
-                </span>
-              </button> */}
             </div>
 
             {/* Progress bar animation */}
@@ -352,25 +430,21 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
         }
 
         @media print {
-          /* Налаштування сторінки */
           @page {
             margin: 1.5cm;
             size: A4 portrait;
           }
 
-          /* КОЛИ printing-modal - ховаємо все крім модалки */
           body.printing-modal > *:not(.fixed) {
             display: none !important;
           }
 
-          /* Ховаємо backdrop */
           body.printing-modal .fixed.inset-0 {
             position: static !important;
             background: white !important;
             backdrop-filter: none !important;
           }
 
-          /* Ховаємо кнопки та декорації */
           .print\\:hidden,
           button,
           svg.animate-spin,
@@ -382,12 +456,10 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
             display: none !important;
           }
 
-          /* Основний контент */
           body {
             background: white !important;
           }
 
-          /* Модальне вікно як звичайний документ */
           .bg-gradient-to-br {
             background: white !important;
             border: none !important;
@@ -398,13 +470,11 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
             padding: 20px !important;
           }
 
-          /* Текст чорний */
           h2, h3, h4, p, label, span {
             color: #000 !important;
             page-break-after: avoid !important;
           }
 
-          /* Поля */
           input, textarea {
             border: 1px solid #ccc !important;
             background: white !important;
@@ -412,14 +482,12 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
             page-break-inside: avoid !important;
           }
 
-          /* Результати */
           [class*="from-blue-500"] {
             background: #f5f5f5 !important;
             border: 1px solid #ddd !important;
             color: #000 !important;
           }
 
-          /* Компактність */
           .space-y-4 > * {
             margin-bottom: 8px !important;
           }
@@ -428,7 +496,6 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
             margin-bottom: 12px !important;
           }
 
-          /* Footer видимий */
           .print\\:block {
             display: block !important;
             margin-top: 20px !important;
