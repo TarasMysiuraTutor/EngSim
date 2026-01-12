@@ -1,4 +1,4 @@
-// src/App.jsx - ОНОВЛЕНИЙ З РОУТИНГОМ
+// src/App.jsx - ОНОВЛЕНИЙ З РОУТОМ ДЛЯ ВІДЕО
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
@@ -10,17 +10,16 @@ import { calculators } from "./data/calculators";
 import HomePage from "./pages/HomePage";
 import CalculatorsPage from "./pages/CalculatorsPage";
 import CalculatorDetail from "./pages/CalculatorDetail";
+import VideosPage from "./pages/VideosPage"; // 👈 НОВИЙ ІМПОРТ
 
 // ГОЛОВНИЙ КОМПОНЕНТ APP З РОУТИНГОМ
 function App() {
-  // Отримуємо збережену мову або встановлюємо EN за замовчуванням
   const [currentLang, setCurrentLang] = useState(() => {
     return localStorage.getItem("preferredLang") || "en";
   });
   const [modalOpen, setModalOpen] = useState(false);
   const [currentCalc, setCurrentCalc] = useState(null);
 
-  // Зберігаємо мову при зміні
   useEffect(() => {
     localStorage.setItem("preferredLang", currentLang);
   }, [currentLang]);
@@ -35,14 +34,11 @@ function App() {
     setCurrentCalc(null);
   };
 
-  // Визначаємо basename автоматично з Vite конфігурації
-  // import.meta.env.BASE_URL автоматично: '/' для dev, '/EngSim/' для production
   const basename = import.meta.env.BASE_URL;
 
   return (
     <BrowserRouter basename={basename}>
       <div className="App">
-        {/* Navbar на всіх сторінках */}
         <Navbar
           currentLang={currentLang}
           setCurrentLang={setCurrentLang}
@@ -78,6 +74,18 @@ function App() {
             path="/calculator/:slug" 
             element={
               <CalculatorDetail 
+                currentLang={currentLang}
+                setCurrentLang={setCurrentLang}
+                t={translations[currentLang]}
+              />
+            } 
+          />
+
+          {/* 👇 НОВА СТОРІНКА З ВІДЕО */}
+          <Route 
+            path="/videos" 
+            element={
+              <VideosPage 
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}

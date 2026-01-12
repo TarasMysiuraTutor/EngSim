@@ -18,12 +18,9 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
 
   const scrollToSection = (e, id) => {
     e.preventDefault();
-    // Отримуємо базовий URL з Vite
     const baseUrl = import.meta.env.BASE_URL;
     
-    // Перевіряємо чи ми на головній сторінці
     if (window.location.pathname !== baseUrl && window.location.pathname !== `${baseUrl}index.html`) {
-      // Якщо ні - переходимо на головну з якорем
       window.location.href = `${baseUrl}#${id}`;
       return;
     }
@@ -33,6 +30,14 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
       setIsOpen(false);
     }
+  };
+
+  // Переклади для нового пункту меню
+  const videosText = {
+    uk: "Відеоуроки",
+    ru: "Видеоуроки",
+    en: "Videos",
+    de: "Videos"
   };
 
   return (
@@ -92,6 +97,17 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
             </svg>
             {t.navCalc}
+          </Link>
+
+          {/* 👇 НОВИЙ ПУНКТ - ВІДЕОУРОКИ */}
+          <Link
+            to="/videos"
+            className="flex items-center gap-2 hover:text-blue-400 transition-colors duration-300 group"
+          >
+            <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            {videosText[currentLang]}
           </Link>
           
           <a
@@ -230,6 +246,18 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
               {t.navCalc}
+            </Link>
+
+            {/* 👇 НОВИЙ ПУНКТ - ВІДЕОУРОКИ (мобільне меню) */}
+            <Link
+              to="/videos"
+              className="flex items-center gap-2 py-2 hover:text-blue-400 transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              {videosText[currentLang]}
             </Link>
             
             <a
