@@ -53,7 +53,9 @@ const VideoCard = ({ video, currentLang }) => {
       {/* Thumbnail */}
       <div className="relative overflow-hidden bg-black" style={{ paddingTop: '56.25%' }}>
         <img 
-          src={getThumbnail(video.youtubeId)} 
+          src={(video.screen[currentLang])} 
+          
+          // src={getThumbnail(video.youtubeId)} 
           alt={video.title[currentLang]}
           className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />

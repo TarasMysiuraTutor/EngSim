@@ -1,4 +1,8 @@
 // src/data/videosData.js
+import videoScreen1_en from '../assets/foto/Tutorial 01 Basic Pipe Flow en.jpg';
+import videoScreen1_uk from '../assets/foto/Tutorial 01 Basic Pipe Flow uk.jpg';
+import videoScreen1_ru from '../assets/foto/Tutorial 01 Basic Pipe Flow ru.jpg';
+import videoScreen1_de from '../assets/foto/Tutorial 01 Basic Pipe Flow de.jpg';
 
 export const videosData = [
   {
@@ -15,6 +19,12 @@ export const videosData = [
       ru: "ОПИСАНИЕ ПРОБЛЕМЫ: РУКОВОДСТВО 1. Вода течет между двумя резервуарами через одиничный базовый трубопровод. Можно предположить геометрию с острым входом для трубопровода из Резервуара A. Показания давления указаны ниже. Примем атмосферное давление = 100 кПа. Цель - рассчитать массовый расход воды через трубопровод.",
       de: "PROBLEM-BESCHREIBUNG: TUTORIAL 1. Wasser fließt zwischen zwei Tanks durch einen einzelnen grundlegenden Rohrleitung. Ein scharfer Eingangstyp kann für den Rohreintritt aus Tank A angenommen werden. Druckmesswerte sind unten dargestellt. Nehmen Sie den atmosphärischen Druck = 100 kPa an. Das Ziel ist es, die Massenstromrate durch die Rohrleitung zu berechnen.",
     },
+    screen: {
+      en: videoScreen1_en,
+      uk: videoScreen1_uk,
+      ru: videoScreen1_ru,
+      de: videoScreen1_de,
+    },
     youtubeId: "D7DFO0kUESI", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
     category: "flownex",
     categoryName: {
@@ -27,81 +37,81 @@ export const videosData = [
     date: "2025-12-25",
   },
 
-  {
-    id: 11,
-    title: {
-      uk: "Проектування складної деталі в SolidWorks",
-      ru: "Проектирование сложной детали в SolidWorks",
-      en: "Complex Part Design in SolidWorks",
-      de: "Komplexe Teilegestaltung in SolidWorks",
-    },
-    description: {
-      uk: "Покрокове створення складної інженерної деталі з використанням основних інструментів SolidWorks",
-      ru: "Пошаговое создание сложной инженерной детали с использованием основных инструментов SolidWorks",
-      en: "Step-by-step creation of a complex engineering part using core SolidWorks tools",
-      de: "Schritt-für-Schritt-Erstellung eines komplexen technischen Teils mit SolidWorks",
-    },
-    youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID вашого відео
-    category: "solidworks",
-    categoryName: {
-      uk: "SolidWorks",
-      ru: "SolidWorks",
-      en: "SolidWorks",
-      de: "SolidWorks",
-    },
-    duration: "15:30",
-    date: "2024-01-15",
-  },
-  {
-    id: 12,
-    title: {
-      uk: "Аналіз потоку рідини в FlowNEX",
-      ru: "Анализ потока жидкости в FlowNEX",
-      en: "Fluid Flow Analysis in FlowNEX",
-      de: "Strömungsanalyse in FlowNEX",
-    },
-    description: {
-      uk: "Налаштування та проведення гідравлічного розрахунку в FlowNEX для трубопровідної системи",
-      ru: "Настройка и проведение гидравлического расчета в FlowNEX для трубопроводной системы",
-      en: "Setup and hydraulic calculation in FlowNEX for pipeline systems",
-      de: "Einrichtung und hydraulische Berechnung in FlowNEX für Rohrleitungssysteme",
-    },
-    youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
-    category: "flownex",
-    categoryName: {
-      uk: "FlowNEX",
-      ru: "FlowNEX",
-      en: "FlowNEX",
-      de: "FlowNEX",
-    },
-    duration: "22:45",
-    date: "2024-01-10",
-  },
-  {
-    id: 112,
-    title: {
-      uk: "Аналіз потоку рідини в FlowNEX",
-      ru: "Анализ потока жидкости в FlowNEX",
-      en: "Fluid Flow Analysis in FlowNEX",
-      de: "Strömungsanalyse in FlowNEX",
-    },
-    description: {
-      uk: "Налаштування та проведення гідравлічного розрахунку в FlowNEX для трубопровідної системи",
-      ru: "Настройка и проведение гидравлического расчета в FlowNEX для трубопроводной системы",
-      en: "Setup and hydraulic calculation in FlowNEX for pipeline systems",
-      de: "Einrichtung und hydraulische Berechnung in FlowNEX für Rohrleitungssysteme",
-    },
-    youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
-    category: "flownex",
-    categoryName: {
-      uk: "FlowNEX",
-      ru: "FlowNEX",
-      en: "FlowNEX",
-      de: "FlowNEX",
-    },
-    duration: "22:45",
-    date: "2024-01-10",
-  },
+  // {
+  //   id: 11,
+  //   title: {
+  //     uk: "Проектування складної деталі в SolidWorks",
+  //     ru: "Проектирование сложной детали в SolidWorks",
+  //     en: "Complex Part Design in SolidWorks",
+  //     de: "Komplexe Teilegestaltung in SolidWorks",
+  //   },
+  //   description: {
+  //     uk: "Покрокове створення складної інженерної деталі з використанням основних інструментів SolidWorks",
+  //     ru: "Пошаговое создание сложной инженерной детали с использованием основных инструментов SolidWorks",
+  //     en: "Step-by-step creation of a complex engineering part using core SolidWorks tools",
+  //     de: "Schritt-für-Schritt-Erstellung eines komplexen technischen Teils mit SolidWorks",
+  //   },
+  //   youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID вашого відео
+  //   category: "solidworks",
+  //   categoryName: {
+  //     uk: "SolidWorks",
+  //     ru: "SolidWorks",
+  //     en: "SolidWorks",
+  //     de: "SolidWorks",
+  //   },
+  //   duration: "15:30",
+  //   date: "2024-01-15",
+  // },
+  // {
+  //   id: 12,
+  //   title: {
+  //     uk: "Аналіз потоку рідини в FlowNEX",
+  //     ru: "Анализ потока жидкости в FlowNEX",
+  //     en: "Fluid Flow Analysis in FlowNEX",
+  //     de: "Strömungsanalyse in FlowNEX",
+  //   },
+  //   description: {
+  //     uk: "Налаштування та проведення гідравлічного розрахунку в FlowNEX для трубопровідної системи",
+  //     ru: "Настройка и проведение гидравлического расчета в FlowNEX для трубопроводной системы",
+  //     en: "Setup and hydraulic calculation in FlowNEX for pipeline systems",
+  //     de: "Einrichtung und hydraulische Berechnung in FlowNEX für Rohrleitungssysteme",
+  //   },
+  //   youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
+  //   category: "flownex",
+  //   categoryName: {
+  //     uk: "FlowNEX",
+  //     ru: "FlowNEX",
+  //     en: "FlowNEX",
+  //     de: "FlowNEX",
+  //   },
+  //   duration: "22:45",
+  //   date: "2024-01-10",
+  // },
+  // {
+  //   id: 112,
+  //   title: {
+  //     uk: "Аналіз потоку рідини в FlowNEX",
+  //     ru: "Анализ потока жидкости в FlowNEX",
+  //     en: "Fluid Flow Analysis in FlowNEX",
+  //     de: "Strömungsanalyse in FlowNEX",
+  //   },
+  //   description: {
+  //     uk: "Налаштування та проведення гідравлічного розрахунку в FlowNEX для трубопровідної системи",
+  //     ru: "Настройка и проведение гидравлического расчета в FlowNEX для трубопроводной системы",
+  //     en: "Setup and hydraulic calculation in FlowNEX for pipeline systems",
+  //     de: "Einrichtung und hydraulische Berechnung in FlowNEX für Rohrleitungssysteme",
+  //   },
+  //   youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
+  //   category: "flownex",
+  //   categoryName: {
+  //     uk: "FlowNEX",
+  //     ru: "FlowNEX",
+  //     en: "FlowNEX",
+  //     de: "FlowNEX",
+  //   },
+  //   duration: "22:45",
+  //   date: "2024-01-10",
+  // },
   //   {
   //     id: 3,
   //     title: {
