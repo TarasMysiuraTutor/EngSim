@@ -76,9 +76,9 @@ const VideoCard = ({ video, currentLang }) => {
 
   const thumbnail = getVideoThumbnail(video, currentLang);
 
-  console.log('Video ID:', video.id);
-  console.log('Current Lang:', currentLang);
-  console.log('Thumbnail URL:', thumbnail);
+  // console.log('Video ID:', video.id);
+  // console.log('Current Lang:', currentLang);
+  // console.log('Thumbnail URL:', thumbnail);
 
   return (
     <div 
