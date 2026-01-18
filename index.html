@@ -1,8 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="img-src 'self' https://res.cloudinary.com; connect-src 'self' https://res.cloudinary.com"
+    />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -192,19 +197,25 @@
       }
     </script>
 
-     <script type="text/javascript">
+    <script type="text/javascript">
       // Single Page Apps для GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash,
           );
         }
-      }(window.location))
+      })(window.location);
     </script>
 
     <!-- Google Analytics (додайте свій ID) -->
