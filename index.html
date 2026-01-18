@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <Helmet>
-      <meta
-        http-equiv="Content-Security-Policy"
-        content="img-src 'self' https://res.cloudinary.com data:;"
-      />
-    </Helmet>
+    <!-- <Helmet> -->
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="img-src 'self' https://res.cloudinary.com data:;"
+    /> -->
+    <!-- </Helmet> -->
+    
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="img-src 'self' https://res.cloudinary.com; connect-src 'self' https://res.cloudinary.com"
+    />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
