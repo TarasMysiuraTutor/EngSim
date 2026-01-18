@@ -1,7 +1,7 @@
 // src/pages/CalculatorsPage.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { calculators } from '../data/calculators';
