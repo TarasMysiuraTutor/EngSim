@@ -34,15 +34,14 @@ export default defineConfig({
     drop: process.env.NODE_ENV === "production" ? ["console", "debugger"] : [],
   },
 
-  server: {
+   server: {
     port: 3000,
     open: true,
-    headers: {
-      "Content-Security-Policy":
-        "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: https://res.cloudinary.com; font-src 'self' data:; connect-src 'self' https://formspree.io https://api.formspree.io https://res.cloudinary.com;",
-    },
-  },
-
+    // headers: {
+    //   'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: https://res.cloudinary.com; font-src 'self' data:; connect-src 'self' https://formspree.io https://api.formspree.io https://res.cloudinary.com;"
+    // }
+  },  
+  
   preview: {
     port: 4173,
     strictPort: false,
