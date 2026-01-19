@@ -1,4 +1,4 @@
-// src/pages/HomePage.jsx
+// src/pages/HomePage.jsx - БЕЗ МОДАЛЬНИХ ВІКОН
 import React, { useState, useEffect } from "react";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
@@ -14,7 +14,7 @@ import { useBreadcrumbs } from "../hooks/useBreadcrumbs";
 import { translations } from "../data/translations";
 import { calculators } from "../data/calculators";
 
-function HomePage({ currentLang, openCalculator }) {
+function HomePage({ currentLang }) {
   const [activeSection, setActiveSection] = useState("home");
 
   const {
@@ -79,7 +79,7 @@ function HomePage({ currentLang, openCalculator }) {
         <Hero t={translations[currentLang]} />
       </div>
 
-      {/* Breadcrumbs - показуються тільки якщо не на головній */}
+      {/* Breadcrumbs */}
       {breadcrumbs.length > 0 && (
         <Breadcrumbs items={breadcrumbs} currentLang={currentLang} />
       )}
@@ -92,10 +92,10 @@ function HomePage({ currentLang, openCalculator }) {
 
       <Testimonials t={translations[currentLang]} /> 
 
+      {/* 👇 ОНОВЛЕНИЙ КОМПОНЕНТ - БЕЗ openCalculator */}
       <Calculators
         t={translations[currentLang]}
         currentLang={currentLang}
-        openCalculator={openCalculator}
         calculators={calculators}
       />
 

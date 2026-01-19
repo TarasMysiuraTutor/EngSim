@@ -19,12 +19,20 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
   const scrollToSection = (e, id) => {
     e.preventDefault();
     const baseUrl = import.meta.env.BASE_URL;
+    const currentPath = window.location.pathname;
     
-    if (window.location.pathname !== baseUrl && window.location.pathname !== `${baseUrl}index.html`) {
-      window.location.href = `${baseUrl}#${id}`;
+    // Перевіряємо чи ми на головній сторінці
+    const isHomePage = currentPath === baseUrl || 
+                       currentPath === `${baseUrl}/` || 
+                       currentPath === `${baseUrl}index.html`;
+    
+    if (!isHomePage) {
+      // Якщо не на головній - переходимо на головну з якорем
+      navigate(`/#${id.replace('#', '')}`);
       return;
     }
     
+    // Якщо на головній - скролимо
     const element = document.querySelector(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });

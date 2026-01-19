@@ -1,9 +1,12 @@
+// src/components/Calculators.jsx - УНІФІКОВАНА ВЕРСІЯ
 import React, { useEffect, useRef, useState } from 'react';
-import { getCategorySchema, injectSchema } from '../utils/structuredData';
+import { useNavigate } from 'react-router-dom';
+import { getCategorySchema } from '../utils/structuredData';
 
-const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
+const Calculators = ({ t, currentLang, calculators }) => {
   const [visibleCategories, setVisibleCategories] = useState([]);
   const sectionRef = useRef(null);
+  const navigate = useNavigate();
 
   const categories = [
     {
@@ -34,7 +37,6 @@ const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
 
   // Додаємо structured data для всіх категорій
   useEffect(() => {
-    // Створюємо structured data для кожної категорії
     categories.forEach(category => {
       const categoryData = {
         name: t[category.titleKey],
@@ -52,7 +54,6 @@ const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
 
       const schema = getCategorySchema(categoryData);
       
-      // Інжектуємо schema для кожної категорії
       const scriptId = `category-schema-${category.categoryId}`;
       const oldScript = document.getElementById(scriptId);
       if (oldScript) {
@@ -66,14 +67,13 @@ const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
       document.head.appendChild(script);
     });
 
-    // Очищення при unmount
     return () => {
       categories.forEach(category => {
         const script = document.getElementById(`category-schema-${category.categoryId}`);
         if (script) script.remove();
       });
     };
-  }, [currentLang, calculators]); // Оновлюємо при зміні мови
+  }, [currentLang, calculators]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -95,6 +95,11 @@ const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
 
     return () => observer.disconnect();
   }, []);
+
+  // 👇 ГОЛОВНА ЗМІНА: Навігація замість відкриття модалки
+  const handleCalculatorClick = (calcKey) => {
+    navigate(`/calculator/${calcKey}`);
+  };
 
   return (
     <section id="calculators" className="py-20 px-8 relative overflow-hidden bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a]" ref={sectionRef}>
@@ -126,8 +131,8 @@ const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
                 return (
                   <div
                     key={calcKey}
-                    onClick={() => openCalculator(calcKey)}
-                    className={`bg-white/5 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/60 cursor-pointer transition-all duration-500 group hover-lift hover-glow ${
+                    onClick={() => handleCalculatorClick(calcKey)}
+                    className={`bg-white/5 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/60 cursor-pointer transition-all duration-500 group hover-lift hover-glow hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 ${
                       visibleCategories.includes(catIndex) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}
                     style={{
@@ -140,19 +145,19 @@ const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
                     <h4 className="text-lg md:text-xl font-bold text-cyan-400 mb-2 group-hover:text-blue-300 transition-colors duration-300">
                       {calc.title[currentLang]}
                     </h4>
-                    <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">
+                    <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300 line-clamp-2">
                       {calc.desc[currentLang]}
                     </p>
                     
                     {/* Click indicator */}
-                    <div className="mt-4 flex items-center gap-2 text-blue-500 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="mt-4 flex items-center justify-between text-blue-500 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span>
-                        {currentLang === 'de' && 'Klicken zum Berechnen'}
-                        {currentLang === 'en' && 'Click to calculate'}
-                        {currentLang === 'uk' && 'Натисніть для розрахунку'}
-                        {currentLang === 'ru' && 'Нажмите для расчета'}
+                        {currentLang === 'de' && 'Öffnen'}
+                        {currentLang === 'en' && 'Open'}
+                        {currentLang === 'uk' && 'Відкрити'}
+                        {currentLang === 'ru' && 'Открыть'}
                       </span>
-                      <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
                     </div>
@@ -162,6 +167,24 @@ const Calculators = ({ t, currentLang, openCalculator, calculators }) => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* CTA для перегляду всіх калькуляторів */}
+      <div className="text-center mt-16">
+        <button
+          onClick={() => navigate('/calculators')}
+          className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/50"
+        >
+          <span>
+            {currentLang === 'uk' && 'Переглянути всі калькулятори'}
+            {currentLang === 'ru' && 'Просмотреть все калькуляторы'}
+            {currentLang === 'en' && 'View All Calculators'}
+            {currentLang === 'de' && 'Alle Rechner anzeigen'}
+          </span>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </button>
       </div>
     </section>
   );

@@ -6,64 +6,74 @@ export const translations = {
     navCalc: "Калькулятори",
     navProjects: "Проекти",
     navContact: "Контакти",
-    
+
     // Hero Section
     heroLabel: "Професійні інженерні послуги",
     heroPreTitle: "Вітаю, я Віктор, інженер-розрахунковець.",
     heroTitle: "Професійні інженерні розрахунки",
-    heroPostTitle: "Пропоную свої послуги з професійних інженерних розрахунків для різних галузей промисловості:",
-    heroSubtitle: "Опір матеріалів • Термодинаміка • Теплові процеси • Промислові розрахунки",
+    heroPostTitle:
+      "Пропоную свої послуги з професійних інженерних розрахунків для різних галузей промисловості:",
+    heroSubtitle:
+      "Опір матеріалів • Термодинаміка • Теплові процеси • Промислові розрахунки",
     heroCTA: "Замовити розрахунок",
     heroCallButton: "Зателефонувати",
     heroTrustedBy: "Довіряють 150+ клієнтів",
     heroRating: "5.0 рейтинг",
-    
+
     // Stats
     statsYears: "Років досвіду",
     statsProjects: "Виконаних проектів",
     statsClients: "Задоволених клієнтів",
     statsSupport: "Підтримка клієнтів",
-    
+
     // Services
     servicesTitle: "Мої послуги",
-    servicesSubtitle: "Професійні інженерні послуги з індивідуальним підходом до кожного проекту",
+    servicesSubtitle:
+      "Професійні інженерні послуги з індивідуальним підходом до кожного проекту",
     service1Title: "Опір матеріалів",
-    service1Desc: "Розрахунки міцності, деформацій, напружень в конструкціях та механізмах. Аналіз стійкості та надійності.",
+    service1Desc:
+      "Розрахунки міцності, деформацій, напружень в конструкціях та механізмах. Аналіз стійкості та надійності.",
     service1Feature1: "Розрахунки міцності",
     service1Feature2: "Аналіз деформацій",
     service1Feature3: "Оцінка надійності",
     service2Title: "Термодинаміка",
-    service2Desc: "Теплові розрахунки систем, аналіз термодинамічних циклів, розрахунок теплообмінників та енергетичних установок.",
+    service2Desc:
+      "Теплові розрахунки систем, аналіз термодинамічних циклів, розрахунок теплообмінників та енергетичних установок.",
     service2Feature1: "Теплові розрахунки",
     service2Feature2: "Аналіз циклів",
     service2Feature3: "Розрахунок обладнання",
     service3Title: "Теплові процеси",
-    service3Desc: "Моделювання теплопередачі, розрахунок теплоізоляції, аналіз температурних режимів промислового обладнання.",
+    service3Desc:
+      "Моделювання теплопередачі, розрахунок теплоізоляції, аналіз температурних режимів промислового обладнання.",
     service3Feature1: "Теплопередача",
     service3Feature2: "Теплоізоляція",
     service3Feature3: "Температурний режим",
     service4Title: "Промислові розрахунки",
-    service4Desc: "Комплексні інженерні розрахунки для різних галузей промисловості. Оптимізація технологічних процесів.",
+    service4Desc:
+      "Комплексні інженерні розрахунки для різних галузей промисловості. Оптимізація технологічних процесів.",
     service4Feature1: "Комплексні розрахунки",
     service4Feature2: "Оптимізація",
     service4Feature3: "Технологічні процеси",
     service5Title: "Технічна документація",
-    service5Desc: "Підготовка технічних звітів, розрахункових пояснювальних записок, креслень та специфікацій.",
+    service5Desc:
+      "Підготовка технічних звітів, розрахункових пояснювальних записок, креслень та специфікацій.",
     service5Feature1: "Технічні звіти",
     service5Feature2: "Креслення",
     service5Feature3: "Специфікації",
     service6Title: "Консультації",
-    service6Desc: "Експертні консультації з питань міцності, теплотехніки та оптимізації інженерних рішень.",
+    service6Desc:
+      "Експертні консультації з питань міцності, теплотехніки та оптимізації інженерних рішень.",
     service6Feature1: "Експертна оцінка",
     service6Feature2: "Технічний супровід",
     service6Feature3: "Оптимізація рішень",
     serviceCTA: "Замовити послугу",
     serviceLearnMore: "Дізнатися більше",
     serviceNotFound: "Не знайшли потрібну послугу?",
-    serviceNotFoundDesc: "Зв'яжіться зі мною, і ми обговоримо ваш проект індивідуально",
+    serviceNotFoundDesc:
+      "Зв'яжіться зі мною, і ми обговоримо ваш проект індивідуально",
     serviceContactMe: "Написати мені",
     serviceCallMe: "Зателефонувати",
-    
+
     // Calculators
     calcTitle: "Інженерні калькулятори",
     calcSubtitle: "Безкоштовні онлайн калькулятори для швидких розрахунків",
@@ -71,7 +81,7 @@ export const translations = {
     calcCat2: "Термодинаміка",
     calcCat3: "Гідравліка",
     calcCat4: "Енергетика",
-    
+
     // Projects
     projectsTitle: "Виконані проекти",
     projectsSubtitle: "Приклади успішно реалізованих інженерних рішень",
@@ -80,21 +90,25 @@ export const translations = {
     project3Title: "Енергоефективність",
     projectViewDetails: "Детальніше",
     projectHaveProject: "Маєте подібний проект?",
-    projectHaveProjectDesc: "Обговоримо ваше завдання та знайдемо оптимальне рішення",
+    projectHaveProjectDesc:
+      "Обговоримо ваше завдання та знайдемо оптимальне рішення",
     projectDiscuss: "Обговорити проект",
     projectOrderSimilar: "Замовити подібний проект",
-    
+
     // Contact
     contactTitle: "Зв'язатися зі мною",
-    
+
     // About
     aboutTitle: "Про мене",
     aboutSubtitle: "Інженер-розрахунковець з багаторічним досвідом",
     aboutName: "Віктор Сукайло",
     aboutRole: "Інженер-консультант",
-    aboutBio1: "Професійний інженер з понад 10 років досвіду в галузі промислових розрахунків, термодинаміки та опору матеріалів.",
-    aboutBio2: "Спеціалізуюся на складних інженерних розрахунках для промислових підприємств, енергоаудиті та оптимізації технологічних процесів.",
-    aboutBio3: "Працював над проектами для провідних компаній України, завжди орієнтуюсь на практичні результати та економічну ефективність рішень.",
+    aboutBio1:
+      "Професійний інженер з понад 10 років досвіду в галузі промислових розрахунків, термодинаміки та опору матеріалів.",
+    aboutBio2:
+      "Спеціалізуюся на складних інженерних розрахунках для промислових підприємств, енергоаудиті та оптимізації технологічних процесів.",
+    aboutBio3:
+      "Працював над проектами для провідних компаній України, завжди орієнтуюсь на практичні результати та економічну ефективність рішень.",
     aboutEducationTitle: "Освіта та кваліфікація",
     aboutEducation1: "Магістр технічних наук",
     aboutEducation2: "Сертифікований енергоаудитор",
@@ -107,37 +121,44 @@ export const translations = {
     aboutExpertise5: "Технічна документація",
     aboutExpertise6: "Супровід проектів",
     aboutCTA: "Обговорити проект",
-    
+
     // Testimonials
     testimonialsTitle: "Відгуки клієнтів",
     testimonialsSubtitle: "Що кажуть про мою роботу",
     testimonial1Name: "Олександр Петренко",
     testimonial1Role: "Директор",
     testimonial1Company: "ТехноПром ООО",
-    testimonial1Text: "Віктор виконав складні розрахунки металоконструкції для нашого заводу. Професійний підхід, точність розрахунків та своєчасна здача проекту. Рекомендую як надійного спеціаліста!",
+    testimonial1Text:
+      "Віктор виконав складні розрахунки металоконструкції для нашого заводу. Професійний підхід, точність розрахунків та своєчасна здача проекту. Рекомендую як надійного спеціаліста!",
     testimonial2Name: "Марина Коваленко",
     testimonial2Role: "Головний інженер",
     testimonial2Company: "ЕнергоБуд",
-    testimonial2Text: "Замовляли енергоаудит виробництва. Віктор провів детальний аналіз, запропонував конкретні рішення. Завдяки його рекомендаціям знизили витрати на опалення на 30%. Дуже задоволені результатом!",
+    testimonial2Text:
+      "Замовляли енергоаудит виробництва. Віктор провів детальний аналіз, запропонував конкретні рішення. Завдяки його рекомендаціям знизили витрати на опалення на 30%. Дуже задоволені результатом!",
     testimonial3Name: "Дмитро Сидоренко",
     testimonial3Role: "Технічний директор",
     testimonial3Company: "ХімПром Україна",
-    testimonial3Text: "Розробка теплообмінника для нашого цеху. Віктор врахував всі технічні вимоги, підібрав оптимальне рішення. Обладнання працює бездоганно вже рік. Професіонал своєї справи!",
+    testimonial3Text:
+      "Розробка теплообмінника для нашого цеху. Віктор врахував всі технічні вимоги, підібрав оптимальне рішення. Обладнання працює бездоганно вже рік. Професіонал своєї справи!",
     testimonial4Name: "Ірина Мельник",
     testimonial4Role: "Керівник проектів",
     testimonial4Company: "БудІнжиніринг",
-    testimonial4Text: "Співпраця з Віктором — це завжди якість та відповідальність. Виконує розрахунки швидко, надає детальну документацію, завжди на зв'язку. Працюємо разом вже 3 роки!",
-    
+    testimonial4Text:
+      "Співпраця з Віктором — це завжди якість та відповідальність. Виконує розрахунки швидко, надає детальну документацію, завжди на зв'язку. Працюємо разом вже 3 роки!",
+
     // Contact
     contactTitle: "Зв'язатися зі мною",
-    contactSubtitle: "Готовий відповісти на ваші запитання та обговорити проект",
+    contactSubtitle:
+      "Готовий відповісти на ваші запитання та обговорити проект",
     contactName: "Ваше ім'я",
     contactEmail: "Email",
     contactPhone: "Телефон (опціонально)",
     contactMessage: "Опишіть ваш проект",
     contactSubmit: "Надіслати повідомлення",
-    contactSuccess: "Дякую! Ваше повідомлення надіслано. Зв'яжуся з вами найближчим часом.",
-    contactError: "Помилка відправки. Будь ласка, спробуйте пізніше або зв'яжіться зі мною напряму.",
+    contactSuccess:
+      "Дякую! Ваше повідомлення надіслано. Зв'яжуся з вами найближчим часом.",
+    contactError:
+      "Помилка відправки. Будь ласка, спробуйте пізніше або зв'яжіться зі мною напряму.",
     contactOr: "Або зв'яжіться зі мною напряму",
     contactQuickTitle: "Швидкий зв'язок",
     contactQuickPhone: "+380 XX XXX XX XX",
@@ -151,18 +172,18 @@ export const translations = {
     contactPlaceholderPhone: "+380 50 123 45 67",
     contactPlaceholderMessage: "Розкажіть про ваш проект...",
     contactTimezone: "Київський час (UTC+2)",
-    
+
     // Testimonials Stats
     testimonialsStatClients: "Задоволених клієнтів",
     testimonialsStatRating: "Середній рейтинг",
     testimonialsStatRecommend: "Рекомендують іншим",
-    
+
     // Quick Contact
     quickContactTitle: "Швидкий зв'язок",
     quickContactPhone: "+380 XX XXX XX XX",
     quickContactEmail: "viktor@example.com",
     quickContactTelegram: "@viktorsukaylo",
-    
+
     // Common
     calculate: "Розрахувати",
     result: "Результат:",
@@ -170,7 +191,7 @@ export const translations = {
     readMore: "Читати далі",
     download: "Завантажити",
     share: "Поділитися",
-    
+
     // Footer
     footer: "Інженерні Розрахунки. Всі права захищені.",
     footerAbout: "Про мене",
@@ -183,9 +204,12 @@ export const translations = {
     footerQuickLinks: "Швидкі посилання",
     footerContactInfo: "Контактна інформація",
     footerSocial: "Соціальні мережі",
-    footerDescription: "Професійні інженерні розрахунки та консультації. Опір матеріалів, термодинаміка, гідравліка, енергетика.",
+    footerDescription:
+      "Професійні інженерні розрахунки та консультації. Опір матеріалів, термодинаміка, гідравліка, енергетика.",
+    footerSpan1: "Розроблено з",
+    footerSpan2: "для інженерів",
   },
-  
+
   ru: {
     logo: "Инженерные Расчеты",
     navHome: "Главная",
@@ -193,64 +217,74 @@ export const translations = {
     navCalc: "Калькуляторы",
     navProjects: "Проекты",
     navContact: "Контакты",
-    
+
     // Hero Section
     heroLabel: "Профессиональные инженерные услуги",
     heroPreTitle: "Добро пожаловать, я Виктор, инженер-расчетчик.",
     heroTitle: "Профессиональные инженерные расчеты",
-    heroPostTitle: "Предлагаю свои услуги по профессиональным инженерным расчетам для различных отраслей промышленности:",
-    heroSubtitle: "Сопротивление материалов • Термодинамика • Тепловые процессы • Промышленные расчеты",
+    heroPostTitle:
+      "Предлагаю свои услуги по профессиональным инженерным расчетам для различных отраслей промышленности:",
+    heroSubtitle:
+      "Сопротивление материалов • Термодинамика • Тепловые процессы • Промышленные расчеты",
     heroCTA: "Заказать расчет",
     heroCallButton: "Позвонить",
     heroTrustedBy: "Доверяют 150+ клиентов",
     heroRating: "5.0 рейтинг",
-    
+
     // Stats
     statsYears: "Лет опыта",
     statsProjects: "Выполненных проектов",
     statsClients: "Довольных клиентов",
     statsSupport: "Поддержка клиентов",
-    
+
     // Services
     servicesTitle: "Мои услуги",
-    servicesSubtitle: "Профессиональные инженерные услуги с индивидуальным подходом к каждому проекту",
+    servicesSubtitle:
+      "Профессиональные инженерные услуги с индивидуальным подходом к каждому проекту",
     service1Title: "Сопротивление материалов",
-    service1Desc: "Расчеты прочности, деформаций, напряжений в конструкциях и механизмах. Анализ устойчивости и надежности.",
+    service1Desc:
+      "Расчеты прочности, деформаций, напряжений в конструкциях и механизмах. Анализ устойчивости и надежности.",
     service1Feature1: "Расчеты прочности",
     service1Feature2: "Анализ деформаций",
     service1Feature3: "Оценка надежности",
     service2Title: "Термодинамика",
-    service2Desc: "Тепловые расчеты систем, анализ термодинамических циклов, расчет теплообменников и энергетических установок.",
+    service2Desc:
+      "Тепловые расчеты систем, анализ термодинамических циклов, расчет теплообменников и энергетических установок.",
     service2Feature1: "Тепловые расчеты",
     service2Feature2: "Анализ циклов",
     service2Feature3: "Расчет оборудования",
     service3Title: "Тепловые процессы",
-    service3Desc: "Моделирование теплопередачи, расчет теплоизоляции, анализ температурных режимов промышленного оборудования.",
+    service3Desc:
+      "Моделирование теплопередачи, расчет теплоизоляции, анализ температурных режимов промышленного оборудования.",
     service3Feature1: "Теплопередача",
     service3Feature2: "Теплоизоляция",
     service3Feature3: "Температурный режим",
     service4Title: "Промышленные расчеты",
-    service4Desc: "Комплексные инженерные расчеты для различных отраслей промышленности. Оптимизация технологических процессов.",
+    service4Desc:
+      "Комплексные инженерные расчеты для различных отраслей промышленности. Оптимизация технологических процессов.",
     service4Feature1: "Комплексные расчеты",
     service4Feature2: "Оптимизация",
     service4Feature3: "Технологические процессы",
     service5Title: "Техническая документация",
-    service5Desc: "Подготовка технических отчетов, расчетных пояснительных записок, чертежей и спецификаций.",
+    service5Desc:
+      "Подготовка технических отчетов, расчетных пояснительных записок, чертежей и спецификаций.",
     service5Feature1: "Технические отчеты",
     service5Feature2: "Чертежи",
     service5Feature3: "Спецификации",
     service6Title: "Консультации",
-    service6Desc: "Экспертные консультации по вопросам прочности, теплотехники и оптимизации инженерных решений.",
+    service6Desc:
+      "Экспертные консультации по вопросам прочности, теплотехники и оптимизации инженерных решений.",
     service6Feature1: "Экспертная оценка",
     service6Feature2: "Техническое сопровождение",
     service6Feature3: "Оптимизация решений",
     serviceCTA: "Заказать услугу",
     serviceLearnMore: "Узнать больше",
     serviceNotFound: "Не нашли нужную услугу?",
-    serviceNotFoundDesc: "Свяжитесь со мной, и мы обсудим ваш проект индивидуально",
+    serviceNotFoundDesc:
+      "Свяжитесь со мной, и мы обсудим ваш проект индивидуально",
     serviceContactMe: "Написать мне",
     serviceCallMe: "Позвонить",
-    
+
     // Calculators
     calcTitle: "Инженерные калькуляторы",
     calcSubtitle: "Бесплатные онлайн калькуляторы для быстрых расчетов",
@@ -258,7 +292,7 @@ export const translations = {
     calcCat2: "Термодинамика",
     calcCat3: "Гидравлика",
     calcCat4: "Энергетика",
-    
+
     // Projects
     projectsTitle: "Выполненные проекты",
     projectsSubtitle: "Примеры успешно реализованных инженерных решений",
@@ -270,18 +304,21 @@ export const translations = {
     projectHaveProjectDesc: "Обсудим вашу задачу и найдем оптимальное решение",
     projectDiscuss: "Обсудить проект",
     projectOrderSimilar: "Заказать похожий проект",
-    
+
     // Contact
     contactTitle: "Связаться со мной",
-    
+
     // About
     aboutTitle: "Обо мне",
     aboutSubtitle: "Инженер-расчетчик с многолетним опытом",
     aboutName: "Виктор Сукайло",
     aboutRole: "Инженер-консультант",
-    aboutBio1: "Профессиональный инженер с более чем 10 годами опыта в области промышленных расчетов, термодинамики и сопротивления материалов.",
-    aboutBio2: "Специализируюсь на сложных инженерных расчетах для промышленных предприятий, энергоаудите и оптимизации технологических процессов.",
-    aboutBio3: "Работал над проектами для ведущих компаний Украины, всегда ориентируюсь на практические результаты и экономическую эффективность решений.",
+    aboutBio1:
+      "Профессиональный инженер с более чем 10 годами опыта в области промышленных расчетов, термодинамики и сопротивления материалов.",
+    aboutBio2:
+      "Специализируюсь на сложных инженерных расчетах для промышленных предприятий, энергоаудите и оптимизации технологических процессов.",
+    aboutBio3:
+      "Работал над проектами для ведущих компаний Украины, всегда ориентируюсь на практические результаты и экономическую эффективность решений.",
     aboutEducationTitle: "Образование и квалификация",
     aboutEducation1: "Магистр технических наук",
     aboutEducation2: "Сертифицированный энергоаудитор",
@@ -294,27 +331,31 @@ export const translations = {
     aboutExpertise5: "Техническая документация",
     aboutExpertise6: "Сопровождение проектов",
     aboutCTA: "Обсудить проект",
-    
+
     // Testimonials
     testimonialsTitle: "Отзывы клиентов",
     testimonialsSubtitle: "Что говорят о моей работе",
     testimonial1Name: "Александр Петренко",
     testimonial1Role: "Директор",
     testimonial1Company: "ТехноПром ООО",
-    testimonial1Text: "Виктор выполнил сложные расчеты металлоконструкции для нашего завода. Профессиональный подход, точность расчетов и своевременная сдача проекта. Рекомендую как надежного специалиста!",
+    testimonial1Text:
+      "Виктор выполнил сложные расчеты металлоконструкции для нашего завода. Профессиональный подход, точность расчетов и своевременная сдача проекта. Рекомендую как надежного специалиста!",
     testimonial2Name: "Марина Коваленко",
     testimonial2Role: "Главный инженер",
     testimonial2Company: "ЭнергоСтрой",
-    testimonial2Text: "Заказывали энергоаудит производства. Виктор провел детальный анализ, предложил конкретные решения. Благодаря его рекомендациям снизили затраты на отопление на 30%. Очень довольны результатом!",
+    testimonial2Text:
+      "Заказывали энергоаудит производства. Виктор провел детальный анализ, предложил конкретные решения. Благодаря его рекомендациям снизили затраты на отопление на 30%. Очень довольны результатом!",
     testimonial3Name: "Дмитрий Сидоренко",
     testimonial3Role: "Технический директор",
     testimonial3Company: "ХимПром Украина",
-    testimonial3Text: "Разработка теплообменника для нашего цеха. Виктор учел все технические требования, подобрал оптимальное решение. Оборудование работает безупречно уже год. Профессионал своего дела!",
+    testimonial3Text:
+      "Разработка теплообменника для нашего цеха. Виктор учел все технические требования, подобрал оптимальное решение. Оборудование работает безупречно уже год. Профессионал своего дела!",
     testimonial4Name: "Ирина Мельник",
     testimonial4Role: "Руководитель проектов",
     testimonial4Company: "СтройИнжиниринг",
-    testimonial4Text: "Сотрудничество с Виктором — это всегда качество и ответственность. Выполняет расчеты быстро, предоставляет детальную документацию, всегда на связи. Работаем вместе уже 3 года!",
-    
+    testimonial4Text:
+      "Сотрудничество с Виктором — это всегда качество и ответственность. Выполняет расчеты быстро, предоставляет детальную документацию, всегда на связи. Работаем вместе уже 3 года!",
+
     // Contact
     contactTitle: "Связаться со мной",
     contactSubtitle: "Готов ответить на ваши вопросы и обсудить проект",
@@ -323,8 +364,10 @@ export const translations = {
     contactPhone: "Телефон (опционально)",
     contactMessage: "Опишите ваш проект",
     contactSubmit: "Отправить сообщение",
-    contactSuccess: "Спасибо! Ваше сообщение отправлено. Свяжусь с вами в ближайшее время.",
-    contactError: "Ошибка отправки. Пожалуйста, попробуйте позже или свяжитесь со мной напрямую.",
+    contactSuccess:
+      "Спасибо! Ваше сообщение отправлено. Свяжусь с вами в ближайшее время.",
+    contactError:
+      "Ошибка отправки. Пожалуйста, попробуйте позже или свяжитесь со мной напрямую.",
     contactOr: "Или свяжитесь со мной напрямую",
     contactQuickTitle: "Быстрая связь",
     contactQuickPhone: "+380 XX XXX XX XX",
@@ -338,18 +381,18 @@ export const translations = {
     contactPlaceholderPhone: "+380 50 123 45 67",
     contactPlaceholderMessage: "Расскажите о вашем проекте...",
     contactTimezone: "Киевское время (UTC+2)",
-    
+
     // Testimonials Stats
     testimonialsStatClients: "Довольных клиентов",
     testimonialsStatRating: "Средний рейтинг",
     testimonialsStatRecommend: "Рекомендуют другим",
-    
+
     // Quick Contact
     quickContactTitle: "Быстрая связь",
     quickContactPhone: "+380 XX XXX XX XX",
     quickContactEmail: "viktor@example.com",
     quickContactTelegram: "@viktorsukaylo",
-    
+
     // Common
     calculate: "Рассчитать",
     result: "Результат:",
@@ -357,7 +400,7 @@ export const translations = {
     readMore: "Читать далее",
     download: "Скачать",
     share: "Поделиться",
-    
+
     // Footer
     footer: "Инженерные Расчеты. Все права защищены.",
     footerAbout: "Обо мне",
@@ -370,9 +413,12 @@ export const translations = {
     footerQuickLinks: "Быстрые ссылки",
     footerContactInfo: "Контактная информация",
     footerSocial: "Социальные сети",
-    footerDescription: "Профессиональные инженерные расчеты и консультации. Сопротивление материалов, термодинамика, гидравлика, энергетика.",
+    footerDescription:
+      "Профессиональные инженерные расчеты и консультации. Сопротивление материалов, термодинамика, гидравлика, энергетика.",
+    footerSpan1: "Разработано с",
+    footerSpan2: "для инженеров",
   },
-  
+
   en: {
     logo: "Engineering Calculations",
     navHome: "Home",
@@ -380,64 +426,74 @@ export const translations = {
     navCalc: "Calculators",
     navProjects: "Projects",
     navContact: "Contact",
-    
+
     // Hero Section
     heroLabel: "Professional Engineering Services",
     heroPreTitle: "Welcome, I am Viktor, an engineering calculator.",
     heroTitle: "Professional Engineering Calculations",
-    heroPostTitle: "I offer my services for professional engineering calculations in various industries:",
-    heroSubtitle: "Strength of Materials • Thermodynamics • Thermal Processes • Industrial Calculations",
+    heroPostTitle:
+      "I offer my services for professional engineering calculations in various industries:",
+    heroSubtitle:
+      "Strength of Materials • Thermodynamics • Thermal Processes • Industrial Calculations",
     heroCTA: "Order Calculation",
     heroCallButton: "Call Now",
     heroTrustedBy: "Trusted by 150+ clients",
     heroRating: "5.0 rating",
-    
+
     // Stats
     statsYears: "Years of Experience",
     statsProjects: "Completed Projects",
     statsClients: "Satisfied Clients",
     statsSupport: "Client Support",
-    
+
     // Services
     servicesTitle: "My Services",
-    servicesSubtitle: "Professional engineering services with an individual approach to each project",
+    servicesSubtitle:
+      "Professional engineering services with an individual approach to each project",
     service1Title: "Strength of Materials",
-    service1Desc: "Calculations of strength, deformations, stresses in structures and mechanisms. Stability and reliability analysis.",
+    service1Desc:
+      "Calculations of strength, deformations, stresses in structures and mechanisms. Stability and reliability analysis.",
     service1Feature1: "Strength calculations",
     service1Feature2: "Deformation analysis",
     service1Feature3: "Reliability assessment",
     service2Title: "Thermodynamics",
-    service2Desc: "Thermal calculations of systems, analysis of thermodynamic cycles, calculation of heat exchangers and power plants.",
+    service2Desc:
+      "Thermal calculations of systems, analysis of thermodynamic cycles, calculation of heat exchangers and power plants.",
     service2Feature1: "Thermal calculations",
     service2Feature2: "Cycle analysis",
     service2Feature3: "Equipment calculation",
     service3Title: "Thermal Processes",
-    service3Desc: "Heat transfer modeling, thermal insulation calculation, analysis of temperature regimes of industrial equipment.",
+    service3Desc:
+      "Heat transfer modeling, thermal insulation calculation, analysis of temperature regimes of industrial equipment.",
     service3Feature1: "Heat transfer",
     service3Feature2: "Thermal insulation",
     service3Feature3: "Temperature regime",
     service4Title: "Industrial Calculations",
-    service4Desc: "Comprehensive engineering calculations for various industries. Optimization of technological processes.",
+    service4Desc:
+      "Comprehensive engineering calculations for various industries. Optimization of technological processes.",
     service4Feature1: "Comprehensive calculations",
     service4Feature2: "Optimization",
     service4Feature3: "Technological processes",
     service5Title: "Technical Documentation",
-    service5Desc: "Preparation of technical reports, calculation explanatory notes, drawings and specifications.",
+    service5Desc:
+      "Preparation of technical reports, calculation explanatory notes, drawings and specifications.",
     service5Feature1: "Technical reports",
     service5Feature2: "Drawings",
     service5Feature3: "Specifications",
     service6Title: "Consultations",
-    service6Desc: "Expert consultations on strength, thermal engineering and optimization of engineering solutions.",
+    service6Desc:
+      "Expert consultations on strength, thermal engineering and optimization of engineering solutions.",
     service6Feature1: "Expert assessment",
     service6Feature2: "Technical support",
     service6Feature3: "Solution optimization",
     serviceCTA: "Order Service",
     serviceLearnMore: "Learn More",
     serviceNotFound: "Can't find the service you need?",
-    serviceNotFoundDesc: "Contact me and we'll discuss your project individually",
+    serviceNotFoundDesc:
+      "Contact me and we'll discuss your project individually",
     serviceContactMe: "Contact Me",
     serviceCallMe: "Call Now",
-    
+
     // Calculators
     calcTitle: "Engineering Calculators",
     calcSubtitle: "Free online calculators for quick calculations",
@@ -445,30 +501,35 @@ export const translations = {
     calcCat2: "Thermodynamics",
     calcCat3: "Hydraulics",
     calcCat4: "Energy",
-    
+
     // Projects
     projectsTitle: "Completed Projects",
-    projectsSubtitle: "Examples of successfully implemented engineering solutions",
+    projectsSubtitle:
+      "Examples of successfully implemented engineering solutions",
     project1Title: "Metal Structure",
     project2Title: "Heat Exchanger",
     project3Title: "Energy Efficiency",
     projectViewDetails: "View Details",
     projectHaveProject: "Have a similar project?",
-    projectHaveProjectDesc: "Let's discuss your task and find the optimal solution",
+    projectHaveProjectDesc:
+      "Let's discuss your task and find the optimal solution",
     projectDiscuss: "Discuss Project",
     projectOrderSimilar: "Order Similar Project",
-    
+
     // Contact
     contactTitle: "Contact Me",
-    
+
     // About
     aboutTitle: "About Me",
     aboutSubtitle: "Engineering consultant with years of experience",
     aboutName: "Viktor Sukaylo",
     aboutRole: "Engineering Consultant",
-    aboutBio1: "Professional engineer with over 10 years of experience in industrial calculations, thermodynamics and strength of materials.",
-    aboutBio2: "I specialize in complex engineering calculations for industrial enterprises, energy audits and optimization of technological processes.",
-    aboutBio3: "I have worked on projects for leading Ukrainian companies, always focusing on practical results and economic efficiency of solutions.",
+    aboutBio1:
+      "Professional engineer with over 10 years of experience in industrial calculations, thermodynamics and strength of materials.",
+    aboutBio2:
+      "I specialize in complex engineering calculations for industrial enterprises, energy audits and optimization of technological processes.",
+    aboutBio3:
+      "I have worked on projects for leading Ukrainian companies, always focusing on practical results and economic efficiency of solutions.",
     aboutEducationTitle: "Education and Qualifications",
     aboutEducation1: "Master of Engineering",
     aboutEducation2: "Certified Energy Auditor",
@@ -481,27 +542,31 @@ export const translations = {
     aboutExpertise5: "Technical documentation",
     aboutExpertise6: "Project support",
     aboutCTA: "Discuss Project",
-    
+
     // Testimonials
     testimonialsTitle: "Client Testimonials",
     testimonialsSubtitle: "What they say about my work",
     testimonial1Name: "Alexander Petrenko",
     testimonial1Role: "Director",
     testimonial1Company: "TechnoProm LLC",
-    testimonial1Text: "Viktor performed complex metal structure calculations for our plant. Professional approach, accurate calculations and timely project delivery. I recommend him as a reliable specialist!",
+    testimonial1Text:
+      "Viktor performed complex metal structure calculations for our plant. Professional approach, accurate calculations and timely project delivery. I recommend him as a reliable specialist!",
     testimonial2Name: "Marina Kovalenko",
     testimonial2Role: "Chief Engineer",
     testimonial2Company: "EnergyBuild",
-    testimonial2Text: "We ordered an energy audit of production. Viktor conducted a detailed analysis and proposed specific solutions. Thanks to his recommendations, we reduced heating costs by 30%. Very satisfied with the result!",
+    testimonial2Text:
+      "We ordered an energy audit of production. Viktor conducted a detailed analysis and proposed specific solutions. Thanks to his recommendations, we reduced heating costs by 30%. Very satisfied with the result!",
     testimonial3Name: "Dmitry Sidorenko",
     testimonial3Role: "Technical Director",
     testimonial3Company: "ChemProm Ukraine",
-    testimonial3Text: "Development of a heat exchanger for our workshop. Viktor took into account all technical requirements and selected the optimal solution. The equipment has been working flawlessly for a year. A true professional!",
+    testimonial3Text:
+      "Development of a heat exchanger for our workshop. Viktor took into account all technical requirements and selected the optimal solution. The equipment has been working flawlessly for a year. A true professional!",
     testimonial4Name: "Irina Melnyk",
     testimonial4Role: "Project Manager",
     testimonial4Company: "BuildEngineering",
-    testimonial4Text: "Cooperation with Viktor is always quality and responsibility. He performs calculations quickly, provides detailed documentation, and is always in touch. We have been working together for 3 years!",
-    
+    testimonial4Text:
+      "Cooperation with Viktor is always quality and responsibility. He performs calculations quickly, provides detailed documentation, and is always in touch. We have been working together for 3 years!",
+
     // Contact
     contactTitle: "Contact Me",
     contactSubtitle: "Ready to answer your questions and discuss the project",
@@ -510,8 +575,10 @@ export const translations = {
     contactPhone: "Phone (optional)",
     contactMessage: "Describe your project",
     contactSubmit: "Send Message",
-    contactSuccess: "Thank you! Your message has been sent. I will contact you soon.",
-    contactError: "Sending error. Please try again later or contact me directly.",
+    contactSuccess:
+      "Thank you! Your message has been sent. I will contact you soon.",
+    contactError:
+      "Sending error. Please try again later or contact me directly.",
     contactOr: "Or contact me directly",
     contactQuickTitle: "Quick Contact",
     contactQuickPhone: "+380 XX XXX XX XX",
@@ -525,18 +592,18 @@ export const translations = {
     contactPlaceholderPhone: "+380 50 123 45 67",
     contactPlaceholderMessage: "Tell us about your project...",
     contactTimezone: "Kyiv time (UTC+2)",
-    
+
     // Testimonials Stats
     testimonialsStatClients: "Satisfied clients",
     testimonialsStatRating: "Average rating",
     testimonialsStatRecommend: "Recommend to others",
-    
+
     // Quick Contact
     quickContactTitle: "Quick Contact",
     quickContactPhone: "+380 XX XXX XX XX",
     quickContactEmail: "viktor@example.com",
     quickContactTelegram: "@viktorsukaylo",
-    
+
     // Common
     calculate: "Calculate",
     result: "Result:",
@@ -544,7 +611,7 @@ export const translations = {
     readMore: "Read More",
     download: "Download",
     share: "Share",
-    
+
     // Footer
     footer: "Engineering Calculations. All rights reserved.",
     footerAbout: "About",
@@ -557,9 +624,12 @@ export const translations = {
     footerQuickLinks: "Quick Links",
     footerContactInfo: "Contact Information",
     footerSocial: "Social Media",
-    footerDescription: "Professional engineering calculations and consulting. Strength of materials, thermodynamics, hydraulics, energy.",
+    footerDescription:
+      "Professional engineering calculations and consulting. Strength of materials, thermodynamics, hydraulics, energy.",
+    footerSpan1: "Developed with",
+    footerSpan2: "for engineers",
   },
-  
+
   de: {
     logo: "Ingenieurberechnungen",
     navHome: "Startseite",
@@ -567,64 +637,74 @@ export const translations = {
     navCalc: "Rechner",
     navProjects: "Projekte",
     navContact: "Kontakt",
-    
+
     // Hero Section
     heroLabel: "Professionelle Ingenieurdienstleistungen",
     heroPreTitle: "Willkommen, ich bin Viktor, ein Ingenieurkalkulator.",
     heroTitle: "Professionelle Ingenieurberechnungen",
-    heroPostTitle: "Ich biete meine Dienste im Bereich professioneller ingenieurtechnischer Berechnungen für verschiedene Industriezweige an:",
-    heroSubtitle: "Festigkeitslehre • Thermodynamik • Thermische Prozesse • Industrieberechnungen",
+    heroPostTitle:
+      "Ich biete meine Dienste im Bereich professioneller ingenieurtechnischer Berechnungen für verschiedene Industriezweige an:",
+    heroSubtitle:
+      "Festigkeitslehre • Thermodynamik • Thermische Prozesse • Industrieberechnungen",
     heroCTA: "Berechnung bestellen",
     heroCallButton: "Jetzt anrufen",
     heroTrustedBy: "Vertrauen von 150+ Kunden",
     heroRating: "5.0 Bewertung",
-    
+
     // Stats
     statsYears: "Jahre Erfahrung",
     statsProjects: "Abgeschlossene Projekte",
     statsClients: "Zufriedene Kunden",
     statsSupport: "Kundenbetreuung",
-    
+
     // Services
     servicesTitle: "Meine Dienstleistungen",
-    servicesSubtitle: "Professionelle Ingenieurdienstleistungen mit individuellem Ansatz für jedes Projekt",
+    servicesSubtitle:
+      "Professionelle Ingenieurdienstleistungen mit individuellem Ansatz für jedes Projekt",
     service1Title: "Festigkeitslehre",
-    service1Desc: "Berechnungen von Festigkeit, Verformungen, Spannungen in Konstruktionen und Mechanismen. Stabilitäts- und Zuverlässigkeitsanalyse.",
+    service1Desc:
+      "Berechnungen von Festigkeit, Verformungen, Spannungen in Konstruktionen und Mechanismen. Stabilitäts- und Zuverlässigkeitsanalyse.",
     service1Feature1: "Festigkeitsberechnungen",
     service1Feature2: "Verformungsanalyse",
     service1Feature3: "Zuverlässigkeitsbewertung",
     service2Title: "Thermodynamik",
-    service2Desc: "Thermische Berechnungen von Systemen, Analyse thermodynamischer Kreisprozesse, Berechnung von Wärmetauschern und Kraftwerken.",
+    service2Desc:
+      "Thermische Berechnungen von Systemen, Analyse thermodynamischer Kreisprozesse, Berechnung von Wärmetauschern und Kraftwerken.",
     service2Feature1: "Thermische Berechnungen",
     service2Feature2: "Zyklusanalyse",
     service2Feature3: "Geräteberechnung",
     service3Title: "Thermische Prozesse",
-    service3Desc: "Wärmeübertragungsmodellierung, Wärmedämmungsberechnung, Analyse der Temperaturbedingungen industrieller Anlagen.",
+    service3Desc:
+      "Wärmeübertragungsmodellierung, Wärmedämmungsberechnung, Analyse der Temperaturbedingungen industrieller Anlagen.",
     service3Feature1: "Wärmeübertragung",
     service3Feature2: "Wärmedämmung",
     service3Feature3: "Temperaturregime",
     service4Title: "Industrieberechnungen",
-    service4Desc: "Umfassende Ingenieurberechnungen für verschiedene Industriezweige. Optimierung technologischer Prozesse.",
+    service4Desc:
+      "Umfassende Ingenieurberechnungen für verschiedene Industriezweige. Optimierung technologischer Prozesse.",
     service4Feature1: "Umfassende Berechnungen",
     service4Feature2: "Optimierung",
     service4Feature3: "Technologische Prozesse",
     service5Title: "Technische Dokumentation",
-    service5Desc: "Erstellung technischer Berichte, Berechnungserläuterungen, Zeichnungen und Spezifikationen.",
+    service5Desc:
+      "Erstellung technischer Berichte, Berechnungserläuterungen, Zeichnungen und Spezifikationen.",
     service5Feature1: "Technische Berichte",
     service5Feature2: "Zeichnungen",
     service5Feature3: "Spezifikationen",
     service6Title: "Beratungen",
-    service6Desc: "Expertenberatungen zu Festigkeit, Wärmetechnik und Optimierung technischer Lösungen.",
+    service6Desc:
+      "Expertenberatungen zu Festigkeit, Wärmetechnik und Optimierung technischer Lösungen.",
     service6Feature1: "Expertenbewertung",
     service6Feature2: "Technische Betreuung",
     service6Feature3: "Lösungsoptimierung",
     serviceCTA: "Dienstleistung bestellen",
     serviceLearnMore: "Mehr erfahren",
     serviceNotFound: "Dienstleistung nicht gefunden?",
-    serviceNotFoundDesc: "Kontaktieren Sie mich und wir besprechen Ihr Projekt individuell",
+    serviceNotFoundDesc:
+      "Kontaktieren Sie mich und wir besprechen Ihr Projekt individuell",
     serviceContactMe: "Kontaktieren Sie mich",
     serviceCallMe: "Jetzt anrufen",
-    
+
     // Calculators
     calcTitle: "Ingenieurrechner",
     calcSubtitle: "Kostenlose Online-Rechner für schnelle Berechnungen",
@@ -632,7 +712,7 @@ export const translations = {
     calcCat2: "Thermodynamik",
     calcCat3: "Hydraulik",
     calcCat4: "Energie",
-    
+
     // Projects
     projectsTitle: "Abgeschlossene Projekte",
     projectsSubtitle: "Beispiele erfolgreich umgesetzter technischer Lösungen",
@@ -641,21 +721,25 @@ export const translations = {
     project3Title: "Energieeffizienz",
     projectViewDetails: "Details anzeigen",
     projectHaveProject: "Haben Sie ein ähnliches Projekt?",
-    projectHaveProjectDesc: "Lassen Sie uns Ihre Aufgabe besprechen und die optimale Lösung finden",
+    projectHaveProjectDesc:
+      "Lassen Sie uns Ihre Aufgabe besprechen und die optimale Lösung finden",
     projectDiscuss: "Projekt besprechen",
     projectOrderSimilar: "Ähnliches Projekt bestellen",
-    
+
     // Contact
     contactTitle: "Kontaktieren Sie mich",
-    
+
     // About
     aboutTitle: "Über mich",
     aboutSubtitle: "Ingenieurberater mit langjähriger Erfahrung",
     aboutName: "Viktor Sukaylo",
     aboutRole: "Ingenieurberater",
-    aboutBio1: "Professioneller Ingenieur mit über 10 Jahren Erfahrung in Industrieberechnungen, Thermodynamik und Festigkeitslehre.",
-    aboutBio2: "Ich spezialisiere mich auf komplexe ingenieurtechnische Berechnungen für Industrieunternehmen, Energieaudits und Optimierung technologischer Prozesse.",
-    aboutBio3: "Ich habe an Projekten für führende ukrainische Unternehmen gearbeitet und konzentriere mich immer auf praktische Ergebnisse und wirtschaftliche Effizienz der Lösungen.",
+    aboutBio1:
+      "Professioneller Ingenieur mit über 10 Jahren Erfahrung in Industrieberechnungen, Thermodynamik und Festigkeitslehre.",
+    aboutBio2:
+      "Ich spezialisiere mich auf komplexe ingenieurtechnische Berechnungen für Industrieunternehmen, Energieaudits und Optimierung technologischer Prozesse.",
+    aboutBio3:
+      "Ich habe an Projekten für führende ukrainische Unternehmen gearbeitet und konzentriere mich immer auf praktische Ergebnisse und wirtschaftliche Effizienz der Lösungen.",
     aboutEducationTitle: "Bildung und Qualifikationen",
     aboutEducation1: "Master der Ingenieurwissenschaften",
     aboutEducation2: "Zertifizierter Energieauditor",
@@ -668,37 +752,44 @@ export const translations = {
     aboutExpertise5: "Technische Dokumentation",
     aboutExpertise6: "Projektbegleitung",
     aboutCTA: "Projekt besprechen",
-    
+
     // Testimonials
     testimonialsTitle: "Kundenbewertungen",
     testimonialsSubtitle: "Was sie über meine Arbeit sagen",
     testimonial1Name: "Alexander Petrenko",
     testimonial1Role: "Direktor",
     testimonial1Company: "TechnoProm GmbH",
-    testimonial1Text: "Viktor führte komplexe Metallkonstruktionsberechnungen für unser Werk durch. Professioneller Ansatz, präzise Berechnungen und pünktliche Projektabgabe. Ich empfehle ihn als zuverlässigen Spezialisten!",
+    testimonial1Text:
+      "Viktor führte komplexe Metallkonstruktionsberechnungen für unser Werk durch. Professioneller Ansatz, präzise Berechnungen und pünktliche Projektabgabe. Ich empfehle ihn als zuverlässigen Spezialisten!",
     testimonial2Name: "Marina Kovalenko",
     testimonial2Role: "Chefingenieur",
     testimonial2Company: "EnergieBau",
-    testimonial2Text: "Wir haben ein Energieaudit der Produktion bestellt. Viktor führte eine detaillierte Analyse durch und schlug konkrete Lösungen vor. Dank seiner Empfehlungen konnten wir die Heizkosten um 30% senken. Sehr zufrieden!",
+    testimonial2Text:
+      "Wir haben ein Energieaudit der Produktion bestellt. Viktor führte eine detaillierte Analyse durch und schlug konkrete Lösungen vor. Dank seiner Empfehlungen konnten wir die Heizkosten um 30% senken. Sehr zufrieden!",
     testimonial3Name: "Dmitry Sidorenko",
     testimonial3Role: "Technischer Direktor",
     testimonial3Company: "ChemProm Ukraine",
-    testimonial3Text: "Entwicklung eines Wärmetauschers für unsere Werkstatt. Viktor berücksichtigte alle technischen Anforderungen und wählte die optimale Lösung. Die Ausrüstung funktioniert seit einem Jahr einwandfrei. Ein echter Profi!",
+    testimonial3Text:
+      "Entwicklung eines Wärmetauschers für unsere Werkstatt. Viktor berücksichtigte alle technischen Anforderungen und wählte die optimale Lösung. Die Ausrüstung funktioniert seit einem Jahr einwandfrei. Ein echter Profi!",
     testimonial4Name: "Irina Melnyk",
     testimonial4Role: "Projektmanager",
     testimonial4Company: "BauEngineering",
-    testimonial4Text: "Die Zusammenarbeit mit Viktor bedeutet immer Qualität und Verantwortung. Er führt Berechnungen schnell durch, liefert detaillierte Dokumentation und ist immer erreichbar. Wir arbeiten seit 3 Jahren zusammen!",
-    
+    testimonial4Text:
+      "Die Zusammenarbeit mit Viktor bedeutet immer Qualität und Verantwortung. Er führt Berechnungen schnell durch, liefert detaillierte Dokumentation und ist immer erreichbar. Wir arbeiten seit 3 Jahren zusammen!",
+
     // Contact
     contactTitle: "Kontaktieren Sie mich",
-    contactSubtitle: "Bereit, Ihre Fragen zu beantworten und das Projekt zu besprechen",
+    contactSubtitle:
+      "Bereit, Ihre Fragen zu beantworten und das Projekt zu besprechen",
     contactName: "Ihr Name",
     contactEmail: "E-Mail",
     contactPhone: "Telefon (optional)",
     contactMessage: "Beschreiben Sie Ihr Projekt",
     contactSubmit: "Nachricht senden",
-    contactSuccess: "Danke! Ihre Nachricht wurde gesendet. Ich werde mich bald bei Ihnen melden.",
-    contactError: "Sendefehler. Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt.",
+    contactSuccess:
+      "Danke! Ihre Nachricht wurde gesendet. Ich werde mich bald bei Ihnen melden.",
+    contactError:
+      "Sendefehler. Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt.",
     contactOr: "Oder kontaktieren Sie mich direkt",
     contactQuickTitle: "Schnellkontakt",
     contactQuickPhone: "+380 XX XXX XX XX",
@@ -712,18 +803,18 @@ export const translations = {
     contactPlaceholderPhone: "+380 50 123 45 67",
     contactPlaceholderMessage: "Erzählen Sie uns von Ihrem Projekt...",
     contactTimezone: "Kiewer Zeit (UTC+2)",
-    
+
     // Testimonials Stats
     testimonialsStatClients: "Zufriedene Kunden",
     testimonialsStatRating: "Durchschnittliche Bewertung",
     testimonialsStatRecommend: "Empfehlen anderen",
-    
+
     // Quick Contact
     quickContactTitle: "Schnellkontakt",
     quickContactPhone: "+380 XX XXX XX XX",
     quickContactEmail: "viktor@example.com",
     quickContactTelegram: "@viktorsukaylo",
-    
+
     // Common
     calculate: "Berechnen",
     result: "Ergebnis:",
@@ -731,7 +822,7 @@ export const translations = {
     readMore: "Weiterlesen",
     download: "Herunterladen",
     share: "Teilen",
-    
+
     // Footer
     footer: "Ingenieurberechnungen. Alle Rechte vorbehalten.",
     footerAbout: "Über mich",
@@ -744,19 +835,23 @@ export const translations = {
     footerQuickLinks: "Schnellzugriff",
     footerContactInfo: "Kontakt",
     footerSocial: "Soziale Medien",
-    footerDescription: "Professionelle Ingenieurberechnungen und Beratung. Festigkeitslehre, Thermodynamik, Hydraulik, Energie.",
+    footerDescription:
+      "Professionelle Ingenieurberechnungen und Beratung. Festigkeitslehre, Thermodynamik, Hydraulik, Energie.",
     footerRights: "Alle Rechte vorbehalten",
+    footerSpan1: "Entwickelt mit",
+    footerSpan2: "für Ingenieure",
     
     // Privacy & Terms (shorter versions)
     privacyTitle: "Datenschutzrichtlinie",
-    privacyIntro: "Diese Datenschutzrichtlinie beschreibt, wie wir Ihre persönlichen Daten erfassen, verwenden und schützen.",
+    privacyIntro:
+      "Diese Datenschutzrichtlinie beschreibt, wie wir Ihre persönlichen Daten erfassen, verwenden und schützen.",
     termsTitle: "Nutzungsbedingungen",
-    termsIntro: "Durch die Nutzung dieser Website und der Ingenieurrechner stimmen Sie den folgenden Bedingungen zu.",
+    termsIntro:
+      "Durch die Nutzung dieser Website und der Ingenieurrechner stimmen Sie den folgenden Bedingungen zu.",
     privacyContact: "Bei Datenschutzfragen kontaktieren:",
     termsContact: "Bei Nutzungsfragen kontaktieren:",
   },
 };
-
 
 // Add Privacy Policy sections for UK/RU
 translations.uk.privacySection1Title = "Збір інформації";

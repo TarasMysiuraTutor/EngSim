@@ -127,24 +127,24 @@ export const videosData = [
     // 👇 НОВИЙ ФУНКЦІОНАЛ: Інструкції для завантаження
     instructions: {
       uk: {
-        url: "https://drive.google.com/file/d/1rM4vTqSmSlZ1OcYmpTlMBQYk3m9QgmAT/view?usp=sharing",
-        filename: "Tutorial 01 Basic Pipe Flow uk.pdf",
-        size: "2.5 MB",
+        url: "https://drive.google.com/file/d/155pvCLCC-tFWps0CahQ2UI4J2FI4C1NZ/view?usp=sharing",
+        filename: "Tutorial 02 Interconnected Tanks uk.pdf",
+        size: "988 kB",
       },
       ru: {
-        url: "https://drive.google.com/file/d/1k3aOPLrGn7D7air6L81X_gdHSduN1na0/view?usp=sharing",
-        filename: "Tutorial 01 Basic Pipe Flow ru.pdf",
-        size: "2.5 MB",
+        url: "https://drive.google.com/file/d/1nh-G_uY3NjhV52fn5vzmDz1Xo-aWPKib/view?usp=sharing",
+        filename: "Tutorial 02 Interconnected Tanks ru.pdf",
+        size: "993 kB",
       },
       en: {
-        url: "https://drive.google.com/file/d/1wqzDTj-V5InOmLXCR6f8kNOmDlRUYakJ/view?usp=sharing",
-        filename: "Tutorial 01 Basic Pipe Flow en.pdf",
-        size: "1.1 MB",
+        url: "https://drive.google.com/file/d/1hSEsqPQEVkfRdJX8KGHpIQwaIlyUVHMP/view?usp=sharing",
+        filename: "Tutorial 02 Interconnected Tanks en.pdf",
+        size: "774 kB",
       },
       de: {
-        url: "https://drive.google.com/file/d/108p5mPCYgttF-EG74-exHxVJ15qZTlHR/view?usp=sharing",
-        filename: "Tutorial 01 Basic Pipe Flow de.pdf",
-        size: "2.5 MB",
+        url: "https://drive.google.com/file/d/1zUJzMnFfTKTP9HLbmS_oLO8yruZpqD4B/view?usp=sharing",
+        filename: "Tutorial 02 Interconnected Tanks de.pdf",
+        size: "951 kB",
       },
     },
 
@@ -176,89 +176,89 @@ export const videosData = [
       },
     ],
   },
-  // {
-  //   id: 3,
-  //   title: {
-  //     uk: "Проектування складної деталі в SolidWorks",
-  //     ru: "Проектирование сложной детали в SolidWorks",
-  //     en: "Complex Part Design in SolidWorks",
-  //     de: "Komplexe Teilegestaltung in SolidWorks",
-  //   },
-  //   description: {
-  //     uk: "Покрокове створення складної інженерної деталі з використанням основних інструментів SolidWorks",
-  //     ru: "Пошаговое создание сложной инженерной детали с использованием основных инструментов SolidWorks",
-  //     en: "Step-by-step creation of a complex engineering part using core SolidWorks tools",
-  //     de: "Schritt-für-Schritt-Erstellung eines komplexen technischen Teils mit SolidWorks",
-  //   },
-  //   youtubeId: "D7DFO0kUESI",
-  //   category: "solidworks",
-  //   categoryName: {
-  //     uk: "SolidWorks",
-  //     ru: "SolidWorks",
-  //     en: "SolidWorks",
-  //     de: "SolidWorks",
-  //   },
-  //   duration: "15:30",
-  //   date: "2024-01-15",
+  {
+    id: 3,
+    title: {
+      uk: "Проектування складної деталі в SolidWorks",
+      ru: "Проектирование сложной детали в SolidWorks",
+      en: "Complex Part Design in SolidWorks",
+      de: "Komplexe Teilegestaltung in SolidWorks",
+    },
+    description: {
+      uk: "Покрокове створення складної інженерної деталі з використанням основних інструментів SolidWorks",
+      ru: "Пошаговое создание сложной инженерной детали с использованием основных инструментов SolidWorks",
+      en: "Step-by-step creation of a complex engineering part using core SolidWorks tools",
+      de: "Schritt-für-Schritt-Erstellung eines komplexen technischen Teils mit SolidWorks",
+    },
+    youtubeId: "D7DFO0kUESI",
+    category: "solidworks",
+    categoryName: {
+      uk: "SolidWorks",
+      ru: "SolidWorks",
+      en: "SolidWorks",
+      de: "SolidWorks",
+    },
+    duration: "15:30",
+    date: "2024-01-15",
 
-  //   // 👇 НОВИЙ ФУНКЦІОНАЛ: Thumbnail з Cloudinary
-  //   thumbnail:
-  //     "https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/v1234567890/videos/solidworks-part-design.jpg",
-  //   // АБО якщо завантажили локально в проект:
-  //   // thumbnail: "/images/thumbnails/video1.jpg",
+    // 👇 НОВИЙ ФУНКЦІОНАЛ: Thumbnail з Cloudinary
+    thumbnail:
+      "https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/v1234567890/videos/solidworks-part-design.jpg",
+    // АБО якщо завантажили локально в проект:
+    // thumbnail: "/images/thumbnails/video1.jpg",
 
-  //   // 👇 НОВИЙ ФУНКЦІОНАЛ: Інструкції для завантаження
-  //   instructions: {
-  //     uk: {
-  //       url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-uk.pdf",
-  //       filename: "Інструкція_SolidWorks_Деталь.pdf",
-  //       size: "2.5 MB",
-  //     },
-  //     ru: {
-  //       url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-ru.pdf",
-  //       filename: "Инструкция_SolidWorks_Деталь.pdf",
-  //       size: "2.5 MB",
-  //     },
-  //     en: {
-  //       url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-en.pdf",
-  //       filename: "SolidWorks_Tutorial_Part.pdf",
-  //       size: "2.5 MB",
-  //     },
-  //     de: {
-  //       url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-de.pdf",
-  //       filename: "SolidWorks_Anleitung_Teil.pdf",
-  //       size: "2.5 MB",
-  //     },
-  //   },
+    // 👇 НОВИЙ ФУНКЦІОНАЛ: Інструкції для завантаження
+    instructions: {
+      uk: {
+        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-uk.pdf",
+        filename: "Інструкція_SolidWorks_Деталь.pdf",
+        size: "2.5 MB",
+      },
+      ru: {
+        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-ru.pdf",
+        filename: "Инструкция_SolidWorks_Деталь.pdf",
+        size: "2.5 MB",
+      },
+      en: {
+        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-en.pdf",
+        filename: "SolidWorks_Tutorial_Part.pdf",
+        size: "2.5 MB",
+      },
+      de: {
+        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-de.pdf",
+        filename: "SolidWorks_Anleitung_Teil.pdf",
+        size: "2.5 MB",
+      },
+    },
 
-  //   // 👇 ДОДАТКОВІ ФАЙЛИ (опціонально)
-  //   resources: [
-  //     {
-  //       type: "model", // model, drawing, archive
-  //       name: {
-  //         uk: "3D модель деталі",
-  //         ru: "3D модель детали",
-  //         en: "3D part model",
-  //         de: "3D-Teilmodell",
-  //       },
-  //       url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/models/part.SLDPRT",
-  //       filename: "complex_part.SLDPRT",
-  //       size: "1.2 MB",
-  //     },
-  //     {
-  //       type: "drawing",
-  //       name: {
-  //         uk: "Креслення деталі",
-  //         ru: "Чертеж детали",
-  //         en: "Part drawing",
-  //         de: "Teilezeichnung",
-  //       },
-  //       url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/drawings/part-drawing.PDF",
-  //       filename: "part_drawing.PDF",
-  //       size: "850 KB",
-  //     },
-  //   ],
-  // },
+    // 👇 ДОДАТКОВІ ФАЙЛИ (опціонально)
+    resources: [
+      {
+        type: "model", // model, drawing, archive
+        name: {
+          uk: "3D модель деталі",
+          ru: "3D модель детали",
+          en: "3D part model",
+          de: "3D-Teilmodell",
+        },
+        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/models/part.SLDPRT",
+        filename: "complex_part.SLDPRT",
+        size: "1.2 MB",
+      },
+      {
+        type: "drawing",
+        name: {
+          uk: "Креслення деталі",
+          ru: "Чертеж детали",
+          en: "Part drawing",
+          de: "Teilezeichnung",
+        },
+        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/drawings/part-drawing.PDF",
+        filename: "part_drawing.PDF",
+        size: "850 KB",
+      },
+    ],
+  },
   // {
   //   id: 4,
   //   title: {

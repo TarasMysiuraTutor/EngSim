@@ -1,22 +1,55 @@
+// src/components/Footer.jsx
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import LegalModal from './LegalModal';
 
 const Footer = ({ t, currentLang }) => {
-  const [modalType, setModalType] = useState(null); // 'privacy' or 'terms'
-  
+  const [modalType, setModalType] = useState(null);
+  const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
 
+  // Функція для навігації на головну сторінку з якорем
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    
+    const baseUrl = import.meta.env.BASE_URL;
+    const currentPath = window.location.pathname;
+    
+    // Перевіряємо чи ми на головній сторінці
+    const isHomePage = currentPath === baseUrl || 
+                       currentPath === `${baseUrl}/` || 
+                       currentPath === `${baseUrl}index.html`;
+    
+    if (!isHomePage) {
+      // Якщо не на головній - переходимо через navigate
+      navigate(`/#${sectionId}`);
+      // Після переходу скролимо (з затримкою для завантаження)
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      // Якщо на головній - просто скролимо
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+
   const navigationLinks = [
-    { label: t.footerAbout, href: '#about' },
-    { label: t.footerServices, href: '#services' },
-    { label: t.footerProjects, href: '#projects' },
-    { label: t.footerCalculators, href: '#calculators' },
-    { label: t.footerContact, href: '#contact' },
+    { label: t.footerAbout || 'About', href: 'about' },
+    { label: t.footerServices || 'Services', href: 'services' },
+    { label: t.footerProjects || 'Projects', href: 'projects' },
+    { label: t.footerCalculators || 'Calculators', href: 'calculators' },
+    { label: t.footerContact || 'Contact', href: 'contact' },
   ];
 
   const legalLinks = [
-    { label: t.footerPrivacy, onClick: () => setModalType('privacy') },
-    { label: t.footerTerms, onClick: () => setModalType('terms') },
+    { label: t.footerPrivacy || 'Privacy Policy', onClick: () => setModalType('privacy') },
+    { label: t.footerTerms || 'Terms of Service', onClick: () => setModalType('terms') },
   ];
 
   const contactInfo = [
@@ -26,7 +59,7 @@ const Footer = ({ t, currentLang }) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
         </svg>
       ),
-      text: t.contactQuickPhone,
+      text: t.contactQuickPhone || '+380XXXXXXXXX',
       href: 'tel:+380XXXXXXXXX'
     },
     {
@@ -35,8 +68,8 @@ const Footer = ({ t, currentLang }) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      text: t.contactQuickEmail,
-      href: 'mailto:viktor.sukaylo@example.com'
+      text: t.contactQuickEmail || 'contact@example.com',
+      href: 'mailto:contact@example.com'
     },
   ];
 
@@ -82,10 +115,10 @@ const Footer = ({ t, currentLang }) => {
           {/* About Column */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-blue-400 mb-4">
-              {t.logo}
+              {t.logo || 'EngSim'}
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              {t.footerDescription}
+              {t.footerDescription || 'Professional engineering calculators and educational materials'}
             </p>
             
             {/* Social Links */}
@@ -108,14 +141,15 @@ const Footer = ({ t, currentLang }) => {
           {/* Quick Links Column */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">
-              {t.footerQuickLinks}
+              {t.footerQuickLinks || 'Quick Links'}
             </h4>
             <ul className="space-y-2">
               {navigationLinks.map((link, index) => (
                 <li key={index}>
                   <a
-                    href={link.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center group"
+                    href={`#${link.href}`}
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center group cursor-pointer"
                   >
                     <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                     {link.label}
@@ -128,7 +162,7 @@ const Footer = ({ t, currentLang }) => {
           {/* Contact Column */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">
-              {t.footerContactInfo}
+              {t.footerContactInfo || 'Contact Info'}
             </h4>
             <ul className="space-y-3">
               {contactInfo.map((contact, index) => (
@@ -148,7 +182,7 @@ const Footer = ({ t, currentLang }) => {
                 <svg className="w-5 h-5 flex-shrink-0 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span>{t.contactAvailable}</span>
+                <span>{t.contactAvailable || 'Available 24/7'}</span>
               </li>
             </ul>
           </div>
@@ -156,7 +190,7 @@ const Footer = ({ t, currentLang }) => {
           {/* Legal Column */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">
-              {t.footerQuickLinks}
+              {t.footerLegal || 'Legal'}
             </h4>
             <ul className="space-y-2">
               {legalLinks.map((link, index) => (
@@ -176,9 +210,10 @@ const Footer = ({ t, currentLang }) => {
             <div className="mt-6">
               <a
                 href="#contact"
-                className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg font-semibold text-white text-sm hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1"
+                onClick={(e) => scrollToSection(e, 'contact')}
+                className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg font-semibold text-white text-sm hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
               >
-                {t.contactTitle}
+                {t.contactTitle || 'Contact Us'}
               </a>
             </div>
           </div>
@@ -188,27 +223,29 @@ const Footer = ({ t, currentLang }) => {
         <div className="pt-8 border-t border-blue-500/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
             <p>
-              © {currentYear} {t.aboutName}. {t.footerRights}
+              © {currentYear} {t.aboutName || 'EngSim'}. {t.footerRights || 'All rights reserved.'}
             </p>
             <p className="flex items-center gap-2">
-              <span>Розроблено з</span>
+              <span>{t.footerSpan1 || 'Made with'}</span>
               <svg className="w-4 h-4 text-red-500 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
               </svg>
-              <span>для інженерів</span>
+              <span>{t.footerSpan2 || 'for engineers'}</span>
             </p>
           </div>
         </div>
       </div>
       
       {/* Legal Modal */}
-      <LegalModal 
-        isOpen={modalType !== null}
-        onClose={() => setModalType(null)}
-        type={modalType}
-        t={t}
-        currentLang={currentLang}
-      />
+      {modalType && (
+        <LegalModal 
+          isOpen={modalType !== null}
+          onClose={() => setModalType(null)}
+          type={modalType}
+          t={t}
+          currentLang={currentLang}
+        />
+      )}
     </footer>
   );
 };

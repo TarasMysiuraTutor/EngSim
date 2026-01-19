@@ -1,44 +1,35 @@
-// src/App.jsx - ОНОВЛЕНИЙ З РОУТОМ ДЛЯ ВІДЕО
+// src/App.jsx - УНІФІКОВАНА ВЕРСІЯ БЕЗ МОДАЛОК
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
-import CalculatorModal from "./components/CalculatorModal";
 import { translations } from "./data/translations";
-import { calculators } from "./data/calculators";
 
 // ІМПОРТ СТОРІНОК
 import HomePage from "./pages/HomePage";
 import CalculatorsPage from "./pages/CalculatorsPage";
 import CalculatorDetail from "./pages/CalculatorDetail";
-import VideosPage from "./pages/VideosPage"; // 👈 НОВИЙ ІМПОРТ
+import VideosPage from "./pages/VideosPage";
+import AdminPage from "./pages/AdminPage";
 
-// ГОЛОВНИЙ КОМПОНЕНТ APP З РОУТИНГОМ
+// ГОЛОВНИЙ КОМПОНЕНТ APP
 function App() {
+  // Отримуємо збережену мову або встановлюємо EN за замовчуванням
   const [currentLang, setCurrentLang] = useState(() => {
     return localStorage.getItem("preferredLang") || "en";
   });
-  const [modalOpen, setModalOpen] = useState(false);
-  const [currentCalc, setCurrentCalc] = useState(null);
 
+  // Зберігаємо мову при зміні
   useEffect(() => {
     localStorage.setItem("preferredLang", currentLang);
   }, [currentLang]);
 
-  const openCalculator = (calcKey) => {
-    setCurrentCalc(calcKey);
-    setModalOpen(true);
-  };
-
-  const closeCalculator = () => {
-    setModalOpen(false);
-    setCurrentCalc(null);
-  };
-
+  // Визначаємо basename автоматично з Vite конфігурації
   const basename = import.meta.env.BASE_URL;
 
   return (
     <BrowserRouter basename={basename}>
       <div className="App">
+        {/* Navbar на всіх сторінках */}
         <Navbar
           currentLang={currentLang}
           setCurrentLang={setCurrentLang}
@@ -52,7 +43,6 @@ function App() {
             element={
               <HomePage 
                 currentLang={currentLang}
-                openCalculator={openCalculator}
               />
             } 
           />
@@ -81,7 +71,7 @@ function App() {
             } 
           />
 
-          {/* 👇 НОВА СТОРІНКА З ВІДЕО */}
+          {/* СТОРІНКА З ВІДЕО */}
           <Route 
             path="/videos" 
             element={
@@ -92,18 +82,16 @@ function App() {
               />
             } 
           />
-        </Routes>
 
-        {/* МОДАЛЬНЕ ВІКНО (працює на головній сторінці) */}
-        {modalOpen && currentCalc && (
-          <CalculatorModal
-            currentCalc={currentCalc}
-            currentLang={currentLang}
-            calculators={calculators}
-            t={translations[currentLang]}
-            onClose={closeCalculator}
-          />
-        )}
+          {/* 👇 НОВИЙ МАРШРУТ - АДМІН ПАНЕЛЬ */}
+          <Route path="/admin" element={
+            <AdminPage 
+              currentLang={currentLang}
+              setCurrentLang={setCurrentLang}
+              t={translations[currentLang]}
+            />
+          } />
+        </Routes>
       </div>
     </BrowserRouter>
   );
