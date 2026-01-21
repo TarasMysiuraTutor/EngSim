@@ -6,7 +6,12 @@ export const translations = {
     navCalc: "Калькулятори",
     navProjects: "Проекти",
     navContact: "Контакти",
-
+    navCompany: "Компанія",
+    navAbout: "Про мене",
+    navTestimonials: "Відгуки клієнтів",
+    navTools: "Інструменти",
+    navCalc: "Калькулятори",
+    navHelp: "Допомога",
     // Hero Section
     heroLabel: "Професійні інженерні послуги",
     heroPreTitle: "Вітаю, я Віктор, інженер-розрахунковець.",
@@ -208,6 +213,36 @@ export const translations = {
       "Професійні інженерні розрахунки та консультації. Опір матеріалів, термодинаміка, гідравліка, енергетика.",
     footerSpan1: "Розроблено з",
     footerSpan2: "для інженерів",
+
+    navReference: "Довідка",
+
+    adminTitle: "Адмін-панель",
+    adminSubtitle: "Керування відео, послугами та проектами. Генератори контенту для швидкого наповнення даних",
+    adminVideoGenerator: "Генератор Відео",
+    adminTestimonialGenerator: "Генератор відгуків",
+    adminServiceGenerator: "Генератор Послуг",
+    adminProjectGenerator: "Генератор Проектів",
+    adminBasicInfo: "Основна інформація",
+    adminVideoId: "ID відео",
+    adminYoutubeId: "YouTube ID",
+    adminCategory: "Категорія",
+    adminDuration: "Тривалість",
+    adminDate: "Дата",
+    adminTitles: "Назви відео",
+    adminDescriptions: "Описи",
+    adminThumbnails: "Thumbnails",
+    adminInstructions: "Інструкції (PDF)",
+    adminResources: "Додаткові ресурси",
+    adminAddResource: "Додати ресурс",
+    adminResource: "Ресурс",
+    adminType: "Тип",
+    adminFilename: "Filename",
+    adminSize: "Size",
+    adminName: "Назва",
+    adminGeneratedCode: "Згенерований код",
+    adminCopy: "Копіювати",
+    adminCopied: "Скопійовано!",
+    adminCodeHint: "Скопіюй цей код та вставте його в масив",
   },
 
   ru: {
@@ -217,6 +252,12 @@ export const translations = {
     navCalc: "Калькуляторы",
     navProjects: "Проекты",
     navContact: "Контакты",
+    navCompany: "Компания",
+    navAbout: "Обо мне",
+    navTestimonials: "Отзывы клиентов",
+    navTools: "Инструменты",
+    navCalc: "Калькуляторы",
+    navHelp: "Помощь",
 
     // Hero Section
     heroLabel: "Профессиональные инженерные услуги",
@@ -417,6 +458,36 @@ export const translations = {
       "Профессиональные инженерные расчеты и консультации. Сопротивление материалов, термодинамика, гидравлика, энергетика.",
     footerSpan1: "Разработано с",
     footerSpan2: "для инженеров",
+
+    navReference: "Справочник",
+
+    adminTitle: "Админ-панель",
+    adminSubtitle: "Управление видео, услугами и проектами. Генераторы контента для быстрого наполнения данных",
+    adminVideoGenerator: "Генератор Видео",
+    adminTestimonialGenerator: "Генератор отзывов",
+    adminServiceGenerator: "Генератор Услуг",
+    adminProjectGenerator: "Генератор Проектов",
+    adminBasicInfo: "Основная информация",
+    adminVideoId: "ID видео",
+    adminYoutubeId: "YouTube ID",
+    adminCategory: "Категория",
+    adminDuration: "Продолжительность",
+    adminDate: "Дата",
+    adminTitles: "Названия видео",
+    adminDescriptions: "Описания",
+    adminThumbnails: "Thumbnails",
+    adminInstructions: "Инструкции (PDF)",
+    adminResources: "Дополнительные ресурсы",
+    adminAddResource: "Добавить ресурс",
+    adminResource: "Ресурс",
+    adminType: "Тип",
+    adminFilename: "Filename",
+    adminSize: "Size",
+    adminName: "Название",
+    adminGeneratedCode: "Сгенерированный код",
+    adminCopy: "Копировать",
+    adminCopied: "Скопировано!",
+    adminCodeHint: "Скопируйте этот код и вставьте его в массив",
   },
 
   en: {
@@ -426,6 +497,12 @@ export const translations = {
     navCalc: "Calculators",
     navProjects: "Projects",
     navContact: "Contact",
+    navCompany: "Company",
+    navAbout: "About",
+    navTestimonials: "Testimonials",
+    navTools: "Tools",
+    navCalc: "Calculators",
+    navHelp: "Help",
 
     // Hero Section
     heroLabel: "Professional Engineering Services",
@@ -628,6 +705,36 @@ export const translations = {
       "Professional engineering calculations and consulting. Strength of materials, thermodynamics, hydraulics, energy.",
     footerSpan1: "Developed with",
     footerSpan2: "for engineers",
+
+    navReference: "Reference",
+
+    adminTitle: "Admin Panel",
+    adminSubtitle: "Manage videos, services, and projects. Content generators for quick data population",
+    adminVideoGenerator: "Video Generator",
+    adminTestimonialGenerator: "Testimonial Generator",
+    adminServiceGenerator: "Service Generator",
+    adminProjectGenerator: "Project Generator",
+    adminBasicInfo: "Basic Information",
+    adminVideoId: "Video ID",
+    adminYoutubeId: "YouTube ID",
+    adminCategory: "Category",
+    adminDuration: "Duration",
+    adminDate: "Date",
+    adminTitles: "Video Titles",
+    adminDescriptions: "Descriptions",
+    adminThumbnails: "Thumbnails",
+    adminInstructions: "Instructions (PDF)",
+    adminResources: "Additional Resources",
+    adminAddResource: "Add Resource",
+    adminResource: "Resource",
+    adminType: "Type",
+    adminFilename: "Filename",
+    adminSize: "Size",
+    adminName: "Name",
+    adminGeneratedCode: "Generated Code",
+    adminCopy: "Copy",
+    adminCopied: "Copied!",
+    adminCodeHint: "Copy this code and paste it into the array",
   },
 
   de: {
@@ -637,6 +744,12 @@ export const translations = {
     navCalc: "Rechner",
     navProjects: "Projekte",
     navContact: "Kontakt",
+    navCompany: "Unternehmen",
+    navAbout: "Über mich",
+    navTestimonials: "Kundenbewertungen",
+    navTools: "Werkzeuge",
+    navCalc: "Rechner",
+    navHelp: "Hilfe",
 
     // Hero Section
     heroLabel: "Professionelle Ingenieurdienstleistungen",
@@ -840,7 +953,38 @@ export const translations = {
     footerRights: "Alle Rechte vorbehalten",
     footerSpan1: "Entwickelt mit",
     footerSpan2: "für Ingenieure",
-    
+
+    navReference: "Referenz",
+
+    adminTitle: "Admin-Panel",
+    adminSubtitle: "Verwaltung von Videos, Dienstleistungen und Projekten. Inhaltsersteller für schnelle Datenbefüllung",
+    adminVideoGenerator: "Video-Generator",
+    adminTestimonialGenerator: "Bewertungs-Generator",
+    adminServiceGenerator: "Service-Generator",
+    adminProjectGenerator: "Projekt-Generator",
+    adminBasicInfo: "Grundinformationen",
+    adminVideoId: "Video-ID",
+    adminYoutubeId: "YouTube-ID",
+    adminCategory: "Kategorie",
+    adminDuration: "Dauer",
+    adminDate: "Datum",
+    adminTitles: "Video-Titel",
+    adminDescriptions: "Beschreibungen",
+    adminThumbnails: "Thumbnails",
+    adminInstructions: "Anleitungen (PDF)",
+    adminResources: "Zusätzliche Ressourcen",
+    adminAddResource: "Ressource hinzufügen",
+    adminResource: "Ressource",
+    adminType: "Typ",
+    adminFilename: "Dateiname",
+    adminSize: "Größe",
+    adminName: "Name",
+    adminGeneratedCode: "Generierter Code",
+    adminCopy: "Kopieren",
+    adminCopied: "Kopiert!",
+    adminCodeHint:
+      "Kopieren Sie diesen Code und fügen Sie ihn in das Array ein",
+
     // Privacy & Terms (shorter versions)
     privacyTitle: "Datenschutzrichtlinie",
     privacyIntro:
@@ -852,6 +996,13 @@ export const translations = {
     termsContact: "Bei Nutzungsfragen kontaktieren:",
   },
 };
+
+// ============================================
+// UKRAINIAN (translations.uk)
+// ============================================
+
+// Privacy Policy sections (Ukrainian)
+// Add to translations.uk:
 
 // Add Privacy Policy sections for UK/RU
 translations.uk.privacySection1Title = "Збір інформації";
@@ -950,6 +1101,13 @@ translations.uk.termsSection6Text = `Ми залишаємо за собою п�
 • Оновлена дата буде вказана внизу документа
 • Продовження використання сайту означає прийняття нових умов
 • Рекомендуємо періодично перевіряти цю сторінку`;
+
+// ============================================
+// RUSSIAN (translations.ru)
+// ============================================
+
+// Privacy Policy sections (Russian)
+// Add to translations.ru:
 
 // Russian translations
 translations.ru.privacySection1Title = "Сбор информации";
@@ -1050,3 +1208,204 @@ translations.ru.termsSection6Text = `Мы оставляем за собой п�
 • Рекомендуем периодически проверять эту страницу`;
 
 // export { translations };
+
+// ============================================
+// ENGLISH (translations.en)
+// ============================================
+
+// Privacy Policy sections
+((translations.en.privacyTitle = "Privacy Policy"),
+  (translations.en.privacyIntro =
+    "This Privacy Policy describes how we collect, use, and protect your personal information when you use our website and engineering calculators."),
+  (translations.en.privacyContact = "For privacy questions, contact:"),
+  (translations.en.privacySection1Title = "Information Collection"),
+  (translations.en.privacySection1Text = `We collect only the information you voluntarily provide through the contact form on our website:
+• Name and surname
+• Email address
+• Phone number (if you choose to provide it)
+• Message text describing your project
+
+This information is collected solely to contact you and discuss your project.`),
+  (translations.en.privacySection2Title = "Use of Information"),
+  (translations.en.privacySection2Text = `Your personal information is used exclusively for:
+• Responding to your inquiries and questions
+• Providing professional consultations
+• Preparing commercial proposals
+• Performing ordered work
+
+We never use your information for spam mailings or transfer to third parties without your consent.`),
+  (translations.en.privacySection3Title = "Data Protection"),
+  (translations.en.privacySection3Text = `We take all necessary measures to protect your personal information:
+• Use secure HTTPS connection
+• Do not store credit card data
+• Limit access to personal data
+• Regularly update security systems
+
+Your data is stored only as long as necessary to complete the order and provide services.`),
+  (translations.en.privacySection4Title = "Your Rights"),
+  (translations.en.privacySection4Text = `Under applicable law, you have the right to:
+• Receive information about what data we store about you
+• Request correction of inaccurate data
+• Request deletion of your personal data
+• Withdraw consent for data processing at any time
+
+To exercise these rights, please contact us through the contact form or email.`),
+  (translations.en.privacySection5Title = "Cookies and Analytics"),
+  (translations.en.privacySection5Text = `Our website may use cookies for:
+• Improving website performance
+• Visitor analysis (Google Analytics)
+• Remembering language settings
+
+You can disable cookies in your browser settings, but this may affect website functionality.`),
+  // Terms of Use sections
+  (translations.en.termsTitle = "Terms of Use"),
+  (translations.en.termsIntro =
+    "By using this website and engineering calculators, you agree to the following terms and conditions."),
+  (translations.en.termsContact = "For usage questions, contact:"),
+  (translations.en.termsSection1Title = "Website Use"),
+  (translations.en.termsSection1Text = `This website provides information about engineering services and free online calculators.
+
+By using the site, you agree to:
+• Provide accurate and current information
+• Not use the site for illegal purposes
+• Not attempt to compromise site security
+• Respect copyrights on content`),
+  (translations.en.termsSection2Title = "Engineering Calculators"),
+  (translations.en.termsSection2Text = `Online calculators are provided "as is" for preliminary calculations and estimates.
+
+Important:
+• Calculator results are for reference only
+• Professional verification is required for final decisions
+• We are not responsible for decisions made based on calculator results
+• Calculators do not replace professional engineering calculations`),
+  (translations.en.termsSection3Title = "Engineering Services"),
+  (translations.en.termsSection3Text = `When ordering professional engineering services:
+• A separate contract for work performance is concluded
+• Project timelines and costs are discussed
+• Technical documentation is provided
+• Project information confidentiality is guaranteed
+
+All technical calculations are performed in accordance with current norms and standards.`),
+  (translations.en.termsSection4Title = "Intellectual Property"),
+  (translations.en.termsSection4Text = `All content on the site (texts, images, calculators, design) is protected by copyright.
+
+Prohibited:
+• Copying content without permission
+• Using calculators on other sites
+• Removing copyright notices
+
+For use of materials, please request permission.`),
+  (translations.en.termsSection5Title = "Limitation of Liability"),
+  (translations.en.termsSection5Text = `We make every effort to ensure accuracy of information, but:
+• Do not guarantee absence of errors in reference materials
+• Are not responsible for site malfunctions
+• Are not liable for losses through use of free calculators
+• Recommend verifying important calculations with professionals`),
+  (translations.en.termsSection6Title = "Changes to Terms"),
+  (translations.en.termsSection6Text = `We reserve the right to change these terms at any time.
+
+For significant changes:
+• Updated date will be indicated at the bottom of the document
+• Continued use of the site means acceptance of new terms
+• We recommend periodically checking this page`),
+  // ============================================
+  // GERMAN (translations.de)
+  // ============================================
+
+  // Privacy Policy sections (German)
+  // Add to translations.de:
+
+  (translations.de.privacyTitle = "Datenschutzrichtlinie"),
+  (translations.de.privacyIntro =
+    "Diese Datenschutzrichtlinie beschreibt, wie wir Ihre persönlichen Daten erfassen, verwenden und schützen, wenn Sie unsere Website und technischen Rechner nutzen."),
+  (translations.de.privacyContact = "Bei Datenschutzfragen kontaktieren:"),
+  (translations.de.privacySection1Title = "Datenerfassung"),
+  (translations.de.privacySection1Text = `Wir erfassen nur die Informationen, die Sie freiwillig über das Kontaktformular auf unserer Website bereitstellen:
+• Name und Nachname
+• E-Mail-Adresse
+• Telefonnummer (falls Sie diese angeben möchten)
+• Nachrichtentext mit Beschreibung Ihres Projekts
+
+Diese Informationen werden ausschließlich erfasst, um Sie zu kontaktieren und Ihr Projekt zu besprechen.`),
+  (translations.de.privacySection2Title = "Verwendung der Informationen"),
+  (translations.de.privacySection2Text = `Ihre persönlichen Informationen werden ausschließlich verwendet für:
+• Beantwortung Ihrer Anfragen und Fragen
+• Bereitstellung professioneller Beratungen
+• Erstellung kommerzieller Angebote
+• Durchführung beauftragter Arbeiten
+
+Wir verwenden Ihre Informationen niemals für Spam-Mailings oder übertragen sie ohne Ihre Zustimmung an Dritte.`),
+  (translations.de.privacySection3Title = "Datenschutz"),
+  (translations.de.privacySection3Text = `Wir ergreifen alle erforderlichen Maßnahmen zum Schutz Ihrer persönlichen Informationen:
+• Verwendung sicherer HTTPS-Verbindung
+• Keine Speicherung von Kreditkartendaten
+• Einschränkung des Zugriffs auf persönliche Daten
+• Regelmäßige Aktualisierung der Sicherheitssysteme
+
+Ihre Daten werden nur so lange gespeichert, wie es zur Auftragserfüllung und Dienstleistungserbringung erforderlich ist.`),
+  (translations.de.privacySection4Title = "Ihre Rechte"),
+  (translations.de.privacySection4Text = `Gemäß geltendem Recht haben Sie das Recht:
+• Informationen darüber zu erhalten, welche Daten wir über Sie speichern
+• Berichtigung unrichtiger Daten zu verlangen
+• Löschung Ihrer persönlichen Daten zu verlangen
+• Die Einwilligung zur Datenverarbeitung jederzeit zu widerrufen
+
+Um diese Rechte auszuüben, kontaktieren Sie uns bitte über das Kontaktformular oder per E-Mail.`),
+  (translations.de.privacySection5Title = "Cookies und Analytik"),
+  (translations.de.privacySection5Text = `Unsere Website kann Cookies verwenden für:
+• Verbesserung der Website-Leistung
+• Besucheranalyse (Google Analytics)
+• Speicherung von Spracheinstellungen
+
+Sie können Cookies in Ihren Browsereinstellungen deaktivieren, dies kann jedoch die Funktionalität der Website beeinträchtigen.`),
+  // Terms of Use sections (German)
+  (translations.de.termsTitle = "Nutzungsbedingungen"),
+  (translations.de.termsIntro =
+    "Durch die Nutzung dieser Website und der technischen Rechner stimmen Sie den folgenden Bedingungen zu."),
+  (translations.de.termsContact = "Bei Nutzungsfragen kontaktieren:"),
+  (translations.de.termsSection1Title = "Website-Nutzung"),
+  (translations.de.termsSection1Text = `Diese Website bietet Informationen über technische Dienstleistungen und kostenlose Online-Rechner.
+
+Durch die Nutzung der Website stimmen Sie zu:
+• Genaue und aktuelle Informationen bereitzustellen
+• Die Website nicht für illegale Zwecke zu nutzen
+• Nicht zu versuchen, die Sicherheit der Website zu gefährden
+• Urheberrechte an Inhalten zu respektieren`),
+  (translations.de.termsSection2Title = "Technische Rechner"),
+  (translations.de.termsSection2Text = `Online-Rechner werden "wie besehen" für vorläufige Berechnungen und Schätzungen bereitgestellt.
+
+Wichtig:
+• Rechnerergebnisse sind nur als Referenz gedacht
+• Professionelle Überprüfung ist für endgültige Entscheidungen erforderlich
+• Wir sind nicht verantwortlich für Entscheidungen, die auf Rechnerergebnissen basieren
+• Rechner ersetzen keine professionellen technischen Berechnungen`),
+  (translations.de.termsSection3Title = "Technische Dienstleistungen"),
+  (translations.de.termsSection3Text = `Bei Bestellung professioneller technischer Dienstleistungen:
+• Wird ein separater Vertrag für die Arbeitsausführung abgeschlossen
+• Werden Projektfristen und -kosten besprochen
+• Wird technische Dokumentation bereitgestellt
+• Wird Vertraulichkeit der Projektinformationen garantiert
+
+Alle technischen Berechnungen werden gemäß geltenden Normen und Standards durchgeführt.`),
+  (translations.de.termsSection4Title = "Geistiges Eigentum"),
+  (translations.de.termsSection4Text = `Alle Inhalte auf der Website (Texte, Bilder, Rechner, Design) sind urheberrechtlich geschützt.
+
+Verboten:
+• Kopieren von Inhalten ohne Genehmigung
+• Verwendung von Rechnern auf anderen Websites
+• Entfernung von Urheberrechtshinweisen
+
+Für die Verwendung von Materialien fordern Sie bitte eine Genehmigung an.`),
+  (translations.de.termsSection5Title = "Haftungsbeschränkung"),
+  (translations.de.termsSection5Text = `Wir bemühen uns um Genauigkeit der Informationen, aber:
+• Garantieren keine Fehlerfreiheit in Referenzmaterialien
+• Sind nicht verantwortlich für Website-Ausfälle
+• Haften nicht für Verluste durch Verwendung kostenloser Rechner
+• Empfehlen, wichtige Berechnungen von Fachleuten überprüfen zu lassen`),
+  (translations.de.termsSection6Title = "Änderungen der Bedingungen"),
+  (translations.de.termsSection6Text = `Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern.
+
+Bei wesentlichen Änderungen:
+• Wird das aktualisierte Datum am Ende des Dokuments angegeben
+• Bedeutet die fortgesetzte Nutzung der Website die Akzeptanz neuer Bedingungen
+• Empfehlen wir, diese Seite regelmäßig zu überprüfen`));

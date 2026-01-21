@@ -1,43 +1,10 @@
+// src/components/Testimonials.jsx
 import React, { useEffect, useState, useRef } from 'react';
+import { testimonialsData } from '../data/testimonialsData';
 
 const Testimonials = ({ t }) => {
   const [visibleCards, setVisibleCards] = useState([]);
   const sectionRef = useRef(null);
-
-  const testimonials = [
-    {
-      nameKey: 'testimonial1Name',
-      roleKey: 'testimonial1Role',
-      companyKey: 'testimonial1Company',
-      textKey: 'testimonial1Text',
-      rating: 5,
-      initials: 'ОП'
-    },
-    {
-      nameKey: 'testimonial2Name',
-      roleKey: 'testimonial2Role',
-      companyKey: 'testimonial2Company',
-      textKey: 'testimonial2Text',
-      rating: 5,
-      initials: 'МК'
-    },
-    {
-      nameKey: 'testimonial3Name',
-      roleKey: 'testimonial3Role',
-      companyKey: 'testimonial3Company',
-      textKey: 'testimonial3Text',
-      rating: 5,
-      initials: 'ДС'
-    },
-    {
-      nameKey: 'testimonial4Name',
-      roleKey: 'testimonial4Role',
-      companyKey: 'testimonial4Company',
-      textKey: 'testimonial4Text',
-      rating: 5,
-      initials: 'ІМ'
-    }
-  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -63,6 +30,16 @@ const Testimonials = ({ t }) => {
     return () => observer.disconnect();
   }, []);
 
+  // Отримуємо поточну мову з t (translations)
+  const getCurrentLang = () => {
+    if (t.navHome === 'Головна') return 'uk';
+    if (t.navHome === 'Главная') return 'ru';
+    if (t.navHome === 'Home') return 'en';
+    return 'de';
+  };
+
+  const currentLang = getCurrentLang();
+
   return (
     <section id="testimonials" className="py-20 px-4 md:px-8 bg-[#1a1f3a]/50 relative overflow-hidden" ref={sectionRef}>
       {/* Animated background */}
@@ -81,9 +58,9 @@ const Testimonials = ({ t }) => {
 
       {/* Testimonials Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-        {testimonials.map((testimonial, index) => (
+        {testimonialsData.map((testimonial, index) => (
           <div
-            key={index}
+            key={testimonial.id}
             className={`testimonial-card bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 md:p-8 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-500 group relative overflow-hidden ${
               visibleCards.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
@@ -114,7 +91,7 @@ const Testimonials = ({ t }) => {
 
               {/* Testimonial Text */}
               <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6 group-hover:text-white transition-colors duration-300">
-                {t[testimonial.textKey]}
+                {testimonial.text[currentLang]}
               </p>
 
               {/* Author Info */}
@@ -129,24 +106,26 @@ const Testimonials = ({ t }) => {
                 {/* Name and Role */}
                 <div className="flex-grow">
                   <h4 className="text-white font-semibold text-base md:text-lg group-hover:text-blue-400 transition-colors duration-300">
-                    {t[testimonial.nameKey]}
+                    {testimonial.name[currentLang]}
                   </h4>
                   <p className="text-gray-400 text-sm">
-                    {t[testimonial.roleKey]}
+                    {testimonial.role[currentLang]}
                   </p>
                   <p className="text-blue-400 text-sm font-medium">
-                    {t[testimonial.companyKey]}
+                    {testimonial.company[currentLang]}
                   </p>
                 </div>
 
                 {/* Verified Badge */}
-                <div className="flex-shrink-0">
-                  <div className="bg-green-500/20 border border-green-500/40 rounded-full p-2 group-hover:scale-110 transition-transform duration-300" title="Verified">
-                    <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
+                {testimonial.verified && (
+                  <div className="flex-shrink-0">
+                    <div className="bg-green-500/20 border border-green-500/40 rounded-full p-2 group-hover:scale-110 transition-transform duration-300" title="Verified">
+                      <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>

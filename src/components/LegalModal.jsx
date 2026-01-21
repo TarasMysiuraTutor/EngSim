@@ -1,3 +1,4 @@
+// src/components/LegalModal.jsx - ВИПРАВЛЕНА ВЕРСІЯ
 import React, { useEffect } from 'react';
 
 const LegalModal = ({ isOpen, onClose, type, t, currentLang }) => {
@@ -25,24 +26,24 @@ const LegalModal = ({ isOpen, onClose, type, t, currentLang }) => {
   const intro = isPrivacy ? t.privacyIntro : t.termsIntro;
   const contactLabel = isPrivacy ? t.privacyContact : t.termsContact;
 
-  // Контент для Privacy Policy
-  const privacyContent = currentLang === 'uk' || currentLang === 'ru' ? [
+  // Контент для Privacy Policy - ТУТ ТЕПЕР ВСІ МОВИ
+  const privacyContent = [
     { title: t.privacySection1Title, text: t.privacySection1Text },
     { title: t.privacySection2Title, text: t.privacySection2Text },
     { title: t.privacySection3Title, text: t.privacySection3Text },
     { title: t.privacySection4Title, text: t.privacySection4Text },
     { title: t.privacySection5Title, text: t.privacySection5Text },
-  ] : [];
+  ];
 
-  // Контент для Terms of Use
-  const termsContent = currentLang === 'uk' || currentLang === 'ru' ? [
+  // Контент для Terms of Use - ТУТ ТЕПЕР ВСІ МОВИ
+  const termsContent = [
     { title: t.termsSection1Title, text: t.termsSection1Text },
     { title: t.termsSection2Title, text: t.termsSection2Text },
     { title: t.termsSection3Title, text: t.termsSection3Text },
     { title: t.termsSection4Title, text: t.termsSection4Text },
     { title: t.termsSection5Title, text: t.termsSection5Text },
     { title: t.termsSection6Title, text: t.termsSection6Text },
-  ] : [];
+  ];
 
   const content = isPrivacy ? privacyContent : termsContent;
 
@@ -84,36 +85,20 @@ const LegalModal = ({ isOpen, onClose, type, t, currentLang }) => {
             {intro}
           </p>
 
-          {/* Sections (for UK/RU only, EN/DE get simplified version) */}
-          {content.length > 0 ? (
-            content.map((section, index) => (
-              <div key={index} className="space-y-3">
-                <h3 className="text-xl font-bold text-blue-400 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center text-sm">
-                    {index + 1}
-                  </span>
-                  {section.title}
-                </h3>
-                <div className="pl-10 text-gray-300 leading-relaxed whitespace-pre-line">
-                  {section.text}
-                </div>
+          {/* Sections - ТЕПЕР ДЛЯ ВСІХ МОВ */}
+          {content.map((section, index) => (
+            <div key={index} className="space-y-3">
+              <h3 className="text-xl font-bold text-blue-400 flex items-center gap-2">
+                <span className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center text-sm">
+                  {index + 1}
+                </span>
+                {section.title}
+              </h3>
+              <div className="pl-10 text-gray-300 leading-relaxed whitespace-pre-line">
+                {section.text}
               </div>
-            ))
-          ) : (
-            // Simplified version for EN/DE
-            <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6">
-              <p className="text-gray-300 leading-relaxed mb-4">
-                {currentLang === 'en' 
-                  ? "Full version of this document is available in Ukrainian and Russian. For English version, please contact us directly."
-                  : "Die vollständige Version dieses Dokuments ist auf Ukrainisch und Russisch verfügbar. Für die deutsche Version kontaktieren Sie uns bitte direkt."}
-              </p>
-              <p className="text-gray-400 text-sm">
-                {currentLang === 'en'
-                  ? "Main points: We collect contact information from forms, use it only for communication, don't share with third parties, and respect your GDPR rights."
-                  : "Hauptpunkte: Wir sammeln Kontaktinformationen aus Formularen, verwenden sie nur zur Kommunikation, geben sie nicht an Dritte weiter und respektieren Ihre DSGVO-Rechte."}
-              </p>
             </div>
-          )}
+          ))}
 
           {/* Contact Info */}
           <div className="mt-8 p-6 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/30 rounded-lg">
@@ -151,7 +136,7 @@ const LegalModal = ({ isOpen, onClose, type, t, currentLang }) => {
             onClick={onClose}
             className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
           >
-            {t.close}
+            {t.close || 'Close'}
           </button>
         </div>
       </div>
