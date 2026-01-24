@@ -1,4 +1,5 @@
 // src/App.jsx - УНІФІКОВАНА ВЕРСІЯ БЕЗ МОДАЛОК
+import "katex/dist/katex.min.css";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -10,15 +11,25 @@ import CalculatorsPage from "./pages/CalculatorsPage";
 import CalculatorDetail from "./pages/CalculatorDetail";
 import VideosPage from "./pages/VideosPage";
 import AdminPage from "./pages/AdminPage";
-import ReferencePage from "./pages/ReferencePage";
+// import ReferencePage from "./pages/ReferencePage";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import FAQPage from "./pages/FAQPage";
 import ContactPage from "./pages/ContactPage";
-import ReferenceMathPage from "./pages/ReferenceMathPage";
+// import ReferenceMathPage from "./pages/ReferenceMathPage";
 // import ReferenceStrengthPage from "./pages/ReferenceStrengthPage";
+
+// ДОВІДКА - ГОЛОВНА СТОРІНКА
+import ReferencePage from "./pages/ReferencePage";
+
+// ДОВІДКА - РОЗДІЛИ
+import ReferenceMathPage from "./pages/ReferenceMathPage";
+import ReferenceStrengthPage from "./pages/ReferenceStrengthPage";
+// import ReferenceHydraulicPage from "./pages/ReferenceHydraulicPage";  // Створіть аналогічно
+// import ReferenceThermalPage from "./pages/ReferenceThermalPage";      // Створіть аналогічно
+// import ReferenceMassPage from "./pages/ReferenceMassPage";            // Створіть аналогічно
 
 // ГОЛОВНИЙ КОМПОНЕНТ APP
 function App() {
@@ -120,36 +131,116 @@ function App() {
           />
 
           {/* 👇 НОВА СТОРІНКА - ДОВІДКОВІ ДАНІ */}
-          <Route
-            path="/reference"
+         {/* ============ ДОВІДКА ============ */}
+          
+          {/* Головна сторінка довідки */}
+          <Route 
+            path="/reference" 
             element={
-              <ReferencePage
+              <ReferencePage 
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}
               />
-            }
+            } 
           />
-          <Route
-            path="/reference/math"
+
+          {/* Математика */}
+          <Route 
+            path="/reference/math" 
             element={
-              <ReferenceMathPage
+              <ReferenceMathPage 
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}
               />
-            }
+            } 
           />
-          {/* <Route
-            path="/reference/strength"
+
+          {/* Опір матеріалів */}
+          <Route 
+            path="/reference/strength" 
             element={
-              <ReferenceStrengthPage
+              <ReferenceStrengthPage 
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}
               />
-            }
-          /> */}
+            } 
+          />
+
+          {/* Гідравліка */}
+          {/* 
+          <Route 
+            path="/reference/hydraulic" 
+            element={
+              <ReferenceHydraulicPage 
+                currentLang={currentLang}
+                setCurrentLang={setCurrentLang}
+                t={translations[currentLang]}
+              />
+            } 
+          />
+          */}
+
+          {/* Теплообмін */}
+          {/* 
+          <Route 
+            path="/reference/thermal" 
+            element={
+              <ReferenceThermalPage 
+                currentLang={currentLang}
+                setCurrentLang={setCurrentLang}
+                t={translations[currentLang]}
+              />
+            } 
+          />
+          */}
+
+          {/* Масообмін */}
+          {/* 
+          <Route 
+            path="/reference/mass" 
+            element={
+              <ReferenceMassPage 
+                currentLang={currentLang}
+                setCurrentLang={setCurrentLang}
+                t={translations[currentLang]}
+              />
+            } 
+          />
+          */}
+
+          {/* ============ 404 - НЕ ЗНАЙДЕНО ============ */}
+          
+          <Route 
+            path="*" 
+            element={
+              <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-9xl mb-8">🔍</div>
+                  <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
+                    404
+                  </h1>
+                  <p className="text-2xl text-gray-400 mb-8">
+                    {currentLang === 'uk' && 'Сторінку не знайдено'}
+                    {currentLang === 'ru' && 'Страница не найдена'}
+                    {currentLang === 'en' && 'Page not found'}
+                    {currentLang === 'de' && 'Seite nicht gefunden'}
+                  </p>
+                  <button
+                    onClick={() => window.location.href = basename}
+                    className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all"
+                  >
+                    {currentLang === 'uk' && 'Повернутися на головну'}
+                    {currentLang === 'ru' && 'Вернуться на главную'}
+                    {currentLang === 'en' && 'Back to home'}
+                    {currentLang === 'de' && 'Zurück zur Startseite'}
+                  </button>
+                </div>
+              </div>
+            } 
+          />
         </Routes>
       </div>
     </BrowserRouter>

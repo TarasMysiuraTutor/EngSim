@@ -1,0 +1,40 @@
+{
+  "id": "steel-properties",
+  "category": "materials",
+  "title": {
+    "uk": "Механічні властивості конструкційних сталей",
+    "ru": "Механические свойства конструкционных сталей",
+    "en": "Mechanical Properties of Structural Steels",
+    "de": "Mechanische Eigenschaften von Baustählen"
+  },
+  "headers": {
+    "uk": ["Марка сталі", "Межа текучості f<sub>y</sub>, МПа", "Межа міцності f<sub>u</sub>, МПа", "Модуль пружності E, ГПа", "Щільність ρ, кг/м³"],
+    "ru": ["Марка стали", "Предел текучести f<sub>y</sub>, МПа", "Предел прочности f<sub>u</sub>, МПа", "Модуль упругости E, ГПа", "Плотность ρ, кг/м³"],
+    "en": ["Steel Grade", "Yield Strength f<sub>y</sub>, MPa", "Tensile Strength f<sub>u</sub>, MPa", "Elastic Modulus E, GPa", "Density ρ, kg/m³"],
+    "de": ["Stahlsorte", "Streckgrenze f<sub>y</sub>, MPa", "Zugfestigkeit f<sub>u</sub>, MPa", "E-Modul E, GPa", "Dichte ρ, kg/m³"]
+  },
+  "rows": [
+    ["S235", "235", "360", "210", "7850"],
+    ["S275", "275", "430", "210", "7850"],
+    ["S355", "355", "510", "210", "7850"],
+    ["S450", "440", "550", "210", "7850"],
+    ["S460", "460", "570", "210", "7850"]
+  ],
+  "note": {
+    "uk": "Для товщини елементів до 40 мм при температурі 20°C",
+    "ru": "Для толщины элементов до 40 мм при температуре 20°C",
+    "en": "For element thickness up to 40 mm at 20°C",
+    "de": "Für Elementdicke bis 40 mm bei 20°C"
+  },
+  "relatedFiles": [],
+  "source": {
+    "name": "EN 10025-2:2019",
+    "url": "https://www.en-standard.eu/bs-en-10025-2-2019-hot-rolled-products-of-structural-steels-technical-delivery-conditions-for-non-alloy-structural-steels/",
+    "description": {
+      "uk": "Гарячекатані вироби з конструкційних сталей",
+      "ru": "Горячекатаные изделия из конструкционных сталей",
+      "en": "Hot rolled products of structural steels",
+      "de": "Warmgewalzte Erzeugnisse aus Baustählen"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "ipe-sections",
+  "category": "sections",
+  "title": {
+    "uk": "Профілі IPE",
+    "ru": "Профили IPE",
+    "en": "IPE Sections",
+    "de": "IPE-Profile"
+  },
+  "headers": {
+    "uk": ["Профіль", "h, мм", "W, см³"],
+    "ru": ["Профиль", "h, мм", "W, см³"],
+    "en": ["Section", "h, mm", "W, cm³"],
+    "de": ["Profil", "h, mm", "W, cm³"]
+  },
+  "rows": [
+    ["IPE 100", "100", "34.2"],
+    ["IPE 200", "200", "194"],
+    ["IPE 300", "300", "557"]
+  ],
+  "note": {
+    "uk": "Примітка...",
+    "ru": "Примечание...",
+    "en": "Note...",
+    "de": "Hinweis..."
+  },
+  "source": {
+    "name": "EN 10365:2017",
+    "url": "https://..."
+  }
+}
