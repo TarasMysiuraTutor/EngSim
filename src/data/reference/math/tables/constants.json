@@ -1,0 +1,42 @@
+{
+  "id": "constants",
+  "category": "constants",
+  "title": {
+    "uk": "Математичні константи",
+    "ru": "Математические константы",
+    "en": "Mathematical Constants",
+    "de": "Mathematische Konstanten"
+  },
+  "headers": {
+    "uk": ["Назва", "Символ", "Значення", "Опис"],
+    "ru": ["Название", "Символ", "Значение", "Описание"],
+    "en": ["Name", "Symbol", "Value", "Description"],
+    "de": ["Name", "Symbol", "Wert", "Beschreibung"]
+  },
+  "rows": [
+    [
+      {"uk": "Число Пі", "ru": "Число Пи", "en": "Pi", "de": "Pi"},
+      "π",
+      "3.14159265359",
+      {"uk": "Відношення довжини кола до діаметра", "ru": "Отношение длины окружности к диаметру", "en": "Ratio of circle circumference to diameter", "de": "Verhältnis Kreisumfang zu Durchmesser"}
+    ],
+    [
+      {"uk": "Число Ейлера", "ru": "Число Эйлера", "en": "Euler's number", "de": "Eulersche Zahl"},
+      "e",
+      "2.71828182846",
+      {"uk": "Основа натурального логарифму", "ru": "Основание натурального логарифма", "en": "Base of natural logarithm", "de": "Basis des natürlichen Logarithmus"}
+    ],
+    [
+      {"uk": "Золотий перетин", "ru": "Золотое сечение", "en": "Golden ratio", "de": "Goldener Schnitt"},
+      "φ",
+      "1.61803398875",
+      {"uk": "(1 + √5) / 2", "ru": "(1 + √5) / 2", "en": "(1 + √5) / 2", "de": "(1 + √5) / 2"}
+    ],
+    [
+      {"uk": "Корінь з 2", "ru": "Корень из 2", "en": "Square root of 2", "de": "Quadratwurzel aus 2"},
+      "√2",
+      "1.41421356237",
+      {"uk": "Діагональ одиничного квадрата", "ru": "Диагональ единичного квадрата", "en": "Diagonal of unit square", "de": "Diagonale des Einheitsquadrats"}
+    ]
+  ]
+}

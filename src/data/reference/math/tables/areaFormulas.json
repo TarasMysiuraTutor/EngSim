@@ -1,0 +1,43 @@
+{
+  "id": "area_formulas",
+  "category": "geometry",
+  "title": {
+    "uk": "Формули площ плоских фігур",
+    "ru": "Формулы площадей плоских фигур",
+    "en": "Area Formulas for Plane Figures",
+    "de": "Flächenformeln ebener Figuren"
+  },
+  "headers": {
+    "uk": ["Фігура", "Формула площі", "Позначення"],
+    "ru": ["Фигура", "Формула площади", "Обозначение"],
+    "en": ["Figure", "Area Formula", "Notation"],
+    "de": ["Figur", "Flächenformel", "Bezeichnung"]
+  },
+  "rows": [
+    [
+      {"uk": "Квадрат", "ru": "Квадрат", "en": "Square", "de": "Quadrat"},
+      "A = a²",
+      {"uk": "a — сторона", "ru": "a — сторона", "en": "a — side", "de": "a — Seite"}
+    ],
+    [
+      {"uk": "Прямокутник", "ru": "Прямоугольник", "en": "Rectangle", "de": "Rechteck"},
+      "A = a × b",
+      {"uk": "a, b — сторони", "ru": "a, b — стороны", "en": "a, b — sides", "de": "a, b — Seiten"}
+    ],
+    [
+      {"uk": "Трикутник", "ru": "Треугольник", "en": "Triangle", "de": "Dreieck"},
+      "A = (b × h) / 2",
+      {"uk": "b — основа, h — висота", "ru": "b — основание, h — высота", "en": "b — base, h — height", "de": "b — Basis, h — Höhe"}
+    ],
+    [
+      {"uk": "Коло", "ru": "Круг", "en": "Circle", "de": "Kreis"},
+      "A = π × r²",
+      {"uk": "r — радіус", "ru": "r — радиус", "en": "r — radius", "de": "r — Radius"}
+    ],
+    [
+      {"uk": "Трапеція", "ru": "Трапеция", "en": "Trapezoid", "de": "Trapez"},
+      "A = ((a + b) × h) / 2",
+      {"uk": "a, b — основи, h — висота", "ru": "a, b — основания, h — высота", "en": "a, b — bases, h — height", "de": "a, b — Grundseiten, h — Höhe"}
+    ]
+  ]
+}

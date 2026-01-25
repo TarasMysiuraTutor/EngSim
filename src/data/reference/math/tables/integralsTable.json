@@ -1,0 +1,31 @@
+{
+  "id": "integrals_table",
+  "category": "calculus",
+  "title": {
+    "uk": "Таблиця інтегралів",
+    "ru": "Таблица интегралов",
+    "en": "Table of Integrals",
+    "de": "Tabelle der Integrale"
+  },
+  "headers": {
+    "uk": ["Функція f(x)", "Інтеграл ∫f(x)dx"],
+    "ru": ["Функция f(x)", "Интеграл ∫f(x)dx"],
+    "en": ["Function f(x)", "Integral ∫f(x)dx"],
+    "de": ["Funktion f(x)", "Integral ∫f(x)dx"]
+  },
+  "rows": [
+    ["0", "C"],
+    ["1", "x + C"],
+    ["x", "x²/2 + C"],
+    ["xⁿ (n≠−1)", "xⁿ⁺¹/(n+1) + C"],
+    ["1/x", "ln|x| + C"],
+    ["eˣ", "eˣ + C"],
+    ["aˣ", "aˣ/ln a + C"],
+    ["sin x", "−cos x + C"],
+    ["cos x", "sin x + C"],
+    ["1/cos²x", "tan x + C"],
+    ["1/sin²x", "−cot x + C"],
+    ["1/√(1−x²)", "arcsin x + C"],
+    ["1/(1+x²)", "arctan x + C"]
+  ]
+}

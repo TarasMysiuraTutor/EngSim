@@ -1,0 +1,48 @@
+{
+  "id": "volume_formulas",
+  "category": "geometry",
+  "title": {
+    "uk": "Формули об'ємів тіл",
+    "ru": "Формулы объемов тел",
+    "en": "Volume Formulas for Solids",
+    "de": "Volumenformeln für Körper"
+  },
+  "headers": {
+    "uk": ["Тіло", "Формула об'єму", "Позначення"],
+    "ru": ["Тело", "Формула объема", "Обозначение"],
+    "en": ["Solid", "Volume Formula", "Notation"],
+    "de": ["Körper", "Volumenformel", "Bezeichnung"]
+  },
+  "rows": [
+    [
+      {"uk": "Куб", "ru": "Куб", "en": "Cube", "de": "Würfel"},
+      "V = a³",
+      {"uk": "a — ребро", "ru": "a — ребро", "en": "a — edge", "de": "a — Kante"}
+    ],
+    [
+      {"uk": "Паралелепіпед", "ru": "Параллелепипед", "en": "Rectangular Prism", "de": "Quader"},
+      "V = abc",
+      {"uk": "a, b, c — ребра", "ru": "a, b, c — ребра", "en": "a, b, c — edges", "de": "a, b, c — Kanten"}
+    ],
+    [
+      {"uk": "Циліндр", "ru": "Цилиндр", "en": "Cylinder", "de": "Zylinder"},
+      "V = πr²h",
+      {"uk": "r — радіус, h — висота", "ru": "r — радиус, h — высота", "en": "r — radius, h — height", "de": "r — Radius, h — Höhe"}
+    ],
+    [
+      {"uk": "Конус", "ru": "Конус", "en": "Cone", "de": "Kegel"},
+      "V = (πr²h)/3",
+      {"uk": "r — радіус, h — висота", "ru": "r — радиус, h — высота", "en": "r — radius, h — height", "de": "r — Radius, h — Höhe"}
+    ],
+    [
+      {"uk": "Куля", "ru": "Шар", "en": "Sphere", "de": "Kugel"},
+      "V = (4πr³)/3",
+      {"uk": "r — радіус", "ru": "r — радиус", "en": "r — radius", "de": "r — Radius"}
+    ],
+    [
+      {"uk": "Піраміда", "ru": "Пирамида", "en": "Pyramid", "de": "Pyramide"},
+      "V = (Sh)/3",
+      {"uk": "S — площа основи, h — висота", "ru": "S — площадь основания, h — высота", "en": "S — base area, h — height", "de": "S — Grundfläche, h — Höhe"}
+    ]
+  ]
+}

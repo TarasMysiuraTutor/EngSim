@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "uk": "ІНСТРУКЦІЯ 01. Основи аналізу трубопровідного потоку в FlowNEX",
+      "ru": "РУКОВОДСТВО 01. Основные принципы потока в трубах в FlowNEX",
+      "en": "TUTORIAL 01. Basic Pipe Flow Analysis in FlowNEX",
+      "de": "TUTORIAL 01. Grundlegende Rohrflussanalyse in FlowNEX"
+    },
+    "description": {
+      "en": "PROBLEM DESCRIPTION: TUTORIAL 01. Water flows between two tanks through a single basic pipe. A sharp entry type geometry can be assumed for the pipe inlet from Tank A. Gauge pressure readings are shown below. Take the atmospheric pressure = 100 kPa.The objective is to calculate the mass flow rate through the pipe.",
+      "uk": "ОПИС ПРОБЛЕМИ: ІНСТРУКЦІЯ 01. Вода тече між двома резервуарами через одиничний базовий трубопровід. Можна припустити геометрію з різким входом для трубопроводу з Резервуара A. Показники тисків вказуються нижче. Приймемо атмосферний тиск = 100 кПа. Мета - розрахувати масовий витік води через трубопровід.",
+      "ru": "ОПИСАНИЕ ПРОБЛЕМЫ: РУКОВОДСТВО 01. Вода течет между двумя резервуарами через одиничный базовый трубопровод. Можно предположить геометрию с острым входом для трубопровода из Резервуара A. Показания давления указаны ниже. Примем атмосферное давление = 100 кПа. Цель - рассчитать массовый расход воды через трубопровод.",
+      "de": "PROBLEM-BESCHREIBUNG: TUTORIAL 01. Wasser fließt zwischen zwei Tanks durch einen einzelnen grundlegenden Rohrleitung. Ein scharfer Eingangstyp kann für den Rohreintritt aus Tank A angenommen werden. Druckmesswerte sind unten dargestellt. Nehmen Sie den atmosphärischen Druck = 100 kPa an. Das Ziel ist es, die Massenstromrate durch die Rohrleitung zu berechnen."
+    },
+    "youtubeId": "D7DFO0kUESI",
+    "category": "flownex",
+    "categoryName": {
+      "uk": "FlowNEX",
+      "ru": "FlowNEX",
+      "en": "FlowNEX",
+      "de": "FlowNEX"
+    },
+    "duration": "20:30",
+    "date": "2025-12-25",
+    "thumbnail": {
+      "uk": "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768728495/Tutorial_01_Basic_Pipe_Flow_uk_tlmuzu.jpg",
+      "ru": "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768728495/Tutorial_01_Basic_Pipe_Flow_ru_on5g9h.jpg",
+      "en": "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768728495/Tutorial_01_Basic_Pipe_Flow_en_cho78i.jpg",
+      "de": "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768728495/Tutorial_01_Basic_Pipe_Flow_de_ygrupi.jpg"
+    },
+    "instructions": {
+      "uk": {
+        "url": "https://drive.google.com/file/d/1rM4vTqSmSlZ1OcYmpTlMBQYk3m9QgmAT/view?usp=sharing",
+        "filename": "Tutorial 01 Basic Pipe Flow uk.pdf",
+        "size": "831 kB"
+      },
+      "ru": {
+        "url": "https://drive.google.com/file/d/1k3aOPLrGn7D7air6L81X_gdHSduN1na0/view?usp=sharing",
+        "filename": "Tutorial 01 Basic Pipe Flow ru.pdf",
+        "size": "830 kB"
+      },
+      "en": {
+        "url": "https://drive.google.com/file/d/1wqzDTj-V5InOmLXCR6f8kNOmDlRUYakJ/view?usp=sharing",
+        "filename": "Tutorial 01 Basic Pipe Flow en.pdf",
+        "size": "613 kB"
+      },
+      "de": {
+        "url": "https://drive.google.com/file/d/108p5mPCYgttF-EG74-exHxVJ15qZTlHR/view?usp=sharing",
+        "filename": "Tutorial 01 Basic Pipe Flow de.pdf",
+        "size": "800 kB"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "title": {
+      "uk": "ІНСТРУКЦІЯ 02. Взаємозв'язані резервуари в FlowNEX",
+      "ru": "РУКОВОДСТВО 02. Взаимосвязанные резервуары в FlowNEX",
+      "en": "Tutorial 02. Interconnected Tanks in FlowNEX",
+      "de": "Tutorial 02. Interconnected Tanks in FlowNEX"
+    },
+    "description": {
+      "en": "PROBLEM DESCRIPTION: TUTORIAL 02. Three tanks are interconnected at junction J. The elevation of junction J is given in the table below. The tank conditions are given in the tables below. Determine the static pressure in junction J as well as the corresponding mass flow rates through each of the three pipes.",
+      "uk": "ОПИС ПРОБЛЕМИ: ІНСТРУКЦІЯ 02. Три резервуари з'єднані в точці J. Висота точки J задана в таблиці нижче. Умови резервуарів задані в таблицях нижче. Визначте статичний тиск у точці J, а також відповідні масові витоки через кожен з трьох трубопроводів.",
+      "ru": "ОПИСАНИЕ ПРОБЛЕМЫ: РУКОВОДСТВО 02. Три резервуара соединены в точке J. Высота точки J задана в таблице ниже. Условия резервуаров заданы в таблицах ниже. Определите статическое давление в точке J, а также соответствующие массовые расходы через каждый из трех трубопроводов.",
+      "de": "PROBLEM-BESCHREIBUNG: TUTORIAL 02. Drei Tanks sind an Knotenpunkt J miteinander verbunden. Die Höhe des Knotenpunkts J ist in der Tabelle unten gegeben. Die Tankbedingungen sind in den Tabellen unten gegeben. Bestimmen Sie den statischen Druck im Knotenpunkt J sowie die entsprechenden Massenströme durch jeden der drei Rohre."
+    },
+    "youtubeId": "ByAOdKbjMF8",
+    "category": "flownex",
+    "categoryName": {
+      "uk": "FlowNEX",
+      "ru": "FlowNEX",
+      "en": "FlowNEX",
+      "de": "FlowNEX"
+    },
+    "duration": "20:30",
+    "date": "2025-12-25",
+    "thumbnail": {
+      "uk": "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768728495/Tutorial_02_Interconnected_Tanks_uk_h6wm6l.jpg",
+      "ru": "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768728495/Tutorial_02_Interconnected_Tanks_ru_qi66lg.jpg",
+      "en": "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768728495/Tutorial_02_Interconnected_Tanks_en_xsaxws.jpg",
+      "de": "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768728495/Tutorial_02_Interconnected_Tanks_de_dohqam.jpg"
+    },
+    "instructions": {
+      "uk": {
+        "url": "https://drive.google.com/file/d/155pvCLCC-tFWps0CahQ2UI4J2FI4C1NZ/view?usp=sharing",
+        "filename": "Tutorial 02 Interconnected Tanks uk.pdf",
+        "size": "988 kB"
+      },
+      "ru": {
+        "url": "https://drive.google.com/file/d/1nh-G_uY3NjhV52fn5vzmDz1Xo-aWPKib/view?usp=sharing",
+        "filename": "Tutorial 02 Interconnected Tanks ru.pdf",
+        "size": "993 kB"
+      },
+      "en": {
+        "url": "https://drive.google.com/file/d/1hSEsqPQEVkfRdJX8KGHpIQwaIlyUVHMP/view?usp=sharing",
+        "filename": "Tutorial 02 Interconnected Tanks en.pdf",
+        "size": "774 kB"
+      },
+      "de": {
+        "url": "https://drive.google.com/file/d/1zUJzMnFfTKTP9HLbmS_oLO8yruZpqD4B/view?usp=sharing",
+        "filename": "Tutorial 02 Interconnected Tanks de.pdf",
+        "size": "951 kB"
+      }
+    }
+  }
+]

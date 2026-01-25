@@ -1,0 +1,34 @@
+{
+  "id": "derivatives_table",
+  "category": "calculus",
+  "title": {
+    "uk": "Таблиця похідних",
+    "ru": "Таблица производных",
+    "en": "Table of Derivatives",
+    "de": "Tabelle der Ableitungen"
+  },
+  "headers": {
+    "uk": ["Функція f(x)", "Похідна f'(x)"],
+    "ru": ["Функция f(x)", "Производная f'(x)"],
+    "en": ["Function f(x)", "Derivative f'(x)"],
+    "de": ["Funktion f(x)", "Ableitung f'(x)"]
+  },
+  "rows": [
+    ["C (константа)", "0"],
+    ["x", "1"],
+    ["xⁿ", "nxⁿ⁻¹"],
+    ["√x", "1/(2√x)"],
+    ["1/x", "−1/x²"],
+    ["eˣ", "eˣ"],
+    ["aˣ", "aˣ ln a"],
+    ["ln x", "1/x"],
+    ["logₐ x", "1/(x ln a)"],
+    ["sin x", "cos x"],
+    ["cos x", "−sin x"],
+    ["tan x", "1/cos²x"],
+    ["cot x", "−1/sin²x"],
+    ["arcsin x", "1/√(1−x²)"],
+    ["arccos x", "−1/√(1−x²)"],
+    ["arctan x", "1/(1+x²)"]
+  ]
+}
