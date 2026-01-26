@@ -1,0 +1,103 @@
+{
+  "id": "resistance_coefficients",
+  "category": "resistance",
+  "title": {
+    "uk": "Коефіцієнти місцевих опорів ζ",
+    "ru": "Коэффициенты местных сопротивлений ζ",
+    "en": "Local Resistance Coefficients ζ",
+    "de": "Widerstandsbeiwerte ζ"
+  },
+  "headers": {
+    "uk": ["Тип опору", "Коефіцієнт ζ", "Умови"],
+    "ru": ["Тип сопротивления", "Коэффициент ζ", "Условия"],
+    "en": ["Resistance Type", "Coefficient ζ", "Conditions"],
+    "de": ["Widerstandstyp", "Beiwert ζ", "Bedingungen"]
+  },
+  "rows": [
+    [
+      {"uk": "Вхід в трубу з бака (гострий)", "ru": "Вход в трубу из бака (острый)", "en": "Sharp entrance", "de": "Scharfer Einlauf"},
+      "0.5",
+      {"uk": "Без заокруглення", "ru": "Без закругления", "en": "No rounding", "de": "Ohne Abrundung"}
+    ],
+    [
+      {"uk": "Вхід в трубу з бака (заокруглений)", "ru": "Вход в трубу из бака (закругленный)", "en": "Rounded entrance", "de": "Abgerundeter Einlauf"},
+      "0.1-0.2",
+      {"uk": "r/d = 0.1-0.2", "ru": "r/d = 0.1-0.2", "en": "r/d = 0.1-0.2", "de": "r/d = 0.1-0.2"}
+    ],
+    [
+      {"uk": "Вихід з труби в бак", "ru": "Выход из трубы в бак", "en": "Exit to tank", "de": "Auslass in Tank"},
+      "1.0",
+      {"uk": "Повна втрата швидкісного напору", "ru": "Полная потеря скоростного напора", "en": "Complete velocity head loss", "de": "Vollständiger Geschwindigkeitsverlust"}
+    ],
+    [
+      {"uk": "Коліно 90° (гладке)", "ru": "Колено 90° (гладкое)", "en": "90° elbow (smooth)", "de": "90° Bogen (glatt)"},
+      "0.3-0.5",
+      {"uk": "R/d > 1", "ru": "R/d > 1", "en": "R/d > 1", "de": "R/d > 1"}
+    ],
+    [
+      {"uk": "Коліно 90° (різьбове)", "ru": "Колено 90° (резьбовое)", "en": "90° elbow (threaded)", "de": "90° Bogen (Gewinde)"},
+      "1.5-2.0",
+      {"uk": "Стандартне", "ru": "Стандартное", "en": "Standard", "de": "Standard"}
+    ],
+    [
+      {"uk": "Коліно 45°", "ru": "Колено 45°", "en": "45° elbow", "de": "45° Bogen"},
+      "0.2-0.4",
+      {"uk": "Гладке", "ru": "Гладкое", "en": "Smooth", "de": "Glatt"}
+    ],
+    [
+      {"uk": "Трійник (прохідний потік)", "ru": "Тройник (проходной поток)", "en": "Tee (through flow)", "de": "T-Stück (Durchgang)"},
+      "0.2-0.4",
+      {"uk": "Пряма лінія", "ru": "Прямая линия", "en": "Straight line", "de": "Gerade Linie"}
+    ],
+    [
+      {"uk": "Трійник (відгалуження)", "ru": "Тройник (ответвление)", "en": "Tee (branch)", "de": "T-Stück (Abzweig)"},
+      "1.0-1.5",
+      {"uk": "Поворот 90°", "ru": "Поворот 90°", "en": "90° turn", "de": "90° Wende"}
+    ],
+    [
+      {"uk": "Засувка (повністю відкрита)", "ru": "Задвижка (полностью открыта)", "en": "Gate valve (fully open)", "de": "Schieber (voll geöffnet)"},
+      "0.15-0.2",
+      {"uk": "Клинова", "ru": "Клиновая", "en": "Wedge type", "de": "Keilschieber"}
+    ],
+    [
+      {"uk": "Вентиль (повністю відкритий)", "ru": "Вентиль (полностью открыт)", "en": "Globe valve (fully open)", "de": "Absperrventil (voll geöffnet)"},
+      "4.0-6.0",
+      {"uk": "Стандартний", "ru": "Стандартный", "en": "Standard", "de": "Standard"}
+    ],
+    [
+      {"uk": "Зворотний клапан (підйомний)", "ru": "Обратный клапан (подъемный)", "en": "Check valve (lift)", "de": "Rückschlagventil (Hub)"},
+      "2.0-3.0",
+      {"uk": "Повністю відкритий", "ru": "Полностью открыт", "en": "Fully open", "de": "Voll geöffnet"}
+    ],
+    [
+      {"uk": "Зворотний клапан (поворотний)", "ru": "Обратный клапан (поворотный)", "en": "Check valve (swing)", "de": "Rückschlagventil (Pendel)"},
+      "0.5-1.0",
+      {"uk": "Повністю відкритий", "ru": "Полностью открыт", "en": "Fully open", "de": "Voll geöffnet"}
+    ],
+    [
+      {"uk": "Фільтр (сітчастий)", "ru": "Фильтр (сетчатый)", "en": "Strainer (basket)", "de": "Filter (Sieb)"},
+      "1.0-2.0",
+      {"uk": "Чистий", "ru": "Чистый", "en": "Clean", "de": "Sauber"}
+    ],
+    [
+      {"uk": "Раптове розширення", "ru": "Внезапное расширение", "en": "Sudden expansion", "de": "Plötzliche Erweiterung"},
+      "(1-A₁/A₂)²",
+      {"uk": "За формулою Борда", "ru": "По формуле Борда", "en": "Borda formula", "de": "Borda-Formel"}
+    ],
+    [
+      {"uk": "Раптове звуження", "ru": "Внезапное сужение", "en": "Sudden contraction", "de": "Plötzliche Verengung"},
+      "0.5(1-A₂/A₁)",
+      {"uk": "Приблизно", "ru": "Приблизительно", "en": "Approximate", "de": "Ungefähr"}
+    ]
+  ],
+  "source": {
+    "name": "ДБН В.2.5-64:2012",
+    "url": "https://dbn.co.ua/",
+    "description": {
+      "uk": "Внутрішній водопровід та каналізація",
+      "ru": "Внутренний водопровод и канализация",
+      "en": "Internal water supply and sewerage",
+      "de": "Interne Wasserversorgung und Kanalisation"
+    }
+  }
+}

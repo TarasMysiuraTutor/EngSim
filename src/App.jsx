@@ -11,15 +11,12 @@ import CalculatorsPage from "./pages/CalculatorsPage";
 import CalculatorDetail from "./pages/CalculatorDetail";
 import VideosPage from "./pages/VideosPage";
 import AdminPage from "./pages/AdminPage";
-// import ReferencePage from "./pages/ReferencePage";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import FAQPage from "./pages/FAQPage";
 import ContactPage from "./pages/ContactPage";
-// import ReferenceMathPage from "./pages/ReferenceMathPage";
-// import ReferenceStrengthPage from "./pages/ReferenceStrengthPage";
 
 // ДОВІДКА - ГОЛОВНА СТОРІНКА
 import ReferencePage from "./pages/ReferencePage";
@@ -27,7 +24,7 @@ import ReferencePage from "./pages/ReferencePage";
 // ДОВІДКА - РОЗДІЛИ
 import ReferenceMathPage from "./pages/ReferenceMathPage";
 import ReferenceStrengthPage from "./pages/ReferenceStrengthPage";
-// import ReferenceHydraulicPage from "./pages/ReferenceHydraulicPage";  // Створіть аналогічно
+import ReferenceHydraulicPage from "./pages/ReferenceHydraulicsPage";  // Створіть аналогічно
 // import ReferenceThermalPage from "./pages/ReferenceThermalPage";      // Створіть аналогічно
 // import ReferenceMassPage from "./pages/ReferenceMassPage";            // Створіть аналогічно
 
@@ -170,7 +167,7 @@ function App() {
           />
 
           {/* Гідравліка */}
-          {/* 
+          
           <Route 
             path="/reference/hydraulic" 
             element={
@@ -181,7 +178,7 @@ function App() {
               />
             } 
           />
-          */}
+         
 
           {/* Теплообмін */}
           {/* 

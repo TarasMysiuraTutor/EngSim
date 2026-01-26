@@ -243,6 +243,14 @@ export const translations = {
     adminCopy: "Копіювати",
     adminCopied: "Скопійовано!",
     adminCodeHint: "Скопіюй цей код та вставте його в масив",
+
+    //quickNavigationTitle
+    quickNavigationTitle: "Швидка навігація",
+    servicesQuickDesc: "Професійні інженерні розрахунки",
+    aboutQuickDesc: "Досвід та кваліфікація",
+    projectsQuickDesc: "Портфоліо виконаних робіт",
+    contactQuickDesc: "Зв'яжіться зі мною",
+
   },
 
   ru: {
@@ -488,6 +496,13 @@ export const translations = {
     adminCopy: "Копировать",
     adminCopied: "Скопировано!",
     adminCodeHint: "Скопируйте этот код и вставьте его в массив",
+  
+  //quickNavigationTitle
+    quickNavigationTitle: "Быстрая навигация",
+    servicesQuickDesc: "Профессиональные инженерные расчеты",
+    aboutQuickDesc: "Опыт и квалификация",
+    projectsQuickDesc: "Портфолио выполненных работ",
+    contactQuickDesc: "Свяжитесь со мной",
   },
 
   en: {
@@ -735,6 +750,13 @@ export const translations = {
     adminCopy: "Copy",
     adminCopied: "Copied!",
     adminCodeHint: "Copy this code and paste it into the array",
+  
+  //quickNavigationTitle
+    quickNavigationTitle: "Quick Navigation",
+    servicesQuickDesc: "Professional engineering calculations",
+    aboutQuickDesc: "Experience and qualifications",
+    projectsQuickDesc: "Portfolio of completed projects",
+    contactQuickDesc: "Contact me",
   },
 
   de: {
@@ -994,6 +1016,13 @@ export const translations = {
       "Durch die Nutzung dieser Website und der Ingenieurrechner stimmen Sie den folgenden Bedingungen zu.",
     privacyContact: "Bei Datenschutzfragen kontaktieren:",
     termsContact: "Bei Nutzungsfragen kontaktieren:",
+  
+  //quickNavigationTitle
+    quickNavigationTitle: "Schnellnavigation",
+    servicesQuickDesc: "Professionelle technische Berechnungen",
+    aboutQuickDesc: "Erfahrung und Qualifikationen",
+    projectsQuickDesc: "Portfolio abgeschlossener Projekte",
+    contactQuickDesc: "Kontaktieren Sie mich",
   },
 };
 

@@ -1,0 +1,75 @@
+{
+  "id": "fluids_properties",
+  "category": "basics",
+  "title": {
+    "uk": "Властивості рідин при 20°C",
+    "ru": "Свойства жидкостей при 20°C",
+    "en": "Fluid Properties at 20°C",
+    "de": "Flüssigkeitseigenschaften bei 20°C"
+  },
+  "headers": {
+    "uk": ["Рідина", "Щільність ρ, кг/м³", "Динамічна в'язкість μ, Па·с×10⁻³", "Кінематична в'язкість ν, м²/с×10⁻⁶"],
+    "ru": ["Жидкость", "Плотность ρ, кг/м³", "Динамическая вязкость μ, Па·с×10⁻³", "Кинематическая вязкость ν, м²/с×10⁻⁶"],
+    "en": ["Fluid", "Density ρ, kg/m³", "Dynamic viscosity μ, Pa·s×10⁻³", "Kinematic viscosity ν, m²/s×10⁻⁶"],
+    "de": ["Flüssigkeit", "Dichte ρ, kg/m³", "Dynamische Viskosität μ, Pa·s×10⁻³", "Kinematische Viskosität ν, m²/s×10⁻⁶"]
+  },
+  "rows": [
+    [
+      {"uk": "Вода", "ru": "Вода", "en": "Water", "de": "Wasser"},
+      "998",
+      "1.002",
+      "1.004"
+    ],
+    [
+      {"uk": "Морська вода", "ru": "Морская вода", "en": "Seawater", "de": "Meerwasser"},
+      "1025",
+      "1.07",
+      "1.05"
+    ],
+    [
+      {"uk": "Гліцерин", "ru": "Глицерин", "en": "Glycerin", "de": "Glycerin"},
+      "1260",
+      "1490",
+      "1180"
+    ],
+    [
+      {"uk": "Етиловий спирт", "ru": "Этиловый спирт", "en": "Ethyl alcohol", "de": "Ethylalkohol"},
+      "789",
+      "1.20",
+      "1.52"
+    ],
+    [
+      {"uk": "Бензин", "ru": "Бензин", "en": "Gasoline", "de": "Benzin"},
+      "700-750",
+      "0.50-0.60",
+      "0.70-0.85"
+    ],
+    [
+      {"uk": "Дизельне паливо", "ru": "Дизельное топливо", "en": "Diesel fuel", "de": "Dieselkraftstoff"},
+      "830-860",
+      "2.0-5.0",
+      "2.5-6.0"
+    ],
+    [
+      {"uk": "Машинна олива SAE 30", "ru": "Машинное масло SAE 30", "en": "Engine oil SAE 30", "de": "Motoröl SAE 30"},
+      "890",
+      "200-300",
+      "225-340"
+    ],
+    [
+      {"uk": "Ртуть", "ru": "Ртуть", "en": "Mercury", "de": "Quecksilber"},
+      "13546",
+      "1.55",
+      "0.114"
+    ]
+  ],
+  "source": {
+    "name": "Довідник інженера-гідравліка",
+    "description": {
+      "uk": "За даними при атмосферному тиску 101.325 кПа",
+      "ru": "По данным при атмосферном давлении 101.325 кПа",
+      "en": "At atmospheric pressure 101.325 kPa",
+      "de": "Bei atmosphärischem Druck 101.325 kPa"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "pipe_roughness",
+  "category": "resistance",
+  "title": {
+    "uk": "Абсолютна шорсткість труб k, мм",
+    "ru": "Абсолютная шероховатость труб k, мм",
+    "en": "Absolute Pipe Roughness k, mm",
+    "de": "Absolute Rohrrauhigkeit k, mm"
+  },
+  "headers": {
+    "uk": ["Матеріал труби", "Стан", "k, мм", "Примітка"],
+    "ru": ["Материал трубы", "Состояние", "k, мм", "Примечание"],
+    "en": ["Pipe Material", "Condition", "k, mm", "Note"],
+    "de": ["Rohrmaterial", "Zustand", "k, mm", "Hinweis"]
+  },
+  "rows": [
+    [
+      {"uk": "Скло, мідь, латунь", "ru": "Стекло, медь, латунь", "en": "Glass, copper, brass", "de": "Glas, Kupfer, Messing"},
+      {"uk": "Нові", "ru": "Новые", "en": "New", "de": "Neu"},
+      "0.0015-0.01",
+      {"uk": "Гладкі труби", "ru": "Гладкие трубы", "en": "Smooth pipes", "de": "Glatte Rohre"}
+    ],
+    [
+      {"uk": "Пластик (ПВХ, ПЕ, ПП)", "ru": "Пластик (ПВХ, ПЭ, ПП)", "en": "Plastic (PVC, PE, PP)", "de": "Kunststoff (PVC, PE, PP)"},
+      {"uk": "Нові", "ru": "Новые", "en": "New", "de": "Neu"},
+      "0.01-0.05",
+      {"uk": "Дуже гладкі", "ru": "Очень гладкие", "en": "Very smooth", "de": "Sehr glatt"}
+    ],
+    [
+      {"uk": "Сталь", "ru": "Сталь", "en": "Steel", "de": "Stahl"},
+      {"uk": "Нова безшовна", "ru": "Новая бесшовная", "en": "New seamless", "de": "Neu nahtlos"},
+      "0.02-0.05",
+      {"uk": "Без корозії", "ru": "Без коррозии", "en": "No corrosion", "de": "Keine Korrosion"}
+    ],
+    [
+      {"uk": "Сталь", "ru": "Сталь", "en": "Steel", "de": "Stahl"},
+      {"uk": "Нова зварна", "ru": "Новая сварная", "en": "New welded", "de": "Neu geschweißt"},
+      "0.04-0.10",
+      {"uk": "Зі зварними швами", "ru": "Со сварными швами", "en": "With weld seams", "de": "Mit Schweißnähten"}
+    ],
+    [
+      {"uk": "Сталь оцинкована", "ru": "Сталь оцинкованная", "en": "Galvanized steel", "de": "Verzinkter Stahl"},
+      {"uk": "Нова", "ru": "Новая", "en": "New", "de": "Neu"},
+      "0.07-0.15",
+      {"uk": "З цинковим покриттям", "ru": "С цинковым покрытием", "en": "Zinc coated", "de": "Verzinkt"}
+    ],
+    [
+      {"uk": "Сталь", "ru": "Сталь", "en": "Steel", "de": "Stahl"},
+      {"uk": "Після експлуатації", "ru": "После эксплуатации", "en": "Used", "de": "Gebraucht"},
+      "0.15-1.0",
+      {"uk": "З корозією та відкладеннями", "ru": "С коррозией и отложениями", "en": "With corrosion and deposits", "de": "Mit Korrosion und Ablagerungen"}
+    ],
+    [
+      {"uk": "Чавун", "ru": "Чугун", "en": "Cast iron", "de": "Gusseisen"},
+      {"uk": "Новий", "ru": "Новый", "en": "New", "de": "Neu"},
+      "0.25-0.50",
+      {"uk": "Без покриття", "ru": "Без покрытия", "en": "Uncoated", "de": "Unbeschichtet"}
+    ],
+    [
+      {"uk": "Чавун", "ru": "Чугун", "en": "Cast iron", "de": "Gusseisen"},
+      {"uk": "Після експлуатації", "ru": "После эксплуатации", "en": "Used", "de": "Gebraucht"},
+      "1.0-1.5",
+      {"uk": "З відкладеннями", "ru": "С отложениями", "en": "With deposits", "de": "Mit Ablagerungen"}
+    ],
+    [
+      {"uk": "Азбестоцемент", "ru": "Асбестоцемент", "en": "Asbestos cement", "de": "Asbestzement"},
+      {"uk": "Новий", "ru": "Новый", "en": "New", "de": "Neu"},
+      "0.05-0.10",
+      {"uk": "Гладка внутрішня поверхня", "ru": "Гладкая внутренняя поверхность", "en": "Smooth inner surface", "de": "Glatte Innenfläche"}
+    ],
+    [
+      {"uk": "Бетон", "ru": "Бетон", "en": "Concrete", "de": "Beton"},
+      {"uk": "Гладкий", "ru": "Гладкий", "en": "Smooth", "de": "Glatt"},
+      "0.3-0.8",
+      {"uk": "Якісне опалубка", "ru": "Качественная опалубка", "en": "Quality formwork", "de": "Qualitätsschalung"}
+    ],
+    [
+      {"uk": "Бетон", "ru": "Бетон", "en": "Concrete", "de": "Beton"},
+      {"uk": "Шорсткий", "ru": "Шероховатый", "en": "Rough", "de": "Rau"},
+      "1.0-3.0",
+      {"uk": "Звичайне опалубка", "ru": "Обычная опалубка", "en": "Regular formwork", "de": "Normale Schalung"}
+    ],
+    [
+      {"uk": "Залізобетон", "ru": "Железобетон", "en": "Reinforced concrete", "de": "Stahlbeton"},
+      {"uk": "Старий", "ru": "Старый", "en": "Old", "de": "Alt"},
+      "2.0-5.0",
+      {"uk": "З пошкодженнями", "ru": "С повреждениями", "en": "With damage", "de": "Mit Beschädigungen"}
+    ]
+  ],
+  "source": {
+    "name": "ДБН В.2.5-74:2013",
+    "description": {
+      "uk": "Водопостачання. Зовнішні мережі та споруди",
+      "ru": "Водоснабжение. Наружные сети и сооружения",
+      "en": "Water supply. External networks and structures",
+      "de": "Wasserversorgung. Externe Netze und Strukturen"
+    }
+  }
+}

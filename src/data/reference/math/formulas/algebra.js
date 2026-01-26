@@ -190,7 +190,7 @@ export const algebraFormulas = [
       de: "Summe geometrischer Folge",
     },
     formula: "Sₙ = a₁(1 − qⁿ)/(1 − q)",
-    latex: "S_n = \frac{a_1(1 - q^n)}{1 - q}",
+    latex: "S_n = \\frac{a_1(1 - q^n)}{1 - q}",
     variables: [
       {
         uk: "a₁ — перший член",

@@ -197,6 +197,7 @@ const ReferenceStrengthPage = ({ currentLang, setCurrentLang, t }) => {
                         formula={item.formula} 
                         className="text-white text-2xl flex items-center justify-center"
                       />
+                      
                     </div>
 
                     {/* Variables */}

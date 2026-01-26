@@ -15,7 +15,7 @@ function HomePage({ currentLang }) {
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
         <Hero t={t} />
         
-        {/* Quick Links Section */}
+        {/* quickNavigationTitle */}
         <section className="py-16 px-4 md:px-8 bg-[#1a1f3a]/50">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">

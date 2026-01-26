@@ -7,50 +7,53 @@ import Footer from '../components/Footer';
 import { mathReferenceData } from '../data/reference/math';
 
 // Компонент для відображення формул через KaTeX
-const FormulaDisplay = ({ latex, inline = false }) => {
-  const containerRef = useRef(null);
 
-  useEffect(() => {
-    if (containerRef.current && latex) {
-      // Динамічне завантаження KaTeX
-      const loadKatex = async () => {
-        if (!window.katex) {
-          // Завантажуємо CSS
-          const link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css';
-          document.head.appendChild(link);
+import FormulaDisplay from "../components/FormulaDisplay";
 
-          // Завантажуємо JS
-          const script = document.createElement('script');
-          script.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js';
-          script.onload = () => renderFormula();
-          document.head.appendChild(script);
-        } else {
-          renderFormula();
-        }
-      };
+// const FormulaDisplay = ({ latex, inline = false }) => {
+//   const containerRef = useRef(null);
 
-      const renderFormula = () => {
-        try {
-          window.katex.render(latex, containerRef.current, {
-            throwOnError: false,
-            displayMode: !inline,
-            strict: false
-          });
-        } catch (err) {
-          console.error('KaTeX render error:', err);
-          // Fallback - показуємо звичайний текст
-          containerRef.current.textContent = latex;
-        }
-      };
+//   useEffect(() => {
+//     if (containerRef.current && latex) {
+//       // Динамічне завантаження KaTeX
+//       const loadKatex = async () => {
+//         if (!window.katex) {
+//           // Завантажуємо CSS
+//           const link = document.createElement('link');
+//           link.rel = 'stylesheet';
+//           link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css';
+//           document.head.appendChild(link);
 
-      loadKatex();
-    }
-  }, [latex, inline]);
+//           // Завантажуємо JS
+//           const script = document.createElement('script');
+//           script.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js';
+//           script.onload = () => renderFormula();
+//           document.head.appendChild(script);
+//         } else {
+//           renderFormula();
+//         }
+//       };
 
-  return <div ref={containerRef} className={inline ? "inline-block" : "text-3xl my-4"} />;
-};
+//       const renderFormula = () => {
+//         try {
+//           window.katex.render(latex, containerRef.current, {
+//             throwOnError: false,
+//             displayMode: !inline,
+//             strict: false
+//           });
+//         } catch (err) {
+//           console.error('KaTeX render error:', err);
+//           // Fallback - показуємо звичайний текст
+//           containerRef.current.textContent = latex;
+//         }
+//       };
+
+//       loadKatex();
+//     }
+//   }, [latex, inline]);
+
+//   return <div ref={containerRef} className={inline ? "inline-block" : "text-3xl my-4"} />;
+// };
 
 const ReferenceMathPage = ({ currentLang, setCurrentLang, t }) => {
   const { formulas, tables, files } = mathReferenceData;
@@ -287,7 +290,11 @@ const ReferenceMathPage = ({ currentLang, setCurrentLang, t }) => {
                     <div className="bg-[#0a0e27]/50 p-6 rounded-xl border border-blue-500/20 mb-4">
                       {formula.latex ? (
                         <div className="text-center">
-                          <FormulaDisplay latex={formula.latex} />
+                          <FormulaDisplay
+                            formula={formula.latex}
+                            className="text-white text-2xl flex items-center justify-center"
+                          />
+                          {/* <FormulaDisplay latex={formula.latex} /> */}
                         </div>
                       ) : (
                         <div className="text-3xl font-mono text-center text-white">
