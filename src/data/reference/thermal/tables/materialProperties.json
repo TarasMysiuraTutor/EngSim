@@ -1,0 +1,93 @@
+{
+  "id": "building-materials",
+  "category": "materials",
+  "title": {
+    "uk": "Теплопровідність будівельних матеріалів",
+    "ru": "Теплопроводность строительных материалов",
+    "en": "Thermal Conductivity of Building Materials",
+    "de": "Wärmeleitfähigkeit von Baumaterialien"
+  },
+  "headers": {
+    "uk": ["Матеріал", "λ, Вт/(м·К)", "ρ, кг/м³", "cₚ, Дж/(кг·К)"],
+    "ru": ["Материал", "λ, Вт/(м·К)", "ρ, кг/м³", "cₚ, Дж/(кг·К)"],
+    "en": ["Material", "λ, W/(m·K)", "ρ, kg/m³", "cₚ, J/(kg·K)"],
+    "de": ["Material", "λ, W/(m·K)", "ρ, kg/m³", "cₚ, J/(kg·K)"]
+  },
+  "rows": [
+    [
+      {"uk": "Бетон звичайний", "ru": "Бетон обычный", "en": "Concrete ordinary", "de": "Normalbeton"},
+      "1.5",
+      "2400",
+      "840"
+    ],
+    [
+      {"uk": "Бетон легкий", "ru": "Бетон легкий", "en": "Lightweight concrete", "de": "Leichtbeton"},
+      "0.35-0.70",
+      "1200-1800",
+      "840"
+    ],
+    [
+      {"uk": "Цегла керамічна", "ru": "Кирпич керамический", "en": "Ceramic brick", "de": "Keramikziegel"},
+      "0.56",
+      "1800",
+      "880"
+    ],
+    [
+      {"uk": "Цегла силікатна", "ru": "Кирпич силикатный", "en": "Silicate brick", "de": "Kalksandstein"},
+      "0.76",
+      "1800",
+      "880"
+    ],
+    [
+      {"uk": "Деревина (сосна)", "ru": "Древесина (сосна)", "en": "Wood (pine)", "de": "Holz (Kiefer)"},
+      "0.15",
+      "500",
+      "2300"
+    ],
+    [
+      {"uk": "Деревина (дуб)", "ru": "Древесина (дуб)", "en": "Wood (oak)", "de": "Holz (Eiche)"},
+      "0.18",
+      "700",
+      "2300"
+    ],
+    [
+      {"uk": "Скло віконне", "ru": "Стекло оконное", "en": "Window glass", "de": "Fensterglas"},
+      "0.76",
+      "2500",
+      "840"
+    ],
+    [
+      {"uk": "Мінеральна вата", "ru": "Минеральная вата", "en": "Mineral wool", "de": "Mineralwolle"},
+      "0.041",
+      "100",
+      "840"
+    ],
+    [
+      {"uk": "Пінополістирол", "ru": "Пенополистирол", "en": "Polystyrene foam", "de": "Polystyrolschaum"},
+      "0.035",
+      "25",
+      "1340"
+    ],
+    [
+      {"uk": "Пінополіуретан", "ru": "Пенополиуретан", "en": "Polyurethane foam", "de": "Polyurethanschaum"},
+      "0.025",
+      "30",
+      "1400"
+    ]
+  ],
+  "note": {
+    "uk": "Значення при температурі 20°C",
+    "ru": "Значения при температуре 20°C",
+    "en": "Values at 20°C",
+    "de": "Werte bei 20°C"
+  },
+  "source": {
+    "name": "ДСТУ Б В.2.6-31:2016",
+    "description": {
+      "uk": "Теплова ізоляція будівель",
+      "ru": "Тепловая изоляция зданий",
+      "en": "Thermal insulation of buildings",
+      "de": "Wärmedämmung von Gebäuden"
+    }
+  }
+}

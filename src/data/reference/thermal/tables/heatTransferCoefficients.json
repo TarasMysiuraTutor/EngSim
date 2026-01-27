@@ -1,0 +1,59 @@
+{
+  "id": "heat-transfer-coefficients",
+  "category": "convection",
+  "title": {
+    "uk": "Типові значення коефіцієнта тепловіддачі",
+    "ru": "Типичные значения коэффициента теплоотдачи",
+    "en": "Typical Heat Transfer Coefficients",
+    "de": "Typische Wärmeübergangskoeffizienten"
+  },
+  "headers": {
+    "uk": ["Умови теплообміну", "α, Вт/(м²·К)"],
+    "ru": ["Условия теплообмена", "α, Вт/(м²·К)"],
+    "en": ["Heat Transfer Conditions", "α, W/(m²·K)"],
+    "de": ["Wärmeübertragungsbedingungen", "α, W/(m²·K)"]
+  },
+  "rows": [
+    [
+      {"uk": "Вільна конвекція повітря", "ru": "Свободная конвекция воздуха", "en": "Free convection air", "de": "Freie Konvektion Luft"},
+      "3-20"
+    ],
+    [
+      {"uk": "Вільна конвекція води", "ru": "Свободная конвекция воды", "en": "Free convection water", "de": "Freie Konvektion Wasser"},
+      "20-100"
+    ],
+    [
+      {"uk": "Вимушена конвекція повітря", "ru": "Вынужденная конвекция воздуха", "en": "Forced convection air", "de": "Erzwungene Konvektion Luft"},
+      "10-200"
+    ],
+    [
+      {"uk": "Вимушена конвекція води", "ru": "Вынужденная конвекция воды", "en": "Forced convection water", "de": "Erzwungene Konvektion Wasser"},
+      "50-10000"
+    ],
+    [
+      {"uk": "Вимушена конвекція масла", "ru": "Вынужденная конвекция масла", "en": "Forced convection oil", "de": "Erzwungene Konvektion Öl"},
+      "50-500"
+    ],
+    [
+      {"uk": "Конденсація водяної пари", "ru": "Конденсация водяного пара", "en": "Condensation of water vapor", "de": "Kondensation von Wasserdampf"},
+      "5000-15000"
+    ],
+    [
+      {"uk": "Кипіння води при атм. тиску", "ru": "Кипение воды при атм. давлении", "en": "Boiling water at atm. pressure", "de": "Siedendes Wasser bei atm. Druck"},
+      "3000-100000"
+    ],
+    [
+      {"uk": "Конденсація органічних парів", "ru": "Конденсация органических паров", "en": "Condensation of organic vapors", "de": "Kondensation organischer Dämpfe"},
+      "500-2000"
+    ]
+  ],
+  "source": {
+    "name": "VDI Heat Atlas 2010",
+    "description": {
+      "uk": "Довідник з теплообміну",
+      "ru": "Справочник по теплообмену",
+      "en": "Heat Transfer Handbook",
+      "de": "Wärmeübertragung Handbuch"
+    }
+  }
+}

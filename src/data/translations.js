@@ -14,7 +14,7 @@ export const translations = {
     navHelp: "Допомога",
     // Hero Section
     heroLabel: "Професійні інженерні послуги",
-    heroPreTitle: "Вітаю, я Віктор, інженер-розрахунковець.",
+    heroPreTitle: "Вітаю, я Тарас, інженер-розрахунковець.",
     heroTitle: "Професійні інженерні розрахунки",
     heroPostTitle:
       "Пропоную свої послуги з професійних інженерних розрахунків для різних галузей промисловості:",
@@ -106,7 +106,7 @@ export const translations = {
     // About
     aboutTitle: "Про мене",
     aboutSubtitle: "Інженер-розрахунковець з багаторічним досвідом",
-    aboutName: "Віктор Сукайло",
+    aboutName: "Тарас Мисюра",
     aboutRole: "Інженер-консультант",
     aboutBio1:
       "Професійний інженер з понад 10 років досвіду в галузі промислових розрахунків, термодинаміки та опору матеріалів.",
@@ -134,12 +134,12 @@ export const translations = {
     testimonial1Role: "Директор",
     testimonial1Company: "ТехноПром ООО",
     testimonial1Text:
-      "Віктор виконав складні розрахунки металоконструкції для нашого заводу. Професійний підхід, точність розрахунків та своєчасна здача проекту. Рекомендую як надійного спеціаліста!",
+      "Тарас виконав складні розрахунки металоконструкції для нашого заводу. Професійний підхід, точність розрахунків та своєчасна здача проекту. Рекомендую як надійного спеціаліста!",
     testimonial2Name: "Марина Коваленко",
     testimonial2Role: "Головний інженер",
     testimonial2Company: "ЕнергоБуд",
     testimonial2Text:
-      "Замовляли енергоаудит виробництва. Віктор провів детальний аналіз, запропонував конкретні рішення. Завдяки його рекомендаціям знизили витрати на опалення на 30%. Дуже задоволені результатом!",
+      "Замовляли енергоаудит виробництва. Тарас провів детальний аналіз, запропонував конкретні рішення. Завдяки його рекомендаціям знизили витрати на опалення на 30%. Дуже задоволені результатом!",
     testimonial3Name: "Дмитро Сидоренко",
     testimonial3Role: "Технічний директор",
     testimonial3Company: "ХімПром Україна",
@@ -149,7 +149,7 @@ export const translations = {
     testimonial4Role: "Керівник проектів",
     testimonial4Company: "БудІнжиніринг",
     testimonial4Text:
-      "Співпраця з Віктором — це завжди якість та відповідальність. Виконує розрахунки швидко, надає детальну документацію, завжди на зв'язку. Працюємо разом вже 3 роки!",
+      "Співпраця з Тарасом — це завжди якість та відповідальність. Виконує розрахунки швидко, надає детальну документацію, завжди на зв'язку. Працюємо разом вже 3 роки!",
 
     // Contact
     contactTitle: "Зв'язатися зі мною",
@@ -167,8 +167,8 @@ export const translations = {
     contactOr: "Або зв'яжіться зі мною напряму",
     contactQuickTitle: "Швидкий зв'язок",
     contactQuickPhone: "+380 XX XXX XX XX",
-    contactQuickEmail: "viktor.sukaylo@example.com",
-    contactQuickTelegram: "@viktorsukaylo",
+    contactQuickEmail: "engensim@gmail.com",
+    contactQuickTelegram: "@taras_as",
     contactAvailable: "Доступний Пн-Пт, 9:00-18:00",
     contactResponseTime: "Зазвичай відповідаю протягом 2 годин",
     contactSending: "Надсилання...",
@@ -186,8 +186,8 @@ export const translations = {
     // Quick Contact
     quickContactTitle: "Швидкий зв'язок",
     quickContactPhone: "+380 XX XXX XX XX",
-    quickContactEmail: "viktor@example.com",
-    quickContactTelegram: "@viktorsukaylo",
+    quickContactEmail: "engensim@gmail.com",
+    quickContactTelegram: "@taras_as",
 
     // Common
     calculate: "Розрахувати",
@@ -269,7 +269,7 @@ export const translations = {
 
     // Hero Section
     heroLabel: "Профессиональные инженерные услуги",
-    heroPreTitle: "Добро пожаловать, я Виктор, инженер-расчетчик.",
+    heroPreTitle: "Добро пожаловать, я Тарас, инженер-расчетчик.",
     heroTitle: "Профессиональные инженерные расчеты",
     heroPostTitle:
       "Предлагаю свои услуги по профессиональным инженерным расчетам для различных отраслей промышленности:",
@@ -360,7 +360,7 @@ export const translations = {
     // About
     aboutTitle: "Обо мне",
     aboutSubtitle: "Инженер-расчетчик с многолетним опытом",
-    aboutName: "Виктор Сукайло",
+    aboutName: "Тарас Мисюра",
     aboutRole: "Инженер-консультант",
     aboutBio1:
       "Профессиональный инженер с более чем 10 годами опыта в области промышленных расчетов, термодинамики и сопротивления материалов.",
@@ -388,22 +388,22 @@ export const translations = {
     testimonial1Role: "Директор",
     testimonial1Company: "ТехноПром ООО",
     testimonial1Text:
-      "Виктор выполнил сложные расчеты металлоконструкции для нашего завода. Профессиональный подход, точность расчетов и своевременная сдача проекта. Рекомендую как надежного специалиста!",
+      "Тарас выполнил сложные расчеты металлоконструкции для нашего завода. Профессиональный подход, точность расчетов и своевременная сдача проекта. Рекомендую как надежного специалиста!",
     testimonial2Name: "Марина Коваленко",
     testimonial2Role: "Главный инженер",
     testimonial2Company: "ЭнергоСтрой",
     testimonial2Text:
-      "Заказывали энергоаудит производства. Виктор провел детальный анализ, предложил конкретные решения. Благодаря его рекомендациям снизили затраты на отопление на 30%. Очень довольны результатом!",
+      "Заказывали энергоаудит производства. Тарас провел детальный анализ, предложил конкретные решения. Благодаря его рекомендациям снизили затраты на отопление на 30%. Очень довольны результатом!",
     testimonial3Name: "Дмитрий Сидоренко",
     testimonial3Role: "Технический директор",
     testimonial3Company: "ХимПром Украина",
     testimonial3Text:
-      "Разработка теплообменника для нашего цеха. Виктор учел все технические требования, подобрал оптимальное решение. Оборудование работает безупречно уже год. Профессионал своего дела!",
+      "Разработка теплообменника для нашего цеха. Тарас учел все технические требования, подобрал оптимальное решение. Оборудование работает безупречно уже год. Профессионал своего дела!",
     testimonial4Name: "Ирина Мельник",
     testimonial4Role: "Руководитель проектов",
     testimonial4Company: "СтройИнжиниринг",
     testimonial4Text:
-      "Сотрудничество с Виктором — это всегда качество и ответственность. Выполняет расчеты быстро, предоставляет детальную документацию, всегда на связи. Работаем вместе уже 3 года!",
+      "Сотрудничество с Тарасом — это всегда качество и ответственность. Выполняет расчеты быстро, предоставляет детальную документацию, всегда на связи. Работаем вместе уже 3 года!",
 
     // Contact
     contactTitle: "Связаться со мной",
@@ -420,8 +420,8 @@ export const translations = {
     contactOr: "Или свяжитесь со мной напрямую",
     contactQuickTitle: "Быстрая связь",
     contactQuickPhone: "+380 XX XXX XX XX",
-    contactQuickEmail: "viktor.sukaylo@example.com",
-    contactQuickTelegram: "@viktorsukaylo",
+    contactQuickEmail: "engensim@gmail.com",
+    contactQuickTelegram: "@taras_as",
     contactAvailable: "Доступен Пн-Пт, 9:00-18:00",
     contactResponseTime: "Обычно отвечаю в течение 2 часов",
     contactSending: "Отправка...",
@@ -439,8 +439,8 @@ export const translations = {
     // Quick Contact
     quickContactTitle: "Быстрая связь",
     quickContactPhone: "+380 XX XXX XX XX",
-    quickContactEmail: "viktor@example.com",
-    quickContactTelegram: "@viktorsukaylo",
+    quickContactEmail: "engensim@gmail.com",
+    quickContactTelegram: "@taras_as",
 
     // Common
     calculate: "Рассчитать",
@@ -521,7 +521,7 @@ export const translations = {
 
     // Hero Section
     heroLabel: "Professional Engineering Services",
-    heroPreTitle: "Welcome, I am Viktor, an engineering calculator.",
+    heroPreTitle: "Welcome, I am Taras, an engineering calculator.",
     heroTitle: "Professional Engineering Calculations",
     heroPostTitle:
       "I offer my services for professional engineering calculations in various industries:",
@@ -614,7 +614,7 @@ export const translations = {
     // About
     aboutTitle: "About Me",
     aboutSubtitle: "Engineering consultant with years of experience",
-    aboutName: "Viktor Sukaylo",
+    aboutName: "Taras Mysiura",
     aboutRole: "Engineering Consultant",
     aboutBio1:
       "Professional engineer with over 10 years of experience in industrial calculations, thermodynamics and strength of materials.",
@@ -642,22 +642,22 @@ export const translations = {
     testimonial1Role: "Director",
     testimonial1Company: "TechnoProm LLC",
     testimonial1Text:
-      "Viktor performed complex metal structure calculations for our plant. Professional approach, accurate calculations and timely project delivery. I recommend him as a reliable specialist!",
+      "Taras performed complex metal structure calculations for our plant. Professional approach, accurate calculations and timely project delivery. I recommend him as a reliable specialist!",
     testimonial2Name: "Marina Kovalenko",
     testimonial2Role: "Chief Engineer",
     testimonial2Company: "EnergyBuild",
     testimonial2Text:
-      "We ordered an energy audit of production. Viktor conducted a detailed analysis and proposed specific solutions. Thanks to his recommendations, we reduced heating costs by 30%. Very satisfied with the result!",
+      "We ordered an energy audit of production. Taras conducted a detailed analysis and proposed specific solutions. Thanks to his recommendations, we reduced heating costs by 30%. Very satisfied with the result!",
     testimonial3Name: "Dmitry Sidorenko",
     testimonial3Role: "Technical Director",
     testimonial3Company: "ChemProm Ukraine",
     testimonial3Text:
-      "Development of a heat exchanger for our workshop. Viktor took into account all technical requirements and selected the optimal solution. The equipment has been working flawlessly for a year. A true professional!",
+      "Development of a heat exchanger for our workshop. Taras took into account all technical requirements and selected the optimal solution. The equipment has been working flawlessly for a year. A true professional!",
     testimonial4Name: "Irina Melnyk",
     testimonial4Role: "Project Manager",
     testimonial4Company: "BuildEngineering",
     testimonial4Text:
-      "Cooperation with Viktor is always quality and responsibility. He performs calculations quickly, provides detailed documentation, and is always in touch. We have been working together for 3 years!",
+      "Cooperation with Taras is always quality and responsibility. He performs calculations quickly, provides detailed documentation, and is always in touch. We have been working together for 3 years!",
 
     // Contact
     contactTitle: "Contact Me",
@@ -674,8 +674,8 @@ export const translations = {
     contactOr: "Or contact me directly",
     contactQuickTitle: "Quick Contact",
     contactQuickPhone: "+380 XX XXX XX XX",
-    contactQuickEmail: "viktor.sukaylo@example.com",
-    contactQuickTelegram: "@viktorsukaylo",
+    contactQuickEmail: "engensim@gmail.com",
+    contactQuickTelegram: "@taras_as",
     contactAvailable: "Available Mon-Fri, 9:00-18:00",
     contactResponseTime: "Usually respond within 2 hours",
     contactSending: "Sending...",
@@ -693,8 +693,8 @@ export const translations = {
     // Quick Contact
     quickContactTitle: "Quick Contact",
     quickContactPhone: "+380 XX XXX XX XX",
-    quickContactEmail: "viktor@example.com",
-    quickContactTelegram: "@viktorsukaylo",
+    quickContactEmail: "engensim@gmail.com",
+    quickContactTelegram: "@taras_as",
 
     // Common
     calculate: "Calculate",
@@ -775,7 +775,7 @@ export const translations = {
 
     // Hero Section
     heroLabel: "Professionelle Ingenieurdienstleistungen",
-    heroPreTitle: "Willkommen, ich bin Viktor, ein Ingenieurkalkulator.",
+    heroPreTitle: "Willkommen, ich bin Taras, ein Ingenieurkalkulator.",
     heroTitle: "Professionelle Ingenieurberechnungen",
     heroPostTitle:
       "Ich biete meine Dienste im Bereich professioneller ingenieurtechnischer Berechnungen für verschiedene Industriezweige an:",
@@ -867,7 +867,7 @@ export const translations = {
     // About
     aboutTitle: "Über mich",
     aboutSubtitle: "Ingenieurberater mit langjähriger Erfahrung",
-    aboutName: "Viktor Sukaylo",
+    aboutName: "Taras Mysiura",
     aboutRole: "Ingenieurberater",
     aboutBio1:
       "Professioneller Ingenieur mit über 10 Jahren Erfahrung in Industrieberechnungen, Thermodynamik und Festigkeitslehre.",
@@ -895,22 +895,22 @@ export const translations = {
     testimonial1Role: "Direktor",
     testimonial1Company: "TechnoProm GmbH",
     testimonial1Text:
-      "Viktor führte komplexe Metallkonstruktionsberechnungen für unser Werk durch. Professioneller Ansatz, präzise Berechnungen und pünktliche Projektabgabe. Ich empfehle ihn als zuverlässigen Spezialisten!",
+      "Taras führte komplexe Metallkonstruktionsberechnungen für unser Werk durch. Professioneller Ansatz, präzise Berechnungen und pünktliche Projektabgabe. Ich empfehle ihn als zuverlässigen Spezialisten!",
     testimonial2Name: "Marina Kovalenko",
     testimonial2Role: "Chefingenieur",
     testimonial2Company: "EnergieBau",
     testimonial2Text:
-      "Wir haben ein Energieaudit der Produktion bestellt. Viktor führte eine detaillierte Analyse durch und schlug konkrete Lösungen vor. Dank seiner Empfehlungen konnten wir die Heizkosten um 30% senken. Sehr zufrieden!",
+      "Wir haben ein Energieaudit der Produktion bestellt. Taras führte eine detaillierte Analyse durch und schlug konkrete Lösungen vor. Dank seiner Empfehlungen konnten wir die Heizkosten um 30% senken. Sehr zufrieden!",
     testimonial3Name: "Dmitry Sidorenko",
     testimonial3Role: "Technischer Direktor",
     testimonial3Company: "ChemProm Ukraine",
     testimonial3Text:
-      "Entwicklung eines Wärmetauschers für unsere Werkstatt. Viktor berücksichtigte alle technischen Anforderungen und wählte die optimale Lösung. Die Ausrüstung funktioniert seit einem Jahr einwandfrei. Ein echter Profi!",
+      "Entwicklung eines Wärmetauschers für unsere Werkstatt. Taras berücksichtigte alle technischen Anforderungen und wählte die optimale Lösung. Die Ausrüstung funktioniert seit einem Jahr einwandfrei. Ein echter Profi!",
     testimonial4Name: "Irina Melnyk",
     testimonial4Role: "Projektmanager",
     testimonial4Company: "BauEngineering",
     testimonial4Text:
-      "Die Zusammenarbeit mit Viktor bedeutet immer Qualität und Verantwortung. Er führt Berechnungen schnell durch, liefert detaillierte Dokumentation und ist immer erreichbar. Wir arbeiten seit 3 Jahren zusammen!",
+      "Die Zusammenarbeit mit Taras bedeutet immer Qualität und Verantwortung. Er führt Berechnungen schnell durch, liefert detaillierte Dokumentation und ist immer erreichbar. Wir arbeiten seit 3 Jahren zusammen!",
 
     // Contact
     contactTitle: "Kontaktieren Sie mich",
@@ -928,8 +928,8 @@ export const translations = {
     contactOr: "Oder kontaktieren Sie mich direkt",
     contactQuickTitle: "Schnellkontakt",
     contactQuickPhone: "+380 XX XXX XX XX",
-    contactQuickEmail: "viktor.sukaylo@example.com",
-    contactQuickTelegram: "@viktorsukaylo",
+    contactQuickEmail: "engensim@gmail.com",
+    contactQuickTelegram: "@taras_as",
     contactAvailable: "Verfügbar Mo-Fr, 9:00-18:00",
     contactResponseTime: "Antworte normalerweise innerhalb von 2 Stunden",
     contactSending: "Senden...",
@@ -947,8 +947,8 @@ export const translations = {
     // Quick Contact
     quickContactTitle: "Schnellkontakt",
     quickContactPhone: "+380 XX XXX XX XX",
-    quickContactEmail: "viktor@example.com",
-    quickContactTelegram: "@viktorsukaylo",
+    quickContactEmail: "engensim@gmail.com",
+    quickContactTelegram: "@taras_as",
 
     // Common
     calculate: "Berechnen",

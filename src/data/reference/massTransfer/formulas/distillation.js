@@ -117,5 +117,129 @@ export const distillationFormulas = [
       { uk: 'N — дійсне число тарілок', ru: 'N — действительное число тарелок', en: 'N — actual number of stages', de: 'N — tatsächliche Bodenzahl' },
       { uk: 'R — робоче флегмове число', ru: 'R — рабочее флегмовое число', en: 'R — operating reflux ratio', de: 'R — Betriebsrücklaufverhältnis' }
     ]
+  },
+  {
+    id: 'antoine_equation',
+    category: 'distillation',
+    title: {
+      uk: 'Рівняння Антуана (тиск насиченої пари)',
+      ru: 'Уравнение Антуана (давление насыщенного пара)',
+      en: 'Antoine Equation (Vapor Pressure)',
+      de: 'Antoine-Gleichung (Dampfdruck)'
+    },
+    formula: 'log₁₀(P°) = A - B/(C + T)',
+    latex: '\\log_{10}(P^\\circ) = A - \\frac{B}{C + T}',
+    variables: [
+      { uk: 'P° — тиск насиченої пари, мм рт.ст.', ru: 'P° — давление насыщенного пара, мм рт.ст.', en: 'P° — vapor pressure, mmHg', de: 'P° — Dampfdruck, mmHg' },
+      { uk: 'T — температура, °C', ru: 'T — температура, °C', en: 'T — temperature, °C', de: 'T — Temperatur, °C' },
+      { uk: 'A, B, C — константи Антуана (табличні)', ru: 'A, B, C — константы Антуана (табличные)', en: 'A, B, C — Antoine constants (tabulated)', de: 'A, B, C — Antoine-Konstanten (tabelliert)' }
+    ],
+    example: {
+      uk: 'Для води: A=8.07131, B=1730.63, C=233.426',
+      ru: 'Для воды: A=8.07131, B=1730.63, C=233.426',
+      en: 'For water: A=8.07131, B=1730.63, C=233.426',
+      de: 'Für Wasser: A=8.07131, B=1730.63, C=233.426'
+    }
+  },
+  {
+    id: 'clausius_clapeyron',
+    category: 'distillation',
+    title: {
+      uk: 'Рівняння Клаузіуса-Клапейрона',
+      ru: 'Уравнение Клаузиуса-Клапейрона',
+      en: 'Clausius-Clapeyron Equation',
+      de: 'Clausius-Clapeyron-Gleichung'
+    },
+    formula: 'ln(P₂/P₁) = -(ΔH_vap/R) × (1/T₂ - 1/T₁)',
+    latex: '\\ln\\left(\\frac{P_2}{P_1}\\right) = -\\frac{\\Delta H_{vap}}{R} \\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)',
+    variables: [
+      { uk: 'P — тиск пари, Па', ru: 'P — давление пара, Па', en: 'P — vapor pressure, Pa', de: 'P — Dampfdruck, Pa' },
+      { uk: 'ΔH_vap — теплота випаровування, Дж/моль', ru: 'ΔH_vap — теплота испарения, Дж/моль', en: 'ΔH_vap — heat of vaporization, J/mol', de: 'ΔH_vap — Verdampfungswärme, J/mol' },
+      { uk: 'R — газова константа, 8.314 Дж/(моль·К)', ru: 'R — газовая постоянная, 8.314 Дж/(моль·К)', en: 'R — gas constant, 8.314 J/(mol·K)', de: 'R — Gaskonstante, 8.314 J/(mol·K)' }
+    ]
+  },
+  {
+    id: 'murphree_efficiency',
+    category: 'distillation',
+    title: {
+      uk: 'ККД тарілки за Мерфі',
+      ru: 'КПД тарелки по Мерфи',
+      en: 'Murphree Plate Efficiency',
+      de: 'Murphree-Bodenwirkungsgrad'
+    },
+    formula: 'E_MV = (y_n - y_(n+1))/(y_n* - y_(n+1))',
+    latex: 'E_{MV} = \\frac{y_n - y_{n+1}}{y_n^* - y_{n+1}}',
+    variables: [
+      { uk: 'y_n — фактична концентрація пари з тарілки n', ru: 'y_n — фактическая концентрация пара с тарелки n', en: 'y_n — actual vapor composition from plate n', de: 'y_n — tatsächliche Dampfzusammensetzung von Boden n' },
+      { uk: 'y_n* — рівноважна концентрація пари', ru: 'y_n* — равновесная концентрация пара', en: 'y_n* — equilibrium vapor composition', de: 'y_n* — Gleichgewichtsdampfzusammensetzung' },
+      { uk: 'y_(n+1) — концентрація вхідної пари', ru: 'y_(n+1) — концентрация входящего пара', en: 'y_(n+1) — inlet vapor composition', de: 'y_(n+1) — Eintrittsdampfzusammensetzung' }
+    ]
+  },
+  {
+    id: 'hetp',
+    category: 'distillation',
+    title: {
+      uk: 'Висота, еквівалентна теоретичній тарілці (HETP)',
+      ru: 'Высота, эквивалентная теоретической тарелке (HETP)',
+      en: 'Height Equivalent to Theoretical Plate (HETP)',
+      de: 'Höhe äquivalent zum theoretischen Boden (HETP)'
+    },
+    formula: 'HETP = Z/N',
+    latex: 'HETP = \\frac{Z}{N}',
+    variables: [
+      { uk: 'Z — висота насадки, м', ru: 'Z — высота насадки, м', en: 'Z — packing height, m', de: 'Z — Packungshöhe, m' },
+      { uk: 'N — кількість теоретичних тарілок', ru: 'N — количество теоретических тарелок', en: 'N — number of theoretical plates', de: 'N — Anzahl theoretischer Böden' }
+    ]
+  },
+  {
+    id: 'azeotrope_composition',
+    category: 'distillation',
+    title: {
+      uk: 'Склад азеотропної суміші',
+      ru: 'Состав азеотропной смеси',
+      en: 'Azeotrope Composition',
+      de: 'Azeotrope Zusammensetzung'
+    },
+    formula: 'x_az = y_az (при T_az)',
+    latex: 'x_{az} = y_{az} \\quad \\text{at } T_{az}',
+    variables: [
+      { uk: 'x_az, y_az — склад рідини та пари в точці азеотропу', ru: 'x_az, y_az — состав жидкости и пара в точке азеотропа', en: 'x_az, y_az — liquid and vapor composition at azeotrope', de: 'x_az, y_az — Flüssigkeits- und Dampfzusammensetzung am Azeotrop' },
+      { uk: 'T_az — температура азеотропу', ru: 'T_az — температура азеотропа', en: 'T_az — azeotrope temperature', de: 'T_az — Azeotroptemperatur' }
+    ]
+  },
+  {
+    id: 'ponchon_savarit',
+    category: 'distillation',
+    title: {
+      uk: 'Метод Поншона-Саваріта (ентальпійний метод)',
+      ru: 'Метод Поншона-Саварита (энтальпийный метод)',
+      en: 'Ponchon-Savarit Method (Enthalpy Method)',
+      de: 'Ponchon-Savarit-Methode (Enthalpiemethode)'
+    },
+    formula: 'Q = L × (H_V - h_L)',
+    latex: 'Q = L(H_V - h_L)',
+    variables: [
+      { uk: 'Q — тепловий потік, Вт', ru: 'Q — тепловой поток, Вт', en: 'Q — heat duty, W', de: 'Q — Wärmeleistung, W' },
+      { uk: 'L — мольний потік рідини, моль/с', ru: 'L — мольный поток жидкости, моль/с', en: 'L — liquid molar flow, mol/s', de: 'L — Flüssigkeitsmolstrom, mol/s' },
+      { uk: 'H_V — ентальпія пари, Дж/моль', ru: 'H_V — энтальпия пара, Дж/моль', en: 'H_V — vapor enthalpy, J/mol', de: 'H_V — Dampfenthalpie, J/mol' },
+      { uk: 'h_L — ентальпія рідини, Дж/моль', ru: 'h_L — энтальпия жидкости, Дж/моль', en: 'h_L — liquid enthalpy, J/mol', de: 'h_L — Flüssigkeitsenthalpie, J/mol' }
+    ]
+  },
+  {
+    id: 'minimum_boilup_ratio',
+    category: 'distillation',
+    title: {
+      uk: 'Мінімальне парове число',
+      ru: 'Минимальное паровое число',
+      en: 'Minimum Boilup Ratio',
+      de: 'Minimales Verdampfungsverhältnis'
+    },
+    formula: 'V_min/B = (x_B - x_F)/(x_F - y_F*)',
+    latex: '\\frac{V_{min}}{B} = \\frac{x_B - x_F}{x_F - y_F^*}',
+    variables: [
+      { uk: 'V — паровий потік, моль/с', ru: 'V — паровой поток, моль/с', en: 'V — vapor flow, mol/s', de: 'V — Dampfstrom, mol/s' },
+      { uk: 'B — потік кубового залишку, моль/с', ru: 'B — поток кубового остатка, моль/с', en: 'B — bottom product flow, mol/s', de: 'B — Sumpfproduktstrom, mol/s' },
+      { uk: 'x_B — склад кубового залишку', ru: 'x_B — состав кубового остатка', en: 'x_B — bottom composition', de: 'x_B — Sumpfzusammensetzung' }
+    ]
   }
 ];

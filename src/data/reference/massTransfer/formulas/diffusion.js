@@ -125,5 +125,114 @@ export const diffusionFormulas = [
       { uk: 'L — характерний розмір, м', ru: 'L — характерный размер, м', en: 'L — characteristic length, m', de: 'L — charakteristische Länge, m' },
       { uk: 'D — коефіцієнт дифузії, м²/с', ru: 'D — коэффициент диффузии, м²/с', en: 'D — diffusion coefficient, m²/s', de: 'D — Diffusionskoeffizient, m²/s' }
     ]
+  },
+  {
+    id: 'chapman_enskog',
+    category: 'diffusion',
+    title: {
+      uk: 'Рівняння Чепмена-Енскога',
+      ru: 'Уравнение Чепмена-Энскога',
+      en: 'Chapman-Enskog Equation',
+      de: 'Chapman-Enskog-Gleichung'
+    },
+    formula: 'D_AB = (0.00266 × T^(3/2)) / (P × M_AB^(1/2) × σ_AB² × Ω_D)',
+    latex: 'D_{AB} = \\frac{0.00266 T^{3/2}}{P M_{AB}^{1/2} \\sigma_{AB}^2 \\Omega_D}',
+    variables: [
+      { uk: 'T — температура, К', ru: 'T — температура, К', en: 'T — temperature, K', de: 'T — Temperatur, K' },
+      { uk: 'P — тиск, атм', ru: 'P — давление, атм', en: 'P — pressure, atm', de: 'P — Druck, atm' },
+      { uk: 'M_AB = 2/(1/M_A + 1/M_B)', ru: 'M_AB = 2/(1/M_A + 1/M_B)', en: 'M_AB = 2/(1/M_A + 1/M_B)', de: 'M_AB = 2/(1/M_A + 1/M_B)' },
+      { uk: 'σ_AB — діаметр зіткнення, Å', ru: 'σ_AB — диаметр столкновения, Å', en: 'σ_AB — collision diameter, Å', de: 'σ_AB — Stoßdurchmesser, Å' },
+      { uk: 'Ω_D — інтеграл зіткнень', ru: 'Ω_D — интеграл столкновений', en: 'Ω_D — collision integral', de: 'Ω_D — Stoßintegral' }
+    ],
+    source: {
+      name: 'Chapman S., Cowling T.G., 1970',
+      url: 'https://en.wikipedia.org/wiki/Chapman%E2%80%93Enskog_theory'
+    }
+  },
+  {
+    id: 'arrhenius_diffusion',
+    category: 'diffusion',
+    title: {
+      uk: 'Температурна залежність коефіцієнта дифузії (Арреніус)',
+      ru: 'Температурная зависимость коэффициента диффузии (Аррениус)',
+      en: 'Arrhenius Temperature Dependence of Diffusion',
+      de: 'Arrhenius-Temperaturabhängigkeit der Diffusion'
+    },
+    formula: 'D = D₀ × exp(-E_a/(RT))',
+    latex: 'D = D_0 \\exp\\left(-\\frac{E_a}{RT}\\right)',
+    variables: [
+      { uk: 'D₀ — передекспоненціальний множник, м²/с', ru: 'D₀ — предэкспоненциальный множитель, м²/с', en: 'D₀ — pre-exponential factor, m²/s', de: 'D₀ — präexponentieller Faktor, m²/s' },
+      { uk: 'E_a — енергія активації, Дж/моль', ru: 'E_a — энергия активации, Дж/моль', en: 'E_a — activation energy, J/mol', de: 'E_a — Aktivierungsenergie, J/mol' },
+      { uk: 'R — газова константа, 8.314 Дж/(моль·К)', ru: 'R — газовая постоянная, 8.314 Дж/(моль·К)', en: 'R — gas constant, 8.314 J/(mol·K)', de: 'R — Gaskonstante, 8.314 J/(mol·K)' },
+      { uk: 'T — температура, К', ru: 'T — температура, К', en: 'T — temperature, K', de: 'T — Temperatur, K' }
+    ]
+  },
+  {
+    id: 'knudsen_diffusion',
+    category: 'diffusion',
+    title: {
+      uk: 'Кнудсенівська дифузія',
+      ru: 'Кнудсеновская диффузия',
+      en: 'Knudsen Diffusion',
+      de: 'Knudsen-Diffusion'
+    },
+    formula: 'D_K = (d_pore/3) × √(8RT/(πM))',
+    latex: 'D_K = \\frac{d_{pore}}{3} \\sqrt{\\frac{8RT}{\\pi M}}',
+    variables: [
+      { uk: 'd_pore — діаметр пори, м', ru: 'd_pore — диаметр поры, м', en: 'd_pore — pore diameter, m', de: 'd_pore — Porendurchmesser, m' },
+      { uk: 'M — молярна маса, кг/моль', ru: 'M — молярная масса, кг/моль', en: 'M — molar mass, kg/mol', de: 'M — Molmasse, kg/mol' }
+    ]
+  },
+  {
+    id: 'effective_diffusivity',
+    category: 'diffusion',
+    title: {
+      uk: 'Ефективний коефіцієнт дифузії в пористому середовищі',
+      ru: 'Эффективный коэффициент диффузии в пористой среде',
+      en: 'Effective Diffusivity in Porous Media',
+      de: 'Effektive Diffusivität in porösen Medien'
+    },
+    formula: 'D_eff = (ε/τ) × D',
+    latex: 'D_{eff} = \\frac{\\varepsilon}{\\tau} D',
+    variables: [
+      { uk: 'ε — порожнинність', ru: 'ε — пористость', en: 'ε — porosity', de: 'ε — Porosität' },
+      { uk: 'τ — звивистість', ru: 'τ — извилистость', en: 'τ — tortuosity', de: 'τ — Tortuosität' },
+      { uk: 'D — коефіцієнт дифузії у вільному об\'ємі, м²/с', ru: 'D — коэффициент диффузии в свободном объеме, м²/с', en: 'D — bulk diffusion coefficient, m²/s', de: 'D — Volumendiffusionskoeffizient, m²/s' }
+    ]
+  },
+  {
+    id: 'prandtl_number',
+    category: 'diffusion',
+    title: {
+      uk: 'Число Прандтля',
+      ru: 'Число Прандтля',
+      en: 'Prandtl Number',
+      de: 'Prandtl-Zahl'
+    },
+    formula: 'Pr = ν/α = (c_p × μ)/k',
+    latex: 'Pr = \\frac{\\nu}{\\alpha} = \\frac{c_p \\mu}{k}',
+    variables: [
+      { uk: 'ν — кінематична в\'язкість, м²/с', ru: 'ν — кинематическая вязкость, м²/с', en: 'ν — kinematic viscosity, m²/s', de: 'ν — kinematische Viskosität, m²/s' },
+      { uk: 'α — температуропровідність, м²/с', ru: 'α — температуропроводность, м²/с', en: 'α — thermal diffusivity, m²/s', de: 'α — Temperaturleitfähigkeit, m²/s' },
+      { uk: 'c_p — теплоємність, Дж/(кг·К)', ru: 'c_p — теплоемкость, Дж/(кг·К)', en: 'c_p — heat capacity, J/(kg·K)', de: 'c_p — Wärmekapazität, J/(kg·K)' },
+      { uk: 'μ — динамічна в\'язкість, Па·с', ru: 'μ — динамическая вязкость, Па·с', en: 'μ — dynamic viscosity, Pa·s', de: 'μ — dynamische Viskosität, Pa·s' },
+      { uk: 'k — теплопровідність, Вт/(м·К)', ru: 'k — теплопроводность, Вт/(м·К)', en: 'k — thermal conductivity, W/(m·K)', de: 'k — Wärmeleitfähigkeit, W/(m·K)' }
+    ]
+  },
+  {
+    id: 'lewis_number',
+    category: 'diffusion',
+    title: {
+      uk: 'Число Льюїса',
+      ru: 'Число Льюиса',
+      en: 'Lewis Number',
+      de: 'Lewis-Zahl'
+    },
+    formula: 'Le = α/D = Sc/Pr',
+    latex: 'Le = \\frac{\\alpha}{D} = \\frac{Sc}{Pr}',
+    variables: [
+      { uk: 'α — температуропровідність, м²/с', ru: 'α — температуропроводность, м²/с', en: 'α — thermal diffusivity, m²/s', de: 'α — Temperaturleitfähigkeit, m²/s' },
+      { uk: 'D — коефіцієнт дифузії, м²/с', ru: 'D — коэффициент диффузии, м²/с', en: 'D — diffusion coefficient, m²/s', de: 'D — Diffusionskoeffizient, m²/s' }
+    ]
   }
 ];

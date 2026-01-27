@@ -1,0 +1,92 @@
+{
+  "id": "diffusion_coefficients",
+  "category": "diffusion",
+  "title": {
+    "uk": "Коефіцієнти дифузії в газах (при 25°C, 1 атм)",
+    "ru": "Коэффициенты диффузии в газах (при 25°C, 1 атм)",
+    "en": "Diffusion Coefficients in Gases (at 25°C, 1 atm)",
+    "de": "Diffusionskoeffizienten in Gasen (bei 25°C, 1 atm)"
+  },
+  "headers": {
+    "uk": ["Система", "D × 10⁵, м²/с", "Температура, °C"],
+    "ru": ["Система", "D × 10⁵, м²/с", "Температура, °C"],
+    "en": ["System", "D × 10⁵, m²/s", "Temperature, °C"],
+    "de": ["System", "D × 10⁵, m²/s", "Temperatur, °C"]
+  },
+  "rows": [
+    [
+      {
+        "uk": "H₂ - повітря",
+        "ru": "H₂ - воздух",
+        "en": "H₂ - air",
+        "de": "H₂ - Luft"
+      },
+      "7.11",
+      "25"
+    ],
+    [
+      {
+        "uk": "O₂ - повітря",
+        "ru": "O₂ - воздух",
+        "en": "O₂ - air",
+        "de": "O₂ - Luft"
+      },
+      "2.06",
+      "25"
+    ],
+    [
+      {
+        "uk": "CO₂ - повітря",
+        "ru": "CO₂ - воздух",
+        "en": "CO₂ - air",
+        "de": "CO₂ - Luft"
+      },
+      "1.64",
+      "25"
+    ],
+    [
+      {
+        "uk": "H₂O - повітря",
+        "ru": "H₂O - воздух",
+        "en": "H₂O - air",
+        "de": "H₂O - Luft"
+      },
+      "2.56",
+      "25"
+    ],
+    [
+      {
+        "uk": "NH₃ - повітря",
+        "ru": "NH₃ - воздух",
+        "en": "NH₃ - air",
+        "de": "NH₃ - Luft"
+      },
+      "2.36",
+      "25"
+    ],
+    [
+      {
+        "uk": "Етанол - повітря",
+        "ru": "Этанол - воздух",
+        "en": "Ethanol - air",
+        "de": "Ethanol - Luft"
+      },
+      "1.19",
+      "25"
+    ],
+    [
+      {
+        "uk": "Бензол - повітря",
+        "ru": "Бензол - воздух",
+        "en": "Benzene - air",
+        "de": "Benzol - Luft"
+      },
+      "0.88",
+      "25"
+    ]
+  ],
+  "source": {
+    "name": "Perry's Chemical Engineers' Handbook, 9th Ed.",
+    "url": "https://www.accessengineeringlibrary.com/content/book/9780071834087"
+  }
+}

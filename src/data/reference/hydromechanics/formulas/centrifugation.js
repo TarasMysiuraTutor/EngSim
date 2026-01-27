@@ -1,4 +1,6 @@
-// src/data/reference/hydromechanics/formulas/centrifugation.js
+// ============================================
+// FILE: src/data/reference/hydromechanics/formulas/centrifugation.js
+// ============================================
 
 export const centrifugationFormulas = [
   {
@@ -43,13 +45,13 @@ export const centrifugationFormulas = [
     }
   },
   {
-    id: "separation-factor",
+    id: "centrifuge-separation-factor",
     category: "centrifugation",
     title: {
       uk: "Фактор розділення центрифуги",
       ru: "Фактор разделения центрифуги",
       en: "Centrifuge Separation Factor",
-      de: "Zentrifugen-Trennfaktor"
+      de: "Zentrifugentrennfaktor"
     },
     latex: "Fr = \\frac{\\omega^2 \\cdot r}{g}",
     variables: [
@@ -79,13 +81,13 @@ export const centrifugationFormulas = [
       }
     ],
     example: {
-      uk: "Приклад: При ω=100 рад/с і r=0.2 м:\nFr = (100)²×0.2 / 9.81 ≈ 204\nЦентробіжне прискорення у 204 рази більше за гравітаційне",
-      ru: "Пример: При ω=100 рад/с и r=0.2 м:\nFr = (100)²×0.2 / 9.81 ≈ 204\nЦентробежное ускорение в 204 раза больше гравитационного",
-      en: "Example: At ω=100 rad/s and r=0.2 m:\nFr = (100)²×0.2 / 9.81 ≈ 204\nCentrifugal acceleration is 204 times greater than gravitational",
-      de: "Beispiel: Bei ω=100 rad/s und r=0.2 m:\nFr = (100)²×0.2 / 9.81 ≈ 204\nZentrifugalbeschleunigung ist 204-mal größer als Gravitationsbeschleunigung"
+      uk: "Fr показує, у скільки разів центробіжне прискорення більше за прискорення вільного падіння.\nТипові значення: 500-5000 для промислових центрифуг, >50000 для надцентрифуг",
+      ru: "Fr показывает, во сколько раз центробежное ускорение больше ускорения свободного падения.\nТипичные значения: 500-5000 для промышленных центрифуг, >50000 для сверхцентрифуг",
+      en: "Fr shows how many times centrifugal acceleration exceeds gravitational acceleration.\nTypical values: 500-5000 for industrial centrifuges, >50000 for ultracentrifuges",
+      de: "Fr zeigt, um wie viel die Zentrifugalbeschleunigung die Erdbeschleunigung übersteigt.\nTypische Werte: 500-5000 für Industriezentrifugen, >50000 für Ultrazentrifugen"
     },
     source: {
-      name: "Процеси і апарати",
+      name: "Центрифугування в хімічній промисловості",
       url: null
     }
   },
@@ -96,7 +98,7 @@ export const centrifugationFormulas = [
       uk: "Швидкість осадження в центрифузі",
       ru: "Скорость осаждения в центрифуге",
       en: "Settling Velocity in Centrifuge",
-      de: "Sedimentationsgeschwindigkeit in Zentrifuge"
+      de: "Sedimentationsgeschwindigkeit in der Zentrifuge"
     },
     latex: "v_c = \\frac{d^2(\\rho_p - \\rho_f)\\omega^2 r}{18\\mu}",
     variables: [
@@ -104,13 +106,25 @@ export const centrifugationFormulas = [
         uk: "vc - швидкість осадження в центрифузі, м/с",
         ru: "vc - скорость осаждения в центрифуге, м/с",
         en: "vc - settling velocity in centrifuge, m/s",
-        de: "vc - Sedimentationsgeschwindigkeit, m/s"
+        de: "vc - Sedimentationsgeschwindigkeit in Zentrifuge, m/s"
       },
       {
         uk: "d - діаметр частинки, м",
         ru: "d - диаметр частицы, м",
         en: "d - particle diameter, m",
         de: "d - Partikeldurchmesser, m"
+      },
+      {
+        uk: "ρp - щільність частинки, кг/м³",
+        ru: "ρp - плотность частицы, кг/м³",
+        en: "ρp - particle density, kg/m³",
+        de: "ρp - Partikeldichte, kg/m³"
+      },
+      {
+        uk: "ρf - щільність рідини, кг/м³",
+        ru: "ρf - плотность жидкости, кг/м³",
+        en: "ρf - fluid density, kg/m³",
+        de: "ρf - Fluiddichte, kg/m³"
       },
       {
         uk: "ω - кутова швидкість, рад/с",
@@ -123,10 +137,22 @@ export const centrifugationFormulas = [
         ru: "r - радиус, м",
         en: "r - radius, m",
         de: "r - Radius, m"
+      },
+      {
+        uk: "μ - динамічна в'язкість, Па·с",
+        ru: "μ - динамическая вязкость, Па·с",
+        en: "μ - dynamic viscosity, Pa·s",
+        de: "μ - dynamische Viskosität, Pa·s"
       }
     ],
+    example: {
+      uk: "Швидкість осадження в центрифузі у Fr разів більша за швидкість гравітаційного осадження",
+      ru: "Скорость осаждения в центрифуге в Fr раз больше скорости гравитационного осаждения",
+      en: "Settling velocity in centrifuge is Fr times greater than gravitational settling velocity",
+      de: "Die Sedimentationsgeschwindigkeit in der Zentrifuge ist Fr-mal größer als die Gravitationssedimentationsgeschwindigkeit"
+    },
     source: {
-      name: "Процеси і апарати хімічної технології",
+      name: "Процеси і апарати",
       url: null
     }
   }

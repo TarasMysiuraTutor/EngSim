@@ -25,8 +25,11 @@ import ReferencePage from "./pages/ReferencePage";
 import ReferenceMathPage from "./pages/ReferenceMathPage";
 import ReferenceStrengthPage from "./pages/ReferenceStrengthPage";
 import ReferenceHydraulicPage from "./pages/ReferenceHydraulicsPage";  // Створіть аналогічно
-// import ReferenceThermalPage from "./pages/ReferenceThermalPage";      // Створіть аналогічно
+import ReferenceThermalPage from "./pages/ReferenceThermalPage";      // Створіть аналогічно
 // import ReferenceMassPage from "./pages/ReferenceMassPage";            // Створіть аналогічно
+import ReferenceMassTransferPage from "./pages/ReferenceMassTransferPage"; // Створіть аналогічно
+import ReferenceHydromechanicsPage from "./pages/ReferenceHydromechanicsPage"; // Створіть аналогічно
+
 
 // ГОЛОВНИЙ КОМПОНЕНТ APP
 function App() {
@@ -178,10 +181,23 @@ function App() {
               />
             } 
           />
+
+          {/* Гідравліка */}
+          
+          <Route 
+            path="/reference/hydromechanics" 
+            element={
+              <ReferenceHydromechanicsPage 
+                currentLang={currentLang}
+                setCurrentLang={setCurrentLang}
+                t={translations[currentLang]}
+              />
+            } 
+          />
          
 
           {/* Теплообмін */}
-          {/* 
+          
           <Route 
             path="/reference/thermal" 
             element={
@@ -192,21 +208,21 @@ function App() {
               />
             } 
           />
-          */}
+         
 
           {/* Масообмін */}
-          {/* 
+          
           <Route 
             path="/reference/mass" 
             element={
-              <ReferenceMassPage 
+              <ReferenceMassTransferPage 
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}
               />
             } 
           />
-          */}
+         
 
           {/* ============ 404 - НЕ ЗНАЙДЕНО ============ */}
           

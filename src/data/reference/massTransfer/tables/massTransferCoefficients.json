@@ -1,0 +1,97 @@
+{
+  "id": "mass_transfer_coefficients",
+  "category": "absorption",
+  "title": {
+    "uk": "Типові коефіцієнти масопередачі",
+    "ru": "Типичные коэффициенты массопередачи",
+    "en": "Typical Mass Transfer Coefficients",
+    "de": "Typische Stoffübergangskoeffizienten"
+  },
+  "headers": {
+    "uk": ["Тип апарата", "K_G, кмоль/(м²·год·атм)", "Примітки"],
+    "ru": ["Тип аппарата", "K_G, кмоль/(м²·ч·атм)", "Примечания"],
+    "en": ["Equipment Type", "K_G, kmol/(m²·h·atm)", "Notes"],
+    "de": ["Gerätetyp", "K_G, kmol/(m²·h·atm)", "Anmerkungen"]
+  },
+  "rows": [
+    [
+      {
+        "uk": "Тарільчаста колона (ковпачкові тарілки)",
+        "ru": "Тарельчатая колонна (колпачковые тарелки)",
+        "en": "Plate column (bubble cap trays)",
+        "de": "Bodenkolonne (Glockenböden)"
+      },
+      "0.04 - 0.15",
+      {
+        "uk": "залежить від системи",
+        "ru": "зависит от системы",
+        "en": "system dependent",
+        "de": "systemabhängig"
+      }
+    ],
+    [
+      {
+        "uk": "Тарільчаста колона (ситчасті тарілки)",
+        "ru": "Тарельчатая колонна (ситчатые тарелки)",
+        "en": "Plate column (sieve trays)",
+        "de": "Bodenkolonne (Siebböden)"
+      },
+      "0.10 - 0.25",
+      {
+        "uk": "вища ефективність",
+        "ru": "более высокая эффективность",
+        "en": "higher efficiency",
+        "de": "höhere Effizienz"
+      }
+    ],
+    [
+      {
+        "uk": "Насадкова колона (кільця Рашига)",
+        "ru": "Насадочная колонна (кольца Рашига)",
+        "en": "Packed column (Raschig rings)",
+        "de": "Füllkörperkolonne (Raschig-Ringe)"
+      },
+      "0.08 - 0.20",
+      {
+        "uk": "25 мм насадка",
+        "ru": "25 мм насадка",
+        "en": "25 mm packing",
+        "de": "25 mm Packung"
+      }
+    ],
+    [
+      {
+        "uk": "Насадкова колона (сідлоподібна насадка)",
+        "ru": "Насадочная колонна (седлообразная насадка)",
+        "en": "Packed column (saddle packing)",
+        "de": "Füllkörperkolonne (Sattelpackung)"
+      },
+      "0.15 - 0.35",
+      {
+        "uk": "сучасна насадка",
+        "ru": "современная насадка",
+        "en": "modern packing",
+        "de": "moderne Packung"
+      }
+    ],
+    [
+      {
+        "uk": "Плівковий абсорбер",
+        "ru": "Пленочный абсорбер",
+        "en": "Falling film absorber",
+        "de": "Rieselfilmabsorber"
+      },
+      "0.20 - 0.50",
+      {
+        "uk": "висока швидкість",
+        "ru": "высокая скорость",
+        "en": "high rate",
+        "de": "hohe Rate"
+      }
+    ]
+  ],
+  "source": {
+    "name": "Treybal R.E. Mass Transfer Operations, 3rd Ed.",
+    "url": "https://www.mheducation.com/"
+  }
+}

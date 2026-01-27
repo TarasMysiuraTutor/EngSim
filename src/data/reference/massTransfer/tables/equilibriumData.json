@@ -1,0 +1,33 @@
+{
+  "id": "equilibrium_data",
+  "category": "distillation",
+  "title": {
+    "uk": "Дані рівноваги рідина-пара (етанол-вода при 1 атм)",
+    "ru": "Данные равновесия жидкость-пар (этанол-вода при 1 атм)",
+    "en": "Vapor-Liquid Equilibrium Data (ethanol-water at 1 atm)",
+    "de": "Dampf-Flüssigkeit-Gleichgewichtsdaten (Ethanol-Wasser bei 1 atm)"
+  },
+  "headers": {
+    "uk": ["x (мольна частка EtOH)", "y (мольна частка EtOH)", "T, °C"],
+    "ru": ["x (мольная доля EtOH)", "y (мольная доля EtOH)", "T, °C"],
+    "en": ["x (EtOH mole fraction)", "y (EtOH mole fraction)", "T, °C"],
+    "de": ["x (EtOH Molenbruch)", "y (EtOH Molenbruch)", "T, °C"]
+  },
+  "rows": [
+    ["0.000", "0.000", "100.0"],
+    ["0.019", "0.170", "95.5"],
+    ["0.072", "0.389", "86.7"],
+    ["0.124", "0.470", "82.3"],
+    ["0.230", "0.545", "79.8"],
+    ["0.398", "0.614", "78.4"],
+    ["0.508", "0.657", "78.2"],
+    ["0.657", "0.738", "78.5"],
+    ["0.804", "0.858", "79.3"],
+    ["0.894", "0.923", "80.7"],
+    ["1.000", "1.000", "78.3"]
+  ],
+  "source": {
+    "name": "NIST Chemistry WebBook",
+    "url": "https://webbook.nist.gov/"
+  }
+}
