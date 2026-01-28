@@ -1,137 +1,561 @@
 // src/data/reference/massTransfer/formulas/drying.js
 export const dryingFormulas = [
   {
-    id: 'moisture_content_dry_basis',
-    category: 'drying',
+    id: "moisture_content_dry_basis",
+    category: "drying",
     title: {
-      uk: 'Вологість на суху речовину',
-      ru: 'Влажность на сухое вещество',
-      en: 'Moisture Content (Dry Basis)',
-      de: 'Feuchtigkeitsgehalt (Trockenbasis)'
+      uk: "Вологість на суху речовину",
+      ru: "Влажность на сухое вещество",
+      en: "Moisture Content (Dry Basis)",
+      de: "Feuchtigkeitsgehalt (Trockenbasis)",
     },
-    formula: 'X = (m_w / m_d) × 100%',
-    latex: 'X = \\frac{m_w}{m_d} \\times 100\\%',
+    formula: "X = (m_w / m_d) × 100%",
+    latex: "X = \\frac{m_w}{m_d} \\times 100\\%",
     variables: [
-      { uk: 'm_w — маса вологи, кг', ru: 'm_w — масса влаги, кг', en: 'm_w — mass of moisture, kg', de: 'm_w — Masse der Feuchtigkeit, kg' },
-      { uk: 'm_d — маса сухої речовини, кг', ru: 'm_d — масса сухого вещества, кг', en: 'm_d — mass of dry matter, kg', de: 'm_d — Masse der Trockensubstanz, kg' }
-    ]
+      {
+        uk: "m_w — маса вологи, кг",
+        ru: "m_w — масса влаги, кг",
+        en: "m_w — mass of moisture, kg",
+        de: "m_w — Masse der Feuchtigkeit, kg",
+      },
+      {
+        uk: "m_d — маса сухої речовини, кг",
+        ru: "m_d — масса сухого вещества, кг",
+        en: "m_d — mass of dry matter, kg",
+        de: "m_d — Masse der Trockensubstanz, kg",
+      },
+    ],
   },
   {
-    id: 'moisture_content_wet_basis',
-    category: 'drying',
+    id: "moisture_content_wet_basis",
+    category: "drying",
     title: {
-      uk: 'Вологість на загальну масу',
-      ru: 'Влажность на общую массу',
-      en: 'Moisture Content (Wet Basis)',
-      de: 'Feuchtigkeitsgehalt (Nassbasis)'
+      uk: "Вологість на загальну масу",
+      ru: "Влажность на общую массу",
+      en: "Moisture Content (Wet Basis)",
+      de: "Feuchtigkeitsgehalt (Nassbasis)",
     },
-    formula: 'W = (m_w / (m_w + m_d)) × 100%',
-    latex: 'W = \\frac{m_w}{m_w + m_d} \\times 100\\%',
+    formula: "W = (m_w / (m_w + m_d)) × 100%",
+    latex: "W = \\frac{m_w}{m_w + m_d} \\times 100\\%",
     variables: [
-      { uk: 'm_w — маса вологи, кг', ru: 'm_w — масса влаги, кг', en: 'm_w — mass of moisture, kg', de: 'm_w — Masse der Feuchtigkeit, kg' },
-      { uk: 'm_d — маса сухої речовини, кг', ru: 'm_d — масса сухого вещества, кг', en: 'm_d — mass of dry matter, kg', de: 'm_d — Masse der Trockensubstanz, kg' }
-    ]
+      {
+        uk: "m_w — маса вологи, кг",
+        ru: "m_w — масса влаги, кг",
+        en: "m_w — mass of moisture, kg",
+        de: "m_w — Masse der Feuchtigkeit, kg",
+      },
+      {
+        uk: "m_d — маса сухої речовини, кг",
+        ru: "m_d — масса сухого вещества, кг",
+        en: "m_d — mass of dry matter, kg",
+        de: "m_d — Masse der Trockensubstanz, kg",
+      },
+    ],
   },
   {
-    id: 'drying_rate',
-    category: 'drying',
+    id: "drying_rate",
+    category: "drying",
     title: {
-      uk: 'Швидкість сушіння',
-      ru: 'Скорость сушки',
-      en: 'Drying Rate',
-      de: 'Trocknungsgeschwindigkeit'
+      uk: "Швидкість сушіння",
+      ru: "Скорость сушки",
+      en: "Drying Rate",
+      de: "Trocknungsgeschwindigkeit",
     },
-    formula: 'R = -m_d × (dX/dt)',
-    latex: 'R = -m_d \\frac{dX}{dt}',
+    formula: "R = -m_d × (dX/dt)",
+    latex: "R = -m_d \\frac{dX}{dt}",
     variables: [
-      { uk: 'R — швидкість сушіння, кг/с', ru: 'R — скорость сушки, кг/с', en: 'R — drying rate, kg/s', de: 'R — Trocknungsgeschwindigkeit, kg/s' },
-      { uk: 'm_d — маса сухої речовини, кг', ru: 'm_d — масса сухого вещества, кг', en: 'm_d — mass of dry matter, kg', de: 'm_d — Masse der Trockensubstanz, kg' },
-      { uk: 'X — вологість на суху речовину', ru: 'X — влажность на сухое вещество', en: 'X — moisture content (dry basis)', de: 'X — Feuchtigkeitsgehalt (Trockenbasis)' }
-    ]
+      {
+        uk: "R — швидкість сушіння, кг/с",
+        ru: "R — скорость сушки, кг/с",
+        en: "R — drying rate, kg/s",
+        de: "R — Trocknungsgeschwindigkeit, kg/s",
+      },
+      {
+        uk: "m_d — маса сухої речовини, кг",
+        ru: "m_d — масса сухого вещества, кг",
+        en: "m_d — mass of dry matter, kg",
+        de: "m_d — Masse der Trockensubstanz, kg",
+      },
+      {
+        uk: "X — вологість на суху речовину",
+        ru: "X — влажность на сухое вещество",
+        en: "X — moisture content (dry basis)",
+        de: "X — Feuchtigkeitsgehalt (Trockenbasis)",
+      },
+    ],
   },
   {
-    id: 'constant_rate_period',
-    category: 'drying',
+    id: "constant_rate_period",
+    category: "drying",
     title: {
-      uk: 'Період постійної швидкості сушіння',
-      ru: 'Период постоянной скорости сушки',
-      en: 'Constant Rate Period',
-      de: 'Periode konstanter Trocknungsgeschwindigkeit'
+      uk: "Період постійної швидкості сушіння",
+      ru: "Период постоянной скорости сушки",
+      en: "Constant Rate Period",
+      de: "Periode konstanter Trocknungsgeschwindigkeit",
     },
-    formula: 'R_c = h_c × A × (T_g - T_s)',
-    latex: 'R_c = h_c A (T_g - T_s)',
+    formula: "R_c = h_c × A × (T_g - T_s)",
+    latex: "R_c = h_c A (T_g - T_s)",
     variables: [
-      { uk: 'h_c — коефіцієнт тепловіддачі, Вт/(м²·К)', ru: 'h_c — коэффициент теплоотдачи, Вт/(м²·К)', en: 'h_c — heat transfer coefficient, W/(m²·K)', de: 'h_c — Wärmeübergangskoeffizient, W/(m²·K)' },
-      { uk: 'A — площа поверхні, м²', ru: 'A — площадь поверхности, м²', en: 'A — surface area, m²', de: 'A — Oberfläche, m²' },
-      { uk: 'T_g — температура газу, К', ru: 'T_g — температура газа, К', en: 'T_g — gas temperature, K', de: 'T_g — Gastemperatur, K' },
-      { uk: 'T_s — температура поверхні, К', ru: 'T_s — температура поверхности, К', en: 'T_s — surface temperature, K', de: 'T_s — Oberflächentemperatur, K' }
-    ]
+      {
+        uk: "h_c — коефіцієнт тепловіддачі, Вт/(м²·К)",
+        ru: "h_c — коэффициент теплоотдачи, Вт/(м²·К)",
+        en: "h_c — heat transfer coefficient, W/(m²·K)",
+        de: "h_c — Wärmeübergangskoeffizient, W/(m²·K)",
+      },
+      {
+        uk: "A — площа поверхні, м²",
+        ru: "A — площадь поверхности, м²",
+        en: "A — surface area, m²",
+        de: "A — Oberfläche, m²",
+      },
+      {
+        uk: "T_g — температура газу, К",
+        ru: "T_g — температура газа, К",
+        en: "T_g — gas temperature, K",
+        de: "T_g — Gastemperatur, K",
+      },
+      {
+        uk: "T_s — температура поверхні, К",
+        ru: "T_s — температура поверхности, К",
+        en: "T_s — surface temperature, K",
+        de: "T_s — Oberflächentemperatur, K",
+      },
+    ],
   },
   {
-    id: 'falling_rate_period',
-    category: 'drying',
+    id: "falling_rate_period",
+    category: "drying",
     title: {
-      uk: 'Період падаючої швидкості сушіння',
-      ru: 'Период падающей скорости сушки',
-      en: 'Falling Rate Period',
-      de: 'Periode fallender Trocknungsgeschwindigkeit'
+      uk: "Період падаючої швидкості сушіння",
+      ru: "Период падающей скорости сушки",
+      en: "Falling Rate Period",
+      de: "Periode fallender Trocknungsgeschwindigkeit",
     },
-    formula: 'R_f = R_c × (X - X_e)/(X_c - X_e)',
-    latex: 'R_f = R_c \\frac{X - X_e}{X_c - X_e}',
+    formula: "R_f = R_c × (X - X_e)/(X_c - X_e)",
+    latex: "R_f = R_c \\frac{X - X_e}{X_c - X_e}",
     variables: [
-      { uk: 'R_c — швидкість у періоді постійної швидкості', ru: 'R_c — скорость в периоде постоянной скорости', en: 'R_c — constant rate period rate', de: 'R_c — Geschwindigkeit in konstanter Periode' },
-      { uk: 'X — поточна вологість', ru: 'X — текущая влажность', en: 'X — current moisture content', de: 'X — aktueller Feuchtigkeitsgehalt' },
-      { uk: 'X_c — критична вологість', ru: 'X_c — критическая влажность', en: 'X_c — critical moisture content', de: 'X_c — kritischer Feuchtigkeitsgehalt' },
-      { uk: 'X_e — рівноважна вологість', ru: 'X_e — равновесная влажность', en: 'X_e — equilibrium moisture content', de: 'X_e — Gleichgewichtsfeuchtigkeitsgehalt' }
-    ]
+      {
+        uk: "R_c — швидкість у періоді постійної швидкості",
+        ru: "R_c — скорость в периоде постоянной скорости",
+        en: "R_c — constant rate period rate",
+        de: "R_c — Geschwindigkeit in konstanter Periode",
+      },
+      {
+        uk: "X — поточна вологість",
+        ru: "X — текущая влажность",
+        en: "X — current moisture content",
+        de: "X — aktueller Feuchtigkeitsgehalt",
+      },
+      {
+        uk: "X_c — критична вологість",
+        ru: "X_c — критическая влажность",
+        en: "X_c — critical moisture content",
+        de: "X_c — kritischer Feuchtigkeitsgehalt",
+      },
+      {
+        uk: "X_e — рівноважна вологість",
+        ru: "X_e — равновесная влажность",
+        en: "X_e — equilibrium moisture content",
+        de: "X_e — Gleichgewichtsfeuchtigkeitsgehalt",
+      },
+    ],
   },
   {
-    id: 'drying_time',
-    category: 'drying',
+    id: "drying_time",
+    category: "drying",
     title: {
-      uk: 'Час сушіння',
-      ru: 'Время сушки',
-      en: 'Drying Time',
-      de: 'Trocknungszeit'
+      uk: "Час сушіння",
+      ru: "Время сушки",
+      en: "Drying Time",
+      de: "Trocknungszeit",
     },
-    formula: 't = (m_d / (R_c × A)) × (X_0 - X_f)',
-    latex: 't = \\frac{m_d}{R_c A} (X_0 - X_f)',
+    formula: "t = (m_d / (R_c × A)) × (X_0 - X_f)",
+    latex: "t = \\frac{m_d}{R_c A} (X_0 - X_f)",
     variables: [
-      { uk: 'X_0 — початкова вологість', ru: 'X_0 — начальная влажность', en: 'X_0 — initial moisture content', de: 'X_0 — Anfangsfeuchtigkeitsgehalt' },
-      { uk: 'X_f — кінцева вологість', ru: 'X_f — конечная влажность', en: 'X_f — final moisture content', de: 'X_f — Endfeuchtigkeitsgehalt' }
-    ]
+      {
+        uk: "X_0 — початкова вологість",
+        ru: "X_0 — начальная влажность",
+        en: "X_0 — initial moisture content",
+        de: "X_0 — Anfangsfeuchtigkeitsgehalt",
+      },
+      {
+        uk: "X_f — кінцева вологість",
+        ru: "X_f — конечная влажность",
+        en: "X_f — final moisture content",
+        de: "X_f — Endfeuchtigkeitsgehalt",
+      },
+    ],
   },
   {
-    id: 'psychrometric_ratio',
-    category: 'drying',
+    id: "psychrometric_ratio",
+    category: "drying",
     title: {
-      uk: 'Психрометричне відношення',
-      ru: 'Психрометрическое отношение',
-      en: 'Psychrometric Ratio',
-      de: 'Psychrometrisches Verhältnis'
+      uk: "Психрометричне відношення",
+      ru: "Психрометрическое отношение",
+      en: "Psychrometric Ratio",
+      de: "Psychrometrisches Verhältnis",
     },
-    formula: 'γ = h_c / (k_y × λ)',
-    latex: '\\gamma = \\frac{h_c}{k_y \\lambda}',
+    formula: "γ = h_c / (k_y × λ)",
+    latex: "\\gamma = \\frac{h_c}{k_y \\lambda}",
     variables: [
-      { uk: 'h_c — коефіцієнт тепловіддачі, Вт/(м²·К)', ru: 'h_c — коэффициент теплоотдачи, Вт/(м²·К)', en: 'h_c — heat transfer coefficient, W/(m²·K)', de: 'h_c — Wärmeübergangskoeffizient, W/(m²·K)' },
-      { uk: 'k_y — коефіцієнт масовіддачі, кг/(м²·с)', ru: 'k_y — коэффициент массоотдачи, кг/(м²·с)', en: 'k_y — mass transfer coefficient, kg/(m²·s)', de: 'k_y — Stoffübergangskoeffizient, kg/(m²·s)' },
-      { uk: 'λ — теплота випаровування, Дж/кг', ru: 'λ — теплота испарения, Дж/кг', en: 'λ — latent heat of vaporization, J/kg', de: 'λ — Verdampfungswärme, J/kg' }
-    ]
+      {
+        uk: "h_c — коефіцієнт тепловіддачі, Вт/(м²·К)",
+        ru: "h_c — коэффициент теплоотдачи, Вт/(м²·К)",
+        en: "h_c — heat transfer coefficient, W/(m²·K)",
+        de: "h_c — Wärmeübergangskoeffizient, W/(m²·K)",
+      },
+      {
+        uk: "k_y — коефіцієнт масовіддачі, кг/(м²·с)",
+        ru: "k_y — коэффициент массоотдачи, кг/(м²·с)",
+        en: "k_y — mass transfer coefficient, kg/(m²·s)",
+        de: "k_y — Stoffübergangskoeffizient, kg/(m²·s)",
+      },
+      {
+        uk: "λ — теплота випаровування, Дж/кг",
+        ru: "λ — теплота испарения, Дж/кг",
+        en: "λ — latent heat of vaporization, J/kg",
+        de: "λ — Verdampfungswärme, J/kg",
+      },
+    ],
   },
   {
-    id: 'humidity_ratio',
-    category: 'drying',
+    id: "humidity_ratio",
+    category: "drying",
     title: {
-      uk: 'Вологовміст повітря',
-      ru: 'Влагосодержание воздуха',
-      en: 'Humidity Ratio',
-      de: 'Luftfeuchtigkeit'
+      uk: "Вологовміст повітря",
+      ru: "Влагосодержание воздуха",
+      en: "Humidity Ratio",
+      de: "Luftfeuchtigkeit",
     },
-    formula: 'Y = 0.622 × (P_v / (P - P_v))',
-    latex: 'Y = 0.622 \\frac{P_v}{P - P_v}',
+    formula: "Y = 0.622 × (P_v / (P - P_v))",
+    latex: "Y = 0.622 \\frac{P_v}{P - P_v}",
     variables: [
-      { uk: 'P_v — парціальний тиск водяної пари, Па', ru: 'P_v — парциальное давление водяного пара, Па', en: 'P_v — partial pressure of water vapor, Pa', de: 'P_v — Partialdruck des Wasserdampfes, Pa' },
-      { uk: 'P — загальний тиск, Па', ru: 'P — общее давление, Па', en: 'P — total pressure, Pa', de: 'P — Gesamtdruck, Pa' }
-    ]
-  }
+      {
+        uk: "P_v — парціальний тиск водяної пари, Па",
+        ru: "P_v — парциальное давление водяного пара, Па",
+        en: "P_v — partial pressure of water vapor, Pa",
+        de: "P_v — Partialdruck des Wasserdampfes, Pa",
+      },
+      {
+        uk: "P — загальний тиск, Па",
+        ru: "P — общее давление, Па",
+        en: "P — total pressure, Pa",
+        de: "P — Gesamtdruck, Pa",
+      },
+    ],
+  },
+  {
+    id: "relative_humidity",
+    category: "drying",
+    title: {
+      uk: "Відносна вологість повітря",
+      ru: "Относительная влажность воздуха",
+      en: "Relative Humidity",
+      de: "Relative Luftfeuchtigkeit",
+    },
+    formula: "φ = (P_v/P_sat) × 100%",
+    latex: "\\varphi = \\frac{P_v}{P_{sat}} \\times 100\\%",
+    variables: [
+      {
+        uk: "P_v — парціальний тиск водяної пари, Па",
+        ru: "P_v — парциальное давление водяного пара, Па",
+        en: "P_v — partial pressure of water vapor, Pa",
+        de: "P_v — Partialdruck des Wasserdampfes, Pa",
+      },
+      {
+        uk: "P_sat — тиск насиченої пари при даній температурі, Па",
+        ru: "P_sat — давление насыщенного пара при данной температуре, Па",
+        en: "P_sat — saturated vapor pressure at given temperature, Pa",
+        de: "P_sat — Sättigungsdampfdruck bei gegebener Temperatur, Pa",
+      },
+    ],
+  },
+  {
+    id: "wet_bulb_temperature",
+    category: "drying",
+    title: {
+      uk: "Температура мокрого термометра",
+      ru: "Температура мокрого термометра",
+      en: "Wet Bulb Temperature",
+      de: "Feuchtkugeltemperatur",
+    },
+    formula: "T_wb = T_db - ((100 - φ)/5) × (T_db/100)",
+    latex: "T_{wb} = T_{db} - \\frac{100 - \\varphi}{5} \\frac{T_{db}}{100}",
+    variables: [
+      {
+        uk: "T_db — температура сухого термометра, °C",
+        ru: "T_db — температура сухого термометра, °C",
+        en: "T_db — dry bulb temperature, °C",
+        de: "T_db — Trockentemperatur, °C",
+      },
+      {
+        uk: "φ — відносна вологість, %",
+        ru: "φ — относительная влажность, %",
+        en: "φ — relative humidity, %",
+        de: "φ — relative Feuchtigkeit, %",
+      },
+    ],
+  },
+  {
+    id: "enthalpy_humid_air",
+    category: "drying",
+    title: {
+      uk: "Ентальпія вологого повітря",
+      ru: "Энтальпия влажного воздуха",
+      en: "Enthalpy of Humid Air",
+      de: "Enthalpie feuchter Luft",
+    },
+    formula: "H = c_p,a × T + Y × (λ₀ + c_p,v × T)",
+    latex: "H = c_{p,a} T + Y(\lambda_0 + c_{p,v} T)",
+    variables: [
+      {
+        uk: "c_p,a — теплоємність сухого повітря, 1.005 кДж/(кг·К)",
+        ru: "c_p,a — теплоемкость сухого воздуха, 1.005 кДж/(кг·К)",
+        en: "c_p,a — specific heat of dry air, 1.005 kJ/(kg·K)",
+        de: "c_p,a — spezifische Wärme trockener Luft, 1.005 kJ/(kg·K)",
+      },
+      {
+        uk: "c_p,v — теплоємність водяної пари, 1.88 кДж/(кг·К)",
+        ru: "c_p,v — теплоемкость водяного пара, 1.88 кДж/(кг·К)",
+        en: "c_p,v — specific heat of water vapor, 1.88 kJ/(kg·K)",
+        de: "c_p,v — spezifische Wärme von Wasserdampf, 1.88 kJ/(kg·K)",
+      },
+      {
+        uk: "λ₀ — теплота випаровування при 0°C, 2501 кДж/кг",
+        ru: "λ₀ — теплота испарения при 0°C, 2501 кДж/кг",
+        en: "λ₀ — latent heat at 0°C, 2501 kJ/kg",
+        de: "λ₀ — Verdampfungswärme bei 0°C, 2501 kJ/kg",
+      },
+      {
+        uk: "Y — вологовміст, кг/кг",
+        ru: "Y — влагосодержание, кг/кг",
+        en: "Y — humidity ratio, kg/kg",
+        de: "Y — Feuchtigkeitsverhältnis, kg/kg",
+      },
+    ],
+  },
+  {
+    id: "adiabatic_saturation",
+    category: "drying",
+    title: {
+      uk: "Адіабатичне насичення",
+      ru: "Адиабатическое насыщение",
+      en: "Adiabatic Saturation",
+      de: "Adiabatische Sättigung",
+    },
+    formula: "(Y_sat - Y₁)/(Y_sat - Y₂) = (H₁ - H_sat)/(H₂ - H_sat)",
+    latex:
+      "\\frac{Y_{sat} - Y_1}{Y_{sat} - Y_2} = \\frac{H_1 - H_{sat}}{H_2 - H_{sat}}",
+    variables: [
+      {
+        uk: "Y_sat — вологовміст насиченого повітря",
+        ru: "Y_sat — влагосодержание насыщенного воздуха",
+        en: "Y_sat — humidity ratio of saturated air",
+        de: "Y_sat — Feuchtigkeitsverhältnis gesättigter Luft",
+      },
+      {
+        uk: "H_sat — ентальпія при насиченні",
+        ru: "H_sat — энтальпия при насыщении",
+        en: "H_sat — enthalpy at saturation",
+        de: "H_sat — Enthalpie bei Sättigung",
+      },
+    ],
+  },
+  {
+    id: "heat_mass_transfer_analogy",
+    category: "drying",
+    title: {
+      uk: "Аналогія тепло-масопереносу (число Льюїса)",
+      ru: "Аналогия тепло-массопереноса (число Льюиса)",
+      en: "Heat-Mass Transfer Analogy (Lewis Number)",
+      de: "Wärme-Stoffübertragungs-Analogie (Lewis-Zahl)",
+    },
+    formula: "h_c/k_y = ρ × c_p × Le^(2/3)",
+    latex: "\\frac{h_c}{k_y} = \\rho c_p Le^{2/3}",
+    variables: [
+      {
+        uk: "h_c — коефіцієнт тепловіддачі, Вт/(м²·К)",
+        ru: "h_c — коэффициент теплоотдачи, Вт/(м²·К)",
+        en: "h_c — heat transfer coefficient, W/(m²·K)",
+        de: "h_c — Wärmeübergangskoeffizient, W/(m²·K)",
+      },
+      {
+        uk: "k_y — коефіцієнт масовіддачі, кг/(м²·с)",
+        ru: "k_y — коэффициент массоотдачи, кг/(м²·с)",
+        en: "k_y — mass transfer coefficient, kg/(m²·s)",
+        de: "k_y — Stoffübergangskoeffizient, kg/(m²·s)",
+      },
+      {
+        uk: "Le — число Льюїса",
+        ru: "Le — число Льюиса",
+        en: "Le — Lewis number",
+        de: "Le — Lewis-Zahl",
+      },
+    ],
+  },
+  {
+    id: "freeze_drying_rate",
+    category: "drying",
+    title: {
+      uk: "Швидкість сублімаційного сушіння",
+      ru: "Скорость сублимационной сушки",
+      en: "Freeze Drying Rate",
+      de: "Gefriertrockungsgeschwindigkeit",
+    },
+    formula: "dm/dt = (A × ΔP)/(R_ice + R_dry)",
+    latex: "  \\frac{dm}{dt} = \\frac{A \\Delta P}{R_{ice} + R_{dry}}",
+    variables: [
+      {
+        uk: "A — площа поверхні, м²",
+        ru: "A — площадь поверхности, м²",
+        en: "A — surface area, m²",
+        de: "A — Oberfläche, m²",
+      },
+      {
+        uk: "ΔP — різниця тисків пари, Па",
+        ru: "ΔP — разность давлений пара, Па",
+        en: "ΔP — vapor pressure difference, Pa",
+        de: "ΔP — Dampfdruckdifferenz, Pa",
+      },
+      {
+        uk: "R_ice — опір крижаного шару",
+        ru: "R_ice — сопротивление ледяного слоя",
+        en: "R_ice — ice layer resistance",
+        de: "R_ice — Eisschichtwiderstand",
+      },
+      {
+        uk: "R_dry — опір сухого шару",
+        ru: "R_dry — сопротивление сухого слоя",
+        en: "R_dry — dry layer resistance",
+        de: "R_dry — Trockenschichtwiderstand",
+      },
+    ],
+  },
+  {
+    id: "spray_drying_evaporation",
+    category: "drying",
+    title: {
+      uk: "Швидкість випаровування при розпилювальному сушінні",
+      ru: "Скорость испарения при распылительной сушке",
+      en: "Evaporation Rate in Spray Drying",
+      de: "Verdampfungsgeschwindigkeit beim Sprühtrocknen",
+    },
+    formula: "dW/dt = -k × A × (P_s - P_a)",
+    latex: "\\frac{dW}{dt} = -k A (P_s - P_a)",
+    variables: [
+      {
+        uk: "W — маса вологи в краплі, кг",
+        ru: "W — масса влаги в капле, кг",
+        en: "W — moisture mass in droplet, kg",
+        de: "W — Feuchtigkeitsmasse im Tropfen, kg",
+      },
+      {
+        uk: "k — коефіцієнт масовіддачі",
+        ru: "k — коэффициент массоотдачи",
+        en: "k — mass transfer coefficient",
+        de: "k — Stoffübergangskoeffizient",
+      },
+      {
+        uk: "P_s — тиск на поверхні краплі, Па",
+        ru: "P_s — давление на поверхности капли, Па",
+        en: "P_s — pressure at droplet surface, Pa",
+        de: "P_s — Druck an Tropfenoberfläche, Pa",
+      },
+      {
+        uk: "P_a — парціальний тиск у повітрі, Па",
+        ru: "P_a — парциальное давление в воздухе, Па",
+        en: "P_a — partial pressure in air, Pa",
+        de: "P_a — Partialdruck in Luft, Pa",
+      },
+    ],
+  },
+  {
+    id: "fluidized_bed_drying",
+    category: "drying",
+    title: {
+      uk: "Мінімальна швидкість псевдозрідження",
+      ru: "Минимальная скорость псевдоожижения",
+      en: "Minimum Fluidization Velocity",
+      de: "Minimale Wirbelgeschwindigkeit",
+    },
+    formula: "u_mf = (d_p² × (ρ_p - ρ_g) × g)/(150 × μ × (1-ε)/ε³)",
+    latex:
+      "u_{mf} = \\frac{d_p^2 (\\rho_p - \\rho_g) g}{150 \\mu \\frac{1-\\varepsilon}{\\varepsilon^3}}",
+    variables: [
+      {
+        uk: "d_p — діаметр частинки, м",
+        ru: "d_p — диаметр частицы, м",
+        en: "d_p — particle diameter, m",
+        de: "d_p — Partikeldurchmesser, m",
+      },
+      {
+        uk: "ρ_p — густина частинки, кг/м³",
+        ru: "ρ_p — плотность частицы, кг/м³",
+        en: "ρ_p — particle density, kg/m³",
+        de: "ρ_p — Partikeldichte, kg/m³",
+      },
+      {
+        uk: "ρ_g — густина газу, кг/м³",
+        ru: "ρ_g — плотность газа, кг/м³",
+        en: "ρ_g — gas density, kg/m³",
+        de: "ρ_g — Gasdichte, kg/m³",
+      },
+      {
+        uk: "μ — в'язкість газу, Па·с",
+        ru: "μ — вязкость газа, Па·с",
+        en: "μ — gas viscosity, Pa·s",
+        de: "μ — Gasviskosität, Pa·s",
+      },
+      {
+        uk: "ε — порожнинність шару",
+        ru: "ε — порозность слоя",
+        en: "ε — bed voidage",
+        de: "ε — Betthohlraumanteil",
+      },
+    ],
+  },
+  {
+    id: "microwave_drying_power",
+    category: "drying",
+    title: {
+      uk: "Потужність поглинання мікрохвиль",
+      ru: "Мощность поглощения микроволн",
+      en: "Microwave Power Absorption",
+      de: "Mikrowellen-Leistungsaufnahme",
+    },
+    formula: "P_abs = 2 × π × f × ε₀ × ε″ × E² × V",
+    latex: "P_{abs} = 2\\pi f \\varepsilon_0 \\varepsilon E^2 V",
+    variables: [
+      {
+        uk: "f — частота мікрохвиль, Гц",
+        ru: "f — частота микроволн, Гц",
+        en: "f — microwave frequency, Hz",
+        de: "f — Mikrowellenfrequenz, Hz",
+      },
+      {
+        uk: "ε₀ — діелектрична стала вакууму, 8.85×10⁻¹² Ф/м",
+        ru: "ε₀ — диэлектрическая постоянная вакуума, 8.85×10⁻¹² Ф/м",
+        en: "ε₀ — permittivity of vacuum, 8.85×10⁻¹² F/m",
+        de: "ε₀ — Permittivität des Vakuums, 8.85×10⁻¹² F/m",
+      },
+      {
+        uk: "ε″ — фактор діелектричних втрат",
+        ru: "ε″ — фактор диэлектрических потерь",
+        en: "ε″ — dielectric loss factor",
+        de: "ε″ — dielektrischer Verlustfaktor",
+      },
+      {
+        uk: "E — напруженість електричного поля, В/м",
+        ru: "E — напряженность электрического поля, В/м",
+        en: "E — electric field strength, V/m",
+        de: "E — elektrische Feldstärke, V/m",
+      },
+      {
+        uk: "V — об'єм матеріалу, м³",
+        ru: "V — объем материала, м³",
+        en: "V — material volume, m³",
+        de: "V — Materialvolumen, m³",
+      },
+    ],
+  },
 ];

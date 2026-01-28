@@ -1,0 +1,133 @@
+{
+  "id": "emissivity-values",
+  "category": "radiation",
+  "title": {
+    "uk": "Ступінь чорноти матеріалів",
+    "ru": "Степень черноты материалов",
+    "en": "Emissivity of Materials",
+    "de": "Emissionsgrad von Materialien"
+  },
+  "headers": {
+    "uk": ["Матеріал", "Температура, °C", "ε"],
+    "ru": ["Материал", "Температура, °C", "ε"],
+    "en": ["Material", "Temperature, °C", "ε"],
+    "de": ["Material", "Temperatur, °C", "ε"]
+  },
+  "rows": [
+    [
+      {"uk": "Алюміній полірований", "ru": "Алюминий полированный", "en": "Aluminum polished", "de": "Aluminium poliert"},
+      "20-100",
+      "0.04-0.06"
+    ],
+    [
+      {"uk": "Алюміній окислений", "ru": "Алюминий окисленный", "en": "Aluminum oxidized", "de": "Aluminium oxidiert"},
+      "200-600",
+      "0.11-0.19"
+    ],
+    [
+      {"uk": "Мідь полірована", "ru": "Медь полированная", "en": "Copper polished", "de": "Kupfer poliert"},
+      "20-100",
+      "0.02-0.05"
+    ],
+    [
+      {"uk": "Мідь окислена", "ru": "Медь окисленная", "en": "Copper oxidized", "de": "Kupfer oxidiert"},
+      "200-600",
+      "0.57-0.87"
+    ],
+    [
+      {"uk": "Сталь полірована", "ru": "Сталь полированная", "en": "Steel polished", "de": "Stahl poliert"},
+      "20-100",
+      "0.07-0.10"
+    ],
+    [
+      {"uk": "Сталь окислена", "ru": "Сталь окисленная", "en": "Steel oxidized", "de": "Stahl oxidiert"},
+      "200-600",
+      "0.79-0.82"
+    ],
+    [
+      {"uk": "Сталь оцинкована нова", "ru": "Сталь оцинкованная новая", "en": "Galvanized steel new", "de": "Verzinkter Stahl neu"},
+      "20",
+      "0.23"
+    ],
+    [
+      {"uk": "Сталь оцинкована стара", "ru": "Сталь оцинкованная старая", "en": "Galvanized steel weathered", "de": "Verzinkter Stahl verwittert"},
+      "20",
+      "0.28"
+    ],
+    [
+      {"uk": "Чавун", "ru": "Чугун", "en": "Cast iron", "de": "Gusseisen"},
+      "100-1000",
+      "0.60-0.70"
+    ],
+    [
+      {"uk": "Цегла червона", "ru": "Кирпич красный", "en": "Red brick", "de": "Roter Ziegel"},
+      "20",
+      "0.93"
+    ],
+    [
+      {"uk": "Бетон", "ru": "Бетон", "en": "Concrete", "de": "Beton"},
+      "20",
+      "0.92"
+    ],
+    [
+      {"uk": "Скло", "ru": "Стекло", "en": "Glass", "de": "Glas"},
+      "20",
+      "0.92-0.94"
+    ],
+    [
+      {"uk": "Деревина", "ru": "Древесина", "en": "Wood", "de": "Holz"},
+      "20",
+      "0.80-0.90"
+    ],
+    [
+      {"uk": "Вода", "ru": "Вода", "en": "Water", "de": "Wasser"},
+      "0-100",
+      "0.95-0.96"
+    ],
+    [
+      {"uk": "Лід", "ru": "Лед", "en": "Ice", "de": "Eis"},
+      "0",
+      "0.97"
+    ],
+    [
+      {"uk": "Фарба біла", "ru": "Краска белая", "en": "White paint", "de": "Weiße Farbe"},
+      "20",
+      "0.90-0.95"
+    ],
+    [
+      {"uk": "Фарба чорна матова", "ru": "Краска черная матовая", "en": "Black paint matte", "de": "Schwarze Farbe matt"},
+      "20",
+      "0.96-0.98"
+    ],
+    [
+      {"uk": "Папір білий", "ru": "Бумага белая", "en": "White paper", "de": "Weißes Papier"},
+      "20",
+      "0.92-0.97"
+    ],
+    [
+      {"uk": "Сніг", "ru": "Снег", "en": "Snow", "de": "Schnee"},
+      "0",
+      "0.82"
+    ],
+    [
+      {"uk": "Грунт вологий", "ru": "Почва влажная", "en": "Soil moist", "de": "Feuchter Boden"},
+      "20",
+      "0.95"
+    ]
+  ],
+  "note": {
+    "uk": "ε = 0 - ідеальне відбиття, ε = 1 - абсолютно чорне тіло",
+    "ru": "ε = 0 - идеальное отражение, ε = 1 - абсолютно черное тело",
+    "en": "ε = 0 - perfect reflector, ε = 1 - perfect black body",
+    "de": "ε = 0 - perfekter Reflektor, ε = 1 - perfekter schwarzer Körper"
+  },
+  "source": {
+    "name": "VDI Heat Atlas 2010",
+    "description": {
+      "uk": "Довідник з теплообміну",
+      "ru": "Справочник по теплообмену",
+      "en": "Heat Transfer Handbook",
+      "de": "Wärmeübertragung Handbuch"
+    }
+  }
+}

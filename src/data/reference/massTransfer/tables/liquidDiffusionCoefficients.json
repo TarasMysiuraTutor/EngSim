@@ -1,0 +1,67 @@
+{
+  "id": "liquid_diffusion_coefficients",
+  "category": "diffusion",
+  "title": {
+    "uk": "Коефіцієнти дифузії в рідинах (при 25°C)",
+    "ru": "Коэффициенты диффузии в жидкостях (при 25°C)",
+    "en": "Diffusion Coefficients in Liquids (at 25°C)",
+    "de": "Diffusionskoeffizienten in Flüssigkeiten (bei 25°C)"
+  },
+  "headers": {
+    "uk": ["Розчинена речовина", "Розчинник", "D × 10⁹, м²/с"],
+    "ru": ["Растворенное вещество", "Растворитель", "D × 10⁹, м²/с"],
+    "en": ["Solute", "Solvent", "D × 10⁹, m²/s"],
+    "de": ["Gelöster Stoff", "Lösungsmittel", "D × 10⁹, m²/s"]
+  },
+  "rows": [
+    [
+      {"uk": "NaCl", "ru": "NaCl", "en": "NaCl", "de": "NaCl"},
+      {"uk": "Вода", "ru": "Вода", "en": "Water", "de": "Wasser"},
+      "1.61"
+    ],
+    [
+      {"uk": "Глюкоза", "ru": "Глюкоза", "en": "Glucose", "de": "Glucose"},
+      {"uk": "Вода", "ru": "Вода", "en": "Water", "de": "Wasser"},
+      "0.67"
+    ],
+    [
+      {"uk": "Сахароза", "ru": "Сахароза", "en": "Sucrose", "de": "Saccharose"},
+      {"uk": "Вода", "ru": "Вода", "en": "Water", "de": "Wasser"},
+      "0.52"
+    ],
+    [
+      {"uk": "Етанол", "ru": "Этанол", "en": "Ethanol", "de": "Ethanol"},
+      {"uk": "Вода", "ru": "Вода", "en": "Water", "de": "Wasser"},
+      "1.24"
+    ],
+    [
+      {"uk": "O₂", "ru": "O₂", "en": "O₂", "de": "O₂"},
+      {"uk": "Вода", "ru": "Вода", "en": "Water", "de": "Wasser"},
+      "2.10"
+    ],
+    [
+      {"uk": "CO₂", "ru": "CO₂", "en": "CO₂", "de": "CO₂"},
+      {"uk": "Вода", "ru": "Вода", "en": "Water", "de": "Wasser"},
+      "1.92"
+    ],
+    [
+      {"uk": "H₂", "ru": "H₂", "en": "H₂", "de": "H₂"},
+      {"uk": "Вода", "ru": "Вода", "en": "Water", "de": "Wasser"},
+      "4.50"
+    ],
+    [
+      {"uk": "Йод", "ru": "Йод", "en": "Iodine", "de": "Jod"},
+      {"uk": "Етанол", "ru": "Этанол", "en": "Ethanol", "de": "Ethanol"},
+      "1.26"
+    ],
+    [
+      {"uk": "Бензойна кислота", "ru": "Бензойная кислота", "en": "Benzoic acid", "de": "Benzoesäure"},
+      {"uk": "Бензол", "ru": "Бензол", "en": "Benzene", "de": "Benzol"},
+      "1.38"
+    ]
+  ],
+  "source": {
+    "name": "Perry's Chemical Engineers' Handbook, 9th Ed.",
+    "url": "https://www.accessengineeringlibrary.com/"
+  }
+}

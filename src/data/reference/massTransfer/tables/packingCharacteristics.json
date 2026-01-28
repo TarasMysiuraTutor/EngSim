@@ -1,0 +1,78 @@
+{
+  "id": "packing_characteristics",
+  "category": "absorption",
+  "title": {
+    "uk": "Характеристики промислових насадок",
+    "ru": "Характеристики промышленных насадок",
+    "en": "Industrial Packing Characteristics",
+    "de": "Eigenschaften industrieller Packungen"
+  },
+  "headers": {
+    "uk": ["Тип насадки", "Розмір, мм", "Питома поверхня, м²/м³", "Порожнинність, %", "Матеріал"],
+    "ru": ["Тип насадки", "Размер, мм", "Удельная поверхность, м²/м³", "Порозность, %", "Материал"],
+    "en": ["Packing Type", "Size, mm", "Specific Area, m²/m³", "Void Fraction, %", "Material"],
+    "de": ["Packungstyp", "Größe, mm", "Spezifische Fläche, m²/m³", "Hohlraumanteil, %", "Material"]
+  },
+  "rows": [
+    [
+      {"uk": "Кільця Рашига", "ru": "Кольца Рашига", "en": "Raschig rings", "de": "Raschig-Ringe"},
+      "25",
+      "190",
+      "73",
+      {"uk": "Кераміка", "ru": "Керамика", "en": "Ceramic", "de": "Keramik"}
+    ],
+    [
+      {"uk": "Кільця Рашига", "ru": "Кольца Рашига", "en": "Raschig rings", "de": "Raschig-Ringe"},
+      "50",
+      "92",
+      "74",
+      {"uk": "Кераміка", "ru": "Керамика", "en": "Ceramic", "de": "Keramik"}
+    ],
+    [
+      {"uk": "Кільця Палля", "ru": "Кольца Палля", "en": "Pall rings", "de": "Pall-Ringe"},
+      "25",
+      "205",
+      "92",
+      {"uk": "Метал", "ru": "Металл", "en": "Metal", "de": "Metall"}
+    ],
+    [
+      {"uk": "Кільця Палля", "ru": "Кольца Палля", "en": "Pall rings", "de": "Pall-Ringe"},
+      "50",
+      "128",
+      "94",
+      {"uk": "Метал", "ru": "Металл", "en": "Metal", "de": "Metall"}
+    ],
+    [
+      {"uk": "Сідла Берля", "ru": "Седла Берля", "en": "Berl saddles", "de": "Berl-Sättel"},
+      "25",
+      "250",
+      "68",
+      {"uk": "Кераміка", "ru": "Керамика", "en": "Ceramic", "de": "Keramik"}
+    ],
+    [
+      {"uk": "Сідла Інталокс", "ru": "Седла Инталокс", "en": "Intalox saddles", "de": "Intalox-Sättel"},
+      "25",
+      "255",
+      "75",
+      {"uk": "Кераміка", "ru": "Керамика", "en": "Ceramic", "de": "Keramik"}
+    ],
+    [
+      {"uk": "Сітчаста насадка Mellapak", "ru": "Сетчатая насадка Mellapak", "en": "Mellapak structured", "de": "Mellapak-Strukturpackung"},
+      "250Y",
+      "250",
+      "98",
+      {"uk": "Метал", "ru": "Металл", "en": "Metal", "de": "Metall"}
+    ],
+    [
+      {"uk": "Сітчаста насадка Flexipac", "ru": "Сетчатая насадка Flexipac", "en": "Flexipac structured", "de": "Flexipac-Strukturpackung"},
+      "2Y",
+      "200",
+      "97",
+      {"uk": "Метал", "ru": "Металл", "en": "Metal", "de": "Metall"}
+    ]
+  ],
+  "source": {
+    "name": "Kister H.Z. Distillation Design, 1992",
+    "url": "https://www.mheducation.com/"
+  }
+}

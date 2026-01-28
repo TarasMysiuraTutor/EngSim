@@ -5,9 +5,14 @@
 import allFormulas from './formulas/index.js';
 
 // Імпорт таблиць (JSON)
-import buildingMaterialsTable from './tables/materialProperties.json';
+import airPropertiesTable from './tables/airProperties.json';
+import emissivityTable from './tables/emissivity.json';
 import waterPropertiesTable from './tables/fluidProperties.json';
+import heatExchangerTypesTable from './tables/heatExchangerTypes.json';
 import heatTransferCoefficientsTable from './tables/heatTransferCoefficients.json';
+import buildingMaterialsTable from './tables/materialProperties.json';
+import metalPropertiesTable from './tables/metalProperties.json';
+import steamPropertiesTable from './tables/steamProperties.json';
 
 // Збираємо все разом
 export const thermalReferenceData = {
@@ -17,17 +22,22 @@ export const thermalReferenceData = {
   // ВСІ ТАБЛИЦІ
   tables: [
     buildingMaterialsTable,
+    metalPropertiesTable,
     waterPropertiesTable,
-    heatTransferCoefficientsTable
+    airPropertiesTable,
+    steamPropertiesTable,
+    heatTransferCoefficientsTable,
+    emissivityTable,
+    heatExchangerTypesTable
   ],
 
   // МЕТАДАНІ (для статистики)
   meta: {
     totalFormulas: allFormulas.length,
-    totalTables: 3,
+    totalTables: 8,
     categories: {
-      formulas: ['conduction', 'convection', 'radiation', 'heat_exchangers', 'general'],
-      tables: ['materials', 'fluids', 'convection']
+      formulas: ['conduction', 'convection', 'radiation', 'heat_exchangers', 'general', 'phase_change'],
+      tables: ['materials', 'fluids', 'convection', 'radiation', 'heat_exchangers']
     }
   }
 };

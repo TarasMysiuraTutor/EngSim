@@ -1,4 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
+import LazyImage from "./LazyImage";
+import photoAvif from "../assets/opt/my-photo.avif";
+import photoWebp from "../assets/opt/my-photo.webp";
+import photoPng from "../assets/opt/my-photo.png";
 
 const About = ({ t }) => {
   const [visible, setVisible] = useState(false);
@@ -79,7 +83,7 @@ const About = ({ t }) => {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
                 <div className="relative bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-blue-500/30 backdrop-blur-lg overflow-hidden aspect-square flex items-center justify-center">
                   {/* Placeholder for photo */}
-                  <div className="w-full h-full bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-xl flex flex-col items-center justify-center">
+                  {/* <div className="w-full h-full bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-xl flex flex-col items-center justify-center">
                     <svg
                       className="w-32 h-32 text-blue-400 mb-4"
                       fill="none"
@@ -94,7 +98,28 @@ const About = ({ t }) => {
                       />
                     </svg>
                     <p className="text-gray-400 text-sm">[Photo]</p>
-                  </div>
+                  </div> */}
+                  <LazyImage
+                    src={photoPng} // Фолбек для старих браузерів
+                    alt="Photo of Me"
+                    sources={[
+                      { srcSet: photoAvif, type: "image/avif" },
+                      { srcSet: photoWebp, type: "image/webp" },
+                    ]}
+                    className="w-full h-auto"
+                  />
+
+                  {/* <LazyImage
+                    src={photoPng}
+                    // srcSet={photoSrcSet}
+                    alt="Моє оптимізоване фото"
+                    
+                  /> */}
+                  {/* <img
+                    src={photoPng}
+                    alt={t.aboutName}
+                    className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                  /> */}
 
                   {/* Name overlay */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0a0e27] via-[#0a0e27]/80 to-transparent p-6">

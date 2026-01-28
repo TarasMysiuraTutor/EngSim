@@ -1,0 +1,64 @@
+{
+  "id": "adsorbent_properties",
+  "category": "adsorption",
+  "title": {
+    "uk": "Властивості промислових адсорбентів",
+    "ru": "Свойства промышленных адсорбентов",
+    "en": "Properties of Industrial Adsorbents",
+    "de": "Eigenschaften industrieller Adsorbentien"
+  },
+  "headers": {
+    "uk": ["Адсорбент", "Питома поверхня, м²/г", "Об'єм пор, см³/г", "Розмір пор, нм", "Застосування"],
+    "ru": ["Адсорбент", "Удельная поверхность, м²/г", "Объем пор, см³/г", "Размер пор, нм", "Применение"],
+    "en": ["Adsorbent", "Surface Area, m²/g", "Pore Volume, cm³/g", "Pore Size, nm", "Application"],
+    "de": ["Adsorbens", "Oberfläche, m²/g", "Porenvolumen, cm³/g", "Porengröße, nm", "Anwendung"]
+  },
+  "rows": [
+    [
+      {"uk": "Активоване вугілля", "ru": "Активированный уголь", "en": "Activated carbon", "de": "Aktivkohle"},
+      "800-1500",
+      "0.6-0.9",
+      "2-50",
+      {"uk": "Очищення води, газів", "ru": "Очистка воды, газов", "en": "Water, gas purification", "de": "Wasser-, Gasreinigung"}
+    ],
+    [
+      {"uk": "Силікагель", "ru": "Силикагель", "en": "Silica gel", "de": "Silicagel"},
+      "300-800",
+      "0.4-0.8",
+      "2-30",
+      {"uk": "Осушення газів", "ru": "Осушка газов", "en": "Gas drying", "de": "Gastrocknung"}
+    ],
+    [
+      {"uk": "Цеоліт 5A", "ru": "Цеолит 5A", "en": "Zeolite 5A", "de": "Zeolith 5A"},
+      "650-750",
+      "0.28-0.33",
+      "0.5",
+      {"uk": "Розділення n/iso парафінів", "ru": "Разделение n/iso парафинов", "en": "n/iso paraffin separation", "de": "n/iso Paraffintrennung"}
+    ],
+    [
+      {"uk": "Цеоліт 13X", "ru": "Цеолит 13X", "en": "Zeolite 13X", "de": "Zeolith 13X"},
+      "550-650",
+      "0.31-0.36",
+      "1.0",
+      {"uk": "Осушення, видалення CO₂", "ru": "Осушка, удаление CO₂", "en": "Drying, CO₂ removal", "de": "Trocknung, CO₂-Entfernung"}
+    ],
+    [
+      {"uk": "Активований глинозем", "ru": "Активированный оксид алюминия", "en": "Activated alumina", "de": "Aktiviertes Aluminiumoxid"},
+      "300-400",
+      "0.3-0.5",
+      "3-7",
+      {"uk": "Осушення, очищення", "ru": "Осушка, очистка", "en": "Drying, purification", "de": "Trocknung, Reinigung"}
+    ],
+    [
+      {"uk": "Молекулярні сита MOF", "ru": "Молекулярные сита MOF", "en": "MOF molecular sieves", "de": "MOF-Molekularsiebe"},
+      "1000-6000",
+      "0.5-2.0",
+      "0.5-5",
+      {"uk": "Зберігання H₂, CH₄", "ru": "Хранение H₂, CH₄", "en": "H₂, CH₄ storage", "de": "H₂-, CH₄-Speicherung"}
+    ]
+  ],
+  "source": {
+    "name": "Ruthven D.M. Principles of Adsorption and Adsorption Processes, 1984",
+    "url": "https://www.wiley.com/"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "heat-exchanger-types",
+  "category": "heat_exchangers",
+  "title": {
+    "uk": "Типи теплообмінників та їх характеристики",
+    "ru": "Типы теплообменников и их характеристики",
+    "en": "Heat Exchanger Types and Characteristics",
+    "de": "Wärmeübertrager Typen und Eigenschaften"
+  },
+  "headers": {
+    "uk": ["Тип", "k, Вт/(м²·К)", "Застосування", "Переваги", "Недоліки"],
+    "ru": ["Тип", "k, Вт/(м²·К)", "Применение", "Преимущества", "Недостатки"],
+    "en": ["Type", "k, W/(m²·K)", "Application", "Advantages", "Disadvantages"],
+    "de": ["Typ", "k, W/(m²·K)", "Anwendung", "Vorteile", "Nachteile"]
+  },
+  "rows": [
+    [
+      {"uk": "Кожухотрубний (вода-вода)", "ru": "Кожухотрубный (вода-вода)", "en": "Shell-and-tube (water-water)", "de": "Rohrbündel (Wasser-Wasser)"},
+      "800-1500",
+      {"uk": "Опалення, охолодження", "ru": "Отопление, охлаждение", "en": "Heating, cooling", "de": "Heizung, Kühlung"},
+      {"uk": "Надійність, простота", "ru": "Надежность, простота", "en": "Reliability, simplicity", "de": "Zuverlässigkeit, Einfachheit"},
+      {"uk": "Великі габарити", "ru": "Большие габариты", "en": "Large dimensions", "de": "Große Abmessungen"}
+    ],
+    [
+      {"uk": "Кожухотрубний (пара-вода)", "ru": "Кожухотрубный (пар-вода)", "en": "Shell-and-tube (steam-water)", "de": "Rohrbündel (Dampf-Wasser)"},
+      "1500-4000",
+      {"uk": "Підігрів води парою", "ru": "Подогрев воды паром", "en": "Water heating by steam", "de": "Wassererwärmung mit Dampf"},
+      {"uk": "Високий k", "ru": "Высокий k", "en": "High k", "de": "Hoher k"},
+      {"uk": "Корозія при конденсації", "ru": "Коррозия при конденсации", "en": "Corrosion during condensation", "de": "Korrosion bei Kondensation"}
+    ],
+    [
+      {"uk": "Пластинчастий (вода-вода)", "ru": "Пластинчатый (вода-вода)", "en": "Plate (water-water)", "de": "Platten (Wasser-Wasser)"},
+      "2000-5000",
+      {"uk": "Харчова промисловість", "ru": "Пищевая промышленность", "en": "Food industry", "de": "Lebensmittelindustrie"},
+      {"uk": "Компактність, k високий", "ru": "Компактность, k высокий", "en": "Compactness, high k", "de": "Kompaktheit, hoher k"},
+      {"uk": "Обмеження по T та P", "ru": "Ограничения по T и P", "en": "T and P limitations", "de": "T- und P-Einschränkungen"}
+    ],
+    [
+      {"uk": "Повітряний (газ-газ)", "ru": "Воздушный (газ-газ)", "en": "Air-cooled (gas-gas)", "de": "Luftgekühlt (Gas-Gas)"},
+      "10-50",
+      {"uk": "Рекуперація тепла", "ru": "Рекуперация тепла", "en": "Heat recovery", "de": "Wärmerückgewinnung"},
+      {"uk": "Не потрібна вода", "ru": "Не требуется вода", "en": "No water needed", "de": "Kein Wasser erforderlich"},
+      {"uk": "Низький k, великі розміри", "ru": "Низкий k, большие размеры", "en": "Low k, large size", "de": "Niedriger k, große Größe"}
+    ],
+    [
+      {"uk": "Повітряний (вода-повітря)", "ru": "Воздушный (вода-воздух)", "en": "Air-cooled (water-air)", "de": "Luftgekühlt (Wasser-Luft)"},
+      "20-100",
+      {"uk": "Кондиціювання, охолодження", "ru": "Кондиционирование, охлаждение", "en": "Air conditioning, cooling", "de": "Klimatisierung, Kühlung"},
+      {"uk": "Простота обслуговування", "ru": "Простота обслуживания", "en": "Easy maintenance", "de": "Einfache Wartung"},
+      {"uk": "Залежність від T повітря", "ru": "Зависимость от T воздуха", "en": "Dependent on air T", "de": "Abhängig von Luft-T"}
+    ],
+    [
+      {"uk": "Спіральний", "ru": "Спиральный", "en": "Spiral", "de": "Spiral"},
+      "500-2000",
+      {"uk": "Забруднені середовища", "ru": "Загрязненные среды", "en": "Fouling media", "de": "Verschmutzende Medien"},
+      {"uk": "Самоочищення", "ru": "Самоочищение", "en": "Self-cleaning", "de": "Selbstreinigend"},
+      {"uk": "Складність виготовлення", "ru": "Сложность изготовления", "en": "Manufacturing complexity", "de": "Herstellungskomplexität"}
+    ],
+    [
+      {"uk": "Конденсатор турбіни", "ru": "Конденсатор турбины", "en": "Steam turbine condenser", "de": "Dampfturbinenkondensator"},
+      "3000-6000",
+      {"uk": "ТЕС, АЕС", "ru": "ТЭС, АЭС", "en": "Power plants", "de": "Kraftwerke"},
+      {"uk": "Високий k, великі потужності", "ru": "Высокий k, большие мощности", "en": "High k, large capacity", "de": "Hoher k, große Kapazität"},
+      {"uk": "Потреба у воді для охолодження", "ru": "Потребность в воде для охлаждения", "en": "Cooling water requirement", "de": "Kühlwasserbedarf"}
+    ]
+  ],
+  "note": {
+    "uk": "k - загальний коефіцієнт теплопередачі. Значення орієнтовні",
+    "ru": "k - общий коэффициент теплопередачи. Значения ориентировочные",
+    "en": "k - overall heat transfer coefficient. Values are approximate",
+    "de": "k - Wärmedurchgangskoeffizient. Werte sind ungefähr"
+  },
+  "source": {
+    "name": "EN 305:2015",
+    "url": "https://standards.iteh.ai/catalog/standards/cen/en305",
+    "description": {
+      "uk": "Теплообмінники - Методи випробувань",
+      "ru": "Теплообменники - Методы испытаний",
+      "en": "Heat exchangers - Test procedures",
+      "de": "Wärmeaustauscher - Prüfverfahren"
+    }
+  }
+}

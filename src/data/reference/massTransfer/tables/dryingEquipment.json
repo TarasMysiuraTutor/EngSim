@@ -1,0 +1,213 @@
+{
+  "id": "drying_equipment",
+  "category": "drying",
+  "title": {
+    "uk": "Типи сушильного обладнання та їх характеристики",
+    "ru": "Типы сушильного оборудования и их характеристики",
+    "en": "Types of Drying Equipment and Their Characteristics",
+    "de": "Arten von Trocknungsanlagen und ihre Eigenschaften"
+  },
+  "headers": {
+    "uk": [
+      "Тип сушарки",
+      "Теплоносій",
+      "Час сушіння",
+      "Продуктивність",
+      "Застосування"
+    ],
+    "ru": [
+      "Тип сушилки",
+      "Теплоноситель",
+      "Время сушки",
+      "Производительность",
+      "Применение"
+    ],
+    "en": [
+      "Dryer Type",
+      "Heat Medium",
+      "Drying Time",
+      "Capacity",
+      "Application"
+    ],
+    "de": [
+      "Trocknertyp",
+      "Wärmeträger",
+      "Trocknungszeit",
+      "Kapazität",
+      "Anwendung"
+    ]
+  },
+  "rows": [
+    [
+      {
+        "uk": "Барабанна",
+        "ru": "Барабанная",
+        "en": "Rotary drum",
+        "de": "Drehrohr"
+      },
+      {
+        "uk": "Гаряче повітря",
+        "ru": "Горячий воздух",
+        "en": "Hot air",
+        "de": "Heißluft"
+      },
+      {
+        "uk": "30-90 хв",
+        "ru": "30-90 мин",
+        "en": "30-90 min",
+        "de": "30-90 min"
+      },
+      {
+        "uk": "1-50 т/год",
+        "ru": "1-50 т/ч",
+        "en": "1-50 t/h",
+        "de": "1-50 t/h"
+      },
+      {
+        "uk": "Мінеральні добрива, піски",
+        "ru": "Минеральные удобрения, пески",
+        "en": "Mineral fertilizers, sands",
+        "de": "Mineraldünger, Sande"
+      }
+    ],
+    [
+      {
+        "uk": "Розпилювальна",
+        "ru": "Распылительная",
+        "en": "Spray dryer",
+        "de": "Sprühtrockner"
+      },
+      {
+        "uk": "Гаряче повітря",
+        "ru": "Горячий воздух",
+        "en": "Hot air",
+        "de": "Heißluft"
+      },
+      { "uk": "5-30 с", "ru": "5-30 с", "en": "5-30 s", "de": "5-30 s" },
+      {
+        "uk": "0.1-50 т/год",
+        "ru": "0.1-50 т/ч",
+        "en": "0.1-50 t/h",
+        "de": "0.1-50 t/h"
+      },
+      {
+        "uk": "Молоко, кава, миючі засоби",
+        "ru": "Молоко, кофе, моющие средства",
+        "en": "Milk, coffee, detergents",
+        "de": "Milch, Kaffee, Waschmittel"
+      }
+    ],
+    [
+      {
+        "uk": "Киплячого шару",
+        "ru": "Кипящего слоя",
+        "en": "Fluidized bed",
+        "de": "Wirbelschicht"
+      },
+      {
+        "uk": "Гаряче повітря",
+        "ru": "Горячий воздух",
+        "en": "Hot air",
+        "de": "Heißluft"
+      },
+      { "uk": "5-60 хв", "ru": "5-60 мин", "en": "5-60 min", "de": "5-60 min" },
+      {
+        "uk": "0.1-10 т/год",
+        "ru": "0.1-10 т/ч",
+        "en": "0.1-10 t/h",
+        "de": "0.1-10 t/h"
+      },
+      {
+        "uk": "Фармацевтика, полімери",
+        "ru": "Фармацевтика, полимеры",
+        "en": "Pharmaceuticals, polymers",
+        "de": "Pharmazeutika, Polymere"
+      }
+    ],
+    [
+      {
+        "uk": "Стрічкова",
+        "ru": "Ленточная",
+        "en": "Belt dryer",
+        "de": "Bandtrockner"
+      },
+      {
+        "uk": "Гаряче повітря",
+        "ru": "Горячий воздух",
+        "en": "Hot air",
+        "de": "Heißluft"
+      },
+      {
+        "uk": "20-120 хв",
+        "ru": "20-120 мин",
+        "en": "20-120 min",
+        "de": "20-120 min"
+      },
+      {
+        "uk": "0.05-5 т/год",
+        "ru": "0.05-5 т/ч",
+        "en": "0.05-5 t/h",
+        "de": "0.05-5 t/h"
+      },
+      {
+        "uk": "Овочі, фрукти, паста",
+        "ru": "Овощи, фрукты, паста",
+        "en": "Vegetables, fruits, pasta",
+        "de": "Gemüse, Obst, Teigwaren"
+      }
+    ],
+    [
+      {
+        "uk": "Сублімаційна",
+        "ru": "Сублимационная",
+        "en": "Freeze dryer",
+        "de": "Gefriertrockner"
+      },
+      { "uk": "Вакуум", "ru": "Вакуум", "en": "Vacuum", "de": "Vakuum" },
+      { "uk": "12-48 год", "ru": "12-48 ч", "en": "12-48 h", "de": "12-48 h" },
+      {
+        "uk": "10-1000 кг/добу",
+        "ru": "10-1000 кг/сутки",
+        "en": "10-1000 kg/day",
+        "de": "10-1000 kg/Tag"
+      },
+      {
+        "uk": "Кава, фармпрепарати",
+        "ru": "Кофе, фармпрепараты",
+        "en": "Coffee, pharmaceuticals",
+        "de": "Kaffee, Pharmazeutika"
+      }
+    ],
+    [
+      {
+        "uk": "Мікрохвильова",
+        "ru": "Микроволновая",
+        "en": "Microwave",
+        "de": "Mikrowelle"
+      },
+      {
+        "uk": "Мікрохвилі",
+        "ru": "Микроволны",
+        "en": "Microwaves",
+        "de": "Mikrowellen"
+      },
+      { "uk": "1-15 хв", "ru": "1-15 мин", "en": "1-15 min", "de": "1-15 min" },
+      {
+        "uk": "0.01-1 т/год",
+        "ru": "0.01-1 т/ч",
+        "en": "0.01-1 t/h",
+        "de": "0.01-1 t/h"
+      },
+      {
+        "uk": "Спеції, чай, деревина",
+        "ru": "Специи, чай, древесина",
+        "en": "Spices, tea, wood",
+        "de": "Gewürze, Tee, Holz"
+      }
+    ]
+  ],
+  "source": {
+    "name": "Mujumdar A.S. Handbook of Industrial Drying, 4th Ed., 2015",
+    "url": "https://www.crcpress.com/"
+  }
+}
