@@ -1,49 +1,63 @@
 // src/data/reference/strength/index.js
-// ГОЛОВНИЙ ФАЙЛ - збирає всі дані опору матеріалів
 
-// Імпорт формул
-import basicsFormulas from "./formulas/basics.js";
-import bendingFormulas from "./formulas/bending.js";
-// У майбутньому додавайте:
-// import torsionFormulas from './formulas/torsion.js';
-// import shearFormulas from './formulas/shear.js';
-// import stabilityFormulas from './formulas/stability.js';
+import {
+  allFormulas,
+  basicsFormulas,
+  bendingFormulas,
+  connectionsFormulas,
+  designFormulas,
+  shearFormulas,
+  stabilityFormulas,
+  torsionFormulas,
+} from "./formulas";
 
-// Імпорт таблиць (JSON)
-import steelPropertiesTable from "./tables/materials.json";
-import sectionsTable from "./tables/sections.json";
-// У майбутньому додавайте:
-// import boltsTable from './tables/connections.json';
-// import deflectionsTable from './tables/design.json';
+import {
+  allTables,
+  boltsTable,
+  heaSections,
+  steelProperties,
+  sectionsTable,
+} from "./tables";
+ 
+import strengthFiles from "./files";
 
 // Збираємо все разом
 export const strengthReferenceData = {
-  // ВСІ ФОРМУЛИ
-  formulas: [
-    ...basicsFormulas,
-    ...bendingFormulas, // розкоментувати коли створите
-    // ...torsionFormulas,
-    // ...shearFormulas,
-    // ...stabilityFormulas,
-  ],
+  formulas: allFormulas,
+    tables: allTables,
+    files: strengthFiles,
+}
 
-  // ВСІ ТАБЛИЦІ
-  tables: [
-    steelPropertiesTable,
+// Експорт по категоріях для зручності
+export const strengthByCategory = {
+  formulas: {
+    basics: basicsFormulas,
+    bending: bendingFormulas,
+    connections: connectionsFormulas,
+    design: designFormulas,
+    shear: shearFormulas,
+    stability: stabilityFormulas,
+    torsion: torsionFormulas,
+  },
+  tables: {
+    steelProperties,
     sectionsTable, // розкоментувати коли створите
-    // boltsTable,
-    // deflectionsTable,
-  ],
+    boltsTable,
+  },
+  files: strengthFiles,
+};
+   
+export default strengthReferenceData;
+
 
   // МЕТАДАНІ (для статистики)
-  meta: {
-    totalFormulas: 15, // 👈 Оновіть
-    totalTables: 8, // 👈 Оновіть
-    categories: {
-      formulas: ["basics", "bending", "torsion", "shear", "stability"],
-      tables: ["materials", "sections", "connections", "design", "safety"],
-    },
-  },
-};
+  // meta: {
+  //   totalFormulas: 15, // 👈 Оновіть
+  //   totalTables: 8, // 👈 Оновіть
+  //   categories: {
+  //     formulas: ["basics", "bending", "torsion", "shear", "stability"],
+  //     tables: ["materials", "sections", "connections", "design", "safety"],
+  //   },
+  // },
 
-export default strengthReferenceData;
+

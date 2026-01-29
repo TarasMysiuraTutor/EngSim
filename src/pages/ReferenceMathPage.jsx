@@ -4,56 +4,8 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { mathReferenceData } from '../data/reference/math';
-
-// Компонент для відображення формул через KaTeX
-
 import FormulaDisplay from "../components/FormulaDisplay";
-
-// const FormulaDisplay = ({ latex, inline = false }) => {
-//   const containerRef = useRef(null);
-
-//   useEffect(() => {
-//     if (containerRef.current && latex) {
-//       // Динамічне завантаження KaTeX
-//       const loadKatex = async () => {
-//         if (!window.katex) {
-//           // Завантажуємо CSS
-//           const link = document.createElement('link');
-//           link.rel = 'stylesheet';
-//           link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css';
-//           document.head.appendChild(link);
-
-//           // Завантажуємо JS
-//           const script = document.createElement('script');
-//           script.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js';
-//           script.onload = () => renderFormula();
-//           document.head.appendChild(script);
-//         } else {
-//           renderFormula();
-//         }
-//       };
-
-//       const renderFormula = () => {
-//         try {
-//           window.katex.render(latex, containerRef.current, {
-//             throwOnError: false,
-//             displayMode: !inline,
-//             strict: false
-//           });
-//         } catch (err) {
-//           console.error('KaTeX render error:', err);
-//           // Fallback - показуємо звичайний текст
-//           containerRef.current.textContent = latex;
-//         }
-//       };
-
-//       loadKatex();
-//     }
-//   }, [latex, inline]);
-
-//   return <div ref={containerRef} className={inline ? "inline-block" : "text-3xl my-4"} />;
-// };
+import { mathReferenceData } from '../data/reference/math';
 
 const ReferenceMathPage = ({ currentLang, setCurrentLang, t }) => {
   const { formulas, tables, files } = mathReferenceData;

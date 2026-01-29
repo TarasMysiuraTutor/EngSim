@@ -1,0 +1,41 @@
+{
+  "id": "bolt-properties",
+  "category": "connections",
+  "title": {
+    "uk": "Характеристики болтів",
+    "ru": "Характеристики болтов",
+    "en": "Bolt Properties",
+    "de": "Schraubeneigenschaften"
+  },
+  "headers": {
+    "uk": ["Діаметр", "Клас", "f<sub>ub</sub>, МПа", "A<sub>s</sub>, мм²", "F<sub>v,Rd</sub>, кН", "F<sub>t,Rd</sub>, кН"],
+    "ru": ["Диаметр", "Класс", "f<sub>ub</sub>, МПа", "A<sub>s</sub>, мм²", "F<sub>v,Rd</sub>, кН", "F<sub>t,Rd</sub>, кН"],
+    "en": ["Diameter", "Grade", "f<sub>ub</sub>, MPa", "A<sub>s</sub>, mm²", "F<sub>v,Rd</sub>, kN", "F<sub>t,Rd</sub>, kN"],
+    "de": ["Durchmesser", "Klasse", "f<sub>ub</sub>, MPa", "A<sub>s</sub>, mm²", "F<sub>v,Rd</sub>, kN", "F<sub>t,Rd</sub>, kN"]
+  },
+  "rows": [
+    ["M12", "8.8", "800", "84.3", "32.3", "48.5"],
+    ["M16", "8.8", "800", "157", "60.3", "90.4"],
+    ["M20", "8.8", "800", "245", "94.0", "141"],
+    ["M24", "8.8", "800", "353", "135", "203"],
+    ["M16", "10.9", "1000", "157", "75.4", "113"],
+    ["M20", "10.9", "1000", "245", "118", "176"],
+    ["M24", "10.9", "1000", "353", "170", "254"]
+  ],
+  "note": {
+    "uk": "Розраховано згідно EN 1993-1-8 з γM2 = 1.25",
+    "ru": "Рассчитано согласно EN 1993-1-8 с γM2 = 1.25",
+    "en": "Calculated according to EN 1993-1-8 with γM2 = 1.25",
+    "de": "Berechnet gemäß EN 1993-1-8 mit γM2 = 1.25"
+  },
+  "source": {
+    "name": "EN 1993-1-8:2005",
+    "url": "https://www.en-standard.eu/bs-en-1993-1-8-2005-eurocode-3-design-of-steel-structures-design-of-joints/",
+    "description": {
+      "uk": "Проектування з'єднань",
+      "ru": "Проектирование соединений",
+      "en": "Design of joints",
+      "de": "Bemessung von Verbindungen"
+    }
+  }
+}

@@ -44,6 +44,7 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
     date: new Date().toISOString().split("T")[0],
     title: { uk: "", ru: "", en: "", de: "" },
     description: { uk: "", ru: "", en: "", de: "" },
+    categoryName: { uk: "", ru: "", en: "", de: "" },
     thumbnail: { uk: "", ru: "", en: "", de: "" },
     instructions: {
       uk: { url: "", filename: "", size: "" },
@@ -77,6 +78,12 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
     client: { uk: "", ru: "", en: "", de: "" },
     industry: { uk: "", ru: "", en: "", de: "" },
     challenges: { uk: [""], ru: [""], en: [""], de: [""] },
+    solution: {
+      uk: [{ title: "", description: "" }],
+      ru: [{ title: "", description: "" }],
+      en: [{ title: "", description: "" }],
+      de: [{ title: "", description: "" }],
+    },
     results_detailed: {
       uk: [{ metric: "", description: "" }],
       ru: [{ metric: "", description: "" }],
@@ -107,8 +114,6 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
     { name: "flask", icon: "🧪", label: "Хімія" },
     { name: "document", icon: "📋", label: "Документи" },
     { name: "lightbulb", icon: "💡", label: "Ідея" },
-    { name: "tools", icon: "🛠️", label: "Інструменти" },
-    { name: "chart", icon: "📊", label: "Графік" },
   ];
 
   const projectIconTypes = [
@@ -235,7 +240,6 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
         try {
           const data = JSON.parse(event.target.result);
           
-          // Визначаємо тип файлу по структурі
           if (Array.isArray(data) && data.length > 0) {
             if (data[0].youtubeId) {
               setVideos(data);
@@ -261,9 +265,9 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
 
   const copyToClipboard = () => {
     let code = "";
-    if (activeTab === "videos") code = generateVideoCode();
-    else if (activeTab === "services") code = generateServiceCode();
-    else code = generateProjectCode();
+    if (activeTab === "videos") code = JSON.stringify(videoData, null, 2);
+    else if (activeTab === "services") code = JSON.stringify(serviceData, null, 2);
+    else code = JSON.stringify(projectData, null, 2);
 
     navigator.clipboard.writeText(code);
     setCopied(true);
@@ -339,18 +343,6 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
     }));
   };
 
-  const generateServiceCode = () => {
-    return JSON.stringify(serviceData, null, 2);
-  };
-
-  const generateProjectCode = () => {
-    return JSON.stringify(projectData, null, 2);
-  };
-
-  const generateVideoCode = () => {
-    return JSON.stringify(videoData, null, 2);
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
       <Navbar currentLang={currentLang} setCurrentLang={setCurrentLang} t={t} />
@@ -359,10 +351,7 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumbs */}
           <nav className="mb-8 text-sm">
-            <Link
-              to="/"
-              className="text-blue-400 hover:text-cyan-400 transition-colors"
-            >
+            <Link to="/" className="text-blue-400 hover:text-cyan-400 transition-colors">
               {t.home || "Home"}
             </Link>
             <span className="mx-2 text-gray-500">/</span>
@@ -445,10 +434,7 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
           {/* Tabs */}
           <div className="flex gap-4 mb-8 flex-wrap">
             <button
-              onClick={() => {
-                setActiveTab("videos");
-                setEditMode(false);
-              }}
+              onClick={() => { setActiveTab("videos"); setEditMode(false); }}
               className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all ${
                 activeTab === "videos"
                   ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white"
@@ -456,14 +442,11 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
               }`}
             >
               <Video size={20} />
-              {t.adminVideoGenerator || 'Відео'}
+              Відео
             </button>
             
             <button
-              onClick={() => {
-                setActiveTab("services");
-                setEditMode(false);
-              }}
+              onClick={() => { setActiveTab("services"); setEditMode(false); }}
               className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all ${
                 activeTab === "services"
                   ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white"
@@ -471,14 +454,11 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
               }`}
             >
               <FileText size={20} />
-              {t.adminServiceGenerator || 'Послуги'}
+              Послуги
             </button>
             
             <button
-              onClick={() => {
-                setActiveTab("projects");
-                setEditMode(false);
-              }}
+              onClick={() => { setActiveTab("projects"); setEditMode(false); }}
               className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all ${
                 activeTab === "projects"
                   ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white"
@@ -486,19 +466,19 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
               }`}
             >
               <Briefcase size={20} />
-              {t.adminProjectGenerator || 'Проекти'}
+              Проекти
             </button>
             
             <button
               onClick={() => setActiveTab("testimonials")}
-              className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center gap-3 ${
+              className={`px-6 py-3 rounded-xl font-semibold transition-all flex items-center gap-2 ${
                 activeTab === "testimonials"
-                  ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg scale-105"
-                  : "bg-white/5 text-gray-400 hover:bg-white/10"
+                  ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white"
+                  : "bg-white/5 border border-blue-500/30 text-gray-400 hover:text-white"
               }`}
             >
-              <span className="text-2xl">⭐</span>
-              <span>{t.adminTestimonialGenerator || 'Відгуки'}</span>
+              <span>⭐</span>
+              Відгуки
             </button>
           </div>
 
@@ -506,12 +486,7 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
           {getSavedIds().length > 0 && activeTab !== 'testimonials' && (
             <div className="bg-white/5 border border-blue-500/30 rounded-2xl p-6 mb-8">
               <h2 className="text-xl font-bold text-cyan-400 mb-4">
-                📚 Збережені{" "}
-                {activeTab === "videos"
-                  ? "відео"
-                  : activeTab === "services"
-                    ? "послуги"
-                    : "проекти"}
+                📚 Збережені {activeTab === "videos" ? "відео" : activeTab === "services" ? "послуги" : "проекти"}
               </h2>
 
               <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
@@ -537,39 +512,93 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
             </div>
           )}
 
-          {/* VIDEOS TAB - Скорочена версія, залишаю твою оригінальну форму */}
+          {/* Edit Mode Indicator */}
+          {editMode && activeTab !== 'testimonials' && (
+            <div className="bg-yellow-500/20 border border-yellow-500/40 rounded-2xl p-4 mb-8">
+              <div className="flex justify-between items-center">
+                <p className="text-yellow-400">✏️ Режим редагування активний</p>
+                <button
+                  onClick={() => setEditMode(false)}
+                  className="px-4 py-2 bg-gray-500/20 rounded-lg hover:bg-gray-500/30"
+                >
+                  Створити новий
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* VIDEOS TAB */}
           {activeTab === "videos" && (
             <>
-              {/* Тут твоя оригінальна форма для відео */}
-              <div className="bg-white/5 border border-blue-500/30 rounded-2xl p-6 mb-8">
-                <h2 className="text-2xl font-bold text-cyan-400 mb-4">
-                  📋 Основна інформація
-                </h2>
-                <div className="grid grid-cols-2 gap-4">
-                  <input
-                    type="number"
-                    placeholder="ID"
-                    value={videoData.id}
-                    onChange={(e) => handleInputChange("id", e.target.value)}
-                    className="px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
-                  />
-                  <input
-                    type="text"
-                    placeholder="YouTube ID"
-                    value={videoData.youtubeId}
-                    onChange={(e) => handleInputChange("youtubeId", e.target.value)}
-                    className="px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
-                  />
+              <div className="grid lg:grid-cols-2 gap-8 mb-8">
+                {/* Основна інформація */}
+                <div className="bg-white/5 border border-blue-500/30 rounded-2xl p-6">
+                  <h2 className="text-2xl font-bold text-cyan-400 mb-4">📋 Основна інформація</h2>
+                  <div className="space-y-4">
+                    <input
+                      type="number"
+                      placeholder="ID"
+                      value={videoData.id}
+                      onChange={(e) => handleInputChange("id", e.target.value)}
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                    />
+                    <input
+                      type="text"
+                      placeholder="YouTube ID"
+                      value={videoData.youtubeId}
+                      onChange={(e) => handleInputChange("youtubeId", e.target.value)}
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                    />
+                    <select
+                      value={videoData.category}
+                      onChange={(e) => handleInputChange("category", e.target.value)}
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                    >
+                      {categories.map(cat => (
+                        <option key={cat.value} value={cat.value}>{cat.label}</option>
+                      ))}
+                    </select>
+                    <div className="grid grid-cols-2 gap-4">
+                      <input
+                        type="text"
+                        placeholder="Duration (20:30)"
+                        value={videoData.duration}
+                        onChange={(e) => handleInputChange("duration", e.target.value)}
+                        className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                      />
+                      <input
+                        type="date"
+                        value={videoData.date}
+                        onChange={(e) => handleInputChange("date", e.target.value)}
+                        className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                      />
+                    </div>
+                  </div>
                 </div>
-                {/* Решта форми... */}
+
+                {/* Назви */}
+                <div className="bg-white/5 border border-blue-500/30 rounded-2xl p-6">
+                  <h2 className="text-2xl font-bold text-cyan-400 mb-4">📝 Назви</h2>
+                  {languages.map(lang => (
+                    <div key={lang.code} className="mb-3">
+                      <label className="block text-sm text-gray-400 mb-1">
+                        {lang.flag} {lang.label}
+                      </label>
+                      <input
+                        type="text"
+                        value={videoData.title[lang.code]}
+                        onChange={(e) => handleTranslationChange("title", lang.code, e.target.value)}
+                        className="w-full px-4 py-2 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              {/* Згенерований код */}
+              {/* JSON Preview */}
               <div className="bg-[#0a0e27] border border-blue-500/30 rounded-2xl p-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-2xl font-bold text-cyan-400">
-                    💻 JSON Preview
-                  </h2>
+                  <h2 className="text-2xl font-bold text-cyan-400">💻 JSON Preview</h2>
                   <button
                     onClick={copyToClipboard}
                     className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl font-semibold hover:scale-105 transition-all"
@@ -580,8 +609,213 @@ const AdminPage = ({ currentLang, setCurrentLang, t }) => {
                 </div>
                 <div className="bg-black/50 border border-blue-500/20 p-4 rounded-xl overflow-x-auto">
                   <pre className="text-green-400 text-sm font-mono">
-                    {generateVideoCode()}
+                    {JSON.stringify(videoData, null, 2)}
                   </pre>
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* SERVICES TAB */}
+          {activeTab === "services" && (
+            <>
+              <div className="grid lg:grid-cols-2 gap-8 mb-8">
+                <div className="bg-white/5 border border-blue-500/30 rounded-2xl p-6">
+                  <h2 className="text-2xl font-bold text-cyan-400 mb-4">📋 Основна інформація</h2>
+                  <div className="space-y-4">
+                    <input
+                      type="number"
+                      placeholder="ID"
+                      value={serviceData.id}
+                      onChange={(e) => setServiceData(prev => ({ ...prev, id: e.target.value }))}
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                    />
+                    
+                    <div>
+                      <label className="block text-sm text-gray-400 mb-2">Іконка</label>
+                      <div className="grid grid-cols-6 gap-2">
+                        {iconPalette.map(icon => (
+                          <button
+                            key={icon.name}
+                            onClick={() => setServiceData(prev => ({ ...prev, icon: icon.name }))}
+                            className={`p-3 rounded-xl transition-all ${
+                              serviceData.icon === icon.name
+                                ? "bg-blue-500 border-2 border-blue-400"
+                                : "bg-white/5 border border-blue-500/30 hover:bg-white/10"
+                            }`}
+                          >
+                            <span className="text-2xl">{icon.icon}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    <input
+                      type="text"
+                      placeholder="titleKey (service7Title)"
+                      value={serviceData.titleKey}
+                      onChange={(e) => setServiceData(prev => ({ ...prev, titleKey: e.target.value }))}
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                    />
+                    <input
+                      type="text"
+                      placeholder="descKey (service7Desc)"
+                      value={serviceData.descKey}
+                      onChange={(e) => setServiceData(prev => ({ ...prev, descKey: e.target.value }))}
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                    />
+                    
+                    <div>
+                      <label className="block text-sm text-gray-400 mb-2">Features Keys</label>
+                      {[0, 1, 2].map(i => (
+                        <input
+                          key={i}
+                          type="text"
+                          placeholder={`service7Feature${i + 1}`}
+                          value={serviceData.featuresKeys[i]}
+                          onChange={(e) => {
+                            const newFeatures = [...serviceData.featuresKeys];
+                            newFeatures[i] = e.target.value;
+                            setServiceData(prev => ({ ...prev, featuresKeys: newFeatures }));
+                          }}
+                          className="w-full px-4 py-2 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white mb-2"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* JSON Preview */}
+                <div className="bg-[#0a0e27] border border-blue-500/30 rounded-2xl p-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-2xl font-bold text-cyan-400">💻 JSON Preview</h2>
+                    <button
+                      onClick={copyToClipboard}
+                      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl font-semibold hover:scale-105 transition-all"
+                    >
+                      {copied ? <Check size={16} /> : <Copy size={16} />}
+                      {copied ? "Скопійовано!" : "Копіювати"}
+                    </button>
+                  </div>
+                  <div className="bg-black/50 border border-blue-500/20 p-4 rounded-xl overflow-x-auto max-h-96">
+                    <pre className="text-green-400 text-sm font-mono">
+                      {JSON.stringify(serviceData, null, 2)}
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* PROJECTS TAB */}
+          {activeTab === "projects" && (
+            <>
+              <div className="grid lg:grid-cols-2 gap-8 mb-8">
+                {/* Основна інформація */}
+                <div className="space-y-6">
+                  <div className="bg-white/5 border border-blue-500/30 rounded-2xl p-6">
+                    <h2 className="text-2xl font-bold text-cyan-400 mb-4">📋 Основна інформація</h2>
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        <input
+                          type="number"
+                          placeholder="ID"
+                          value={projectData.id}
+                          onChange={(e) => setProjectData(prev => ({ ...prev, id: e.target.value }))}
+                          className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                        />
+                        <input
+                          type="text"
+                          placeholder="Рік"
+                          value={projectData.year}
+                          onChange={(e) => setProjectData(prev => ({ ...prev, year: e.target.value }))}
+                          className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                        />
+                      </div>
+
+                      <select
+                        value={projectData.iconType}
+                        onChange={(e) => setProjectData(prev => ({ ...prev, iconType: e.target.value }))}
+                        className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                      >
+                        {projectIconTypes.map(type => (
+                          <option key={type.value} value={type.value}>{type.label}</option>
+                        ))}
+                      </select>
+
+                      <input
+                        type="text"
+                        placeholder="Теги (через кому)"
+                        value={projectData.tags.join(", ")}
+                        onChange={(e) => setProjectData(prev => ({ 
+                          ...prev, 
+                          tags: e.target.value.split(",").map(t => t.trim()) 
+                        }))}
+                        className="w-full px-4 py-3 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Назви */}
+                  <div className="bg-white/5 border border-blue-500/30 rounded-2xl p-6">
+                    <h2 className="text-2xl font-bold text-cyan-400 mb-4">📝 Назва</h2>
+                    {languages.map(lang => (
+                      <div key={lang.code} className="mb-3">
+                        <label className="block text-sm text-gray-400 mb-1">
+                          {lang.flag} {lang.label}
+                        </label>
+                        <input
+                          type="text"
+                          value={projectData.title[lang.code]}
+                          onChange={(e) => setProjectData(prev => ({
+                            ...prev,
+                            title: { ...prev.title, [lang.code]: e.target.value }
+                          }))}
+                          className="w-full px-4 py-2 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Опис */}
+                  <div className="bg-white/5 border border-blue-500/30 rounded-2xl p-6">
+                    <h2 className="text-2xl font-bold text-cyan-400 mb-4">💬 Опис</h2>
+                    {languages.map(lang => (
+                      <div key={lang.code} className="mb-3">
+                        <label className="block text-sm text-gray-400 mb-1">
+                          {lang.flag} {lang.label}
+                        </label>
+                        <textarea
+                          value={projectData.desc[lang.code]}
+                          onChange={(e) => setProjectData(prev => ({
+                            ...prev,
+                            desc: { ...prev.desc, [lang.code]: e.target.value }
+                          }))}
+                          className="w-full px-4 py-2 bg-[#0a0e27] border border-blue-500/30 rounded-xl text-white"
+                          rows="2"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* JSON Preview */}
+                <div className="bg-[#0a0e27] border border-blue-500/30 rounded-2xl p-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-2xl font-bold text-cyan-400">💻 JSON Preview</h2>
+                    <button
+                      onClick={copyToClipboard}
+                      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl font-semibold hover:scale-105 transition-all"
+                    >
+                      {copied ? <Check size={16} /> : <Copy size={16} />}
+                      {copied ? "Скопійовано!" : "Копіювати"}
+                    </button>
+                  </div>
+                  <div className="bg-black/50 border border-blue-500/20 p-4 rounded-xl overflow-x-auto" style={{ maxHeight: '600px' }}>
+                    <pre className="text-green-400 text-sm font-mono">
+                      {JSON.stringify(projectData, null, 2)}
+                    </pre>
+                  </div>
                 </div>
               </div>
             </>
