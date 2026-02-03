@@ -1,0 +1,149 @@
+{
+  "documents": [
+    {
+      "id": "perry-handbook",
+      "title": {
+        "uk": "Perry's Chemical Engineers' Handbook",
+        "ru": "Справочник Perry для химиков-технологов",
+        "en": "Perry's Chemical Engineers' Handbook",
+        "de": "Perry's Handbuch für Chemieingenieure"
+      },
+      "description": {
+        "uk": "Найповніший довідник з хімічної інженерії",
+        "ru": "Наиболее полный справочник по химической инженерии",
+        "en": "Most comprehensive chemical engineering handbook",
+        "de": "Umfassendstes Handbuch für Chemieingenieurwesen"
+      },
+      "category": "general",
+      "format": "pdf",
+      "pages": 2274,
+      "size": "18.5 MB",
+      "edition": "9th Edition",
+      "year": 2019,
+      "authors": ["Don W. Green", "Marylee Z. Southard"],
+      "language": "en",
+      "path": "/files/hydromechanics/documents/perry-handbook-9ed.pdf",
+      "thumbnail": "/files/hydromechanics/thumbnails/perry.jpg",
+      "tags": ["reference", "comprehensive", "fluid-mechanics", "heat-transfer"],
+      "featured": true
+    },
+    {
+      "id": "cherevko-processes",
+      "title": {
+        "uk": "Процеси і апарати харчових виробництв",
+        "ru": "Процессы и аппараты пищевых производств",
+        "en": "Processes and Equipment of Food Production",
+        "de": "Prozesse und Ausrüstung der Lebensmittelproduktion"
+      },
+      "category": "food-tech",
+      "format": "pdf",
+      "pages": 448,
+      "size": "5.2 MB",
+      "year": 2014,
+      "authors": ["О.І. Черевко", "А.М. Поперечний"],
+      "language": "uk",
+      "path": "/files/hydromechanics/documents/cherevko-processes.pdf",
+      "tags": ["ukrainian", "food-processing", "practical"]
+    },
+    {
+      "id": "mccabe-unit-operations",
+      "title": {
+        "uk": "Основні процеси хімічної технології",
+        "ru": "Основные процессы химической технологии",
+        "en": "Unit Operations of Chemical Engineering",
+        "de": "Grundoperationen der chemischen Verfahrenstechnik"
+      },
+      "category": "general",
+      "format": "pdf",
+      "pages": 1140,
+      "size": "22.8 MB",
+      "edition": "7th Edition",
+      "year": 2005,
+      "authors": ["Warren L. McCabe", "Julian C. Smith", "Peter Harriott"],
+      "language": "en",
+      "path": "https://github.com/username/repo/releases/download/v1.0/mccabe-7ed.pdf",
+      "storage": "github-release",
+      "tags": ["classic", "comprehensive", "operations"]
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "settling-process",
+      "title": {
+        "uk": "Схема процесу гравітаційного осадження",
+        "ru": "Схема процесса гравитационного осаждения",
+        "en": "Gravitational Settling Process Diagram",
+        "de": "Schema des Gravitationssedimentationsprozesses"
+      },
+      "category": "settling",
+      "format": "png",
+      "size": "856 KB",
+      "dimensions": "1920x1080",
+      "path": "/files/hydromechanics/diagrams/settling-process.png",
+      "tags": ["settling", "gravity", "process-diagram"]
+    },
+    {
+      "id": "centrifuge-design",
+      "title": {
+        "uk": "Конструкція відстійної центрифуги",
+        "ru": "Конструкция отстойной центрифуги",
+        "en": "Sedimenting Centrifuge Design",
+        "de": "Konstruktion der Sedimentierzentrifuge"
+      },
+      "category": "centrifugation",
+      "format": "pdf",
+      "size": "1.2 MB",
+      "path": "/files/hydromechanics/diagrams/centrifuge-design.pdf",
+      "tags": ["centrifuge", "technical-drawing", "equipment"]
+    }
+  ],
+  "videos": [
+    {
+      "id": "centrifuge-operation",
+      "title": {
+        "uk": "Робота промислової центрифуги",
+        "ru": "Работа промышленной центрифуги",
+        "en": "Industrial Centrifuge Operation",
+        "de": "Betrieb der Industriezentrifuge"
+      },
+      "category": "centrifugation",
+      "format": "youtube",
+      "duration": "8:45",
+      "path": "https://www.youtube.com/watch?v=xxxxx",
+      "thumbnail": "https://img.youtube.com/vi/xxxxx/maxresdefault.jpg",
+      "tags": ["video", "demonstration", "centrifuge"]
+    }
+  ],
+  "categories": {
+    "general": {
+      "uk": "Загальні довідники",
+      "ru": "Общие справочники",
+      "en": "General References",
+      "de": "Allgemeine Referenzen"
+    },
+    "food-tech": {
+      "uk": "Харчові технології",
+      "ru": "Пищевые технологии",
+      "en": "Food Technology",
+      "de": "Lebensmitteltechnologie"
+    },
+    "settling": {
+      "uk": "Осадження",
+      "ru": "Осаждение",
+      "en": "Settling",
+      "de": "Sedimentation"
+    },
+    "centrifugation": {
+      "uk": "Центрифугування",
+      "ru": "Центрифугирование",
+      "en": "Centrifugation",
+      "de": "Zentrifugation"
+    },
+    "filtration": {
+      "uk": "Фільтрування",
+      "ru": "Фильтрование",
+      "en": "Filtration",
+      "de": "Filtration"
+    }
+  }
+}
