@@ -797,7 +797,7 @@ export const translations = {
     contactQuickTitle: "Quick Contact",
     contactQuickPhone: "+380 67 684 02 63",
     contactQuickEmail: "engensim@gmail.com",
-    contactQuickTelegram: "@taras_as",
+    contactQuickTelegram: "@Taras_as",
     contactAvailable: "Available Mon-Fri, 9:00-18:00",
     contactResponseTime: "Usually respond within 2 hours",
     contactSending: "Sending...",
@@ -814,7 +814,7 @@ export const translations = {
 
     // Quick Contact
     quickContactTitle: "Quick Contact",
-    quickContactPhone: "+380 XX XXX XX XX",
+    quickContactPhone: "+380 67 684 02 63",
     quickContactEmail: "engensim@gmail.com",
     quickContactTelegram: "@Taras_as",
 
@@ -1090,9 +1090,9 @@ export const translations = {
       "Sendefehler. Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt.",
     contactOr: "Oder kontaktieren Sie mich direkt",
     contactQuickTitle: "Schnellkontakt",
-    contactQuickPhone: "+380 XX XXX XX XX",
+    contactQuickPhone: "+380 67 684 02 63",
     contactQuickEmail: "engensim@gmail.com",
-    contactQuickTelegram: "@taras_as",
+    contactQuickTelegram: "@Taras_as",
     contactAvailable: "Verfügbar Mo-Fr, 9:00-18:00",
     contactResponseTime: "Antworte normalerweise innerhalb von 2 Stunden",
     contactSending: "Senden...",
