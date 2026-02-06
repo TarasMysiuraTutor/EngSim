@@ -7,7 +7,7 @@ export const mathReferenceData = {
     {
       category: 'geometry',
       title: {
-        uk: 'Площа кола',
+        uk: 'Площа круга',
         ru: 'Площадь круга',
         en: 'Circle Area',
         de: 'Kreisfläche'

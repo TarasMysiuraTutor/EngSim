@@ -40,5 +40,38 @@
     "titleKey": "service6Title",
     "descKey": "service6Desc",
     "featuresKeys": ["service6Feature1", "service6Feature2", "service6Feature3"]
+  },
+  {
+    "id": 7,
+    "icon": "blueprint",
+    "titleKey": "service7Title",
+    "descKey": "service7Desc",
+    "featuresKeys": [
+      "service7Feature1",
+      "service7Feature2",
+      "service7Feature3"
+    ]
+  },
+  {
+    "id": 8,
+    "icon": "folder",
+    "titleKey": "service8Title",
+    "descKey": "service8Desc",
+    "featuresKeys": [
+      "service8Feature1",
+      "service8Feature2",
+      "service8Feature3"
+    ]
+  },
+  {
+    "id": 9,
+    "icon": "chart",
+    "titleKey": "service9Title",
+    "descKey": "service9Desc",
+    "featuresKeys": [
+      "service9Feature1",
+      "service9Feature2",
+      "service9Feature3"
+    ]
   }
 ]

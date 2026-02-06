@@ -7,8 +7,6 @@ import { translations } from "./data/translations";
 
 // ІМПОРТ СТОРІНОК
 import HomePage from "./pages/HomePage";
-import CalculatorsPage from "./pages/CalculatorsPage";
-import CalculatorDetail from "./pages/CalculatorDetail";
 import VideosPage from "./pages/VideosPage";
 import AdminPage from "./pages/AdminPage";
 import ServicesPage from "./pages/ServicesPage";
@@ -18,18 +16,25 @@ import TestimonialsPage from "./pages/TestimonialsPage";
 import FAQPage from "./pages/FAQPage";
 import ContactPage from "./pages/ContactPage";
 
+// ІМПОРТ КОМПОНЕНТА SCROLL TO TOP
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopOnNavigate from "./components/ScrollToTopOnNavigate";
+
 // ДОВІДКА - ГОЛОВНА СТОРІНКА
 import ReferencePage from "./pages/ReferencePage";
 
 // ДОВІДКА - РОЗДІЛИ
 import ReferenceMathPage from "./pages/ReferenceMathPage";
 import ReferenceStrengthPage from "./pages/ReferenceStrengthPage";
-import ReferenceHydraulicPage from "./pages/ReferenceHydraulicsPage";  // Створіть аналогічно
-import ReferenceThermalPage from "./pages/ReferenceThermalPage";      // Створіть аналогічно
+import ReferenceHydraulicPage from "./pages/ReferenceHydraulicsPage"; // Створіть аналогічно
+import ReferenceThermalPage from "./pages/ReferenceThermalPage"; // Створіть аналогічно
 // import ReferenceMassPage from "./pages/ReferenceMassPage";            // Створіть аналогічно
 import ReferenceMassTransferPage from "./pages/ReferenceMassTransferPage"; // Створіть аналогічно
 import ReferenceHydromechanicsPage from "./pages/ReferenceHydromechanicsPage"; // Створіть аналогічно
 
+import CalculatorsPage from "./pages/CalculatorsPage";
+import CalculatorDetail from "./pages/CalculatorDetail";
+// import ShellTubeHeatExchangerCalculator from './components/ShellTubeHeatExchangerCalculator';
 
 // ГОЛОВНИЙ КОМПОНЕНТ APP
 function App() {
@@ -55,6 +60,9 @@ function App() {
           setCurrentLang={setCurrentLang}
           t={translations[currentLang]}
         />
+
+         {/* Автоматична прокрутка наверх при зміні сторінки */}
+        <ScrollToTopOnNavigate />
 
         <Routes>
           {/* ГОЛОВНА СТОРІНКА */}
@@ -131,103 +139,100 @@ function App() {
           />
 
           {/* 👇 НОВА СТОРІНКА - ДОВІДКОВІ ДАНІ */}
-         {/* ============ ДОВІДКА ============ */}
-          
+          {/* ============ ДОВІДКА ============ */}
+
           {/* Головна сторінка довідки */}
-          <Route 
-            path="/reference" 
+          <Route
+            path="/reference"
             element={
-              <ReferencePage 
+              <ReferencePage
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}
               />
-            } 
+            }
           />
 
           {/* Математика */}
-          <Route 
-            path="/reference/math" 
+          <Route
+            path="/reference/math"
             element={
-              <ReferenceMathPage 
+              <ReferenceMathPage
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}
               />
-            } 
+            }
           />
 
           {/* Опір матеріалів */}
-          <Route 
-            path="/reference/strength" 
+          <Route
+            path="/reference/strength"
             element={
-              <ReferenceStrengthPage 
+              <ReferenceStrengthPage
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}
               />
-            } 
+            }
           />
 
           {/* Гідравліка */}
-          
-          <Route 
-            path="/reference/hydraulic" 
+
+          <Route
+            path="/reference/hydraulic"
             element={
-              <ReferenceHydraulicPage 
+              <ReferenceHydraulicPage
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}
               />
-            } 
+            }
           />
 
           {/* Гідравліка */}
-          
-          <Route 
-            path="/reference/hydromechanics" 
+
+          <Route
+            path="/reference/hydromechanics"
             element={
-              <ReferenceHydromechanicsPage 
+              <ReferenceHydromechanicsPage
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}
               />
-            } 
+            }
           />
-         
 
           {/* Теплообмін */}
-          
-          <Route 
-            path="/reference/thermal" 
+
+          <Route
+            path="/reference/thermal"
             element={
-              <ReferenceThermalPage 
+              <ReferenceThermalPage
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}
               />
-            } 
+            }
           />
-         
 
           {/* Масообмін */}
-          
-          <Route 
-            path="/reference/mass" 
+
+          <Route
+            path="/reference/mass"
             element={
-              <ReferenceMassTransferPage 
+              <ReferenceMassTransferPage
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}
               />
-            } 
+            }
           />
-         
 
           {/* ============ 404 - НЕ ЗНАЙДЕНО ============ */}
-          
-          <Route 
-            path="*" 
+
+          <Route
+            path="*"
             element={
               <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200 flex items-center justify-center">
                 <div className="text-center">
@@ -236,25 +241,30 @@ function App() {
                     404
                   </h1>
                   <p className="text-2xl text-gray-400 mb-8">
-                    {currentLang === 'uk' && 'Сторінку не знайдено'}
-                    {currentLang === 'ru' && 'Страница не найдена'}
-                    {currentLang === 'en' && 'Page not found'}
-                    {currentLang === 'de' && 'Seite nicht gefunden'}
+                    {currentLang === "uk" && "Сторінку не знайдено"}
+                    {currentLang === "ru" && "Страница не найдена"}
+                    {currentLang === "en" && "Page not found"}
+                    {currentLang === "de" && "Seite nicht gefunden"}
                   </p>
                   <button
-                    onClick={() => window.location.href = basename}
+                    onClick={() => (window.location.href = basename)}
                     className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all"
                   >
-                    {currentLang === 'uk' && 'Повернутися на головну'}
-                    {currentLang === 'ru' && 'Вернуться на главную'}
-                    {currentLang === 'en' && 'Back to home'}
-                    {currentLang === 'de' && 'Zurück zur Startseite'}
+                    {currentLang === "uk" && "Повернутися на головну"}
+                    {currentLang === "ru" && "Вернуться на главную"}
+                    {currentLang === "en" && "Back to home"}
+                    {currentLang === "de" && "Zurück zur Startseite"}
                   </button>
                 </div>
               </div>
-            } 
+            }
           />
         </Routes>
+
+        {/* <ShellTubeHeatExchangerCalculator currentLang="uk" /> */}
+
+        {/* КНОПКА ПОВЕРНЕННЯ НАВЕРХ */}
+        <ScrollToTop />
       </div>
     </BrowserRouter>
   );

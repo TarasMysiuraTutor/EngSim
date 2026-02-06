@@ -5,6 +5,8 @@ import React from "react";
 import About from "../components/About";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
+import AcademicProfiles from "../components/AcademicProfiles";
+
 import { translations } from "../data/translations";
 
 function AboutPage({ currentLang }) {
@@ -12,7 +14,7 @@ function AboutPage({ currentLang }) {
 
   const breadcrumbs = [
     { label: t.navHome, path: "/" },
-    { label: t.aboutTitle, path: "/about" }
+    { label: t.aboutTitle, path: "/about" },
   ];
 
   return (
@@ -21,6 +23,7 @@ function AboutPage({ currentLang }) {
         <Breadcrumbs items={breadcrumbs} currentLang={currentLang} />
         <About t={t} />
       </div>
+      <AcademicProfiles t={t} />
       <Footer t={t} currentLang={currentLang} />
     </>
   );

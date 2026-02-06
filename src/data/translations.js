@@ -41,36 +41,65 @@ export const translations = {
     service1Feature1: "Розрахунки міцності",
     service1Feature2: "Аналіз деформацій",
     service1Feature3: "Оцінка надійності",
+
     service2Title: "Термодинаміка",
     service2Desc:
       "Теплові розрахунки систем, аналіз термодинамічних циклів, розрахунок теплообмінників та енергетичних установок.",
     service2Feature1: "Теплові розрахунки",
     service2Feature2: "Аналіз циклів",
     service2Feature3: "Розрахунок обладнання",
+
     service3Title: "Теплові процеси",
     service3Desc:
       "Моделювання теплопередачі, розрахунок теплоізоляції, аналіз температурних режимів промислового обладнання.",
     service3Feature1: "Теплопередача",
     service3Feature2: "Теплоізоляція",
     service3Feature3: "Температурний режим",
+
     service4Title: "Промислові розрахунки",
     service4Desc:
       "Комплексні інженерні розрахунки для різних галузей промисловості. Оптимізація технологічних процесів.",
     service4Feature1: "Комплексні розрахунки",
     service4Feature2: "Оптимізація",
     service4Feature3: "Технологічні процеси",
+
     service5Title: "Технічна документація",
     service5Desc:
       "Підготовка технічних звітів, розрахункових пояснювальних записок, креслень та специфікацій.",
     service5Feature1: "Технічні звіти",
     service5Feature2: "Креслення",
     service5Feature3: "Специфікації",
+
     service6Title: "Консультації",
     service6Desc:
       "Експертні консультації з питань міцності, теплотехніки та оптимізації інженерних рішень.",
     service6Feature1: "Експертна оцінка",
     service6Feature2: "Технічний супровід",
     service6Feature3: "Оптимізація рішень",
+    // Послуга 7 - Виконання креслеників
+    service7Title: "Виконання креслеників",
+    service7Desc:
+      "Професійна розробка технічних креслеників апаратів, обладнання та конструкцій відповідно до стандартів ЕСКД",
+    service7Feature1: "Складальні та робочі креслення",
+    service7Feature2: "3D-моделювання обладнання",
+    service7Feature3: "Специфікації та відомості",
+
+    // Послуга 8 - Конструкторська документація
+    service8Title: "Оформлення конструкторської документації",
+    service8Desc:
+      "Комплексна підготовка та оформлення технічної документації для виробництва згідно з ДСТУ та міжнародними стандартами",
+    service8Feature1: "Технічні умови та паспорти",
+    service8Feature2: "Інструкції з експлуатації",
+    service8Feature3: "Відповідність ДСТУ та ГОСТ",
+
+    // Послуга 9 - Технічні розрахунки
+    service9Title: "Технічні розрахунки апаратів",
+    service9Desc:
+      "Виконання повного циклу інженерних розрахунків технологічного обладнання та установок",
+    service9Feature1: "Розрахунки на міцність",
+    service9Feature2: "Гідравлічні розрахунки",
+    service9Feature3: "Теплові та масообмінні розрахунки",
+
     serviceCTA: "Замовити послугу",
     serviceLearnMore: "Дізнатися більше",
     serviceNotFound: "Не знайшли потрібну послугу?",
@@ -126,6 +155,20 @@ export const translations = {
     aboutExpertise5: "Технічна документація",
     aboutExpertise6: "Супровід проектів",
     aboutCTA: "Обговорити проект",
+
+    // Наукові профілі
+    academicProfilesTitle: "Наукові профілі",
+    academicProfilesDesc:
+      "Мої дослідження та публікації в міжнародних наукових базах даних",
+    orcidDesc: "Унікальний ідентифікатор дослідника",
+    researchGateDesc: "Наукові публікації та співпраця",
+    scopusDesc: "Метрики цитування та h-індекс",
+    wosDesc: "База даних рецензованих публікацій",
+    scholarDesc: "Цитування та науковий вплив",
+    enuftirDesc: "Інституційний репозиторій НУХТ",
+    viewProfile: "Переглянути профіль",
+    academicProfilesNote:
+      "Публікації регулярно оновлюються. Натисніть на картку для перегляду деталей.",
 
     // Testimonials
     testimonialsTitle: "Відгуки клієнтів",
@@ -213,11 +256,13 @@ export const translations = {
       "Професійні інженерні розрахунки та консультації. Опір матеріалів, термодинаміка, гідравліка, енергетика.",
     footerSpan1: "Розроблено з",
     footerSpan2: "для інженерів",
+    footerLegal: "Юридична інформація",
 
     navReference: "Довідка",
 
     adminTitle: "Адмін-панель",
-    adminSubtitle: "Керування відео, послугами та проектами. Генератори контенту для швидкого наповнення даних",
+    adminSubtitle:
+      "Керування відео, послугами та проектами. Генератори контенту для швидкого наповнення даних",
     adminVideoGenerator: "Генератор Відео",
     adminTestimonialGenerator: "Генератор відгуків",
     adminServiceGenerator: "Генератор Послуг",
@@ -250,7 +295,6 @@ export const translations = {
     aboutQuickDesc: "Досвід та кваліфікація",
     projectsQuickDesc: "Портфоліо виконаних робіт",
     contactQuickDesc: "Зв'яжіться зі мною",
-
   },
 
   ru: {
@@ -326,6 +370,31 @@ export const translations = {
     service6Feature1: "Экспертная оценка",
     service6Feature2: "Техническое сопровождение",
     service6Feature3: "Оптимизация решений",
+
+    // Услуга 7 - Выполнение чертежей
+    service7Title: "Выполнение чертежей",
+    service7Desc:
+      "Профессиональная разработка технических чертежей аппаратов, оборудования и конструкций в соответствии со стандартами ЕСКД",
+    service7Feature1: "Сборочные и рабочие чертежи",
+    service7Feature2: "3D-моделирование оборудования",
+    service7Feature3: "Спецификации и ведомости",
+
+    // Услуга 8 - Конструкторская документация
+    service8Title: "Оформление конструкторской документации",
+    service8Desc:
+      "Комплексная подготовка и оформление технической документации для производства согласно ДСТУ и международным стандартам",
+    service8Feature1: "Технические условия и паспорта",
+    service8Feature2: "Инструкции по эксплуатации",
+    service8Feature3: "Соответствие ДСТУ и ГОСТ",
+
+    // Услуга 9 - Технические расчеты
+    service9Title: "Технические расчеты аппаратов",
+    service9Desc:
+      "Выполнение полного цикла инженерных расчетов технологического оборудования и установок",
+    service9Feature1: "Расчеты на прочность",
+    service9Feature2: "Гидравлические расчеты",
+    service9Feature3: "Тепловые и массообменные расчеты",
+
     serviceCTA: "Заказать услугу",
     serviceLearnMore: "Узнать больше",
     serviceNotFound: "Не нашли нужную услугу?",
@@ -380,6 +449,20 @@ export const translations = {
     aboutExpertise5: "Техническая документация",
     aboutExpertise6: "Сопровождение проектов",
     aboutCTA: "Обсудить проект",
+
+    // Научные профили
+    academicProfilesTitle: "Научные профили",
+    academicProfilesDesc:
+      "Мои исследования и публикации в международных научных базах данных",
+    orcidDesc: "Уникальный идентификатор исследователя",
+    researchGateDesc: "Научные публикации и сотрудничество",
+    scopusDesc: "Метрики цитирования и h-индекс",
+    wosDesc: "База данных рецензированных публикаций",
+    scholarDesc: "Цитирование и научное влияние",
+    enuftirDesc: "Институционный репозиторий НУХТ",
+    viewProfile: "Просмотреть профиль",
+    academicProfilesNote:
+      "Публикации регулярно обновляются. Нажмите на карточку для просмотра деталей.",
 
     // Testimonials
     testimonialsTitle: "Отзывы клиентов",
@@ -466,11 +549,13 @@ export const translations = {
       "Профессиональные инженерные расчеты и консультации. Сопротивление материалов, термодинамика, гидравлика, энергетика.",
     footerSpan1: "Разработано с",
     footerSpan2: "для инженеров",
+    footerLegal: "Юридическая информация",
 
     navReference: "Справочник",
 
     adminTitle: "Админ-панель",
-    adminSubtitle: "Управление видео, услугами и проектами. Генераторы контента для быстрого наполнения данных",
+    adminSubtitle:
+      "Управление видео, услугами и проектами. Генераторы контента для быстрого наполнения данных",
     adminVideoGenerator: "Генератор Видео",
     adminTestimonialGenerator: "Генератор отзывов",
     adminServiceGenerator: "Генератор Услуг",
@@ -496,8 +581,8 @@ export const translations = {
     adminCopy: "Копировать",
     adminCopied: "Скопировано!",
     adminCodeHint: "Скопируйте этот код и вставьте его в массив",
-  
-  //quickNavigationTitle
+
+    //quickNavigationTitle
     quickNavigationTitle: "Быстрая навигация",
     servicesQuickDesc: "Профессиональные инженерные расчеты",
     aboutQuickDesc: "Опыт и квалификация",
@@ -578,6 +663,31 @@ export const translations = {
     service6Feature1: "Expert assessment",
     service6Feature2: "Technical support",
     service6Feature3: "Solution optimization",
+
+    // Service 7 - Technical drawings
+    service7Title: "Technical Drawing Development",
+    service7Desc:
+      "Professional development of technical drawings for equipment, machinery, and structures according to ESKD standards",
+    service7Feature1: "Assembly and working drawings",
+    service7Feature2: "3D equipment modeling",
+    service7Feature3: "Specifications and bills of materials",
+
+    // Service 8 - Design documentation
+    service8Title: "Design Documentation Preparation",
+    service8Desc:
+      "Comprehensive preparation and formatting of technical documentation for production in accordance with DSTU and international standards",
+    service8Feature1: "Technical specifications and passports",
+    service8Feature2: "Operation manuals",
+    service8Feature3: "DSTU and GOST compliance",
+
+    // Service 9 - Technical calculations
+    service9Title: "Equipment Technical Calculations",
+    service9Desc:
+      "Complete cycle of engineering calculations for process equipment and installations",
+    service9Feature1: "Strength calculations",
+    service9Feature2: "Hydraulic calculations",
+    service9Feature3: "Heat and mass transfer calculations",
+
     serviceCTA: "Order Service",
     serviceLearnMore: "Learn More",
     serviceNotFound: "Can't find the service you need?",
@@ -634,6 +744,18 @@ export const translations = {
     aboutExpertise5: "Technical documentation",
     aboutExpertise6: "Project support",
     aboutCTA: "Discuss Project",
+
+    // Academic Profiles
+    academicProfilesTitle: "Academic Profiles",
+    academicProfilesDesc:
+      "My research and publications in international scientific databases",
+    researchGateDesc: "Research publications and collaborations",
+    scopusDesc: "Citation metrics and h-index",
+    wosDesc: "Peer-reviewed publications database",
+    scholarDesc: "Citations and research impact",
+    viewProfile: "View profile",
+    academicProfilesNote:
+      "Publications are regularly updated. Click on a card to view details.",
 
     // Testimonials
     testimonialsTitle: "Client Testimonials",
@@ -720,11 +842,13 @@ export const translations = {
       "Professional engineering calculations and consulting. Strength of materials, thermodynamics, hydraulics, energy.",
     footerSpan1: "Developed with",
     footerSpan2: "for engineers",
+    footerLegal: "Legal Information",
 
     navReference: "Reference",
 
     adminTitle: "Admin Panel",
-    adminSubtitle: "Manage videos, services, and projects. Content generators for quick data population",
+    adminSubtitle:
+      "Manage videos, services, and projects. Content generators for quick data population",
     adminVideoGenerator: "Video Generator",
     adminTestimonialGenerator: "Testimonial Generator",
     adminServiceGenerator: "Service Generator",
@@ -750,8 +874,8 @@ export const translations = {
     adminCopy: "Copy",
     adminCopied: "Copied!",
     adminCodeHint: "Copy this code and paste it into the array",
-  
-  //quickNavigationTitle
+
+    //quickNavigationTitle
     quickNavigationTitle: "Quick Navigation",
     servicesQuickDesc: "Professional engineering calculations",
     aboutQuickDesc: "Experience and qualifications",
@@ -832,6 +956,31 @@ export const translations = {
     service6Feature1: "Expertenbewertung",
     service6Feature2: "Technische Betreuung",
     service6Feature3: "Lösungsoptimierung",
+
+    // Dienst 7 - Technische Zeichnungen
+    service7Title: "Technische Zeichnungsentwicklung",
+    service7Desc:
+      "Professionelle Entwicklung technischer Zeichnungen für Geräte, Ausrüstung und Konstruktionen nach ESKD-Standards",
+    service7Feature1: "Montage- und Arbeitszeichnungen",
+    service7Feature2: "3D-Modellierung von Ausrüstung",
+    service7Feature3: "Spezifikationen und Stücklisten",
+
+    // Dienst 8 - Konstruktionsdokumentation
+    service8Title: "Konstruktionsdokumentation Vorbereitung",
+    service8Desc:
+      "Umfassende Vorbereitung und Formatierung technischer Dokumentation für die Produktion gemäß DSTU und internationalen Standards",
+    service8Feature1: "Technische Spezifikationen und Pässe",
+    service8Feature2: "Bedienungsanleitungen",
+    service8Feature3: "DSTU- und GOST-Konformität",
+
+    // Dienst 9 - Technische Berechnungen
+    service9Title: "Technische Berechnungen von Geräten",
+    service9Desc:
+      "Vollständiger Zyklus von Ingenieurberechnungen für Prozessausrüstung und Anlagen",
+    service9Feature1: "Festigkeitsberechnungen",
+    service9Feature2: "Hydraulische Berechnungen",
+    service9Feature3: "Wärme- und Stoffaustauschberechnungen",
+
     serviceCTA: "Dienstleistung bestellen",
     serviceLearnMore: "Mehr erfahren",
     serviceNotFound: "Dienstleistung nicht gefunden?",
@@ -887,6 +1036,20 @@ export const translations = {
     aboutExpertise5: "Technische Dokumentation",
     aboutExpertise6: "Projektbegleitung",
     aboutCTA: "Projekt besprechen",
+
+    // academicProfiles:
+    academicProfilesTitle: "Akademische Profile",
+    academicProfilesDesc:
+      "Meine Forschung und Publikationen in internationalen wissenschaftlichen Datenbanken",
+    orcidDesc: "Eindeutige Forscher-ID",
+    researchGateDesc: "Forschungspublikationen und Zusammenarbeit",
+    scopusDesc: "Zitationsmetriken und h-Index",
+    wosDesc: "Peer-Review-Publikationsdatenbank",
+    scholarDesc: "Zitate und Forschungseinfluss",
+    enuftirDesc: "Institutionelles Repository der NUFT",
+    viewProfile: "Profil anzeigen",
+    academicProfilesNote:
+      "Publikationen werden regelmäßig aktualisiert. Klicken Sie auf eine Karte, um Details anzuzeigen.",
 
     // Testimonials
     testimonialsTitle: "Kundenbewertungen",
@@ -975,11 +1138,13 @@ export const translations = {
     footerRights: "Alle Rechte vorbehalten",
     footerSpan1: "Entwickelt mit",
     footerSpan2: "für Ingenieure",
+    footerLegal: "Rechtliche Informationen",
 
     navReference: "Referenz",
 
     adminTitle: "Admin-Panel",
-    adminSubtitle: "Verwaltung von Videos, Dienstleistungen und Projekten. Inhaltsersteller für schnelle Datenbefüllung",
+    adminSubtitle:
+      "Verwaltung von Videos, Dienstleistungen und Projekten. Inhaltsersteller für schnelle Datenbefüllung",
     adminVideoGenerator: "Video-Generator",
     adminTestimonialGenerator: "Bewertungs-Generator",
     adminServiceGenerator: "Service-Generator",
@@ -1016,8 +1181,8 @@ export const translations = {
       "Durch die Nutzung dieser Website und der Ingenieurrechner stimmen Sie den folgenden Bedingungen zu.",
     privacyContact: "Bei Datenschutzfragen kontaktieren:",
     termsContact: "Bei Nutzungsfragen kontaktieren:",
-  
-  //quickNavigationTitle
+
+    //quickNavigationTitle
     quickNavigationTitle: "Schnellnavigation",
     servicesQuickDesc: "Professionelle technische Berechnungen",
     aboutQuickDesc: "Erfahrung und Qualifikationen",

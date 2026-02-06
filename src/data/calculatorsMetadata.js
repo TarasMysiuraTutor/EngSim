@@ -1,6 +1,8 @@
 // src/data/calculatorsMetadata.js
 // Метадані для SEO та роутингу (доповнення до існуючих калькуляторів)
 
+import { shellTubeMetadata } from './calculatorData';
+
 // Мапа калькуляторів до категорій
 export const categoryMap = {
   stress: 'strength',
@@ -29,6 +31,7 @@ export const categoryMap = {
   convection: 'thermodynamic',
   radiation: 'thermodynamic',
   enthalpy: 'thermodynamic',
+  shell_tube: 'thermodynamic', // Додано для окремого калькулятора теплообмінника
   
   energy: 'energy',
   power: 'energy',
@@ -259,7 +262,8 @@ P = ρ · g · Q · H / η
     ],
     examples: [],
     relatedCalculators: ['pipe', 'pressure_loss', 'valve']
-  }
+  },
+  shell_tube: shellTubeMetadata,
 };
 
 // Функція для отримання slug з ключа калькулятора

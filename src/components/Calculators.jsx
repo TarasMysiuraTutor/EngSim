@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getCategorySchema } from '../utils/structuredData';
 
+
 const Calculators = ({ t, currentLang, calculators }) => {
   const [visibleCategories, setVisibleCategories] = useState([]);
   const sectionRef = useRef(null);
@@ -25,7 +26,7 @@ const Calculators = ({ t, currentLang, calculators }) => {
       titleKey: 'calcCat2',
       icon: '🌡️',
       categoryId: 'thermodynamic',
-      calcs: ['heattransfer', 'insulation', 'efficiency', 'carnot', 'heat_exchanger', 'convection', 'radiation', 'enthalpy']
+      calcs: ['heattransfer', 'insulation', 'efficiency', 'carnot', 'heat_exchanger', 'convection', 'radiation', 'enthalpy','shell_tube']
     },
     {
       titleKey: 'calcCat4',

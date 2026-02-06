@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const FAQ = ({ currentLang }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -292,8 +293,8 @@ const FAQ = ({ currentLang }) => {
           <p className="text-gray-300 text-lg mb-4">
             {contactTexts[currentLang]}
           </p>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
           >
             {currentLang === 'de' && 'Jetzt kontaktieren'}
@@ -303,7 +304,7 @@ const FAQ = ({ currentLang }) => {
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

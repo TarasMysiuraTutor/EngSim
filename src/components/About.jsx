@@ -3,6 +3,7 @@ import LazyImage from "./LazyImage";
 import photoAvif from "../assets/opt/my-photo.avif";
 import photoWebp from "../assets/opt/my-photo.webp";
 import photoPng from "../assets/opt/my-photo.png";
+import { Link } from "react-router-dom";
 
 const About = ({ t }) => {
   const [visible, setVisible] = useState(false);
@@ -259,8 +260,8 @@ const About = ({ t }) => {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
               >
                 {t.aboutCTA}
@@ -277,7 +278,7 @@ const About = ({ t }) => {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

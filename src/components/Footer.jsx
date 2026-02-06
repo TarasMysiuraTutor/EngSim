@@ -131,12 +131,9 @@ const Footer = ({ t, currentLang }) => {
     {
       name: "Viber",
       icon: (
-        <svg
-          className="w-7 h-7"
-          viewBox="0 0 512 512"
-          >
+        <svg className="w-7 h-7" viewBox="0 0 512 512">
           <path
-          stroke="currentColor"
+            stroke="currentColor"
             stroke-linecap="round"
             stroke-width="10"
             d="M269 186a30 30 0 0 1 31 31m-38-58a64 64 0 0 1 64 67m-73-93a97 97 0 0 1 99 104"
@@ -207,14 +204,19 @@ const Footer = ({ t, currentLang }) => {
             <ul className="space-y-2">
               {navigationLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={`#${link.href}`}
-                    onClick={(e) => scrollToSection(e, link.href)}
+                  <Link
+                    to={`/${link.href}`}
                     className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center group cursor-pointer"
                   >
                     <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                     {link.label}
-                  </a>
+                  </Link>
+
+                  {/* <a
+                    href={`#${link.href}`}
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center group cursor-pointer"
+                  ></a> */}
                 </li>
               ))}
             </ul>
@@ -228,15 +230,15 @@ const Footer = ({ t, currentLang }) => {
             <ul className="space-y-3">
               {contactInfo.map((contact, index) => (
                 <li key={index}>
-                  <a
-                    href={contact.href}
+                  <Link
+                    to={`/$contact}`}
                     className="flex items-center gap-3 text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm group"
                   >
                     <span className="flex-shrink-0 text-blue-400 group-hover:scale-110 transition-transform duration-300">
                       {contact.icon}
                     </span>
                     <span className="break-all">{contact.text}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li className="flex items-center gap-3 text-gray-400 text-sm pt-2">
@@ -279,13 +281,12 @@ const Footer = ({ t, currentLang }) => {
 
             {/* CTA Button */}
             <div className="mt-6">
-              <a
-                href="#contact"
-                onClick={(e) => scrollToSection(e, "contact")}
+              <Link
+                to="/contact"
                 className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg font-semibold text-white text-sm hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
               >
                 {t.contactTitle || "Contact Us"}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

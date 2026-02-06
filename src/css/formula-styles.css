@@ -1,0 +1,124 @@
+/* formula-styles.css */
+/* Стилі для покращення відображення математичних формул */
+
+/* Основні стилі для формул */
+.formula-display {
+  display: block;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.formula-inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Стилі для дробів (якщо KaTeX не доступний) */
+.formula-frac {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.formula-num {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.1em;
+  line-height: 1.2;
+}
+
+.formula-denom {
+  padding-top: 0.1em;
+  line-height: 1.2;
+}
+
+/* KaTeX контейнери */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+.katex-display > .katex {
+  white-space: normal;
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 640px) {
+  .formula-display,
+  .katex-display {
+    font-size: 0.9em;
+  }
+}
+
+/* Анімація появи формул */
+.formula-display,
+.katex-display {
+  animation: fadeInFormula 0.3s ease-in;
+}
+
+@keyframes fadeInFormula {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Покращення читабельності на темному фоні */
+.bg-\[#0a0e27\] .katex,
+.bg-\[#0a0e27\]\/50 .katex {
+  color: #e5e7eb; /* gray-200 */
+}
+
+/* Виділення результатів */
+.formula-result {
+  background: linear-gradient(to right, rgba(249, 115, 22, 0.1), rgba(239, 68, 68, 0.1));
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+/* Виділення підстановок */
+.formula-substitution {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+/* Виділення основних формул */
+.formula-main {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border-left: 3px solid rgba(249, 115, 22, 0.5);
+}
+
+/* Scrollbar для формул */
+.formula-display::-webkit-scrollbar,
+.katex-display::-webkit-scrollbar {
+  height: 6px;
+}
+
+.formula-display::-webkit-scrollbar-track,
+.katex-display::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.formula-display::-webkit-scrollbar-thumb,
+.katex-display::-webkit-scrollbar-thumb {
+  background: rgba(249, 115, 22, 0.5);
+  border-radius: 3px;
+}
+
+.formula-display::-webkit-scrollbar-thumb:hover,
+.katex-display::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.7);
+}
