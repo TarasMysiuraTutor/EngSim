@@ -10,12 +10,12 @@ export default defineConfig({
     sourcemap: false,
     minify: "esbuild",
     target: "es2015", // Знижуємо для кращої сумісності
-    cssCodeSplit: false,
+    cssCodeSplit: true,
 
     rollupOptions: {
       output: {
         // ВАЖЛИВО: Для GitHub Pages краще один bundle
-        manualChunks: undefined,
+        // manualChunks: undefined,
 
         // Додаємо хеші
         entryFileNames: "assets/index-[hash].js",
@@ -24,7 +24,7 @@ export default defineConfig({
 
         // Формат для сумісності
         format: "es",
-        inlineDynamicImports: true,
+        // inlineDynamicImports: true,
       },
     },
   },
