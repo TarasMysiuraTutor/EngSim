@@ -178,7 +178,6 @@ function App() {
           />
 
           {/* Гідравліка */}
-
           <Route
             path="/reference/hydraulic"
             element={
@@ -190,8 +189,7 @@ function App() {
             }
           />
 
-          {/* Гідравліка */}
-
+          {/* Гідромеханіка */}
           <Route
             path="/reference/hydromechanics"
             element={
@@ -204,7 +202,6 @@ function App() {
           />
 
           {/* Теплообмін */}
-
           <Route
             path="/reference/thermal"
             element={
@@ -217,7 +214,6 @@ function App() {
           />
 
           {/* Масообмін */}
-
           <Route
             path="/reference/mass"
             element={
@@ -230,7 +226,6 @@ function App() {
           />
 
           {/* ============ 404 - НЕ ЗНАЙДЕНО ============ */}
-
           <Route
             path="*"
             element={
