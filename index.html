@@ -10,7 +10,7 @@
       content="img-src 'self' https://res.cloudinary.com data:; connect-src 'self' https://res.cloudinary.com data:;"
     />
     <!-- </Helmet> -->
-<!--     
+    <!--     
     <meta
       http-equiv="Content-Security-Policy"
       content="img-src 'self' https://res.cloudinary.com; connect-src 'self' https://res.cloudinary.com"
@@ -238,5 +238,12 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.MathJax = {
+        tex: { inlineMath: [["\\(", "\\)"]] },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   </body>
 </html>

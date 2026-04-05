@@ -220,6 +220,7 @@ export const translations = {
     contactPlaceholderPhone: "+380 50 123 45 67",
     contactPlaceholderMessage: "Розкажіть про ваш проект...",
     contactTimezone: "Київський час (UTC+2)",
+    contactButtonText: "Надіслати повідомлення",
 
     // Testimonials Stats
     testimonialsStatClients: "Задоволених клієнтів",
@@ -254,6 +255,7 @@ export const translations = {
     footerSocial: "Соціальні мережі",
     footerDescription:
       "Професійні інженерні розрахунки та консультації. Опір матеріалів, термодинаміка, гідравліка, енергетика.",
+    footerRights: "Всі права захищені.",
     footerSpan1: "Розроблено з",
     footerSpan2: "для інженерів",
     footerLegal: "Юридична інформація",
@@ -513,6 +515,7 @@ export const translations = {
     contactPlaceholderPhone: "+380 50 123 45 67",
     contactPlaceholderMessage: "Расскажите о вашем проекте...",
     contactTimezone: "Киевское время (UTC+2)",
+    contactButtonText: "Отправить сообщение",
 
     // Testimonials Stats
     testimonialsStatClients: "Довольных клиентов",
@@ -547,6 +550,7 @@ export const translations = {
     footerSocial: "Социальные сети",
     footerDescription:
       "Профессиональные инженерные расчеты и консультации. Сопротивление материалов, термодинамика, гидравлика, энергетика.",
+    footerRights: "Все права защищены.",
     footerSpan1: "Разработано с",
     footerSpan2: "для инженеров",
     footerLegal: "Юридическая информация",
@@ -806,6 +810,7 @@ export const translations = {
     contactPlaceholderPhone: "+380 50 123 45 67",
     contactPlaceholderMessage: "Tell us about your project...",
     contactTimezone: "Kyiv time (UTC+2)",
+    contactButtonText: "Send Message",
 
     // Testimonials Stats
     testimonialsStatClients: "Satisfied clients",
@@ -840,6 +845,7 @@ export const translations = {
     footerSocial: "Social Media",
     footerDescription:
       "Professional engineering calculations and consulting. Strength of materials, thermodynamics, hydraulics, energy.",
+    footerRights: "All rights reserved.",
     footerSpan1: "Developed with",
     footerSpan2: "for engineers",
     footerLegal: "Legal Information",
@@ -1101,6 +1107,7 @@ export const translations = {
     contactPlaceholderPhone: "+380 50 123 45 67",
     contactPlaceholderMessage: "Erzählen Sie uns von Ihrem Projekt...",
     contactTimezone: "Kiewer Zeit (UTC+2)",
+    contactButtonText: "Nachricht senden",
 
     // Testimonials Stats
     testimonialsStatClients: "Zufriedene Kunden",

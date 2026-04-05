@@ -8,7 +8,7 @@ import { translations } from "./data/translations";
 // ІМПОРТ СТОРІНОК
 import HomePage from "./pages/HomePage";
 import VideosPage from "./pages/VideosPage";
-import AdminPage from "./pages/AdminPage";
+import AdminPage from "./admin/AdminPage";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -34,6 +34,7 @@ import ReferenceHydromechanicsPage from "./pages/ReferenceHydromechanicsPage"; /
 
 import CalculatorsPage from "./pages/CalculatorsPage";
 import CalculatorDetail from "./pages/CalculatorDetail";
+import LibraryPage from "./pages/LibraryPage";
 // import ShellTubeHeatExchangerCalculator from './components/ShellTubeHeatExchangerCalculator';
 
 // ГОЛОВНИЙ КОМПОНЕНТ APP
@@ -61,7 +62,7 @@ function App() {
           t={translations[currentLang]}
         />
 
-         {/* Автоматична прокрутка наверх при зміні сторінки */}
+        {/* Автоматична прокрутка наверх при зміні сторінки */}
         <ScrollToTopOnNavigate />
 
         <Routes>
@@ -119,6 +120,18 @@ function App() {
             path="/videos"
             element={
               <VideosPage
+                currentLang={currentLang}
+                setCurrentLang={setCurrentLang}
+                t={translations[currentLang]}
+              />
+            }
+          />
+
+          {/* СТОРІНКА З БІБЛІОТЕКОЮ */}
+          <Route
+            path="/library"
+            element={
+              <LibraryPage
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}

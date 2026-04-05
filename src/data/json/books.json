@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "uk": "Опір матеріалів — Бір & Джонстон",
+      "ru": "Сопротивление материалов — Бир & Джонстон",
+      "en": "Strength of Materials — Beer & Johnston",
+      "de": "Festigkeitslehre — Beer & Johnston"
+    },
+    "desc": {
+      "uk": "Класичний підручник з напружень, деформацій, вигину та основ механіки матеріалів.",
+      "ru": "Классический учебник по напряжениям, деформациям, изгибу и механике материалов.",
+      "en": "Classic engineering textbook covering stress, strain, beam bending, and material mechanics.",
+      "de": "Klassisches Lehrbuch über Spannung, Dehnung, Biegung und Werkstoffmechanik."
+    },
+    "pages": 612,
+    "format": "PDF",
+    "icon": "📘",
+    "file": "/books/beer_strength_of_materials.pdf",
+    "category": "strength"
+  },
+
+  {
+    "id": 2,
+    "title": {
+      "uk": "Гідравлічний довідник",
+      "ru": "Гидравлический справочник",
+      "en": "Hydraulics Reference Handbook",
+      "de": "Hydraulik Referenzhandbuch"
+    },
+    "desc": {
+      "uk": "Швидкі формули та таблиці для труб, насосів, витрат і втрат тиску.",
+      "ru": "Быстрые формулы и таблицы для труб, насосов, расхода и потерь давления.",
+      "en": "Quick formulas and charts for pipes, pumps, flow rates, and pressure losses.",
+      "de": "Schnelle Formeln und Tabellen für Rohre, Pumpen, Durchfluss und Druckverluste."
+    },
+    "pages": 92,
+    "format": "PDF",
+    "icon": "💧",
+    "file": "/books/hydraulics_reference.pdf",
+    "category": "hydraulic"
+  },
+
+  {
+    "id": 3,
+    "title": {
+      "uk": "Основи термодинаміки",
+      "ru": "Основы термодинамики",
+      "en": "Thermodynamics Basics",
+      "de": "Thermodynamik Grundlagen"
+    },
+    "desc": {
+      "uk": "Фундаментальні принципи теплопередачі, циклів та енергетичних рівнянь.",
+      "ru": "Фундаментальные принципы теплопередачи, циклов и энергетических уравнений.",
+      "en": "Fundamentals of heat transfer, thermodynamic cycles, and energy equations.",
+      "de": "Grundlagen der Wärmeübertragung, thermodynamische Zyklen und Energiegleichungen."
+    },
+    "pages": 154,
+    "format": "PDF",
+    "icon": "🔥",
+    "file": "/books/thermodynamics_basics.pdf",
+    "category": "thermodynamic"
+  },
+
+  {
+    "id": 4,
+    "title": {
+      "uk": "Енергетичні системи — довідник",
+      "ru": "Энергетические системы — справочник",
+      "en": "Energy Systems Engineering Handbook",
+      "de": "Handbuch der Energiesystemtechnik"
+    },
+    "desc": {
+      "uk": "Підручник про енергетичні баланси, генерацію, втрати та оптимізацію систем.",
+      "ru": "Учебник об энергетических балансах, генерации, потерях и оптимизации систем.",
+      "en": "Reference on energy balances, generation technologies, system losses, and optimization.",
+      "de": "Nachschlagewerk über Energiehaushalte, Erzeugung, Verluste und Optimierung."
+    },
+    "pages": 430,
+    "format": "PDF",
+    "icon": "⚡",
+    "file": "/books/energy_systems_handbook.pdf",
+    "category": "energy"
+  },
+
+  {
+    "id": 5,
+    "title": {
+      "uk": "Довідник інженера-механіка",
+      "ru": "Справочник инженера-механика",
+      "en": "Mechanical Engineer's Handbook",
+      "de": "Handbuch Maschinenbauingenieur"
+    },
+    "desc": {
+      "uk": "Збірник формул, таблиць і прикладів для всіх галузей інженерії.",
+      "ru": "Сборник формул, таблиц и примеров для всех областей инженерии.",
+      "en": "Comprehensive collection of engineering formulas, tables, and applied calculations.",
+      "de": "Umfassende Sammlung von Ingenieurformeln, Tabellen und Berechnungen."
+    },
+    "pages": 980,
+    "format": "PDF",
+    "icon": "📙",
+    "file": "/books/mechanical_engineer_handbook.pdf",
+    "category": "general"
+  }
+]

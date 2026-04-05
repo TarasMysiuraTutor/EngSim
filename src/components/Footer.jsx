@@ -134,8 +134,8 @@ const Footer = ({ t, currentLang }) => {
         <svg className="w-7 h-7" viewBox="0 0 512 512">
           <path
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-width="10"
+            strokeLinecap="round"
+            strokeWidth="10"
             d="M269 186a30 30 0 0 1 31 31m-38-58a64 64 0 0 1 64 67m-73-93a97 97 0 0 1 99 104"
           />
           <path
