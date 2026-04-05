@@ -102,5 +102,26 @@
     "icon": "📙",
     "file": "/books/mechanical_engineer_handbook.pdf",
     "category": "general"
-  }
+  },
+
+  {
+  "id": "6",
+  "title": {
+    "uk": "Моделювання хіміко-технологічних процесів. Лабораторний практикум",
+    "ru": "Моделирование химико-технологических процессов. Лабораторный практикум",
+    "en": "Modeling of Chemical and Technological Processes. Laboratory Workshop",
+    "de": "Modellierung chemisch-technologischer Prozesse. Laborpraktikum"
+  },
+  "desc": {
+    "uk": "Навчальний посібник розроблено відповідно до програми підготовки бакалаврів за спеціальністю 151 «Автоматизація та комп’ютерно-інтегровані технології». У навчальному посібнику наведено завдання, виконувані протягом лабораторних робіт. Видання забезпечує вивчення студентами теоретичного матеріалу, підготовку до виконання лабораторних робіт та буде корисним для самостійної роботи.",
+    "ru": "Учебное пособие разработано в соответствии с программой подготовки бакалавров по специальности 151 «Автоматизация и компьютерно-интегрированные технологии». В учебном пособии приведены задания, выполняемые в ходе лабораторных работ. Издание способствует изучению студентами теоретического материала, подготовке к выполнению лабораторных работ и будет полезно для самостоятельной работы.",
+    "en": "This textbook has been developed in accordance with the bachelor’s degree program in Specialization 151, “Automation and Computer-Integrated Technologies.” The textbook contains assignments to be completed during laboratory sessions. This publication supports students’ study of theoretical material and preparation for laboratory work, and will be useful for independent study.",
+    "de": "Das Lehrbuch wurde in Übereinstimmung mit dem Bachelor-Studiengang im Fachbereich 151 „Automatisierung und computerintegrierte Technologien“ entwickelt. Es enthält Aufgaben, die im Rahmen der Laborarbeiten zu bearbeiten sind. Das Lehrbuch dient den Studierenden zum Erlernen des theoretischen Stoffes, zur Vorbereitung auf die Laborarbeiten und ist für das selbstständige Lernen von Nutzen."
+  },
+  "pages": "133",
+  "format": "PDF",
+  "file": "/EngSim/books/Modeliuvannia_khimiko-tekhnolohichnykh_protsesiv.pdf",
+  "icon": "📘",
+  "category": "general"
+}
 ]
