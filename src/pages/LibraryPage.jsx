@@ -61,7 +61,10 @@ const LibraryPage = ({ currentLang, setCurrentLang, t }) => {
                     transition
                   "
                 >
-                  ⬇️ Download
+                  ⬇️ {currentLang === "uk" && "Завантажити"}
+                  {currentLang === "ru" && "Скачать"}
+                  {currentLang === "en" && "Download"}
+                  {currentLang === "de" && "Herunterladen"}
                 </a>
               </div>
             );
