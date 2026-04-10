@@ -102,7 +102,7 @@ const Projects = ({ t, currentLang }) => {
     <section id="projects" className="py-20 px-4 md:px-8 bg-[#0f1729]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
-          {t.servicesTitle}
+          {t.projectsTitle}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -110,7 +110,7 @@ const Projects = ({ t, currentLang }) => {
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/60 transition-all duration-500 cursor-pointer hover:transform hover:scale-105"
+              className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/60 transition-all duration-500 cursor-pointer hover:transform hover:scale-105  flex flex-col justify-between"
             >
               {/* Icon */}
               <div className="text-blue-400 mb-4 transform group-hover:scale-110 transition-transform duration-500">
@@ -143,7 +143,7 @@ const Projects = ({ t, currentLang }) => {
               <div className="flex justify-between items-center text-sm text-gray-400">
                 <span>{project.year}</span>
                 <span className="text-blue-400 group-hover:translate-x-2 transition-transform duration-300">
-                  Детальніше →
+                  {t.projectViewDetails} →
                 </span>
               </div>
             </div>
@@ -197,7 +197,7 @@ const Projects = ({ t, currentLang }) => {
               {selectedProject.overview && (
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-blue-400 mb-3">
-                    Огляд проекту
+                    {t.projectOverview}
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     {selectedProject.overview[currentLang]}
@@ -209,7 +209,7 @@ const Projects = ({ t, currentLang }) => {
               {selectedProject.results_detailed && (
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-blue-400 mb-3">
-                    Результати
+                    {t.projectResults}
                   </h3>
                   <div className="grid grid-cols-2 gap-4">
                     {selectedProject.results_detailed[currentLang].map(
@@ -235,7 +235,7 @@ const Projects = ({ t, currentLang }) => {
               {selectedProject.technologies && (
                 <div>
                   <h3 className="text-xl font-bold text-blue-400 mb-3">
-                    Технології
+                    {t.projectTecnology}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies[currentLang].map(

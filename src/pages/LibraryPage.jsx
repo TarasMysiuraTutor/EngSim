@@ -1,12 +1,76 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
 import books from "../data/json/books.json"; // ✅ Ось головне!
+
+import SEO from "../components/SEO";
+
+const seoLibrary = {
+  uk: {
+    title: "Інженерна бібліотека — книги для інженерів | EngSim",
+    description:
+      "Електронна інженерна бібліотека EngSim: підручники, довідники, лабораторні роботи та технічні видання з механіки, гідравліки, теплотехніки та автоматизації.",
+    lang: "uk",
+    canonical: "https://eng-sim.vercel.app/library",
+    keywords:
+      "інженерні книги, гідравліка, теплотехніка, опір матеріалів, лабораторні, EngSim, довідники",
+  },
+  ru: {
+    title: "Инженерная библиотека — книги и учебники | EngSim",
+    description:
+      "Инженерная библиотека EngSim: справочники, лабораторные работы и техническая литература по механике, гидравлике, теплотехнике и автоматизации.",
+    lang: "ru",
+    canonical: "https://eng-sim.vercel.app/library",
+    keywords:
+      "инженерные книги, гидравлика, теплотехника, сопромат, лабораторные работы",
+  },
+  en: {
+    title: "Engineering Library — technical books and manuals | EngSim",
+    description:
+      "EngSim engineering library: textbooks, handbooks, lab manuals, and technical literature on mechanics, hydraulics, thermodynamics, and automation.",
+    lang: "en",
+    canonical: "https://eng-sim.vercel.app/library",
+    keywords:
+      "engineering books, hydraulics, thermodynamics, mechanics, textbooks, technical manuals",
+  },
+  de: {
+    title: "Ingenieur Bibliothek — technische Bücher | EngSim",
+    description:
+      "EngSim Ingenieur-Bibliothek: Lehrbücher, technische Handbücher und Laboranleitungen zu Mechanik, Hydraulik, Thermodynamik und Automatisierung.",
+    lang: "de",
+    canonical: "https://eng-sim.vercel.app/library",
+    keywords:
+      "ingenieur bücher, hydraulik, thermodynamik, mechanik, handbuch, laborarbeiten",
+  },
+};
 
 const LibraryPage = ({ currentLang, setCurrentLang, t }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
       <Navbar currentLang={currentLang} setCurrentLang={setCurrentLang} t={t} />
+      <SEO {...seoLibrary[currentLang]} />
+
+      <SEO
+        {...seoLibrary[currentLang]}
+        jsonld={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: seoLibrary[currentLang].title,
+          description: seoLibrary[currentLang].description,
+          hasPart: books.map((book) => ({
+            "@type": "Book",
+            name: book.title[currentLang] || book.title.en,
+            description: book.desc[currentLang] || book.desc.en,
+            inLanguage: currentLang,
+            bookFormat: book.format,
+            numberOfPages: Number(book.pages),
+            genre: book.category,
+            url: `https://eng-sim.vercel.app${book.file.replace("./", "/")}`,
+            image: "https://eng-sim.vercel.app/preview.png",
+          })),
+        }}
+      />
 
       <div className="max-w-6xl mx-auto pt-24 pb-20 px-6">
         <h1 className="text-4xl font-bold mb-10 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">

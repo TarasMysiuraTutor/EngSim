@@ -7,21 +7,55 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import { translations } from "../data/translations";
 
+import SEO from "../components/SEO";
+
+const seoData = {
+  uk: {
+    title: "EngSim — Інженерні симуляції, книги, відео, курси",
+    description:
+      "Платформа EngSim: відеоуроки, книги, курси та інженерні матеріали для студентів і спеціалістів.",
+    lang: "uk",
+    canonical: "https://eng-sim.vercel.app/",
+  },
+  ru: {
+    title: "EngSim — Инженерные симуляции, книги, видео",
+    description:
+      "Платформа EngSim: учебные материалы, инженерные книги, видео и практические пособия.",
+    lang: "ru",
+    canonical: "https://eng-sim.vercel.app/",
+  },
+  en: {
+    title: "EngSim — Engineering simulations, books, videos",
+    description:
+      "EngSim platform: engineering books, simulations, tutorials and technical content.",
+    lang: "en",
+    canonical: "https://eng-sim.vercel.app/",
+  },
+  de: {
+    title: "EngSim — Ingenieur-Simulationen, Bücher, Videos",
+    description:
+      "EngSim: Lernplattform für Ingenieure. Bücher, Videos und technische Materialien.",
+    lang: "de",
+    canonical: "https://eng-sim.vercel.app/",
+  },
+};
+
 function HomePage({ currentLang }) {
   const t = translations[currentLang];
 
   return (
     <>
+      <SEO {...seoData[currentLang]} />
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
         <Hero t={t} />
-        
+
         {/* quickNavigationTitle */}
         <section className="py-16 px-4 md:px-8 bg-[#1a1f3a]/50">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
               {t.quickNavigationTitle || "Швидка навігація"}
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Services Link */}
               <Link
@@ -29,8 +63,18 @@ function HomePage({ currentLang }) {
                 className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/60 transition-all duration-300 hover:scale-105"
               >
                 <div className="text-blue-400 mb-4">
-                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg
+                    className="w-12 h-12"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
@@ -47,8 +91,18 @@ function HomePage({ currentLang }) {
                 className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/60 transition-all duration-300 hover:scale-105"
               >
                 <div className="text-blue-400 mb-4">
-                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  <svg
+                    className="w-12 h-12"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
@@ -65,8 +119,18 @@ function HomePage({ currentLang }) {
                 className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/60 transition-all duration-300 hover:scale-105"
               >
                 <div className="text-blue-400 mb-4">
-                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  <svg
+                    className="w-12 h-12"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
@@ -83,8 +147,18 @@ function HomePage({ currentLang }) {
                 className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/60 transition-all duration-300 hover:scale-105"
               >
                 <div className="text-blue-400 mb-4">
-                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg
+                    className="w-12 h-12"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">

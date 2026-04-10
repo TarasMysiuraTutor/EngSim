@@ -128,6 +128,10 @@ export const translations = {
       "Обговоримо ваше завдання та знайдемо оптимальне рішення",
     projectDiscuss: "Обговорити проект",
     projectOrderSimilar: "Замовити подібний проект",
+    projectOverview: "Огляд проекту",
+    projectDetails: "Деталі проекту",
+    projectResults: "Результати та вплив",
+    projectTecnology: "Використані технології та методи",
 
     // Contact
     contactTitle: "Зв'язатися зі мною",
@@ -424,6 +428,10 @@ export const translations = {
     projectHaveProjectDesc: "Обсудим вашу задачу и найдем оптимальное решение",
     projectDiscuss: "Обсудить проект",
     projectOrderSimilar: "Заказать похожий проект",
+    projectOverview: "Обзор проекта",
+    projectDetails: "Детали проекта",
+    projectResults: "Результаты и влияние",
+    projectTecnology: "Использованные технологии и методы",
 
     // Contact
     contactTitle: "Связаться со мной",
@@ -721,6 +729,10 @@ export const translations = {
       "Let's discuss your task and find the optimal solution",
     projectDiscuss: "Discuss Project",
     projectOrderSimilar: "Order Similar Project",
+    projectOverview: "Project Overview",
+    projectDetails: "Project Details",
+    projectResults: "Results and Impact",
+    projectTecnology: "Technologies and Methods Used",
 
     // Contact
     contactTitle: "Contact Me",
@@ -1015,6 +1027,10 @@ export const translations = {
       "Lassen Sie uns Ihre Aufgabe besprechen und die optimale Lösung finden",
     projectDiscuss: "Projekt besprechen",
     projectOrderSimilar: "Ähnliches Projekt bestellen",
+    projectOverview: "Projektübersicht",
+    projectDetails: "Projektdetails",
+    projectResults: "Ergebnisse und Auswirkungen",
+    projectTecnology: "Verwendete Technologien und Methoden",
 
     // Contact
     contactTitle: "Kontaktieren Sie mich",
