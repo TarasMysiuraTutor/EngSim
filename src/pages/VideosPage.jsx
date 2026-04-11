@@ -10,7 +10,6 @@ import { videosData } from "../data/videosData";
 
 import videos from "../data/json/videos.json"; // ✅ Ось головне!
 
-
 import SEO from "../components/SEO";
 
 const seoVideos = {
@@ -118,6 +117,19 @@ const VideosPage = ({ currentLang, setCurrentLang, t }) => {
     de: "Lehrvideos zu Ingenieurprogrammen: SolidWorks, FlowNEX, AutoCAD, MathCAD.",
   };
 
+  const toIsoDuration = (duration) => {
+    const parts = duration.split(":");
+    if (parts.length === 2) {
+      const [m, s] = parts;
+      return `PT${Number(m)}M${Number(s)}S`;
+    }
+    if (parts.length === 3) {
+      const [h, m, s] = parts;
+      return `PT${Number(h)}H${Number(m)}M${Number(s)}S`;
+    }
+    return null;
+  };
+
   return (
     <>
       <Helmet>
@@ -125,10 +137,7 @@ const VideosPage = ({ currentLang, setCurrentLang, t }) => {
         <meta name="description" content={pageDesc[currentLang]} />
         <meta property="og:title" content={pageTitle[currentLang]} />
         <meta property="og:description" content={pageDesc[currentLang]} />
-        <link
-          rel="canonical"
-          href="https://eng-sim.vercel.app/videos"
-        />
+        <link rel="canonical" href="https://eng-sim.vercel.app/videos" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
@@ -151,8 +160,9 @@ const VideosPage = ({ currentLang, setCurrentLang, t }) => {
               description:
                 video.description?.[currentLang] || video.description?.en || "",
               thumbnailUrl: `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`,
-              uploadDate: video.date,
-              duration: video.duration || "",
+              // uploadDate: video.date,
+              uploadDate: new Date(video.date).toISOString(),
+              "duration": toIsoDuration(video.duration) || "",
               genre: video.category,
               contentUrl: `https://www.youtube.com/watch?v=${video.youtubeId}`,
               embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
