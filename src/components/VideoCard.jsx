@@ -82,7 +82,7 @@ const VideoCard = ({ video, currentLang }) => {
 
   return (
     <div 
-      className={`group bg-white/5 rounded-2xl overflow-hidden border border-blue-500/20 hover:border-blue-500/60 transition-all duration-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 ${
+      className={`group flex flex-col bg-white/5 rounded-2xl overflow-hidden border border-blue-500/20 hover:border-blue-500/60 transition-all duration-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 ${
         isHovered ? 'scale-[1.02]' : ''
       }`}
       onClick={openVideo}
@@ -155,7 +155,7 @@ const VideoCard = ({ video, currentLang }) => {
       </div>
 
       {/* Info */}
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         {/* Title */}
         <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-cyan-400 transition-colors leading-tight">
           {video.title[currentLang]}
@@ -167,7 +167,7 @@ const VideoCard = ({ video, currentLang }) => {
         </p>
 
         {/* 👇 КНОПКИ ЗАВАНТАЖЕННЯ */}
-        <div className="mb-4 space-y-2">
+        <div className="mt-auto space-y-2">
           {/* Кнопка інструкції */}
           {hasInstruction(video, currentLang) && (
             <button

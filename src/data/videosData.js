@@ -203,29 +203,29 @@ export const videosData = [
 
     // 👇 НОВИЙ ФУНКЦІОНАЛ: Thumbnail з Cloudinary
     thumbnail:
-      "https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/v1234567890/videos/solidworks-part-design.jpg",
+      "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768685250/cld-sample-4.jpg",
     // АБО якщо завантажили локально в проект:
     // thumbnail: "/images/thumbnails/video1.jpg",
 
     // 👇 НОВИЙ ФУНКЦІОНАЛ: Інструкції для завантаження
     instructions: {
       uk: {
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-uk.pdf",
+        url: "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768685250/cld-sample-4.jpg",
         filename: "Інструкція_SolidWorks_Деталь.pdf",
         size: "2.5 MB",
       },
       ru: {
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-ru.pdf",
+        url: "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768685250/cld-sample-4.jpg",
         filename: "Инструкция_SolidWorks_Деталь.pdf",
         size: "2.5 MB",
       },
       en: {
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-en.pdf",
+        url: "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768685250/cld-sample-4.jpg",
         filename: "SolidWorks_Tutorial_Part.pdf",
         size: "2.5 MB",
       },
       de: {
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/instructions/solidworks-tutorial-de.pdf",
+        url: "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768685250/cld-sample-4.jpg",
         filename: "SolidWorks_Anleitung_Teil.pdf",
         size: "2.5 MB",
       },
@@ -241,7 +241,7 @@ export const videosData = [
           en: "3D part model",
           de: "3D-Teilmodell",
         },
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/models/part.SLDPRT",
+        url: "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768685250/cld-sample-4.jpg",
         filename: "complex_part.SLDPRT",
         size: "1.2 MB",
       },
@@ -253,7 +253,7 @@ export const videosData = [
           en: "Part drawing",
           de: "Teilezeichnung",
         },
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/v1234567890/drawings/part-drawing.PDF",
+        url: "https://res.cloudinary.com/dxbxxnifb/image/upload/v1768685250/cld-sample-4.jpg",
         filename: "part_drawing.PDF",
         size: "850 KB",
       },
