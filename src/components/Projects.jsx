@@ -1,11 +1,27 @@
 import React, { useEffect, useState, useRef } from "react";
 import projectsData from "../data/json/projects.json";
+import { formulas } from "../data/formulasData";
+import katex from "katex";
+import "katex/dist/katex.min.css";
 
 const Projects = ({ t, currentLang }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [visible, setVisible] = useState(false);
   const [visibleCards, setVisibleCards] = useState([]);
   const sectionRef = useRef(null);
+
+  // Рендеримо формулу через KaTeX
+  const renderFormula = (latex) => {
+    try {
+      return katex.renderToString(latex, {
+        throwOnError: false,
+        displayMode: false,
+      });
+    } catch (error) {
+      console.error("KaTeX error:", error);
+      return latex;
+    }
+  };
 
   // Іконки для проектів
   const icons = {
@@ -121,216 +137,274 @@ const Projects = ({ t, currentLang }) => {
   }, []);
 
   useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const cards = entry.target.querySelectorAll('.service-card');
-              cards.forEach((card, index) => {
-                setTimeout(() => {
-                  setVisibleCards(prev => [...new Set([...prev, index])]);
-                }, index * 100);
-              });
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-  
-      if (sectionRef.current) {
-        observer.observe(sectionRef.current);
-      }
-  
-      return () => observer.disconnect();
-    }, []);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const cards = entry.target.querySelectorAll(".service-card");
+            cards.forEach((card, index) => {
+              setTimeout(() => {
+                setVisibleCards((prev) => [...new Set([...prev, index])]);
+              }, index * 100);
+            });
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section
-      id="projects"
-      className="py-20 px-4 md:px-8 bg-[#0a0e27] relative overflow-hidden"
-      ref={sectionRef}
-    >
-      {/* Animated background */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse-custom"></div>
-      <div
-        className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse-custom"
-        style={{ animationDelay: "1s" }}
-      ></div>
+    <>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-15px);
+          }
+        }
 
-      <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2
-          className={`text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent transition-all duration-1000 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          {t.projectsTitle}
-        </h2>
-        <p
-          className={`text-lg text-gray-400 max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          {t.projectsSubtitle}
-        </p>
-      </div>
+        .formula-static {
+          color: rgba(96, 165, 250, 0.2);
+          transition: color 0.3s ease;
+        }
 
-      {/* Projects Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        {projectsData.map((project, index) => (
-          <div
-            key={project.id}
-            onClick={() => setSelectedProject(project)}
-             className={`service-card  bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 md:p-8 rounded-2xl border border-blue-500/20 hover:border-blue-500/60 transition-all duration-500 cursor-pointer group relative overflow-hidden flex flex-col justify-between ${
-              visibleCards.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-            style={{
-              transitionDelay: `${index * 0.1}s`
-            }}
-          >
-            {/* Icon */}
-            <div className="text-blue-400 mb-4 transform group-hover:scale-110 transition-transform duration-500">
-              {icons[project.iconType]}
-            </div>
+        .formula-static:hover {
+          color: rgba(147, 197, 253, 0.4);
+        }
 
-            {/* Title */}
-            <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
-              {project.title[currentLang]}
-            </h3>
+        .formula-static .katex * {
+          color: inherit !important;
+        }
 
-            {/* Description */}
-            <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-              {project.desc[currentLang]}
-            </p>
-
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.tags.map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            {/* Info */}
-            <div className="flex justify-between items-center text-sm text-gray-400">
-              <span>{project.year}</span>
-              <span className="text-blue-400 group-hover:translate-x-2 transition-transform duration-300">
-                {t.projectViewDetails} →
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
-      {/* </div> */}
-
-      {/* Modal */}
-      {selectedProject && (
+        .formula-static .katex .frac-line {
+          border-bottom-color: currentColor !important;
+        }
+      `,
+        }}
+      />
+      <section
+        id="projects"
+        className="py-20 px-4 md:px-8 bg-[#0a0e27] relative overflow-hidden"
+        ref={sectionRef}
+      >
+        {/* Animated background */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse-custom"></div>
         <div
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedProject(null)}
-        >
-          <div
-            className="bg-[#1a1f3a] rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-blue-500/30"
-            onClick={(e) => e.stopPropagation()}
+          className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse-custom"
+          style={{ animationDelay: "1s" }}
+        ></div>
+        {/* Floating formulas */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {formulas.map((formula, i) => (
+            <div
+              key={i}
+              className={`absolute ${formula.style} formula-static text-sm md:text-2xl transition-all duration-1000 ${
+                visible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+              style={{
+                animation: `float ${5 + (i % 10) * 1}s ease-in-out infinite`,
+                animationDelay: `${i * 0.1}s`,
+              }}
+            >
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: renderFormula(formula.latex),
+                }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="max-w-7xl mx-auto text-center mb-16">
+          <h2
+            className={`text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent transition-all duration-1000 ${
+              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
           >
-            <div className="p-8">
-              {/* Header */}
-              <div className="flex justify-between items-start mb-6">
-                <div>
-                  <h2 className="text-3xl font-bold text-white mb-2">
-                    {selectedProject.title[currentLang]}
-                  </h2>
-                  <p className="text-gray-400">
-                    {selectedProject.client[currentLang]} •{" "}
-                    {selectedProject.year}
-                  </p>
-                </div>
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
+            {t.projectsTitle}
+          </h2>
+          <p
+            className={`text-lg text-gray-400 max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
+              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
+            {t.projectsSubtitle}
+          </p>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {projectsData.map((project, index) => (
+            <div
+              key={project.id}
+              onClick={() => setSelectedProject(project)}
+              className={`service-card  bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 md:p-8 rounded-2xl border border-blue-500/20 hover:border-blue-500/60 transition-all duration-500 cursor-pointer group relative overflow-hidden flex flex-col justify-between ${
+                visibleCards.includes(index)
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+              style={{
+                transitionDelay: `${index * 0.1}s`,
+              }}
+            >
+              {/* Icon */}
+              <div className="text-blue-400 mb-4 transform group-hover:scale-110 transition-transform duration-500">
+                {icons[project.iconType]}
               </div>
 
-              {/* Overview */}
-              {selectedProject.overview && (
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-blue-400 mb-3">
-                    {t.projectOverview}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {selectedProject.overview[currentLang]}
-                  </p>
-                </div>
-              )}
+              {/* Title */}
+              <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
+                {project.title[currentLang]}
+              </h3>
 
-              {/* Results */}
-              {selectedProject.results_detailed && (
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-blue-400 mb-3">
-                    {t.projectResults}
-                  </h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    {selectedProject.results_detailed[currentLang].map(
-                      (result, idx) => (
-                        <div
-                          key={idx}
-                          className="bg-blue-500/10 p-4 rounded-lg border border-blue-500/20"
-                        >
-                          <div className="text-2xl font-bold text-blue-400 mb-1">
-                            {result.metric}
-                          </div>
-                          <div className="text-sm text-gray-400">
-                            {result.description}
-                          </div>
-                        </div>
-                      ),
-                    )}
-                  </div>
-                </div>
-              )}
+              {/* Description */}
+              <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                {project.desc[currentLang]}
+              </p>
 
-              {/* Technologies */}
-              {selectedProject.technologies && (
-                <div>
-                  <h3 className="text-xl font-bold text-blue-400 mb-3">
-                    {t.projectTecnology}
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedProject.technologies[currentLang].map(
-                      (tech, idx) => (
-                        <span
-                          key={idx}
-                          className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm"
-                        >
-                          {tech}
-                        </span>
-                      ),
-                    )}
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tags.map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Info */}
+              <div className="flex justify-between items-center text-sm text-gray-400">
+                <span>{project.year}</span>
+                <span className="text-blue-400 group-hover:translate-x-2 transition-transform duration-300">
+                  {t.projectViewDetails} →
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+        {/* </div> */}
+
+        {/* Modal */}
+        {selectedProject && (
+          <div
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedProject(null)}
+          >
+            <div
+              className="bg-[#1a1f3a] rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-blue-500/30"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-8">
+                {/* Header */}
+                <div className="flex justify-between items-start mb-6">
+                  <div>
+                    <h2 className="text-3xl font-bold text-white mb-2">
+                      {selectedProject.title[currentLang]}
+                    </h2>
+                    <p className="text-gray-400">
+                      {selectedProject.client[currentLang]} •{" "}
+                      {selectedProject.year}
+                    </p>
                   </div>
+                  <button
+                    onClick={() => setSelectedProject(null)}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
                 </div>
-              )}
+
+                {/* Overview */}
+                {selectedProject.overview && (
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-blue-400 mb-3">
+                      {t.projectOverview}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {selectedProject.overview[currentLang]}
+                    </p>
+                  </div>
+                )}
+
+                {/* Results */}
+                {selectedProject.results_detailed && (
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-blue-400 mb-3">
+                      {t.projectResults}
+                    </h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      {selectedProject.results_detailed[currentLang].map(
+                        (result, idx) => (
+                          <div
+                            key={idx}
+                            className="bg-blue-500/10 p-4 rounded-lg border border-blue-500/20"
+                          >
+                            <div className="text-2xl font-bold text-blue-400 mb-1">
+                              {result.metric}
+                            </div>
+                            <div className="text-sm text-gray-400">
+                              {result.description}
+                            </div>
+                          </div>
+                        ),
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Technologies */}
+                {selectedProject.technologies && (
+                  <div>
+                    <h3 className="text-xl font-bold text-blue-400 mb-3">
+                      {t.projectTecnology}
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProject.technologies[currentLang].map(
+                        (tech, idx) => (
+                          <span
+                            key={idx}
+                            className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm"
+                          >
+                            {tech}
+                          </span>
+                        ),
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </section>
+        )}
+      </section>
+    </>
   );
 };
 

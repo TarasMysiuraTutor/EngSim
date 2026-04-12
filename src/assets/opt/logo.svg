@@ -1,4 +1,4 @@
-<svg width="100%" viewBox="0 0 150 150" role="img" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 540 175" role="img" xmlns="http://www.w3.org/2000/svg">
   <title
     style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);
     stroke-width:1px;stroke-linecap:butt;
@@ -136,7 +136,7 @@
   </circle>
 
   <!-- ENG-SIM main text: x=122 -->
-  <!-- <text font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="80" letter-spacing="-1"
+  <text font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="80" letter-spacing="-1"
     stroke="#0a2a4a" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill" style="fill:rgb(0, 0, 0);
     stroke:rgb(10, 42, 74);color:rgb(0, 0, 0);
     stroke-width:4px;stroke-linecap:butt;stroke-linejoin:round;opacity:1;
@@ -160,11 +160,11 @@
       stroke-linecap:butt;stroke-linejoin:round;opacity:1;
       font-family:&quot;Arial Black&quot;, Arial, sans-serif;font-size:70px;
       font-weight:900;font-style:italictext-anchor:start;dominant-baseline:auto" />
-  </text> -->
+  </text>
 
   <!-- Subtitle: same x=122, textLength matches ENG-SIM width ~390px
        transform scaleY to stretch vertically without changing width -->
-  <!-- <g transform="translate(122, 118) scale(0.9, 2)"
+  <g transform="translate(122, 118) scale(0.9, 2)"
     style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
     <text x="0" y="6" font-family="Arial Narrow, Arial, sans-serif" font-weight="800" font-size="16" fill="#ffffff"
       stroke="#0a2040" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke fill" textLength="390"
@@ -174,15 +174,15 @@
       <animate attributeName="opacity" values="0;1" dur="1s" begin="0.6s" fill="freeze"
         style="fill:rgb(255, 255, 255);stroke:rgb(10, 32, 64);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:butt;stroke-linejoin:round;opacity:1;font-family:&quot;Arial Narrow&quot;, Arial, sans-serif;font-size:16px;font-weight:800;text-anchor:start;dominant-baseline:auto" />
     </text>
-  </g> -->
+  </g>
 
   <!-- Scanline -->
-  <!-- <rect x="0" y="0" width="540" height="2" rx="1" fill="#60c8ff" opacity="0.3"
+  <rect x="0" y="0" width="540" height="2" rx="1" fill="#60c8ff" opacity="0.3"
     style="fill:rgb(96, 200, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.24;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
     <animate attributeName="y" values="-5;180;-5" dur="4s" repeatCount="indefinite"
       style="fill:rgb(96, 200, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto" />
     <animate attributeName="opacity" values="0;0.4;0" dur="4s" repeatCount="indefinite"
       style="fill:rgb(96, 200, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto" />
-  </rect> -->
+  </rect>
 
 </svg>

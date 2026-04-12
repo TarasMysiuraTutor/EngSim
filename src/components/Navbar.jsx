@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import logoAvif from "../assets/opt/logo.avif";
 import logoWebp from "../assets/opt/logo.webp";
 import logoPng from "../assets/opt/logo.png";
+import logoSvg from "../assets/opt/logo.svg";
 
 const Navbar = ({ currentLang, setCurrentLang, t }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,13 +36,21 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
 
   return (
     <nav className="fixed top-0 w-full bg-[#0a0e27]/95 backdrop-blur-lg border-b border-blue-500/30 z-50">
-      <div className="max-w-7xl mx-auto   py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto  py-1 flex justify-between items-center">
         {/* Logo */}
         <button
           onClick={() => navigate("/")}
           className="flex items-center text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer"
         >
-          <picture>
+          <img
+              // className="mr--10"
+              src={logoSvg}
+              alt="Eng-Sim Logo"
+              width="250"
+              height="50"
+              loading="eager" // Логотип вантажимо відразу
+            />
+          {/* <picture>
             <source srcSet={logoAvif} type="image/avif" />
             <source srcSet={logoWebp} type="image/webp" />
             <img
@@ -52,7 +61,7 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
               height="50"
               loading="eager" // Логотип вантажимо відразу
             />
-          </picture>
+          </picture> */}
           {t.logo}
         </button>
 
