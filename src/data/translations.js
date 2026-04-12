@@ -12,6 +12,12 @@ export const translations = {
     navTools: "Інструменти",
     navCalc: "Калькулятори",
     navHelp: "Допомога",
+    navLibrary: "Бібліотека",
+    navCalculators: "Калькулятори",
+    navReference: "Довідка",
+    referenceTitle: "Інженерна довідка — технічні дані та формули ",
+
+
     // Hero Section
     heroLabel: "Професійні інженерні послуги",
     heroPreTitle: "Вітаю, я Тарас, інженер-розрахунковець.",
@@ -316,6 +322,10 @@ export const translations = {
     navTools: "Инструменты",
     navCalc: "Калькуляторы",
     navHelp: "Помощь",
+    navLibrary: "Библиотека",
+    navCalculators: "Калькуляторы",
+    navReference: "Справочник",
+    referenceTitle: "Инженерный справочник — технические данные и формулы",
 
     // Hero Section
     heroLabel: "Профессиональные инженерные услуги",
@@ -615,6 +625,10 @@ export const translations = {
     navTools: "Tools",
     navCalc: "Calculators",
     navHelp: "Help",
+    navLibrary: "Library",
+    navCalculators: "Calculators",
+    navReference: "Reference",
+    referenceTitle: "Engineering Reference — Technical Data and Formulas",
 
     // Hero Section
     heroLabel: "Professional Engineering Services",
@@ -914,6 +928,10 @@ export const translations = {
     navTools: "Werkzeuge",
     navCalc: "Rechner",
     navHelp: "Hilfe",
+    navLibrary: "Bibliothek",
+    navCalculators: "Rechner",
+    navReference: "Referenz",
+    referenceTitle: "Ingenieurreferenz — Technische Daten und Formeln",
 
     // Hero Section
     heroLabel: "Professionelle Ingenieurdienstleistungen",

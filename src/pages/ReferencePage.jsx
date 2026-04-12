@@ -1,11 +1,15 @@
 // src/pages/ReferencePage.jsx - ГОЛОВНА СТОРІНКА ДОВІДКИ
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
+
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef(null);
+
   // Розділи довідки
   const sections = {
     uk: [
@@ -31,7 +35,8 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
         id: "hydraulic",
         icon: "💧",
         title: "Гідравліка",
-        description: "Течія рідин, втрати тиску, напір, гідравлічний опір, насоси, трубопроводи",
+        description:
+          "Течія рідин, втрати тиску, напір, гідравлічний опір, насоси, трубопроводи",
         items: "30+ формул",
         color: "from-cyan-500 to-blue-500",
       },
@@ -85,7 +90,8 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
         id: "hydraulic",
         icon: "💧",
         title: "Гидравлика",
-        description: "Течение жидкостей, потери давления, напор, гидравлическое сопротивление, насосы, трубопроводы",
+        description:
+          "Течение жидкостей, потери давления, напор, гидравлическое сопротивление, насосы, трубопроводы",
         items: "30+ формул",
         color: "from-cyan-500 to-blue-500",
       },
@@ -120,7 +126,8 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
         id: "math",
         icon: "🔢",
         title: "Mathematics",
-        description: "Geometry, trigonometry, algebra, mathematical analysis, differential equations",
+        description:
+          "Geometry, trigonometry, algebra, mathematical analysis, differential equations",
         items: "25+ formulas",
         color: "from-blue-500 to-cyan-500",
       },
@@ -137,7 +144,8 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
         id: "hydraulic",
         icon: "💧",
         title: "Hydraulics",
-        description: "Fluid flow, pressure losses, head, hydraulic resistance, pumps, pipelines",
+        description:
+          "Fluid flow, pressure losses, head, hydraulic resistance, pumps, pipelines",
         items: "30+ formulas",
         color: "from-cyan-500 to-blue-500",
       },
@@ -190,7 +198,8 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
         id: "hydraulic",
         icon: "💧",
         title: "Hydraulik",
-        description: "Fluidströmung, Druckverluste, Niveau, hydraulischer Widerstand, Pumpen, Rohrleitungen",
+        description:
+          "Fluidströmung, Druckverluste, Niveau, hydraulischer Widerstand, Pumpen, Rohrleitungen",
         items: "30+ Formeln",
         color: "from-cyan-500 to-blue-500",
       },
@@ -236,6 +245,11 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
     de: "Technische Referenzdaten: Formeln, Tabellen, Standards. Mathematik, Festigkeitslehre, Hydraulik, Wärmeübertragung, Stoffübertragung.",
   };
 
+  const breadcrumbs = [
+    // { label: t.navHome, path: "/" },
+    { label: t.navReference, path: "/reference" },
+  ];
+
   return (
     <>
       <Helmet>
@@ -243,45 +257,21 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
         <meta name="description" content={pageDesc[currentLang]} />
         <meta property="og:title" content={pageTitle[currentLang]} />
         <meta property="og:description" content={pageDesc[currentLang]} />
-        <link
-          rel="canonical"
-          href="https://tarasmysiuratutor.github.io/EngSim/reference"
-        />
+        <link rel="canonical" href="https://eng-sim.vercel.app/reference" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
-        <Navbar
-          currentLang={currentLang}
-          setCurrentLang={setCurrentLang}
-          t={t}
-        />
-
         <div className="pt-32 pb-16 px-8">
           <div className="max-w-7xl mx-auto">
-            {/* Breadcrumbs */}
-            <nav className="mb-8 text-sm">
-              <Link
-                to="/"
-                className="text-blue-400 hover:text-cyan-400 transition-colors"
-              >
-                {t.home || "Home"}
-              </Link>
-              <span className="mx-2 text-gray-500">/</span>
-              <span className="text-gray-400">
-                {currentLang === "uk" && "Довідкові дані"}
-                {currentLang === "ru" && "Справочные данные"}
-                {currentLang === "en" && "Reference Data"}
-                {currentLang === "de" && "Referenzdaten"}
-              </span>
-            </nav>
-
+            <Breadcrumbs items={breadcrumbs} currentLang={currentLang} />
             {/* Header */}
             <div className="mb-12 text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
-                {currentLang === "uk" && "📚 Інженерні довідкові дані"}
-                {currentLang === "ru" && "📚 Инженерные справочные данные"}
-                {currentLang === "en" && "📚 Engineering Reference Data"}
-                {currentLang === "de" && "📚 Technische Referenzdaten"}
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent transition-all duration-1000">
+                📚 {t.referenceTitle}
+                {/* {currentLang === "uk" && "Інженерні довідкові дані"}
+                {currentLang === "ru" && "Инженерные справочные данные"}
+                {currentLang === "en" && "Engineering Reference Data"}
+                {currentLang === "de" && "Technische Referenzdaten"} */}
               </h1>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 {currentLang === "uk" &&

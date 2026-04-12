@@ -12,7 +12,7 @@ const Breadcrumbs = ({ items, currentLang }) => {
         "@type": "ListItem",
         "position": index + 1,
         "name": item.label,
-        "item": item.url ? `https://tarasmysiuratutor.github.io/EngSim${item.url}` : undefined
+        "item": item.url ? `https://eng-sim.vercel.app/${item.url}` : undefined
       }))
     };
 
@@ -45,7 +45,7 @@ const Breadcrumbs = ({ items, currentLang }) => {
   };
 
   return (
-    <nav aria-label="breadcrumb" className="py-4 px-8">
+    <nav aria-label="breadcrumb" className="pt-8 px-8">
       <div className="max-w-7xl mx-auto">
         <ol className="flex flex-wrap items-center gap-2 text-sm text-gray-400">
           {/* Домашня сторінка */}

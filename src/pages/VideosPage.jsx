@@ -130,44 +130,60 @@ const VideosPage = ({ currentLang, setCurrentLang, t }) => {
     return null;
   };
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: seoVideos[currentLang].title,
+    description: seoVideos[currentLang].description,
+    hasPart: videos.map((video) => ({
+      "@type": "VideoObject",
+      name: video.title?.[currentLang] || video.title?.en,
+      description:
+        video.description?.[currentLang] || video.description?.en || "",
+      thumbnailUrl: `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`,
+      // uploadDate: video.date,
+      uploadDate: new Date(video.date).toISOString(),
+      duration: toIsoDuration(video.duration) || "",
+      genre: video.category,
+      contentUrl: `https://www.youtube.com/watch?v=${video.youtubeId}`,
+      embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
+    })),
+  };
+
+  const buildBreadcrumbJsonLd = (breadcrumbs) => ({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbs.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+      item: `https://eng-sim.vercel.app${item.path}`,
+    })),
+  });
+  ``;
+
   return (
     <>
-      <Helmet>
+      <SEO
+        {...seoVideos[currentLang]}
+        jsonld={[
+          jsonLd, // ✅ VideosPage
+          buildBreadcrumbJsonLd(breadcrumbs), // ✅ BreadcrumbList
+        ]}
+      />
+      {/* <Helmet>
         <title>{pageTitle[currentLang]}</title>
         <meta name="description" content={pageDesc[currentLang]} />
         <meta property="og:title" content={pageTitle[currentLang]} />
         <meta property="og:description" content={pageDesc[currentLang]} />
         <link rel="canonical" href="https://eng-sim.vercel.app/videos" />
-      </Helmet>
+      </Helmet> */}
 
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
         <Navbar
           currentLang={currentLang}
           setCurrentLang={setCurrentLang}
           t={t}
-        />
-        <SEO {...seoVideos[currentLang]} />
-        <SEO
-          {...seoVideos[currentLang]}
-          jsonld={{
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: seoVideos[currentLang].title,
-            description: seoVideos[currentLang].description,
-            hasPart: videos.map((video) => ({
-              "@type": "VideoObject",
-              name: video.title?.[currentLang] || video.title?.en,
-              description:
-                video.description?.[currentLang] || video.description?.en || "",
-              thumbnailUrl: `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`,
-              // uploadDate: video.date,
-              uploadDate: new Date(video.date).toISOString(),
-              "duration": toIsoDuration(video.duration) || "",
-              genre: video.category,
-              contentUrl: `https://www.youtube.com/watch?v=${video.youtubeId}`,
-              embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
-            })),
-          }}
         />
 
         <div className="pt-32 pb-16 px-8">

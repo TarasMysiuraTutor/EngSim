@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import projectsData from "../data/json/projects.json";
 
 const Projects = ({ t, currentLang }) => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [visible, setVisible] = useState(false);
+  const [visibleCards, setVisibleCards] = useState([]);
+  const sectionRef = useRef(null);
 
   // Іконки для проектів
   const icons = {
@@ -98,58 +101,130 @@ const Projects = ({ t, currentLang }) => {
     ),
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const cards = entry.target.querySelectorAll('.service-card');
+              cards.forEach((card, index) => {
+                setTimeout(() => {
+                  setVisibleCards(prev => [...new Set([...prev, index])]);
+                }, index * 100);
+              });
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+  
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+      }
+  
+      return () => observer.disconnect();
+    }, []);
+
   return (
-    <section id="projects" className="py-20 px-4 md:px-8 bg-[#0f1729]">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
+    <section
+      id="projects"
+      className="py-20 px-4 md:px-8 bg-[#0a0e27] relative overflow-hidden"
+      ref={sectionRef}
+    >
+      {/* Animated background */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse-custom"></div>
+      <div
+        className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse-custom"
+        style={{ animationDelay: "1s" }}
+      ></div>
+
+      <div className="max-w-7xl mx-auto text-center mb-16">
+        <h2
+          className={`text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent transition-all duration-1000 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           {t.projectsTitle}
         </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((project) => (
-            <div
-              key={project.id}
-              onClick={() => setSelectedProject(project)}
-              className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/60 transition-all duration-500 cursor-pointer hover:transform hover:scale-105  flex flex-col justify-between"
-            >
-              {/* Icon */}
-              <div className="text-blue-400 mb-4 transform group-hover:scale-110 transition-transform duration-500">
-                {icons[project.iconType]}
-              </div>
-
-              {/* Title */}
-              <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
-                {project.title[currentLang]}
-              </h3>
-
-              {/* Description */}
-              <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                {project.desc[currentLang]}
-              </p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              {/* Info */}
-              <div className="flex justify-between items-center text-sm text-gray-400">
-                <span>{project.year}</span>
-                <span className="text-blue-400 group-hover:translate-x-2 transition-transform duration-300">
-                  {t.projectViewDetails} →
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
+        <p
+          className={`text-lg text-gray-400 max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          {t.projectsSubtitle}
+        </p>
       </div>
+
+      {/* Projects Grid */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {projectsData.map((project, index) => (
+          <div
+            key={project.id}
+            onClick={() => setSelectedProject(project)}
+             className={`service-card  bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 md:p-8 rounded-2xl border border-blue-500/20 hover:border-blue-500/60 transition-all duration-500 cursor-pointer group relative overflow-hidden flex flex-col justify-between ${
+              visibleCards.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+            style={{
+              transitionDelay: `${index * 0.1}s`
+            }}
+          >
+            {/* Icon */}
+            <div className="text-blue-400 mb-4 transform group-hover:scale-110 transition-transform duration-500">
+              {icons[project.iconType]}
+            </div>
+
+            {/* Title */}
+            <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
+              {project.title[currentLang]}
+            </h3>
+
+            {/* Description */}
+            <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+              {project.desc[currentLang]}
+            </p>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Info */}
+            <div className="flex justify-between items-center text-sm text-gray-400">
+              <span>{project.year}</span>
+              <span className="text-blue-400 group-hover:translate-x-2 transition-transform duration-300">
+                {t.projectViewDetails} →
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* </div> */}
 
       {/* Modal */}
       {selectedProject && (

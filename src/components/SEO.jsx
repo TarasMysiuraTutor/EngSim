@@ -32,12 +32,23 @@ export default function SEO({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
 
-      {jsonld && (
-        <script type="application/ld+json">
-          {JSON.stringify(jsonld)}
-        </script>
-      )}
+      {/* {jsonld && (
+        <script type="application/ld+json">{JSON.stringify(jsonld)}</script>
+      )} */}
+
+      {jsonld &&
+        (Array(jsonld) ? jsonld : [jsonld]).map((item, i) => (
+          <script key={i} type="application/ld+json">
+            {JSON.stringify(item)}
+          </script>
+        ))}
+
+      <link rel="alternate" href={canonical} hrefLang="x-default" />
+      <link rel="alternate" href={canonical} hrefLang="uk" />
+      <link rel="alternate" href={canonical} hrefLang="ru" />
+      <link rel="alternate" href={canonical} hrefLang="en" />
+      <link rel="alternate" href={canonical} hrefLang="de" />
     </Helmet>
   );
 }
-``
+``;

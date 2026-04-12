@@ -1,9 +1,11 @@
 // src/components/Testimonials.jsx
-import React, { useEffect, useState, useRef } from 'react';
-import { testimonialsData } from '../data/testimonialsData';
+import React, { useEffect, useState, useRef } from "react";
+import { testimonialsData } from "../data/testimonialsData";
 
 const Testimonials = ({ t }) => {
   const [visibleCards, setVisibleCards] = useState([]);
+  const [visible, setVisible] = useState(false);
+
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -11,16 +13,16 @@ const Testimonials = ({ t }) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const cards = entry.target.querySelectorAll('.testimonial-card');
+            const cards = entry.target.querySelectorAll(".testimonial-card");
             cards.forEach((card, index) => {
               setTimeout(() => {
-                setVisibleCards(prev => [...new Set([...prev, index])]);
+                setVisibleCards((prev) => [...new Set([...prev, index])]);
               }, index * 150);
             });
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -30,28 +32,62 @@ const Testimonials = ({ t }) => {
     return () => observer.disconnect();
   }, []);
 
+   useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisible(true);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+  
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+      }
+  
+      return () => observer.disconnect();
+    }, []);
+
   // Отримуємо поточну мову з t (translations)
   const getCurrentLang = () => {
-    if (t.navHome === 'Головна') return 'uk';
-    if (t.navHome === 'Главная') return 'ru';
-    if (t.navHome === 'Home') return 'en';
-    return 'de';
+    if (t.navHome === "Головна") return "uk";
+    if (t.navHome === "Главная") return "ru";
+    if (t.navHome === "Home") return "en";
+    return "de";
   };
 
   const currentLang = getCurrentLang();
 
   return (
-    <section id="testimonials" className="py-20 px-4 md:px-8 bg-[#1a1f3a]/50 relative overflow-hidden" ref={sectionRef}>
+    <section
+      id="testimonials"
+      className="py-20 px-4 md:px-8 bg-[#1a1f3a]/50 relative overflow-hidden"
+      ref={sectionRef}
+    >
       {/* Animated background */}
       <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse-custom"></div>
-      <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse-custom" style={{ animationDelay: '2s' }}></div>
-      
+      <div
+        className="absolute bottom-0 right-1/3 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse-custom"
+        style={{ animationDelay: "2s" }}
+      ></div>
+
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent animate-fadeInUp">
+        <h2
+          className={`text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent transition-all duration-1000 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           {t.testimonialsTitle}
         </h2>
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+        <p
+          className={`text-lg text-gray-400 max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           {t.testimonialsSubtitle}
         </p>
       </div>
@@ -62,30 +98,43 @@ const Testimonials = ({ t }) => {
           <div
             key={testimonial.id}
             className={`testimonial-card bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg p-6 md:p-8 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-500 group relative overflow-hidden ${
-              visibleCards.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              visibleCards.includes(index)
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
             style={{
-              transitionDelay: `${index * 0.15}s`
+              transitionDelay: `${index * 0.15}s`,
             }}
           >
             {/* Hover glow effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-            
+
             <div className="relative z-10">
               {/* Rating Stars */}
               <div className="flex items-center gap-2 mb-4">
                 <div className="flex text-yellow-400">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      key={i}
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
                 </div>
-                <span className="text-yellow-400 font-semibold">{testimonial.rating}.0</span>
+                <span className="text-yellow-400 font-semibold">
+                  {testimonial.rating}.0
+                </span>
               </div>
 
               {/* Quote Icon */}
-              <svg className="w-10 h-10 text-blue-400/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-10 h-10 text-blue-400/30 mb-4"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
 
@@ -119,9 +168,20 @@ const Testimonials = ({ t }) => {
                 {/* Verified Badge */}
                 {testimonial.verified && (
                   <div className="flex-shrink-0">
-                    <div className="bg-green-500/20 border border-green-500/40 rounded-full p-2 group-hover:scale-110 transition-transform duration-300" title="Verified">
-                      <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    <div
+                      className="bg-green-500/20 border border-green-500/40 rounded-full p-2 group-hover:scale-110 transition-transform duration-300"
+                      title="Verified"
+                    >
+                      <svg
+                        className="w-5 h-5 text-green-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -140,9 +200,7 @@ const Testimonials = ({ t }) => {
               <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">
                 150+
               </div>
-              <div className="text-gray-400">
-                {t.testimonialsStatClients}
-              </div>
+              <div className="text-gray-400">{t.testimonialsStatClients}</div>
             </div>
             <div className="group">
               <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">
@@ -152,7 +210,12 @@ const Testimonials = ({ t }) => {
                 {t.testimonialsStatRating}
                 <div className="flex text-yellow-400 ml-1">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      key={i}
+                      className="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
@@ -163,9 +226,7 @@ const Testimonials = ({ t }) => {
               <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">
                 98%
               </div>
-              <div className="text-gray-400">
-                {t.testimonialsStatRecommend}
-              </div>
+              <div className="text-gray-400">{t.testimonialsStatRecommend}</div>
             </div>
           </div>
         </div>

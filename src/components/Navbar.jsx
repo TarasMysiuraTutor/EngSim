@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
+import logoAvif from "../assets/opt/logo.avif";
+import logoWebp from "../assets/opt/logo.webp";
+import logoPng from "../assets/opt/logo.png";
 
 const Navbar = ({ currentLang, setCurrentLang, t }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,17 +35,24 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
 
   return (
     <nav className="fixed top-0 w-full bg-[#0a0e27]/95 backdrop-blur-lg border-b border-blue-500/30 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto   py-4 flex justify-between items-center">
         {/* Logo */}
         <button
           onClick={() => navigate("/")}
           className="flex items-center text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer"
         >
-          <img
-            className="w-12 h-12 mr-3 rounded-full border-2 border-blue-400"
-            src={logo}
-            alt="logo-icon"
-          />
+          <picture>
+            <source srcSet={logoAvif} type="image/avif" />
+            <source srcSet={logoWebp} type="image/webp" />
+            <img
+              className="w-50 mr-5"
+              src={logoPng}
+              alt="Eng-Sim Logo"
+              width="150"
+              height="50"
+              loading="eager" // Логотип вантажимо відразу
+            />
+          </picture>
           {t.logo}
         </button>
 

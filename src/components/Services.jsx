@@ -3,6 +3,7 @@ import servicesData from '../data/json/services.json';
 import { Link } from 'react-router-dom';
 
 const Services = ({ t }) => {
+  const [visible, setVisible] = useState(false);
   const [visibleCards, setVisibleCards] = useState([]);
   const sectionRef = useRef(null);
 
@@ -56,6 +57,25 @@ const Services = ({ t }) => {
     )
   };
 
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisible(true);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+  
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+      }
+  
+      return () => observer.disconnect();
+    }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -88,10 +108,18 @@ const Services = ({ t }) => {
       
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent animate-fadeInUp">
+        <h2
+          className={`text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent transition-all duration-1000 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           {t.servicesTitle}
         </h2>
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+        <p
+          className={`text-lg text-gray-400 max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           {t.servicesSubtitle}
         </p>
       </div>
