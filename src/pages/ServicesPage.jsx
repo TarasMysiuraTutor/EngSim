@@ -11,13 +11,16 @@ import SEO from "../components/SEO";
 import services from "../data/json/services.json";
 import { adminTranslations } from "../admin/i18n/adminTranslations";
 
+
+import { appConfig } from "@/config/app.config";
+
 const seoServices = {
   uk: {
     title: "Інженерні послуги — EngSim",
     description:
       "Професійні інженерні послуги: розрахунки, моделювання, консалтинг, гідравліка, теплотехніка, автоматизація та енергетика.",
     lang: "uk",
-    canonical: "https://eng-sim.vercel.app/services",
+    canonical: `${appConfig.siteUrl}/services`,
     keywords:
       "інженерні послуги, розрахунки, моделювання, гідравліка, механіка, інженерний консалтинг",
   },
@@ -26,7 +29,7 @@ const seoServices = {
     description:
       "Профессиональные инженерные услуги: расчёты, моделирование, гидравлика, теплотехника, консалтинг, энергетика.",
     lang: "ru",
-    canonical: "https://eng-sim.vercel.app/services",
+    canonical: `${appConfig.siteUrl}/services`,
     keywords:
       "инженерные услуги, расчеты, моделирование, инженерный консалтинг, гидравлика, механика",
   },
@@ -35,7 +38,7 @@ const seoServices = {
     description:
       "Professional engineering services: simulations, calculations, design support, hydraulics, thermodynamics, and consulting.",
     lang: "en",
-    canonical: "https://eng-sim.vercel.app/services",
+    canonical: `${appConfig.siteUrl}/services`,
     keywords:
       "engineering services, calculations, simulations, hydraulics, consulting, design support",
   },
@@ -44,7 +47,7 @@ const seoServices = {
     description:
       "Professionelle Ingenieurdienstleistungen: Simulationen, Berechnungen, Hydraulik, Thermodynamik und technischer Support.",
     lang: "de",
-    canonical: "https://eng-sim.vercel.app/services",
+    canonical: `${appConfig.siteUrl}/services`,
     keywords:
       "ingenieur dienstleistungen, berechnungen, simulationen, hydraulik, consulting",
   },
@@ -72,7 +75,7 @@ function ServicesPage({ currentLang }) {
       },
       areaServed: "Worldwide",
       serviceType: service.icon,
-      termsOfService: "https://eng-sim.vercel.app/services",
+      termsOfService: `${appConfig.siteUrl}/services`,
       offers: {
         "@type": "Offer",
         price: "0",
@@ -88,7 +91,7 @@ function ServicesPage({ currentLang }) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `https://eng-sim.vercel.app${item.path}`,
+      item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
   ``;

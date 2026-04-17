@@ -1,11 +1,20 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from "path"; // ✅ ДОДАТИ ЦЕ
 
 export default defineConfig(({ command }) => ({
   plugins: [react()],
   // base: command === "build" ? "/EngSim/" : "/",
   // base: "/EngSim/",
   base: "/",
+
+  
+// ✅ ДОДАТИ ЦЕ
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
 
 
   build: {

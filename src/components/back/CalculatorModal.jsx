@@ -4,6 +4,9 @@ import { exportToPDF } from '../utils/pdfExport';
 import { useCalculationHistory } from '../hooks/useCalculationHistory';
 import EnhancedInput from './EnhancedInput';
 
+import { appConfig } from "@/config/app.config";
+
+
 const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) => {
   const [formData, setFormData] = useState({});
   const [result, setResult] = useState(null);
@@ -407,7 +410,7 @@ const CalculatorModal = ({ currentCalc, currentLang, calculators, t, onClose }) 
         {/* Print-only footer */}
         <div className="hidden print:block mt-8 pt-4 border-t border-gray-300 text-center text-sm text-gray-600">
           <p>Erstellt mit EngSim - Ingenieurtechnische Rechner</p>
-          <p>Viktor Sukaylo | https://tarasmysiuratutor.github.io/EngSim/</p>
+          <p>Taras Mysiura | `${appConfig.siteUrl}`</p>
           <p className="mt-2 text-xs italic">
             Dieser Bericht dient nur zu Informationszwecken. 
             Für finale Berechnungen konsultieren Sie bitte einen qualifizierten Ingenieur.

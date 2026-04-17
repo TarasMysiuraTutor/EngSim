@@ -9,6 +9,8 @@ import SEO from "../components/SEO";
 
 import { translations } from "../data/translations";
 
+import { appConfig } from "@/config/app.config";
+
 function AboutPage({ currentLang }) {
   const t = translations[currentLang];
 
@@ -24,28 +26,28 @@ function AboutPage({ currentLang }) {
       description:
         "Освітня діяльність, інженерна експертиза та професійний досвід у механіці, гідравліці, теплотехніці та автоматизації.",
       lang: "uk",
-      canonical: "https://eng-sim.vercel.app/about",
+      canonical: `${appConfig.siteUrl}/about`,
     },
     ru: {
       title: "Обо мне — EngSim",
       description:
         "Образовательная деятельность, инженерная экспертиза и профессиональный опыт в механике, гидравлике и теплоэнергетике.",
       lang: "ru",
-      canonical: "https://eng-sim.vercel.app/about",
+      canonical: `${appConfig.siteUrl}/about`,
     },
     en: {
       title: "About Me — EngSim",
       description:
         "Engineering educator and simulation specialist with experience in mechanics, hydraulics, thermodynamics, and automation.",
       lang: "en",
-      canonical: "https://eng-sim.vercel.app/about",
+      canonical: `${appConfig.siteUrl}/about`,
     },
     de: {
       title: "Über mich — EngSim",
       description:
         "Ingenieurpädagoge und Simulationsexperte mit Erfahrung in Mechanik, Hydraulik, Thermodynamik und Automatisierung.",
       lang: "de",
-      canonical: "https://eng-sim.vercel.app/about",
+      canonical: `${appConfig.siteUrl}/about`,
     },
   };
 
@@ -60,7 +62,7 @@ function AboutPage({ currentLang }) {
       name: t.aboutName,
       jobTitle: t.aboutRole,
       description: `${t.aboutBio1} ${t.aboutBio2} ${t.aboutBio3}`,
-      image: "https://eng-sim.vercel.app/my-photo.png",
+      image: `${appConfig.siteUrl}/my-photo.png`,
       knowsAbout: [
         t.aboutExpertise1,
         t.aboutExpertise2,
@@ -80,7 +82,7 @@ function AboutPage({ currentLang }) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `https://eng-sim.vercel.app${item.path}`,
+      item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
   ``;

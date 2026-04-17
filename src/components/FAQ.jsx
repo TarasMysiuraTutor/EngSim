@@ -43,7 +43,7 @@ const FAQ = ({ currentLang }) => {
       {
         question: "Які калькулятори доступні на сайті?",
         answer:
-          "На сайті доступно 32 безкоштовних калькулятори за 4 категоріями: опір матеріалів (8), гідравліка (8), термодинаміка (8) та енергетика (8). Це корисний інструмент для швидких попередніх розрахунків.",
+          "На сайті доступно  безкоштовні калькулятори з різних технічних категорій: опір матеріалів, гідравліка, термодинаміка та енергетика. Це корисний інструмент для швидких попередніх розрахунків.",
       },
       {
         question: "Чи можна довіряти розрахункам з калькуляторів?",
@@ -95,7 +95,7 @@ const FAQ = ({ currentLang }) => {
       {
         question: "Какие калькуляторы доступны на сайте?",
         answer:
-          "На сайте доступно 32 бесплатных калькулятора по 4 категориям: сопротивление материалов (8), гидравлика (8), термодинамика (8) и энергетика (8). Это полезный инструмент для быстрых предварительных расчетов.",
+          "На сайте доступны бесплатные калькуляторы по различным техническим категориям: сопротивление материалов, гидравлика, термодинамика и энергетика. Это полезный инструмент для быстрых предварительных расчетов.",
       },
       {
         question: "Можно ли доверять расчетам калькуляторов?",
@@ -147,7 +147,7 @@ const FAQ = ({ currentLang }) => {
       {
         question: "What calculators are available on the site?",
         answer:
-          "The site offers 32 free calculators in 4 categories: strength of materials (8), hydraulics (8), thermodynamics (8), and energy (8). This is a useful tool for quick preliminary calculations.",
+          "The site offers free calculators in various technical categories: strength of materials, hydraulics, thermodynamics, and energy. This is a useful tool for quick preliminary calculations.",
       },
       {
         question: "Can calculator results be trusted?",
@@ -199,7 +199,7 @@ const FAQ = ({ currentLang }) => {
       {
         question: "Welche Rechner sind auf der Website verfügbar?",
         answer:
-          "Die Website bietet 32 kostenlose Rechner in 4 Kategorien: Festigkeitslehre (8), Hydraulik (8), Thermodynamik (8) und Energie (8). Dies ist ein nützliches Werkzeug für schnelle vorläufige Berechnungen.",
+          "Die Website bietet kostenlose Rechner in verschiedenen technischen Kategorien: Festigkeitslehre, Hydraulik, Thermodynamik und Energie. Dies ist ein nützliches Werkzeug für schnelle vorläufige Berechnungen.",
       },
       {
         question: "Kann man den Rechnerergebnissen vertrauen?",

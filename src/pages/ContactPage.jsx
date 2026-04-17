@@ -9,6 +9,8 @@ import { translations } from "../data/translations";
 
 import SEO from "../components/SEO";
 
+import { appConfig } from "@/config/app.config";
+
 function ContactPage({ currentLang }) {
   const t = translations[currentLang];
 
@@ -18,28 +20,28 @@ function ContactPage({ currentLang }) {
       description:
         "Зв’яжіться зі мною щодо інженерних консультацій, симуляцій, навчання та технічної підтримки.",
       lang: "uk",
-      canonical: "https://eng-sim.vercel.app/contact",
+      canonical: `${appConfig.siteUrl}/contact`,
     },
     ru: {
       title: "Контакты — EngSim",
       description:
         "Свяжитесь со мной по вопросам инженерного консалтинга, моделирования и технической поддержки.",
       lang: "ru",
-      canonical: "https://eng-sim.vercel.app/contact",
+      canonical: `${appConfig.siteUrl}/contact`,
     },
     en: {
       title: "Contact — EngSim",
       description:
         "Get in touch for engineering consulting, simulation services, training, and technical support.",
       lang: "en",
-      canonical: "https://eng-sim.vercel.app/contact",
+      canonical: `${appConfig.siteUrl}/contact`,
     },
     de: {
       title: "Kontakt — EngSim",
       description:
         "Kontaktieren Sie mich für Ingenieurberatung, Simulation, Schulungen und technischen Support.",
       lang: "de",
-      canonical: "https://eng-sim.vercel.app/contact",
+      canonical: `${appConfig.siteUrl}/contact`,
     },
   };
 
@@ -51,7 +53,7 @@ function ContactPage({ currentLang }) {
     mainEntity: {
       "@type": "Organization",
       name: "EngSim",
-      url: "https://eng-sim.vercel.app",
+      url: `${appConfig.siteUrl}`,
       contactPoint: [
         {
           "@type": "ContactPoint",
@@ -70,7 +72,7 @@ function ContactPage({ currentLang }) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `https://eng-sim.vercel.app${item.path}`,
+      item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
   ``;

@@ -8,6 +8,9 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import SEO from "../components/SEO";
 import { translations } from "../data/translations";
 
+import { appConfig } from "@/config/app.config";
+
+
 function FAQPage({ currentLang }) {
   const t = translations[currentLang];
 
@@ -21,28 +24,28 @@ function FAQPage({ currentLang }) {
       description:
         "Відповіді на часті питання щодо інженерних розрахунків, симуляцій, навчальних матеріалів та роботи платформи EngSim.",
       lang: "uk",
-      canonical: "https://eng-sim.vercel.app/faq",
+      canonical: `${appConfig.siteUrl}/faq`,
     },
     ru: {
       title: "Вопросы и ответы — EngSim",
       description:
         "Ответы на часто задаваемые вопросы об инженерных расчетах, симуляциях и обучающих материалах EngSim.",
       lang: "ru",
-      canonical: "https://eng-sim.vercel.app/faq",
+      canonical: `${appConfig.siteUrl}/faq`,
     },
     en: {
       title: "FAQ — Engineering Questions & Answers | EngSim",
       description:
         "Frequently asked questions about engineering simulations, calculations, educational content and EngSim platform.",
       lang: "en",
-      canonical: "https://eng-sim.vercel.app/faq",
+      canonical: `${appConfig.siteUrl}/faq`,
     },
     de: {
       title: "FAQ — Häufige Fragen | EngSim",
       description:
         "Häufig gestellte Fragen zu Ingenieursimulationen, Berechnungen und Lernmaterialien auf EngSim.",
       lang: "de",
-      canonical: "https://eng-sim.vercel.app/faq",
+      canonical: `${appConfig.siteUrl}/faq`,
     },
   };
 
@@ -67,7 +70,7 @@ function FAQPage({ currentLang }) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `https://eng-sim.vercel.app${item.path}`,
+      item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
 

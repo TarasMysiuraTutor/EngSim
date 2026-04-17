@@ -9,34 +9,36 @@ import { translations } from "../data/translations";
 
 import SEO from "../components/SEO";
 
+import { appConfig } from "@/config/app.config";
+
 const seoData = {
   uk: {
     title: "EngSim — Інженерні симуляції, книги, відео, курси",
     description:
       "Платформа EngSim: відеоуроки, книги, курси та інженерні матеріали для студентів і спеціалістів.",
     lang: "uk",
-    canonical: "https://eng-sim.vercel.app/",
+    canonical: `${appConfig.siteUrl}/`,
   },
   ru: {
     title: "EngSim — Инженерные симуляции, книги, видео",
     description:
       "Платформа EngSim: учебные материалы, инженерные книги, видео и практические пособия.",
     lang: "ru",
-    canonical: "https://eng-sim.vercel.app/",
+    canonical: `${appConfig.siteUrl}/`,
   },
   en: {
     title: "EngSim — Engineering simulations, books, videos",
     description:
       "EngSim platform: engineering books, simulations, tutorials and technical content.",
     lang: "en",
-    canonical: "https://eng-sim.vercel.app/",
+    canonical: `${appConfig.siteUrl}/`,
   },
   de: {
     title: "EngSim — Ingenieur-Simulationen, Bücher, Videos",
     description:
       "EngSim: Lernplattform für Ingenieure. Bücher, Videos und technische Materialien.",
     lang: "de",
-    canonical: "https://eng-sim.vercel.app/",
+    canonical: `${appConfig.siteUrl}/`,
   },
 };
 

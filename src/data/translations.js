@@ -19,9 +19,9 @@ export const translations = {
 
 
     // Hero Section
-    heroLabel: "Професійні інженерні послуги",
+    heroLabel: "Платформа професійних інженерних розрахунків",
     heroPreTitle: "Вітаю, я Тарас, інженер-розрахунковець.",
-    heroTitle: "Професійні інженерні розрахунки",
+    heroTitle: "Платформа професійних інженерних розрахунків",
     heroPostTitle:
       "Пропоную свої послуги з професійних інженерних розрахунків для різних галузей промисловості:",
     heroSubtitle:
@@ -148,7 +148,7 @@ export const translations = {
     aboutName: "Тарас Мисюра",
     aboutRole: "Інженер-консультант",
     aboutBio1:
-      "Професійний інженер з понад 10 років досвіду в галузі промислових розрахунків, термодинаміки та опору матеріалів.",
+      "Професійний інженер з понад 15 років досвіду в галузі промислових розрахунків, термодинаміки та опору матеріалів.",
     aboutBio2:
       "Спеціалізуюся на складних інженерних розрахунках для промислових підприємств, енергоаудиті та оптимізації технологічних процесів.",
     aboutBio3:
@@ -328,9 +328,9 @@ export const translations = {
     referenceTitle: "Инженерный справочник — технические данные и формулы",
 
     // Hero Section
-    heroLabel: "Профессиональные инженерные услуги",
+    heroLabel: "Платформа профессиональных инженерных расчетов",
     heroPreTitle: "Добро пожаловать, я Тарас, инженер-расчетчик.",
-    heroTitle: "Профессиональные инженерные расчеты",
+    heroTitle: "Платформа профессиональных инженерных расчетов",
     heroPostTitle:
       "Предлагаю свои услуги по профессиональным инженерным расчетам для различных отраслей промышленности:",
     heroSubtitle:
@@ -452,7 +452,7 @@ export const translations = {
     aboutName: "Тарас Мисюра",
     aboutRole: "Инженер-консультант",
     aboutBio1:
-      "Профессиональный инженер с более чем 10 годами опыта в области промышленных расчетов, термодинамики и сопротивления материалов.",
+      "Профессиональный инженер с более чем 15 годами опыта в области промышленных расчетов, термодинамики и сопротивления материалов.",
     aboutBio2:
       "Специализируюсь на сложных инженерных расчетах для промышленных предприятий, энергоаудите и оптимизации технологических процессов.",
     aboutBio3:
@@ -757,7 +757,7 @@ export const translations = {
     aboutName: "Taras Mysiura",
     aboutRole: "Engineering Consultant",
     aboutBio1:
-      "Professional engineer with over 10 years of experience in industrial calculations, thermodynamics and strength of materials.",
+      "Professional engineer with over 15 years of experience in industrial calculations, thermodynamics and strength of materials.",
     aboutBio2:
       "I specialize in complex engineering calculations for industrial enterprises, energy audits and optimization of technological processes.",
     aboutBio3:
@@ -934,9 +934,9 @@ export const translations = {
     referenceTitle: "Ingenieurreferenz — Technische Daten und Formeln",
 
     // Hero Section
-    heroLabel: "Professionelle Ingenieurdienstleistungen",
+    heroLabel: "Professionelle ingenieurtechnische Berechnungen",
     heroPreTitle: "Willkommen, ich bin Taras, ein Ingenieurkalkulator.",
-    heroTitle: "Professionelle Ingenieurberechnungen",
+    heroTitle: "Professionelle ingenieurtechnische Berechnungen",
     heroPostTitle:
       "Ich biete meine Dienste im Bereich professioneller ingenieurtechnischer Berechnungen für verschiedene Industriezweige an:",
     heroSubtitle:
@@ -1059,7 +1059,7 @@ export const translations = {
     aboutName: "Taras Mysiura",
     aboutRole: "Ingenieurberater",
     aboutBio1:
-      "Professioneller Ingenieur mit über 10 Jahren Erfahrung in Industrieberechnungen, Thermodynamik und Festigkeitslehre.",
+      "Professioneller Ingenieur mit über 15 Jahren Erfahrung in Industrieberechnungen, Thermodynamik und Festigkeitslehre.",
     aboutBio2:
       "Ich spezialisiere mich auf komplexe ingenieurtechnische Berechnungen für Industrieunternehmen, Energieaudits und Optimierung technologischer Prozesse.",
     aboutBio3:

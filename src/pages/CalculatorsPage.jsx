@@ -7,6 +7,9 @@ import Footer from '../components/Footer';
 import { calculators } from '../data/calculators';
 import { categoryMap } from '../data/calculatorsMetadata';
 
+import { appConfig } from "@/config/app.config";
+
+
 const CalculatorsPage = ({ currentLang, setCurrentLang, t }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -59,10 +62,10 @@ const CalculatorsPage = ({ currentLang, setCurrentLang, t }) => {
   };
 
   const pageDesc = {
-    uk: '32 професійних інженерних калькулятора: опір матеріалів, гідравліка, термодинаміка, енергетика. Безкоштовні розрахунки онлайн.',
-    ru: '32 профессиональных инженерных калькулятора: сопротивление материалов, гидравлика, термодинамика, энергетика.',
-    en: '32 professional engineering calculators: strength of materials, hydraulics, thermodynamics, energy. Free online calculations.',
-    de: '32 professionelle technische Rechner: Festigkeitslehre, Hydraulik, Thermodynamik, Energie.'
+    uk: 'Платформа професійних інженерних калькуляторів: опір матеріалів, гідравліка, термодинаміка, енергетика. Безкоштовні розрахунки онлайн.',
+    ru: 'Платформа профессиональных инженерных калькуляторов: сопротивление материалов, гидравлика, термодинамика, энергетика.',
+    en: 'Platform for professional engineering calculators: strength of materials, hydraulics, thermodynamics, energy. Free online calculations.',
+    de: 'Plattform für professionelle technische Rechner: Festigkeitslehre, Hydraulik, Thermodynamik, Energie.'
   };
 
   return (
@@ -72,7 +75,7 @@ const CalculatorsPage = ({ currentLang, setCurrentLang, t }) => {
         <meta name="description" content={pageDesc[currentLang]} />
         <meta property="og:title" content={pageTitle[currentLang]} />
         <meta property="og:description" content={pageDesc[currentLang]} />
-        <link rel="canonical" href="https://tarasmysiuratutor.github.io/EngSim/calculators" />
+        <link rel="canonical" href={`${appConfig.siteUrl}/calculators`} />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
@@ -107,10 +110,10 @@ const CalculatorsPage = ({ currentLang, setCurrentLang, t }) => {
             </h1>
             
             <p className="text-xl text-gray-400 mb-8 max-w-3xl">
-              {currentLang === 'uk' && '32 професійних інструменти для інженерних розрахунків. Швидко, точно, безкоштовно.'}
-              {currentLang === 'ru' && '32 профессиональных инструмента для инженерных расчетов. Быстро, точно, бесплатно.'}
-              {currentLang === 'en' && '32 professional tools for engineering calculations. Fast, accurate, free.'}
-              {currentLang === 'de' && '32 professionelle Werkzeuge für technische Berechnungen. Schnell, genau, kostenlos.'}
+              {currentLang === 'uk' && 'Платформа професійних інженерних калькуляторів та розрахунків.. Швидко, точно, безкоштовно.'}
+              {currentLang === 'ru' && 'Платформа профессиональных инженерных калькуляторов и расчетов. Быстро, точно, бесплатно.'}
+              {currentLang === 'en' && 'Platform for professional engineering calculators and calculations. Fast, accurate, free.'}
+              {currentLang === 'de' && 'Plattform für professionelle technische Rechner und Berechnungen. Schnell, genau, kostenlos.'}
             </p>
 
             {/* Пошук */}

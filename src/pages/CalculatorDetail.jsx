@@ -18,6 +18,7 @@ import {
 import { exportToPDF } from "../utils/pdfExport";
 import { useCalculationHistory } from "../hooks/useCalculationHistory";
 
+import { appConfig } from "@/config/app.config";
 
 const CalculatorDetail = ({ currentLang, setCurrentLang, t }) => {
   const { slug } = useParams();
@@ -197,11 +198,11 @@ const CalculatorDetail = ({ currentLang, setCurrentLang, t }) => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
+        <title>{pageTitle}</title>``
         <meta name="description" content={pageDesc} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <link rel="canonical" href="https://tarasmysiuratutor.github.io/EngSim/" />
+        <link rel="canonical" href={`${appConfig.siteUrl}`} />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
@@ -278,7 +279,6 @@ const CalculatorDetail = ({ currentLang, setCurrentLang, t }) => {
                 📜{" "}
                 {currentLang === "uk" && "Історія розрахунків"}
                 {currentLang === "ru" && "История расчетов"}
-
                 {currentLang === "en" && "Calculation History"}
                 {currentLang === "de" && "Berechnungsverlauf"}
               </h3>

@@ -11,13 +11,16 @@ import SEO from "../components/SEO";
 
 import projects from "../data/json/projects.json"; // ✅ Ось головне!
 
+
+import { appConfig } from "@/config/app.config";
+
 const seoProjects = {
   uk: {
     title: "Інженерні проєкти — EngSim",
     description:
       "seoрахунки та дослідження у механіці, гідравліці, теплотехніці та автоматизації.",
     lang: "uk",
-    canonical: "https://eng-sim.vercel.app/projects",
+    canonical: `${appConfig.siteUrl}/projects`,
     keywords:
       "інженерні проєкти, інженерія, механіка, гідравліка, моделювання, проєктування",
   },
@@ -26,7 +29,7 @@ const seoProjects = {
     description:
       "Портфолио инженерных проектов EngSim: моделирование, проектирование, расчёты и исследования.",
     lang: "ru",
-    canonical: "https://eng-sim.vercel.app/projects",
+    canonical: `${appConfig.siteUrl}/projects`,
     keywords:
       "инженерные проекты, гидравлика, моделирование, теплотехника, автоматизация",
   },
@@ -35,7 +38,7 @@ const seoProjects = {
     description:
       "EngSim portfolio of engineering projects: engineering design, simulation, calculations, and technical analyses.",
     lang: "en",
-    canonical: "https://eng-sim.vercel.app/projects",
+    canonical: `${appConfig.siteUrl}/projects`,
     keywords:
       "engineering projects, simulations, design, mechanical engineering, hydraulics",
   },
@@ -44,7 +47,7 @@ const seoProjects = {
     description:
       "EngSim Portfolio technischer Ingenieurprojekte: Modellierung, Berechnungen, Konstruktion und technische Analysen.",
     lang: "de",
-    canonical: "https://eng-sim.vercel.app/projects",
+    canonical: `${appConfig.siteUrl}/projects`,
     keywords:
       "ingenieur projekte, modellierung, konstruktion, simulation, maschinenbau",
   },
@@ -67,8 +70,8 @@ function ProjectsPage({ currentLang }) {
       keywords: (project.tags || []).join(", "),
       dateCreated: project.year || "",
       genre: project.iconType || "",
-      url: "https://eng-sim.vercel.app/projects",
-      image: "https://eng-sim.vercel.app/preview.png",
+      url: `${appConfig.siteUrl}/projects`,
+      image: `${appConfig.siteUrl}/preview.png`,
     })),
   };
 
@@ -79,7 +82,7 @@ function ProjectsPage({ currentLang }) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `https://eng-sim.vercel.app${item.path}`,
+      item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
   ``;

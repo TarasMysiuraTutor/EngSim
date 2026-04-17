@@ -12,13 +12,16 @@ import videos from "../data/json/videos.json"; // ✅ Ось головне!
 
 import SEO from "../components/SEO";
 
+import { appConfig } from "@/config/app.config";
+
+
 const seoVideos = {
   uk: {
     title: "Інженерні відеоуроки — EngSim",
     description:
       "Добірка відеоуроків з механіки, гідравліки, теплотехніки, моделювання та інженерних симуляцій.",
     lang: "uk",
-    canonical: "https://eng-sim.vercel.app/videos",
+    canonical: `${appConfig.siteUrl}/videos`,
     keywords:
       "інженерні відео, механіка, гідравліка, відеоуроки, інженерія, EngSim",
   },
@@ -27,7 +30,7 @@ const seoVideos = {
     description:
       "Подборка видеоуроков по механике, гидравлике, теплотехнике и инженерному моделированию.",
     lang: "ru",
-    canonical: "https://eng-sim.vercel.app/videos",
+    canonical: `${appConfig.siteUrl}/videos`,
     keywords: "инженерные видео, гидравлика, механика, моделирование, EngSim",
   },
   en: {
@@ -35,7 +38,7 @@ const seoVideos = {
     description:
       "Collection of engineering tutorials on mechanics, hydraulics, thermodynamics, and simulation.",
     lang: "en",
-    canonical: "https://eng-sim.vercel.app/videos",
+    canonical: `${appConfig.siteUrl}/videos`,
     keywords:
       "engineering videos, tutorials, hydraulics, mechanics, simulation",
   },
@@ -44,7 +47,7 @@ const seoVideos = {
     description:
       "Sammlung von Ingenieur-Videolektionen zu Mechanik, Hydraulik, Thermodynamik und Simulation.",
     lang: "de",
-    canonical: "https://eng-sim.vercel.app/videos",
+    canonical: `${appConfig.siteUrl}/videos`,
     keywords: "ingenieur videos, hydraulik, mechanik, tutorials, simulation",
   },
 };
@@ -157,7 +160,7 @@ const VideosPage = ({ currentLang, setCurrentLang, t }) => {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `https://eng-sim.vercel.app${item.path}`,
+      item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
   ``;
@@ -176,7 +179,7 @@ const VideosPage = ({ currentLang, setCurrentLang, t }) => {
         <meta name="description" content={pageDesc[currentLang]} />
         <meta property="og:title" content={pageTitle[currentLang]} />
         <meta property="og:description" content={pageDesc[currentLang]} />
-        <link rel="canonical" href="https://eng-sim.vercel.app/videos" />
+        <link rel="canonical" href={`${appConfig.siteUrl}/videos`} />
       </Helmet> */}
 
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">

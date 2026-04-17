@@ -6,6 +6,8 @@ import { Helmet } from "react-helmet-async";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 
+import { appConfig } from "@/config/app.config";
+
 const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
   const [visible, setVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -257,7 +259,7 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
         <meta name="description" content={pageDesc[currentLang]} />
         <meta property="og:title" content={pageTitle[currentLang]} />
         <meta property="og:description" content={pageDesc[currentLang]} />
-        <link rel="canonical" href="https://eng-sim.vercel.app/reference" />
+        <link rel="canonical" href={`${appConfig.siteUrl}/reference`} />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">

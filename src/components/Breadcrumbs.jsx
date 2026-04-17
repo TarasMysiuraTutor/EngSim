@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
+import { appConfig } from "@/config/app.config";
+import { routes } from "@/config/routes.config";
 
 const Breadcrumbs = ({ items, currentLang }) => {
   // Генеруємо Breadcrumbs Schema для Google
@@ -14,7 +16,7 @@ const Breadcrumbs = ({ items, currentLang }) => {
         "@type": "ListItem",
         position: index + 1,
         name: item.label,
-        item: item.url ? `https://eng-sim.vercel.app/${item.url}` : undefined,
+        item: item.url ? `${appConfig.siteUrl}/${item.url}` : undefined,
       })),
     };
 

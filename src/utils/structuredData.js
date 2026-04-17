@@ -1,6 +1,9 @@
 // Structured Data для калькуляторів
 // Це допомагає Google краще розуміти ваш контент
 
+import { appConfig } from "@/config/app.config";
+
+
 /**
  * Генерує Schema.org markup для окремого калькулятора
  */
@@ -74,7 +77,7 @@ export const getCategorySchema = (categoryData) => {
         "@type": "SoftwareApplication",
         "name": calc.name,
         "description": calc.description,
-        "url": `https://tarasmysiuratutor.github.io/EngSim/#${calc.id}`
+        "url": `${appConfig.siteUrl}#${calc.id}`
       }
     }))
   };

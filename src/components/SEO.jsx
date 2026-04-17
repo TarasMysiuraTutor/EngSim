@@ -1,4 +1,6 @@
 import { Helmet } from "react-helmet-async";
+import { appConfig } from "@/config/app.config";
+
 
 export default function SEO({
   title,
@@ -6,7 +8,7 @@ export default function SEO({
   canonical = "",
   lang = "uk",
   keywords = "",
-  image = "https://eng-sim.vercel.app/preview.png",
+  image = `${appConfig.siteUrl}/preview.png`,
   jsonld = null,
 }) {
   return (

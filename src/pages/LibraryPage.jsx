@@ -7,13 +7,16 @@ import books from "../data/json/books.json"; // ✅ Ось головне!
 
 import SEO from "../components/SEO";
 
+
+import { appConfig } from "@/config/app.config";
+
 const seoLibrary = {
   uk: {
     title: "Інженерна бібліотека — книги для інженерів | EngSim",
     description:
       "Електронна інженерна бібліотека EngSim: підручники, довідники, лабораторні роботи та технічні видання з механіки, гідравліки, теплотехніки та автоматизації.",
     lang: "uk",
-    canonical: "https://eng-sim.vercel.app/library",
+    canonical: `${appConfig.siteUrl}/library`,
     keywords:
       "інженерні книги, гідравліка, теплотехніка, опір матеріалів, лабораторні, EngSim, довідники",
   },
@@ -22,7 +25,7 @@ const seoLibrary = {
     description:
       "Инженерная библиотека EngSim: справочники, лабораторные работы и техническая литература по механике, гидравлике, теплотехнике и автоматизации.",
     lang: "ru",
-    canonical: "https://eng-sim.vercel.app/library",
+    canonical: `${appConfig.siteUrl}/library`,
     keywords:
       "инженерные книги, гидравлика, теплотехника, сопромат, лабораторные работы",
   },
@@ -31,7 +34,7 @@ const seoLibrary = {
     description:
       "EngSim engineering library: textbooks, handbooks, lab manuals, and technical literature on mechanics, hydraulics, thermodynamics, and automation.",
     lang: "en",
-    canonical: "https://eng-sim.vercel.app/library",
+    canonical: `${appConfig.siteUrl}/library`,
     keywords:
       "engineering books, hydraulics, thermodynamics, mechanics, textbooks, technical manuals",
   },
@@ -40,7 +43,7 @@ const seoLibrary = {
     description:
       "EngSim Ingenieur-Bibliothek: Lehrbücher, technische Handbücher und Laboranleitungen zu Mechanik, Hydraulik, Thermodynamik und Automatisierung.",
     lang: "de",
-    canonical: "https://eng-sim.vercel.app/library",
+    canonical: `${appConfig.siteUrl}/library`,
     keywords:
       "ingenieur bücher, hydraulik, thermodynamik, mechanik, handbuch, laborarbeiten",
   },
@@ -60,8 +63,8 @@ const LibraryPage = ({ currentLang, setCurrentLang, t }) => {
       bookFormat: book.format,
       numberOfPages: Number(book.pages),
       genre: book.category,
-      url: `https://eng-sim.vercel.app${book.file.replace("./", "/")}`,
-      image: "https://eng-sim.vercel.app/preview.png",
+      url: `${appConfig.siteUrl}${book.file.replace("./", "/")}`,
+      image: `${appConfig.siteUrl}/preview.png`,
     })),
   };
 
@@ -72,7 +75,7 @@ const LibraryPage = ({ currentLang, setCurrentLang, t }) => {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `https://eng-sim.vercel.app${item.path}`,
+      item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
   ``;
