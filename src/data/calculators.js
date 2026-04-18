@@ -3,13 +3,15 @@ import { strengthCalculators } from "./strength_of_materials.js";
 import { hydraulicsCalculators } from "./hydraulics.js";
 import { thermodynamicsCalculators } from "./thermodynamics.js";
 import { energyCalculators } from "./energy.js";
-import { shellTubeHeatExchanger } from "./calculatorData";
+import { massTransferCalculators } from "./massTransfer.js";
+import { shellTubeHeatExchanger } from "./shellTubeHeatExchanger.js";
 
 export const calculators = {
   ...strengthCalculators,
   ...hydraulicsCalculators,
   ...thermodynamicsCalculators,
   ...energyCalculators,
+  ...massTransferCalculators,
   shell_tube: shellTubeHeatExchanger,
 };
 
@@ -20,24 +22,28 @@ export const categories = {
     { id: "hydraulics", name: "Гідравліка", icon: "💧" },
     { id: "thermodynamics", name: "Термодинаміка", icon: "🔥" },
     { id: "energy", name: "Енергетика", icon: "⚡" },
+    { id: "mass-transfer", name: "Масоперенос", icon: "🧪" },
   ],
   ru: [
     { id: "strength", name: "Сопротивление материалов", icon: "🔩" },
     { id: "hydraulics", name: "Гидравлика", icon: "💧" },
     { id: "thermodynamics", name: "Термодинамика", icon: "🔥" },
     { id: "energy", name: "Энергетика", icon: "⚡" },
+    { id: "mass-transfer", name: "Массоперенос", icon: "🧪" },
   ],
   en: [
     { id: "strength", name: "Strength of Materials", icon: "🔩" },
     { id: "hydraulics", name: "Hydraulics", icon: "💧" },
     { id: "thermodynamics", name: "Thermodynamics", icon: "🔥" },
     { id: "energy", name: "Energy", icon: "⚡" },
+    { id: "mass-transfer", name: "Mass Transfer", icon: "🧪" },
   ],
   de: [
     { id: "strength", name: "Festigkeitslehre", icon: "🔩" },
     { id: "hydraulics", name: "Hydraulik", icon: "💧" },
     { id: "thermodynamics", name: "Thermodynamik", icon: "🔥" },
     { id: "energy", name: "Energie", icon: "⚡" },
+    { id: "mass-transfer", name: "Stoffaustausch", icon: "🧪" },
   ],
 };
 
@@ -82,6 +88,10 @@ export const calculatorCategories = {
   motor: "energy",
   battery: "energy",
   cable: "energy",
+
+  // Масообмін / Массоперенос / Mass Transfer
+  diffusion_flat_wall: "mass-transfer",
+  
 };
 
 // Функція отримання калькуляторів за категорією

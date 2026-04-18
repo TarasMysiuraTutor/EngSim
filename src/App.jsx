@@ -37,6 +37,8 @@ import CalculatorDetail from "./pages/CalculatorDetail";
 import LibraryPage from "./pages/LibraryPage";
 // import ShellTubeHeatExchangerCalculator from './components/ShellTubeHeatExchangerCalculator';
 
+import DiffusionFlatWallPage from "@/pages/massTransfer/DiffusionFlatWallPage";
+
 // ГОЛОВНИЙ КОМПОНЕНТ APP
 function App() {
   // Отримуємо збережену мову або встановлюємо EN за замовчуванням
@@ -113,6 +115,11 @@ function App() {
                 t={translations[currentLang]}
               />
             }
+          />
+
+          <Route
+            path="/calculators/mass-transfer/diffusion-flat-wall"
+            element={<DiffusionFlatWallPage currentLang={currentLang} />}
           />
 
           {/* СТОРІНКА З ВІДЕО */}
