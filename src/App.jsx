@@ -38,6 +38,7 @@ import LibraryPage from "./pages/LibraryPage";
 // import ShellTubeHeatExchangerCalculator from './components/ShellTubeHeatExchangerCalculator';
 
 import DiffusionFlatWallPage from "@/pages/massTransfer/DiffusionFlatWallPage";
+import ReferenceWaterPage from "./pages/ReferenceWaterPage";
 
 // ГОЛОВНИЙ КОМПОНЕНТ APP
 function App() {
@@ -166,6 +167,18 @@ function App() {
             path="/reference"
             element={
               <ReferencePage
+                currentLang={currentLang}
+                setCurrentLang={setCurrentLang}
+                t={translations[currentLang]}
+              />
+            }
+          />
+
+          {/* Властивості води */}
+          <Route
+            path="/reference/waterProperties"
+            element={
+              <ReferenceWaterPage
                 currentLang={currentLang}
                 setCurrentLang={setCurrentLang}
                 t={translations[currentLang]}

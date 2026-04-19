@@ -15,6 +15,15 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
   // Розділи довідки
   const sections = {
     uk: [
+       {
+        id: "waterProperties",
+        icon: "🔢",
+        title: "Властивості води",
+        description:
+          "Температура, тиск, щільність, в'язкість, теплопровідність",
+        items: "15+ формул",
+        color: "from-blue-500 to-cyan-500",
+      },
       {
         id: "math",
         icon: "🔢",
@@ -70,6 +79,15 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
       },
     ],
     ru: [
+       {
+        id: "waterProperties",
+        icon: "🔢",
+        title: "Свойства воды",
+        description:
+          "Температура, давление, плотность, вязкость, теплопроводность",
+        items: "15+ формул",
+        color: "from-blue-500 to-cyan-500",
+      },
       {
         id: "math",
         icon: "🔢",
@@ -124,6 +142,15 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
       },
     ],
     en: [
+       {
+        id: "waterProperties",
+        icon: "🧊",
+        title: "Water Properties",
+        description:
+          "Temperature, pressure, density, viscosity, thermal conductivity",
+        items: "15+ formulas",
+        color: "from-blue-500 to-cyan-500",
+      },
       {
         id: "math",
         icon: "🔢",
@@ -144,7 +171,7 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
       },
       {
         id: "hydraulic",
-        icon: "💧",
+        icon: "🌊",
         title: "Hydraulics",
         description:
           "Fluid flow, pressure losses, head, hydraulic resistance, pumps, pipelines",
@@ -178,6 +205,15 @@ const ReferencePage = ({ currentLang, setCurrentLang, t }) => {
       },
     ],
     de: [
+       {
+        id: "waterProperties",
+        icon: "🔢",
+        title: "Eigenschaften des Wassers",
+        description:
+          "Temperatur, Druck, Dichte, Viskosität, Wärmeleitfähigkeit",
+        items: "15+ Formeln",
+        color: "from-blue-500 to-cyan-500",
+      },
       {
         id: "math",
         icon: "🔢",
