@@ -295,12 +295,11 @@ const Footer = ({ t, currentLang }) => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-blue-500/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-            <p>
-              © {currentYear} {t.aboutName || "EngSim"}.{" "}
-              {t.footerRights || "All rights reserved."}
-            </p>
-            <p className="text-xs text-blue-400/60 hover:text-blue-400 transition-colors" title="Version">
-              v{APP_VERSION}
+            <p className="flex items-center justify-between gap-4 w-full md:w-auto">
+              <span>© {currentYear} {t.aboutName || "EngSim"}. {t.footerRights || "All rights reserved."}</span>
+              <span className="text-blue-400/70 border border-blue-500/30 rounded mx-5 px-2.5 py-0.5 text-xs font-mono">
+                v{APP_VERSION}
+              </span>
             </p>
             <p className="flex items-center gap-2">
               <span>{t.footerSpan1 || "Made with"}</span>
