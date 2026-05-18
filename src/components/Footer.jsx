@@ -299,7 +299,7 @@ const Footer = ({ t, currentLang }) => {
               © {currentYear} {t.aboutName || "EngSim"}.{" "}
               {t.footerRights || "All rights reserved."}
             </p>
-            <p className="text-xs text-gray-400">
+            <p className="text-xs text-blue-400/60 hover:text-blue-400 transition-colors" title="Version">
               v{APP_VERSION}
             </p>
             <p className="flex items-center gap-2">
