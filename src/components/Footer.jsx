@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import LegalModal from "./LegalModal";
+import { APP_VERSION } from "../version";
 
 const Footer = ({ t, currentLang }) => {
   const [modalType, setModalType] = useState(null);
@@ -297,6 +298,9 @@ const Footer = ({ t, currentLang }) => {
             <p>
               © {currentYear} {t.aboutName || "EngSim"}.{" "}
               {t.footerRights || "All rights reserved."}
+            </p>
+            <p className="text-xs text-gray-600">
+              v{APP_VERSION}
             </p>
             <p className="flex items-center gap-2">
               <span>{t.footerSpan1 || "Made with"}</span>

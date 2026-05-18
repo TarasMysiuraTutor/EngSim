@@ -1,14 +1,10 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://tarasmysiuratutor.github.io/EngSim/sitemap.xml
 Sitemap: https://eng-sim.vercel.app/sitemap.xml
 
-# Налаштування для основних пошукових систем
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
-

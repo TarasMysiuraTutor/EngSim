@@ -1,78 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <!-- Головна сторінка з мовними версіями -->
+
   <url>
-    <loc>https://tarasmysiuratutor.github.io/EngSim/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://tarasmysiuratutor.github.io/EngSim/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tarasmysiuratutor.github.io/EngSim/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://tarasmysiuratutor.github.io/EngSim/?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://tarasmysiuratutor.github.io/EngSim/?lang=ru"/>
-    <lastmod>2026-01-02</lastmod>
+    <loc>https://eng-sim.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eng-sim.vercel.app/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eng-sim.vercel.app/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://eng-sim.vercel.app/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eng-sim.vercel.app/"/>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://eng-sim.vercel.app/</loc>
-    <priority>1.0</priority>
+    <loc>https://eng-sim.vercel.app/calculators</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://eng-sim.vercel.app/reference</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://eng-sim.vercel.app/library</loc>
-    <priority>0.9</priority>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://eng-sim.vercel.app/projects</loc>
-    <priority>0.9</priority>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://eng-sim.vercel.app/videos</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://eng-sim.vercel.app/services</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://eng-sim.vercel.app/about</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://eng-sim.vercel.app/contact</loc>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- PDF КНИГИ -->
-  <url>
-    <loc>https://eng-sim.vercel.app/books/beer_strength_of_materials.pdf</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://eng-sim.vercel.app/books/hydraulics_reference.pdf</loc>
+    <loc>https://eng-sim.vercel.app/faq</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
-  <url>
-    <loc>https://eng-sim.vercel.app/books/thermodynamics_basics.pdf</loc>
-  </url>
-
-  <url>
-    <loc>https://eng-sim.vercel.app/books/energy_systems_handbook.pdf</loc>
-  </url>
-
-  <url>
-    <loc>https://eng-sim.vercel.app/books/mechanical_engineer_handbook.pdf</loc>
-  </url>
-
-  <url>
-    <loc>https://eng-sim.vercel.app/books/Modeliuvannia_khimiko-tekhnolohichnykh_protsesiv.pdf</loc>
-  </url>
-  
 </urlset>
-
