@@ -40,8 +40,50 @@ import { sortItems } from "./components/utils/sort";
 // ✅ Іконки
 import { iconPalette, projectIconTypes } from "./components/utils/icons";
 
+// Простий хеш-захист. Щоб змінити пароль — замініть ADMIN_HASH нижче.
+// Згенерувати новий hash: btoa(encodeURIComponent('твій-пароль'))
+const ADMIN_HASH = "ZW5nc2ltLWFkbWluLTIwMjY="; // engsim-admin-2026
+
+function checkPassword(input) {
+  try {
+    return btoa(encodeURIComponent(input)) === ADMIN_HASH;
+  } catch {
+    return false;
+  }
+}
+
 export default function AdminPage({ currentLang, setCurrentLang, t}) {
   const t_admin = adminTranslations[currentLang];
+
+  // ---------------------------------------------------------
+  // AUTH GUARD
+  // ---------------------------------------------------------
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    try {
+      return sessionStorage.getItem("engsim_admin_auth") === "1";
+    } catch {
+      return false;
+    }
+  });
+  const [passwordInput, setPasswordInput] = useState("");
+  const [authError, setAuthError] = useState(false);
+
+  const handleLogin = () => {
+    if (checkPassword(passwordInput)) {
+      try { sessionStorage.setItem("engsim_admin_auth", "1"); } catch {}
+      setIsAuthenticated(true);
+      setAuthError(false);
+    } else {
+      setAuthError(true);
+      setPasswordInput("");
+    }
+  };
+
+  const handleLogout = () => {
+    try { sessionStorage.removeItem("engsim_admin_auth"); } catch {}
+    setIsAuthenticated(false);
+    setPasswordInput("");
+  };
 
   // ---------------------------------------------------------
   // ✅ ТАБИ
@@ -232,6 +274,41 @@ export default function AdminPage({ currentLang, setCurrentLang, t}) {
 
   // ---------------------------------------------------------
   // ============================================================
+  // Login screen якщо не авторизований
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] flex items-center justify-center px-4">
+        <div className="w-full max-w-sm bg-[#12172e] border border-blue-900/40 rounded-2xl p-8 shadow-2xl">
+          <div className="text-center mb-8">
+            <div className="text-5xl mb-4">🔐</div>
+            <h1 className="text-2xl font-bold text-white">Admin Panel</h1>
+            <p className="text-gray-400 text-sm mt-1">EngSim</p>
+          </div>
+          <div className="space-y-4">
+            <input
+              type="password"
+              value={passwordInput}
+              onChange={(e) => { setPasswordInput(e.target.value); setAuthError(false); }}
+              onKeyDown={(e) => e.key === "Enter" && handleLogin()}
+              placeholder="Password"
+              className={`w-full px-4 py-3 rounded-xl bg-[#0a0e27] border text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all ${authError ? "border-red-500" : "border-blue-900/40"}`}
+              autoFocus
+            />
+            {authError && (
+              <p className="text-red-400 text-sm text-center">Невірний пароль</p>
+            )}
+            <button
+              onClick={handleLogin}
+              className="w-full py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:opacity-90 transition-opacity"
+            >
+              Увійти
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     // ✅ RENDER
     <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-white">
@@ -249,9 +326,17 @@ export default function AdminPage({ currentLang, setCurrentLang, t}) {
         {/* ✅ MAIN CONTENT */}
         <div className="flex-1 px-10 max-w-5xl mx-auto">
           {/* ✅ HEADER */}
-          <h1 className="text-4xl font-bold text-cyan-300 mb-2">
+          <div className="flex justify-between items-start mb-2">
+          <h1 className="text-4xl font-bold text-cyan-300">
             {t_admin.adminTitle}
           </h1>
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400 hover:text-red-400 border border-gray-700 hover:border-red-500/40 rounded-xl transition-all"
+          >
+            🔓 Вийти
+          </button>
+          </div>
           <p className="text-gray-400 mb-8">{t_admin.adminSubtitle}</p>
           {/* ✅ TOP ACTION BUTTONS */}
           <div className="flex flex-wrap gap-3 mb-8">
