@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import logo from "../assets/logo.png";
-import logoAvif from "../assets/opt/logo.avif";
-import logoWebp from "../assets/opt/logo.webp";
-import logoPng from "../assets/opt/logo.png";
 import logoSvg from "../assets/opt/logo.svg";
 
 const Navbar = ({ currentLang, setCurrentLang, t }) => {

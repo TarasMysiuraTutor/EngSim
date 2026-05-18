@@ -231,15 +231,15 @@ const Footer = ({ t, currentLang }) => {
             <ul className="space-y-3">
               {contactInfo.map((contact, index) => (
                 <li key={index}>
-                  <Link
-                    to={`/$contact}`}
+                  <a
+                    href={contact.href}
                     className="flex items-center gap-3 text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm group"
                   >
                     <span className="flex-shrink-0 text-blue-400 group-hover:scale-110 transition-transform duration-300">
                       {contact.icon}
                     </span>
                     <span className="break-all">{contact.text}</span>
-                  </Link>
+                  </a>
                 </li>
               ))}
               <li className="flex items-center gap-3 text-gray-400 text-sm pt-2">

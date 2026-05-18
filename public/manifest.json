@@ -1,36 +1,35 @@
 {
-  "name": "EngSim - Ingenieurtechnische Rechner",
+  "name": "EngSim - Engineering Calculators",
   "short_name": "EngSim",
-  "description": "Professionelle Rechner für ingenieurtechnische Berechnungen",
-  "start_url": "/EngSim/",
-  "scope": "/EngSim/",
+  "description": "Professional engineering calculators for strength, hydraulics, thermodynamics, energy.",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
+  "background_color": "#0a0e27",
   "theme_color": "#3b82f6",
   "orientation": "any",
-  "dir": "ltr",
-  "lang": "de",
   "icons": [
     {
-      "src": "/EngSim/icon-72x72.png",
-      "sizes": "72x72",
+      "src": "/favicon/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/EngSim/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/EngSim/icon-128x128.png",
-      "sizes": "128x128",
+      "src": "/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "screenshots": [],
-  "categories": ["utilities", "productivity", "education"],
-  "prefer_related_applications": false
+  "screenshots": []
 }

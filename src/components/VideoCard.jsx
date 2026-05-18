@@ -76,9 +76,6 @@ const VideoCard = ({ video, currentLang }) => {
 
   const thumbnail = getVideoThumbnail(video, currentLang);
 
-  // console.log('Video ID:', video.id);
-  // console.log('Current Lang:', currentLang);
-  // console.log('Thumbnail URL:', thumbnail);
 
   return (
     <div 
@@ -99,7 +96,6 @@ const VideoCard = ({ video, currentLang }) => {
               console.error('Image failed to load:', e.target.src);
               setImageError(true);
             }}
-            // onLoad={() => console.log('Image loaded successfully:', thumbnail)}
             loading="lazy"
             className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
