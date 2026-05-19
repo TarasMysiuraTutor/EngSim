@@ -2,7 +2,7 @@
 
 Платформа професійних інженерних калькуляторів для технічних розрахунків у ключових напрямках: опір матеріалів, гідравліка, термодинаміка, енергетика, масопередача.
 
-Поточна версія: **1.3.0**
+Поточна версія: **1.4.0**
 
 Живий сайт: https://eng-sim.vercel.app/
 
@@ -92,12 +92,29 @@ npm run build
 
 ---
 
+## SSG Prerender
+
+Для Google індексації кожна сторінка генерується як статичний HTML.
+
+```bash
+npm run build:all
+```
+
+Що робить:
+1. `vite build` — клієнтський бандл у `dist/`
+2. `vite build --ssr` — SSR бандл у `dist/server/`
+3. `node prerender.mjs` — генерує HTML для 18 маршрутів
+
+Після build у `dist/` з'являться папки: `about/`, `calculators/`, `reference/math/` тощо — кожна з власним `index.html`.
+
+---
+
 ## Деплой на Vercel
 
 Проект автоматично деплоїться через GitHub при пуші в `main`.
 
 `vercel.json` налаштований:
-- `buildCommand: npm run build`
+- `buildCommand: npm run build:all` (включає SSG prerender)
 - `outputDirectory: dist`
 - Явні rewrites: `sitemap.xml` і `robots.txt` віддаються напряму, решта → `index.html`
 - Content-Type заголовки для `sitemap.xml` і `robots.txt`
@@ -149,6 +166,19 @@ VITE_PUBLIC_APP_NAME=EngSim
 ---
 
 ## Журнал змін
+
+### v1.4.0 — 2026-05-20
+
+- **SSG prerender** — Google тепер бачить повний HTML для кожної сторінки.
+  - Новий `src/entry-server.jsx` — SSR entry point через `StaticRouter` (react-router v7).
+  - Новий `src/AppRoutes.jsx` — маршрути винесено в окремий компонент для спільного використання клієнтом і SSR.
+  - Новий `prerender.mjs` — генерує 18 статичних HTML файлів у `dist/`.
+  - `src/App.jsx` — спрощено: тепер тільки `BrowserRouter` + `AppRoutes`.
+  - `src/main.jsx` — `hydrateRoot` для SSG сторінок, `createRoot` для dev.
+  - `src/components/Footer.jsx` — SSR guard для `window.location.pathname`.
+  - `package.json` — нові скрипти: `build:ssr`, `build:all`, `prerender`.
+  - `vite.config.js` — розділено конфіг client/SSR збірок.
+- **Налаштування Vercel**: змінити Build Command на `npm run build:all`.
 
 ### v1.3.0 — 2026-05-20
 

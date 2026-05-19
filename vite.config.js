@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   plugins: [react()],
   base: "/",
 
@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
 
-  build: {
+  build: isSsrBuild ? {} : {
     outDir: "dist",
     sourcemap: false,
     minify: "esbuild",
@@ -38,17 +38,7 @@ export default defineConfig({
     drop: process.env.NODE_ENV === "production" ? ["console", "debugger"] : [],
   },
 
-  server: {
-    port: 3000,
-    open: true,
-  },
-
-  preview: {
-    port: 4173,
-    strictPort: false,
-  },
-
-  optimizeDeps: {
-    include: ["react", "react-dom", "react-router-dom"],
-  },
-});
+  server: { port: 3000, open: true },
+  preview: { port: 4173 },
+  optimizeDeps: { include: ["react", "react-dom", "react-router-dom"] },
+}));

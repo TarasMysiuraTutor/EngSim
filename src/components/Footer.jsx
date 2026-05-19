@@ -14,7 +14,7 @@ const Footer = ({ t, currentLang }) => {
     e.preventDefault();
 
     const baseUrl = import.meta.env.BASE_URL;
-    const currentPath = window.location.pathname;
+    const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
 
     // Перевіряємо чи ми на головній сторінці
     const isHomePage =
@@ -295,9 +295,9 @@ const Footer = ({ t, currentLang }) => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-blue-500/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-            <p className="flex items-center justify-between gap-4 w-full md:w-auto">
+            <p className="flex items-center gap-3">
               <span>© {currentYear} {t.aboutName || "EngSim"}. {t.footerRights || "All rights reserved."}</span>
-              <span className="text-blue-400/70 border border-blue-500/30 rounded mx-5 px-2.5 py-0.5 text-xs font-mono">
+              <span className="text-blue-400/70 border border-blue-500/30 rounded px-1.5 py-0.5 text-xs font-mono">
                 v{APP_VERSION}
               </span>
             </p>
