@@ -39,25 +39,12 @@ const Navbar = ({ currentLang, setCurrentLang, t }) => {
           className="flex items-center text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer"
         >
           <img
-              // className="mr--10"
               src={logoSvg}
               alt="Eng-Sim Logo"
               width="250"
               height="50"
-              loading="eager" // Логотип вантажимо відразу
+              loading="eager"
             />
-          {/* <picture>
-            <source srcSet={logoAvif} type="image/avif" />
-            <source srcSet={logoWebp} type="image/webp" />
-            <img
-              className="w-50 mr-5"
-              src={logoPng}
-              alt="Eng-Sim Logo"
-              width="150"
-              height="50"
-              loading="eager" // Логотип вантажимо відразу
-            />
-          </picture> */}
           {t.logo}
         </button>
 

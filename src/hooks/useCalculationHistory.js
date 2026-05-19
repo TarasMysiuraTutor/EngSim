@@ -1,4 +1,3 @@
-// src/hooks/useCalculationHistory.js
 import { useState, useEffect } from "react";
 
 const STORAGE_KEY = "engsim_calc_history";
@@ -16,8 +15,8 @@ export const useCalculationHistory = () => {
           const parsed = JSON.parse(stored);
           setHistory(parsed);
         }
-      } catch (error) {
-        console.error("Error loading history:", error);
+      } catch {
+        // ignore
       }
     };
 
@@ -57,38 +56,14 @@ export const useCalculationHistory = () => {
     return newItem;
   };
 
-  // const addCalculation = (calculatorId, calculatorName, inputs, result, lang) => {
-  //   const newItem = {
-  //     id: Date.now(),
-  //     calculatorId,
-  //     calculatorName,
-  //     inputs,
-  //     result,
-  //     lang,
-  //     timestamp: Date.now()
-  //   };
-
-  //   setHistory(prev => {
-  //     const updated = [newItem, ...prev].slice(0, MAX_HISTORY_ITEMS);
-  //     try {
-  //       localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
-  //     } catch (error) {
-  //       console.error('Error saving history:', error);
-  //     }
-  //     return updated;
-  //   });
-
-  //   return newItem;
-  // };
-
   // Видалення одного елемента
   const removeCalculation = (id) => {
     setHistory((prev) => {
       const updated = prev.filter((item) => item.id !== id);
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
-      } catch (error) {
-        console.error("Error updating history:", error);
+      } catch {
+        // ignore
       }
       return updated;
     });
@@ -99,9 +74,9 @@ export const useCalculationHistory = () => {
     setHistory([]);
     try {
       localStorage.removeItem(STORAGE_KEY);
-    } catch (error) {
-      console.error("Error clearing history:", error);
-    }
+    } catch {
+        // ignore
+      }
   };
 
   // Отримання історії для конкретного калькулятора

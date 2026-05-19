@@ -386,10 +386,11 @@ const Contact = ({ t, currentLang }) => {
                         ? "noopener noreferrer"
                         : undefined
                     }
-                    className={`flex items-center gap-4 p-4 bg-gradient-to-r from-${method.color}-500/10 to-${method.color}-600/10 border border-${method.color}-500/30 rounded-lg hover:border-${method.color}-500/60 transition-all duration-300 hover:scale-105 group`}
+                    className="flex items-center gap-4 p-4 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-500/30 rounded-lg hover:border-blue-500/60 transition-all duration-300 hover:scale-105 group"
+                    data-color={method.color}
                   >
                     <div
-                      className={`flex-shrink-0 w-12 h-12 bg-gradient-to-br from-${method.color}-500 to-${method.color}-600 rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}
+                      className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300"
                     >
                       {method.icon}
                     </div>

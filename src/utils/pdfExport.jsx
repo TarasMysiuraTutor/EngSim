@@ -1,9 +1,8 @@
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/opt/logo.png"; // opt версія: 97KB замість 439KB
 const LOGO_URL = Logo;
 
-// const LOGO_URL = "../assets/logo.svg"; // ✅ ВАШ PNG логотип (локальний або URL)
 
 import { appConfig } from "@/config/app.config";
 

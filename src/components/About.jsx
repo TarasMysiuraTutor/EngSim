@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import LazyImage from "./LazyImage";
 import photoAvif from "../assets/opt/my-photo.avif";
 import photoWebp from "../assets/opt/my-photo.webp";
-import photoPng from "../assets/opt/my-photo.png";
+import photoPng from "../assets/opt/my-photo.jpg"; // JPG fallback (54KB замість 827KB PNG)
 import { Link } from "react-router-dom";
 
 const About = ({ t }) => {
@@ -109,18 +109,6 @@ const About = ({ t }) => {
                     ]}
                     className="w-full h-auto"
                   />
-
-                  {/* <LazyImage
-                    src={photoPng}
-                    // srcSet={photoSrcSet}
-                    alt="Моє оптимізоване фото"
-                    
-                  /> */}
-                  {/* <img
-                    src={photoPng}
-                    alt={t.aboutName}
-                    className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
-                  /> */}
 
                   {/* Name overlay */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0a0e27] via-[#0a0e27]/80 to-transparent p-6">

@@ -92,10 +92,7 @@ const VideoCard = ({ video, currentLang }) => {
           <img 
             src={thumbnail}
             alt={video.title[currentLang]}
-            onError={(e) => {
-              console.error('Image failed to load:', e.target.src);
-              setImageError(true);
-            }}
+            onError={() => setImageError(true)}
             loading="lazy"
             className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
