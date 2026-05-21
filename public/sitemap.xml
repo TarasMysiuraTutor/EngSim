@@ -2,78 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Головна -->
   <url>
     <loc>https://eng-sim.vercel.app/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://eng-sim.vercel.app/?lang=de"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://eng-sim.vercel.app/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://eng-sim.vercel.app/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://eng-sim.vercel.app/?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eng-sim.vercel.app/"/>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://eng-sim.vercel.app/calculators</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- Основні сторінки -->
+  <url><loc>https://eng-sim.vercel.app/calculators</loc><lastmod>2026-05-20</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://eng-sim.vercel.app/reference</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://eng-sim.vercel.app/library</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eng-sim.vercel.app/videos</loc><lastmod>2026-05-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eng-sim.vercel.app/services</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eng-sim.vercel.app/about</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eng-sim.vercel.app/projects</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eng-sim.vercel.app/contact</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://eng-sim.vercel.app/faq</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
-  <url>
-    <loc>https://eng-sim.vercel.app/reference</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- Довідник -->
+  <url><loc>https://eng-sim.vercel.app/reference/strength</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://eng-sim.vercel.app/reference/hydraulic</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://eng-sim.vercel.app/reference/hydromechanics</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eng-sim.vercel.app/reference/thermal</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://eng-sim.vercel.app/reference/mass</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eng-sim.vercel.app/reference/math</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eng-sim.vercel.app/reference/waterProperties</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <url>
-    <loc>https://eng-sim.vercel.app/library</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Калькулятори — опір матеріалів -->
+  <url><loc>https://eng-sim.vercel.app/calculator/stress</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/beam</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/shaft</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/bolt</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/deformation</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/column</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/shear</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/weld</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
-  <url>
-    <loc>https://eng-sim.vercel.app/projects</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Калькулятори — гідравліка -->
+  <url><loc>https://eng-sim.vercel.app/calculator/pipe</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/pump</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/pressure_loss</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/orifice</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/valve</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/tank</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/hydraulic_cylinder</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/ventilation</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <url>
-    <loc>https://eng-sim.vercel.app/videos</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Калькулятори — термодинаміка -->
+  <url><loc>https://eng-sim.vercel.app/calculator/heattransfer</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/insulation</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/efficiency</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/carnot</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/heat_exchanger</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/convection</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/radiation</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/enthalpy</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <url>
-    <loc>https://eng-sim.vercel.app/services</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- Калькулятори — енергетика -->
+  <url><loc>https://eng-sim.vercel.app/calculator/energy</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/power</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/solar</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/wind</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/transformer</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/motor</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/battery</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculator/cable</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <url>
-    <loc>https://eng-sim.vercel.app/about</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://eng-sim.vercel.app/contact</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://eng-sim.vercel.app/faq</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- Калькулятори — масообмін -->
+  <url><loc>https://eng-sim.vercel.app/calculator/diffusion_flat_wall</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://eng-sim.vercel.app/calculators/mass-transfer/diffusion-flat-wall</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
 </urlset>
