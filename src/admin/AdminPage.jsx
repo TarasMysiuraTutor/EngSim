@@ -6,7 +6,6 @@ import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 // Компоненти
 import { Sidebar } from "./components/Sidebar";
@@ -545,7 +544,6 @@ export default function AdminPage({ currentLang, setCurrentLang, t}) {
           )}
           {/* ✅ FOOTER */}
           <div className="mt-20">
-            <Footer t={t} currentLang={currentLang} />
           </div>
         </div>
         {/* ✅ END MAIN CONTENT */}
