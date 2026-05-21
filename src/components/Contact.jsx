@@ -41,7 +41,7 @@ const Contact = ({ t, currentLang }) => {
         setStatus("error");
       }
     } catch (error) {
-      console.error("Form submission error:", error);
+      if (import.meta.env.DEV) console.error("Form submission error:", error);
       setStatus("error");
     } finally {
       setIsSubmitting(false);

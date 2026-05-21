@@ -6,6 +6,7 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
+import ErrorBoundary from './components/ErrorBoundary';
 import ScrollToTopOnNavigate from './components/ScrollToTopOnNavigate';
 import { translations } from './data/translations';
 
@@ -53,6 +54,7 @@ export default function AppRoutes({ currentLang = 'en', setCurrentLang = () => {
       <Navbar currentLang={currentLang} setCurrentLang={setCurrentLang} t={t} />
       <ScrollToTopOnNavigate />
 
+      <ErrorBoundary>
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<HomePage currentLang={currentLang} />} />
@@ -91,6 +93,7 @@ export default function AppRoutes({ currentLang = 'en', setCurrentLang = () => {
           } />
         </Routes>
       </Suspense>
+      </ErrorBoundary>
 
       <ScrollToTop />
     </div>

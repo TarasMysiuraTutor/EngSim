@@ -20,7 +20,7 @@ const Hero = ({ t }) => {
         displayMode: false,
       });
     } catch (error) {
-      console.error("KaTeX error:", error);
+      void error; // KaTeX render failed — показуємо fallback
       return latex;
     }
   };
@@ -34,6 +34,7 @@ const Hero = ({ t }) => {
 
   return (
     <>
+      {/* CSS анімації — безпечно, рядок генерується самим компонентом */}
       <style
         dangerouslySetInnerHTML={{
           __html: `

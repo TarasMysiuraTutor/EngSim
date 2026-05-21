@@ -1,9 +1,8 @@
 // src/pages/ReferenceThermalPage.jsx
+import DOMPurify from 'dompurify';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { thermalReferenceData } from '../data/reference/thermal';
 
 const ReferenceThermalPage = ({ currentLang, setCurrentLang, t }) => {
@@ -82,7 +81,6 @@ const ReferenceThermalPage = ({ currentLang, setCurrentLang, t }) => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
-        <Navbar currentLang={currentLang} setCurrentLang={setCurrentLang} t={t} />
 
         <div className="pt-32 pb-16 px-8">
           <div className="max-w-7xl mx-auto">
@@ -294,7 +292,7 @@ const ReferenceThermalPage = ({ currentLang, setCurrentLang, t }) => {
                           <tr className="bg-orange-500/20 border-b border-orange-500/30">
                             {item.headers[currentLang].map((header, i) => (
                               <th key={i} className="px-4 py-3 text-left text-orange-400 font-semibold">
-                                <span dangerouslySetInnerHTML={{ __html: header }} />
+                                <span dangerouslySetInnerHTML={{ __html: typeof window !== "undefined" ? DOMPurify.sanitize(header) : header }} />
                               </th>
                             ))}
                           </tr>
@@ -362,8 +360,6 @@ const ReferenceThermalPage = ({ currentLang, setCurrentLang, t }) => {
             )}
           </div>
         </div>
-
-        <Footer t={t} currentLang={currentLang} />
       </div>
     </>
   );

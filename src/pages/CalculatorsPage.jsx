@@ -1,9 +1,6 @@
-// src/pages/CalculatorsPage.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { calculators } from '../data/calculators';
 import { categoryMap } from '../data/calculatorsMetadata';
 
@@ -79,11 +76,6 @@ const CalculatorsPage = ({ currentLang, setCurrentLang, t }) => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
-        <Navbar 
-          currentLang={currentLang} 
-          setCurrentLang={setCurrentLang} 
-          t={t} 
-        />
 
         {/* Hero Section */}
         <div className="pt-32 pb-16 px-8">
@@ -201,8 +193,6 @@ const CalculatorsPage = ({ currentLang, setCurrentLang, t }) => {
             )}
           </div>
         </div>
-
-        <Footer t={t} />
       </div>
     </>
   );

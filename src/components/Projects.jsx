@@ -18,7 +18,7 @@ const Projects = ({ t, currentLang }) => {
         displayMode: false,
       });
     } catch (error) {
-      console.error("KaTeX error:", error);
+      void error; // KaTeX render failed — показуємо fallback
       return latex;
     }
   };
@@ -162,6 +162,7 @@ const Projects = ({ t, currentLang }) => {
 
   return (
     <>
+      {/* CSS анімації — безпечно, рядок генерується самим компонентом */}
       <style
         dangerouslySetInnerHTML={{
           __html: `

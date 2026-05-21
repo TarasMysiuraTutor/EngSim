@@ -1,11 +1,8 @@
-// src/pages/CalculatorDetail.jsx, { useState } from "react";
 
 import React, { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import EnhancedInput from "../components/EnhancedInput";
 
 import { calculators } from "../data/calculators";
@@ -48,7 +45,8 @@ const CalculatorDetail = ({ currentLang, setCurrentLang, t }) => {
   // якщо калькулятор не знайдено
   if (!calc) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center text-center text-white p-6">
+      <div className="min-h-screen bg-[#0a0e27] text-white flex items-center justify-center">
+        <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">
           {currentLang === "uk" && "Калькулятор не знайдено"}
           {currentLang === "ru" && "Калькулятор не найден"}
@@ -65,6 +63,7 @@ const CalculatorDetail = ({ currentLang, setCurrentLang, t }) => {
           {currentLang === "en" && "← Back to catalog"}
           {currentLang === "de" && "← Zurück zum Katalog"}
         </Link>
+        </div>
       </div>
     );
   }
@@ -206,11 +205,6 @@ const CalculatorDetail = ({ currentLang, setCurrentLang, t }) => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
-        <Navbar
-          currentLang={currentLang}
-          setCurrentLang={setCurrentLang}
-          t={t}
-        />
 
         <div className="max-w-7xl mx-auto pt-28 pb-20 px-8 md:px-12 relative">
           {/* Breadcrumbs */}
@@ -567,8 +561,6 @@ const CalculatorDetail = ({ currentLang, setCurrentLang, t }) => {
             </button>
           </div>
         </div>
-
-        <Footer t={t} />
       </div>
     </>
   );

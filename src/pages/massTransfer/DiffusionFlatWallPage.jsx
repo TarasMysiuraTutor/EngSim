@@ -3,9 +3,8 @@ import { schema } from "@/calculators/massTransfer/diffusionFlatWall/schema";
 import { calculate } from "@/calculators/massTransfer/diffusionFlatWall/formulas";
 
 import CalculatorRenderer from "@/components/CalculatorRenderer";
-
-// ✅ ТВОЇ реальні сервіси
 import { useCalculationHistory } from "@/hooks/useCalculationHistory";
+import SEO from "@/components/SEO";
 import { exportToPDF } from "@/utils/pdfExport";
 
 
@@ -14,10 +13,7 @@ const DiffusionFlatWallPage = ({ currentLang }) => {
   const { addCalculation } = useCalculationHistory();
 
   const handleCalculate = (inputs) => {
-    // 1️⃣ ЧИСТИЙ РОЗРАХУНОК (як зараз)
     const results = calculate(inputs);
-
-    // 2️⃣ ✅ ПУНКТ 6 — ІСТОРІЯ
     addCalculation(
       meta.id,               // calculatorId
       meta.title[currentLang],      // calculatorName
@@ -43,7 +39,20 @@ const DiffusionFlatWallPage = ({ currentLang }) => {
     );
   };
 
+  const lang = currentLang || "en";
+  const titles = {
+    en: "Diffusion Through Flat Wall — Mass Transfer Calculator",
+    uk: "Дифузія через плоску стінку — Калькулятор масопередачі",
+    de: "Diffusion durch ebene Wand — Stoffübertragungs-Rechner",
+  };
+
   return (
+    <>
+      <SEO
+        title={titles[lang] || titles.en}
+        description="Calculate diffusion mass transfer through a flat wall. EngSim engineering calculator."
+        lang={lang}
+      />
     <>
       <h1>{meta.title[currentLang]}</h1>
 
@@ -55,6 +64,7 @@ const DiffusionFlatWallPage = ({ currentLang }) => {
   onExportPdf={handleExportPdf}
 />
 
+    </>
     </>
   );
 };

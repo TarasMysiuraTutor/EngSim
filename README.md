@@ -2,7 +2,7 @@
 
 Платформа професійних інженерних калькуляторів для технічних розрахунків у ключових напрямках: опір матеріалів, гідравліка, термодинаміка, енергетика, масопередача.
 
-Поточна версія: **1.4.0**
+Поточна версія: **1.5.0**
 
 Живий сайт: https://eng-sim.vercel.app/
 
@@ -166,6 +166,25 @@ VITE_PUBLIC_APP_NAME=EngSim
 ---
 
 ## Журнал змін
+
+### v1.5.0 — 2026-05-20
+
+- **Архітектура**:
+  - Прибрано дублювання `<Navbar>` і `<Footer>` з 19 сторінок — вони рендеряться один раз у `AppRoutes.jsx`. Раніше кожна сторінка рендерила власний Navbar.
+  - Додано `ErrorBoundary` компонент навколо `Suspense` у `AppRoutes.jsx` — тепер помилки у lazy-сторінках показують fallback замість білого екрану.
+- **Безпека**:
+  - `ReferenceThermalPage.jsx` — `dangerouslySetInnerHTML` заголовків таблиць тепер санітизується через `DOMPurify`.
+  - `Contact.jsx` — `console.error` форми тепер тільки у `DEV` режимі.
+- **Виправлення помилок**:
+  - `CalculatorDetail.jsx` — виправлено невідповідність JSX тегів у early return (`<>` → `</div>`).
+  - `FormulaDisplay.jsx` — прибрано мертвий код після `return`, `console.error` замінено на тихий fallback.
+  - `DiffusionFlatWallPage.jsx` — додано SEO компонент, прибрано emoji-коментарі.
+- **Файли**:
+  - `src/pages/massTransfer/MassTransferCalculatorPage.jsx` — видалено (мертвий файл з неіснуючими імпортами).
+  - `src/components/ErrorBoundary.jsx` — новий компонент.
+- **Чистота коду**:
+  - `videosData.js` — `console.warn` замінено на тихий fallback.
+  - `Projects.jsx`, `Hero.jsx`, `Services.jsx` — `console.error` у KaTeX catch замінено.
 
 ### v1.4.0 — 2026-05-20
 

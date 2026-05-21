@@ -517,7 +517,7 @@ export const convertGoogleDriveUrl = (url) => {
 export const downloadInstruction = (video, lang) => {
   const instruction = video.instructions?.[lang];
   if (!instruction) {
-    console.warn(`Інструкція для мови ${lang} не знайдена`);
+    void lang; // інструкція не знайдена — тихо ігноруємо
     return;
   }
 

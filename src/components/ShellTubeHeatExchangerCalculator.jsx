@@ -1,6 +1,3 @@
-// ShellTubeHeatExchangerCalculator.jsx
-// Калькулятор кожухотрубного теплообмінника
-// Використовує FormulaDisplay для відображення формул
 
 import React, { useState } from 'react';
 import FormulaDisplay from './FormulaDisplay';
