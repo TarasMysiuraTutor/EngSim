@@ -1,144 +1,62 @@
-// Service Worker для EngSim
-const CACHE_NAME = "engsim-v1";
-const BASE_PATH = "/EngSim";
-const urlsToCache = [`${BASE_PATH}/`, `${BASE_PATH}/index.html`];
+// Service Worker для EngSim — Vercel деплой
+const CACHE_NAME = "engsim-v2";
+const BASE_PATH = "/"; // Vercel — корінь, не /EngSim/
 
-// Встановлення Service Worker
+const STATIC_ASSETS = [
+  "/",
+  "/index.html",
+  "/manifest.json",
+  "/favicon.ico",
+];
+
+// Встановлення — кешуємо статичні ресурси
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches
-      .open(CACHE_NAME)
-      .then((cache) => {
-        console.log("Opened cache");
-        return cache.addAll(urlsToCache);
-      })
-      .catch((err) => {
-        console.log("Cache addAll error:", err);
-      }),
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(STATIC_ASSETS))
   );
   self.skipWaiting();
 });
 
-// Активація Service Worker
+// Активація — видаляємо старі кеші
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log("Deleting old cache:", cacheName);
-            return caches.delete(cacheName);
-          }
-        }),
-      );
-    }),
+    caches.keys().then((names) =>
+      Promise.all(
+        names
+          .filter((name) => name !== CACHE_NAME)
+          .map((name) => caches.delete(name))
+      )
+    )
   );
   self.clients.claim();
 });
 
-// Функція перевірки чи можна кешувати запит
-function isValidRequest(request) {
+// Fetch — стратегія: Network First для HTML, Cache First для статики
+self.addEventListener("fetch", (event) => {
+  const { request } = event;
   const url = new URL(request.url);
 
-  // Ігноруємо розширення браузера
-  if (
-    url.protocol === "chrome-extension:" ||
-    url.protocol === "moz-extension:" ||
-    url.protocol === "safari-extension:"
-  ) {
-    return false;
-  }
+  // Пропускаємо не-GET і cross-origin запити
+  if (request.method !== "GET" || url.origin !== self.location.origin) return;
 
-  // Ігноруємо Formspree (залишаємо, бо ви не хочете кешувати POST-запити до нього)
-  if (url.hostname.includes("formspree.io")) {
-    return false;
-  }
-
-  // !!! ДОДАЙТЕ ЦЮ ПЕРЕВІРКУ !!!
-  // Дозволяємо Cloudinary, щоб Service Worker міг його обробити
-  if (url.hostname.includes("res.cloudinary.com")) {
-    return true; // Це дозволить пройти перевірці
-  }
-
-  // Ігноруємо source maps
-  if (url.pathname.endsWith(".map")) {
-    return false;
-  }
-
-  // Тільки HTTP/HTTPS
-  if (!url.protocol.startsWith("http")) {
-    return false;
-  }
-
-  return true;
-}
-
-// Обробка запитів
-self.addEventListener("fetch", (event) => {
-  // Перевіряємо чи валідний запит
-  if (!isValidRequest(event.request)) {
+  // HTML сторінки — завжди з мережі (щоб SSG контент був актуальним)
+  if (request.headers.get("accept")?.includes("text/html")) {
+    event.respondWith(
+      fetch(request).catch(() => caches.match("/index.html"))
+    );
     return;
   }
 
+  // Статичні ресурси (JS, CSS, images) — Cache First
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      // Повертаємо з кешу якщо є
-      if (response) {
+    caches.match(request).then(
+      (cached) => cached || fetch(request).then((response) => {
+        if (response.ok) {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+        }
         return response;
-      }
-
-      // Клонуємо запит
-      const fetchRequest = event.request.clone();
-
-      return fetch(fetchRequest)
-        .then((response) => {
-          // Перевіряємо чи валідна відповідь
-          if (
-            !response ||
-            response.status !== 200 ||
-            response.type === "error" ||
-            !response.ok
-          ) {
-            return response;
-          }
-
-          // Перевіряємо тип відповіді
-          const contentType = response.headers.get("content-type");
-          if (
-            !contentType ||
-            (!contentType.includes("text/html") &&
-              !contentType.includes("text/css") &&
-              !contentType.includes("application/javascript") &&
-              !contentType.includes("image/"))
-          ) {
-            return response;
-          }
-
-          // Клонуємо відповідь для кешування
-          const responseToCache = response.clone();
-
-          caches.open(CACHE_NAME).then((cache) => {
-            // Додаткова перевірка перед кешуванням
-            if (isValidRequest(event.request)) {
-              cache.put(event.request, responseToCache).catch((err) => {
-                console.log("Cache put error:", err);
-              });
-            }
-          });
-
-          return response;
-        })
-        .catch((error) => {
-          console.log("Fetch failed:", error);
-          // Можна повернути offline сторінку
-          return new Response("Offline - Please check your connection", {
-            status: 503,
-            statusText: "Service Unavailable",
-            headers: new Headers({
-              "Content-Type": "text/plain",
-            }),
-          });
-        });
-    }),
+      })
+    )
   );
 });

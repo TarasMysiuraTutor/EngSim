@@ -1,5 +1,6 @@
 // src/components/AcademicProfiles.jsx
 import React from "react";
+import eNUFTIRLogoWebp from "../assets/dspace-logo.webp";
 import eNUFTIRLogo from "../assets/dspace-logo.png";
 
 const AcademicProfiles = ({ t }) => {
