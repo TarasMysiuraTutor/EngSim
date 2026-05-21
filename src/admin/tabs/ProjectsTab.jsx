@@ -15,7 +15,7 @@ export const ProjectsTab = ({
   const t = adminTranslations[currentLang];
 
   // -----------------------------------------
-  // ✅ handlers
+ 
   // -----------------------------------------
 
   const setField = (field, value) => {
@@ -209,4 +209,3 @@ export const ProjectsTab = ({
     </>
   );
 };
-``;

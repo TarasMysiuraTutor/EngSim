@@ -88,7 +88,7 @@ export const exportToPDF = async (data, currentLang = "de") => {
   const margin = 20;
   let y = 20;
 
-  // ✅ Завантаження логотипу
+ 
   const logo = await loadLogo(LOGO_URL);
   if (logo) {
     const maxW = 35; // ширина логотипу

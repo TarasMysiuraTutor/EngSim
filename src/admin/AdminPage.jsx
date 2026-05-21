@@ -1,5 +1,5 @@
 // =============================================================
-// ✅ AdminPage.jsx (Enterprise + Premium Sidebar + Multilang)
+
 // =============================================================
 
 import React, { useState, useMemo } from "react";
@@ -8,36 +8,36 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-// ✅ Компоненти
+// Компоненти
 import { Sidebar } from "./components/Sidebar";
 import { AdminSearchBar } from "./components/AdminSearchBar";
 import { AdminFilterBar } from "./components/AdminFilterBar";
 import { AdminSortBar } from "./components/AdminSortBar";
 import { AdminList } from "./components/AdminList";
 
-// ✅ Вкладки
+// Вкладки
 import { VideosTab } from "./tabs/VideosTab";
 import { ServicesTab } from "./tabs/ServicesTab";
 import { ProjectsTab } from "./tabs/ProjectsTab";
 import { BooksTab } from "./tabs/BooksTab";
 import { TestimonialsTab } from "./tabs/TestimonialsTab";
 
-// ✅ Багатомовність
+// Багатомовність
 import { adminTranslations } from "./i18n/adminTranslations";
 
-// ✅ Дані JSON
+// Дані JSON
 import videosData from "../data/json/videos.json";
 import servicesData from "../data/json/services.json";
 import projectsData from "../data/json/projects.json";
 import booksData from "../data/json/books.json";
 import testimonialsData from "../data/json/testimonials.json";
 
-// ✅ Утиліти
+// Утиліти
 import { searchItems } from "./components/utils/search";
 import { filterItems } from "./components/utils/filter";
 import { sortItems } from "./components/utils/sort";
 
-// ✅ Іконки
+// Іконки
 import { iconPalette, projectIconTypes } from "./components/utils/icons";
 
 // Простий хеш-захист. Щоб змінити пароль — замініть ADMIN_HASH нижче.
@@ -86,20 +86,20 @@ export default function AdminPage({ currentLang, setCurrentLang, t}) {
   };
 
   // ---------------------------------------------------------
-  // ✅ ТАБИ
+ 
   // ---------------------------------------------------------
   const [activeTab, setActiveTab] = useState("videos");
   const [editMode, setEditMode] = useState(false);
 
   // ---------------------------------------------------------
-  // ✅ ПОШУК / ФІЛЬТР / СОРТУВАННЯ
+ 
   // ---------------------------------------------------------
   const [searchQuery, setSearchQuery] = useState("");
   const [filterCategory, setFilterCategory] = useState("all");
   const [sortBy, setSortBy] = useState("id");
 
   // ---------------------------------------------------------
-  // ✅ ОСНОВНІ ДАНІ
+ 
   // ---------------------------------------------------------
   const [videos, setVideos] = useState(videosData);
   const [services, setServices] = useState(servicesData);
@@ -108,7 +108,7 @@ export default function AdminPage({ currentLang, setCurrentLang, t}) {
   const [testimonials, setTestimonials] = useState(testimonialsData);
 
   // ---------------------------------------------------------
-  // ✅ ФОРМИ (для редагування)
+ 
   // ---------------------------------------------------------
 
   const [videoData, setVideoData] = useState({
@@ -174,7 +174,7 @@ export default function AdminPage({ currentLang, setCurrentLang, t}) {
   };
 
   // ---------------------------------------------------------
-  // ✅ COMPUTED LIST (useMemo)
+ 
   // ---------------------------------------------------------
   const filteredItems = useMemo(() => {
     if (activeTab === "videos") return applyFilters(videos);
@@ -194,15 +194,14 @@ export default function AdminPage({ currentLang, setCurrentLang, t}) {
   ]);
 
   // ---------------------------------------------------------
-  // ✅ COPY JSON HELPER
+ 
   // ---------------------------------------------------------
   const copyToClipboard = (data) => {
     navigator.clipboard.writeText(JSON.stringify(data, null, 2));
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
   };
-  ``;
-  // ✅ SAVE ITEM
+ 
   // ---------------------------------------------------------
   const saveToJSON = () => {
     const maps = {
@@ -230,7 +229,7 @@ export default function AdminPage({ currentLang, setCurrentLang, t}) {
   };
 
   // ---------------------------------------------------------
-  // ✅ DELETE ITEM
+ 
   // ---------------------------------------------------------
   const deleteItem = (type, id) => {
     if (!window.confirm(`${t.deleteConfirm}${id}?`)) return;
@@ -246,7 +245,7 @@ export default function AdminPage({ currentLang, setCurrentLang, t}) {
   };
 
   // ---------------------------------------------------------
-  // ✅ LOAD EXISTING ITEM INTO THE EDITOR
+ 
   // ---------------------------------------------------------
   const loadExisting = (type, id) => {
     const lists = {
@@ -310,7 +309,7 @@ export default function AdminPage({ currentLang, setCurrentLang, t}) {
   }
 
   return (
-    // ✅ RENDER
+   
     <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-white">
       <Navbar currentLang={currentLang} setCurrentLang={setCurrentLang} t={t} />
 
@@ -558,5 +557,4 @@ export default function AdminPage({ currentLang, setCurrentLang, t}) {
   {
     /* ✅ END PAGE WRAPPER */
   }
-  // );
 }

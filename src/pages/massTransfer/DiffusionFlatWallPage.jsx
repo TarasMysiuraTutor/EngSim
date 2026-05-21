@@ -26,7 +26,7 @@ const DiffusionFlatWallPage = ({ currentLang }) => {
   };
 
   const handleExportPdf = (inputs, results) => {
-    // 3️⃣ ✅ ПУНКТ 6 — PDF
+    // PDF export
     exportToPDF(
       {
         calculatorName: meta.title[currentLang],

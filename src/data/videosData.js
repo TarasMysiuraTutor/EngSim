@@ -16,7 +16,7 @@ export const videosData = [
       de: "PROBLEM-BESCHREIBUNG: TUTORIAL 01. Wasser fließt zwischen zwei Tanks durch einen einzelnen grundlegenden Rohrleitung. Ein scharfer Eingangstyp kann für den Rohreintritt aus Tank A angenommen werden. Druckmesswerte sind unten dargestellt. Nehmen Sie den atmosphärischen Druck = 100 kPa an. Das Ziel ist es, die Massenstromrate durch die Rohrleitung zu berechnen.",
     },
 
-    youtubeId: "D7DFO0kUESI", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
+    youtubeId: "D7DFO0kUESI", // TODO: замінити на реальний YouTube ID
     category: "flownex",
     categoryName: {
       uk: "FlowNEX",
@@ -103,7 +103,7 @@ export const videosData = [
       ru: "ОПИСАНИЕ ПРОБЛЕМЫ: РУКОВОДСТВО 02. Три резервуара соединены в точке J. Высота точки J задана в таблице ниже. Условия резервуаров заданы в таблицах ниже. Определите статическое давление в точке J, а также соответствующие массовые расходы через каждый из трех трубопроводов.",
       de: "PROBLEM-BESCHREIBUNG: TUTORIAL 02. Drei Tanks sind an Knotenpunkt J miteinander verbunden. Die Höhe des Knotenpunkts J ist in der Tabelle unten gegeben. Die Tankbedingungen sind in den Tabellen unten gegeben. Bestimmen Sie den statischen Druck im Knotenpunkt J sowie die entsprechenden Massenströme durch jeden der drei Rohre.",
     },
-    youtubeId: "ByAOdKbjMF8", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
+    youtubeId: "ByAOdKbjMF8", // TODO: замінити на реальний YouTube ID
     category: "flownex",
     categoryName: {
       uk: "FlowNEX",
@@ -313,7 +313,7 @@ export const videosData = [
   //     en: "Step-by-step creation of a complex engineering part using core SolidWorks tools",
   //     de: "Schritt-für-Schritt-Erstellung eines komplexen technischen Teils mit SolidWorks",
   //   },
-  //   youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID вашого відео
+  //   youtubeId: "dQw4w9WgXcQ", // TODO: замінити на реальний YouTube ID вашого відео
   //   category: "solidworks",
   //   categoryName: {
   //     uk: "SolidWorks",
@@ -338,7 +338,7 @@ export const videosData = [
   //     en: "Setup and hydraulic calculation in FlowNEX for pipeline systems",
   //     de: "Einrichtung und hydraulische Berechnung in FlowNEX für Rohrleitungssysteme",
   //   },
-  //   youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
+  //   youtubeId: "dQw4w9WgXcQ", // TODO: замінити на реальний YouTube ID
   //   category: "flownex",
   //   categoryName: {
   //     uk: "FlowNEX",
@@ -363,7 +363,7 @@ export const videosData = [
   //     en: "Setup and hydraulic calculation in FlowNEX for pipeline systems",
   //     de: "Einrichtung und hydraulische Berechnung in FlowNEX für Rohrleitungssysteme",
   //   },
-  //   youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
+  //   youtubeId: "dQw4w9WgXcQ", // TODO: замінити на реальний YouTube ID
   //   category: "flownex",
   //   categoryName: {
   //     uk: "FlowNEX",
@@ -388,7 +388,7 @@ export const videosData = [
   //     en: "Creating technical drawings with dimensions and annotations",
   //     de: "Erstellung technischer Zeichnungen mit Maßen und Anmerkungen",
   //   },
-  //   youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
+  //   youtubeId: "dQw4w9WgXcQ", // TODO: замінити на реальний YouTube ID
   //   category: "autocad",
   //   categoryName: {
   //     uk: "AutoCAD",
@@ -413,7 +413,7 @@ export const videosData = [
   //     en: "Performing matrix calculations and solving equation systems",
   //     de: "Durchführung von Matrixberechnungen und Lösung von Gleichungssystemen",
   //   },
-  //   youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
+  //   youtubeId: "dQw4w9WgXcQ", // TODO: замінити на реальний YouTube ID
   //   category: "mathcad",
   //   categoryName: {
   //     uk: "MathCAD",
@@ -438,7 +438,7 @@ export const videosData = [
   //     en: "Creating assembly drawings and operational documentation for mechanical units",
   //     de: "Erstellen von Montagezeichnungen und Betriebsdokumentation",
   //   },
-  //   youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
+  //   youtubeId: "dQw4w9WgXcQ", // TODO: замінити на реальний YouTube ID
   //   category: "solidworks",
   //   categoryName: {
   //     uk: "SolidWorks",
@@ -463,7 +463,7 @@ export const videosData = [
   //     en: "Setting up thermal calculations for heating systems and analyzing results",
   //     de: "Einrichtung thermischer Berechnungen für Heizsysteme",
   //   },
-  //   youtubeId: "dQw4w9WgXcQ", // ⚠️ ЗАМІНІТЬ на реальний YouTube ID
+  //   youtubeId: "dQw4w9WgXcQ", // TODO: замінити на реальний YouTube ID
   //   category: "flownex",
   //   categoryName: {
   //     uk: "FlowNEX",

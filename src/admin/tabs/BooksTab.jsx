@@ -14,7 +14,7 @@ export const BooksTab = ({
   const t = adminTranslations[currentLang];
 
   // -----------------------------------------
-  // ✅ handlers
+ 
   // -----------------------------------------
   const setField = (field, value) => {
     setBookData(prev => ({

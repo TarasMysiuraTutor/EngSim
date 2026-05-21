@@ -3,7 +3,7 @@ import React from "react";
 import { Edit2, Trash2 } from "lucide-react";
 import { adminTranslations } from "../i18n/adminTranslations";
 
-// ✅ Функція для отримання заголовку з fallback-механізмом
+// Отримання заголовку з fallback
 const getTitle = (item, lang) => {
   if (item?.title) {
     return (
@@ -18,7 +18,7 @@ const getTitle = (item, lang) => {
   return `#${item.id}`;
 };
 
-// ✅ Функція для короткого опису (50–80 символів)
+// Короткий опис (50-80 символів)
 const getShortDesc = (item, lang) => {
   if (!item?.desc) return null;
   const text =

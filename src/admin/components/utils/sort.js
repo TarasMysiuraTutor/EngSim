@@ -26,13 +26,13 @@ export function sortItems(items, sortBy = "id") {
   switch (sortBy) {
 
     // ---------------------------
-    // ✅ Sort by numeric: ID
+   
     // ---------------------------
     case "id":
       return arr.sort((a, b) => (a.id || 0) - (b.id || 0));
 
     // ---------------------------
-    // ✅ Sort by multilingual title
+   
     // ---------------------------
     case "title":
       return arr.sort((a, b) =>
@@ -40,7 +40,7 @@ export function sortItems(items, sortBy = "id") {
       );
 
     // ---------------------------
-    // ✅ Sort by pages (books)
+   
     // ---------------------------
     case "pages":
       return arr.sort(
@@ -48,7 +48,7 @@ export function sortItems(items, sortBy = "id") {
       );
 
     // ---------------------------
-    // ✅ Sort by category
+   
     // ---------------------------
     case "category":
       return arr.sort((a, b) =>
@@ -56,7 +56,7 @@ export function sortItems(items, sortBy = "id") {
       );
 
     // ---------------------------
-    // ✅ Sort by date (videos, projects)
+   
     // ---------------------------
     case "date":
       return arr.sort((a, b) => {
@@ -66,7 +66,7 @@ export function sortItems(items, sortBy = "id") {
       });
 
     // ---------------------------
-    // ✅ Sort by name inside resources (videos)
+   
     // ---------------------------
     case "firstResource":
       return arr.sort((a, b) => {
@@ -76,7 +76,7 @@ export function sortItems(items, sortBy = "id") {
       });
 
     // ---------------------------
-    // ✅ Sort by dynamic field (fallback)
+   
     // ---------------------------
     default:
       // If object has a simple sortable field — try to sort by it

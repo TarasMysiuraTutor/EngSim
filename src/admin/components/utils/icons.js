@@ -1,5 +1,5 @@
 // =======================================
-// ✅ iconPalette — використовується у ServicesTab
+// iconPalette — ServicesTab
 // =======================================
 // import { adminTranslations } from "../../adminTranslations";
 
@@ -16,7 +16,7 @@ export const iconPalette = [
 
 
 // =======================================
-// ✅ projectIconTypes — використовується у ProjectsTab
+// projectIconTypes — ProjectsTab
 // =======================================
 
 export const projectIconTypes = [

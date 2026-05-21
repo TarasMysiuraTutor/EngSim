@@ -66,7 +66,12 @@ const AcademicProfiles = ({ t }) => {
     {
       name: "eNUFTIR",
       url: "https://dspace.nuft.edu.ua/browse/author?order=ASC&rpp=20&value=%D0%9C%D0%B8%D1%81%D1%8E%D1%80%D0%B0,%20%D0%A2%D0%B0%D1%80%D0%B0%D1%81%20%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87",
-      icon: <img className="w-full h-full object-contain" src={eNUFTIRLogo} alt="eNUFTIR Logo" />,
+      icon: (
+        <picture>
+          <source srcSet={eNUFTIRLogoWebp} type="image/webp" />
+          <img className="w-full h-full object-contain" src={eNUFTIRLogo} alt="eNUFTIR Logo" />
+        </picture>
+      ),
       color: "from-gray-500  to-indigo-100",
       description: t.enuftirDesc || "NUFT Institutional Repository",
       isLargeIcon: true, // Спеціальний прапорець для більшого контейнера
