@@ -1,14 +1,10 @@
-// src/pages/VideosPage.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import VideoCard from "../components/VideoCard";
 import VideoFilter from "../components/VideoFilter";
 import { videosData } from "../data/videosData";
 
-import videos from "../data/json/videos.json"; // ✅ Ось головне!
+import videos from "../data/json/videos.json";
 
 import SEO from "../components/SEO";
 
@@ -144,7 +140,6 @@ const VideosPage = ({ currentLang, setCurrentLang, t }) => {
       description:
         video.description?.[currentLang] || video.description?.en || "",
       thumbnailUrl: `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`,
-      // uploadDate: video.date,
       uploadDate: new Date(video.date).toISOString(),
       duration: toIsoDuration(video.duration) || "",
       genre: video.category,
@@ -163,31 +158,28 @@ const VideosPage = ({ currentLang, setCurrentLang, t }) => {
       item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
-  ``;
+
+  const breadcrumbs = [
+    { label: t.home || "Home", path: "/" },
+    {
+      label: currentLang === "uk" ? "Відеоуроки" :
+             currentLang === "ru" ? "Видеоуроки" :
+             currentLang === "de" ? "Video-Tutorials" : "Video Tutorials",
+      path: "/videos"
+    },
+  ];
 
   return (
     <>
       <SEO
         {...seoVideos[currentLang]}
         jsonld={[
-          jsonLd, // ✅ VideosPage
-          buildBreadcrumbJsonLd(breadcrumbs), // ✅ BreadcrumbList
+          jsonLd,
+          buildBreadcrumbJsonLd(breadcrumbs),
         ]}
       />
-      {/* <Helmet>
-        <title>{pageTitle[currentLang]}</title>
-        <meta name="description" content={pageDesc[currentLang]} />
-        <meta property="og:title" content={pageTitle[currentLang]} />
-        <meta property="og:description" content={pageDesc[currentLang]} />
-        <link rel="canonical" href={`${appConfig.siteUrl}/videos`} />
-      </Helmet> */}
 
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200">
-        <Navbar
-          currentLang={currentLang}
-          setCurrentLang={setCurrentLang}
-          t={t}
-        />
 
         <div className="pt-32 pb-16 px-8">
           <div className="max-w-7xl mx-auto">
@@ -312,8 +304,6 @@ const VideosPage = ({ currentLang, setCurrentLang, t }) => {
             </div>
           </div>
         </div>
-
-        <Footer t={t} />
       </div>
     </>
   );

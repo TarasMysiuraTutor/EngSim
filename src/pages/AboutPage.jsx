@@ -2,7 +2,6 @@
 // ============================================
 import React from "react";
 import About from "../components/About";
-import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import AcademicProfiles from "../components/AcademicProfiles";
 import SEO from "../components/SEO";
@@ -19,7 +18,7 @@ function AboutPage({ currentLang }) {
     { label: t.aboutTitle, path: "/about" },
   ];
 
-  // ✅ БАГАТОМОВНЕ SEO
+ 
   const seoAbout = {
     uk: {
       title: "Про мене — EngSim",
@@ -51,7 +50,7 @@ function AboutPage({ currentLang }) {
     },
   };
 
-  // ✅ JSON-LD (AboutPage + Person)
+ 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
@@ -85,7 +84,6 @@ function AboutPage({ currentLang }) {
       item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
-  ``;
 
   return (
     <>
@@ -93,8 +91,8 @@ function AboutPage({ currentLang }) {
       <SEO
         {...seoAbout[currentLang]}
         jsonld={[
-          jsonLd, // ✅ твій Person + AboutPage
-          buildBreadcrumbJsonLd(breadcrumbs), // ✅ BreadcrumbList
+          jsonLd,
+          buildBreadcrumbJsonLd(breadcrumbs),
         ]}
       />
 
@@ -104,10 +102,8 @@ function AboutPage({ currentLang }) {
       </div>
 
       <AcademicProfiles t={t} />
-      <Footer t={t} currentLang={currentLang} />
     </>
   );
 }
 
 export default AboutPage;
-``;

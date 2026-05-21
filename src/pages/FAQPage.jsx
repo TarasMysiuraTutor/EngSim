@@ -3,7 +3,6 @@
 // ============================================
 import React from "react";
 import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import SEO from "../components/SEO";
 import { translations } from "../data/translations";
@@ -14,10 +13,10 @@ import { appConfig } from "@/config/app.config";
 function FAQPage({ currentLang }) {
   const t = translations[currentLang];
 
-  // ✅ Breadcrumbs БЕЗ дублю Home
+ 
   const breadcrumbs = [{ label: "FAQ", path: "/faq" }];
 
-  // ✅ Багатомовне SEO
+ 
   const seoFAQ = {
     uk: {
       title: "Питання та відповіді — EngSim",
@@ -49,7 +48,7 @@ function FAQPage({ currentLang }) {
     },
   };
 
-  // ✅ FAQ Schema.org (JSON-LD)
+ 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -80,8 +79,8 @@ function FAQPage({ currentLang }) {
       <SEO
         {...seoFAQ[currentLang]}
         jsonld={[
-          jsonLd, // ✅ FAQPage schema
-          buildBreadcrumbJsonLd(breadcrumbs), // ✅ BreadcrumbList schema
+          jsonLd,
+          buildBreadcrumbJsonLd(breadcrumbs),
         ]}
       />
 
@@ -89,8 +88,6 @@ function FAQPage({ currentLang }) {
         <Breadcrumbs items={breadcrumbs} currentLang={currentLang} />
         <FAQ currentLang={currentLang} />
       </div>
-
-      <Footer t={t} currentLang={currentLang} />
     </>
   );
 }

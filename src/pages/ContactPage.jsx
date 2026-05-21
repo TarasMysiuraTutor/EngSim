@@ -3,7 +3,6 @@
 // ============================================
 import React from "react";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { translations } from "../data/translations";
 
@@ -75,7 +74,6 @@ function ContactPage({ currentLang }) {
       item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
-  ``;
 
   const breadcrumbs = [
     // { label: t.navHome, path: "/" },
@@ -87,8 +85,8 @@ function ContactPage({ currentLang }) {
       <SEO
         {...seoContact[currentLang]}
         jsonld={[
-          jsonLd, // ✅ твій Person + ContactPage
-          buildBreadcrumbJsonLd(breadcrumbs), // ✅ BreadcrumbList
+          jsonLd,
+          buildBreadcrumbJsonLd(breadcrumbs),
         ]}
       />
 
@@ -96,7 +94,6 @@ function ContactPage({ currentLang }) {
         <Breadcrumbs items={breadcrumbs} currentLang={currentLang} />
         <Contact t={t} currentLang={currentLang} />
       </div>
-      <Footer t={t} currentLang={currentLang} />
     </>
   );
 }

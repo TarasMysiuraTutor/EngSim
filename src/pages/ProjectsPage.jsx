@@ -3,13 +3,12 @@
 // ============================================
 import React from "react";
 import Projects from "../components/Projects";
-import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { translations } from "../data/translations";
 
 import SEO from "../components/SEO";
 
-import projects from "../data/json/projects.json"; // ✅ Ось головне!
+import projects from "../data/json/projects.json";
 
 
 import { appConfig } from "@/config/app.config";
@@ -85,7 +84,6 @@ function ProjectsPage({ currentLang }) {
       item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
-  ``;
 
   const breadcrumbs = [
     // { label: t.navHome, path: "/" },
@@ -97,15 +95,14 @@ function ProjectsPage({ currentLang }) {
       <SEO
         {...seoProjects[currentLang]}
         jsonld={[
-          jsonLd, // ✅ ProjectsPage
-          buildBreadcrumbJsonLd(breadcrumbs), // ✅ BreadcrumbList
+          jsonLd,
+          buildBreadcrumbJsonLd(breadcrumbs),
         ]}
       />
       <div className="min-h-screen bg-gradient-to-br from-[#0a0e27] to-[#1a1f3a] text-gray-200 pt-20">
         <Breadcrumbs items={breadcrumbs} currentLang={currentLang} />
         <Projects t={t} currentLang={currentLang} />
       </div>
-      <Footer t={t} currentLang={currentLang} />
     </>
   );
 }

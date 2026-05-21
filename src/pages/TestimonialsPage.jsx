@@ -3,7 +3,6 @@
 // ============================================
 import React from "react";
 import Testimonials from "../components/Testimonials";
-import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import SEO from "../components/SEO";
 import { translations } from "../data/translations";
@@ -14,10 +13,10 @@ import { appConfig } from "@/config/app.config";
 function TestimonialsPage({ currentLang }) {
   const t = translations[currentLang];
 
-  // ✅ Breadcrumbs БЕЗ дублю Home
+ 
   const breadcrumbs = [{ label: t.testimonialsTitle, path: "/testimonials" }];
 
-  // ✅ SEO для сторінки відгуків
+ 
   const seoTestimonials = {
     uk: {
       title: "Відгуки та рекомендації — EngSim",
@@ -53,7 +52,7 @@ function TestimonialsPage({ currentLang }) {
     },
   };
 
-  // ✅ BreadcrumbList schema
+ 
   const buildBreadcrumbJsonLd = (items) => ({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -65,7 +64,7 @@ function TestimonialsPage({ currentLang }) {
     })),
   });
 
-  // ✅ Testimonials / Reviews schema
+ 
   // (навіть якщо зараз відгуки статичні — Google це приймає)
   const reviewsJsonLd = {
     "@context": "https://schema.org",
@@ -91,8 +90,6 @@ function TestimonialsPage({ currentLang }) {
         <Breadcrumbs items={breadcrumbs} currentLang={currentLang} />
         <Testimonials t={t} />
       </div>
-
-      <Footer t={t} currentLang={currentLang} />
     </>
   );
 }

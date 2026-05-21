@@ -1,9 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 
-import books from "../data/json/books.json"; // ✅ Ось головне!
+import books from "../data/json/books.json";
 
 import SEO from "../components/SEO";
 
@@ -78,7 +76,6 @@ const LibraryPage = ({ currentLang, setCurrentLang, t }) => {
       item: `${appConfig.siteUrl}${item.path}`,
     })),
   });
-  ``;
 
   const breadcrumbs = [
     // { label: t.navHome, path: "/" },
@@ -90,8 +87,8 @@ const LibraryPage = ({ currentLang, setCurrentLang, t }) => {
       <SEO
         {...seoLibrary[currentLang]}
         jsonld={[
-          jsonLd, // ✅ твій Person + AboutPage
-          buildBreadcrumbJsonLd(breadcrumbs), // ✅ BreadcrumbList
+          jsonLd,
+          buildBreadcrumbJsonLd(breadcrumbs),
         ]}
       />
 
@@ -162,8 +159,6 @@ const LibraryPage = ({ currentLang, setCurrentLang, t }) => {
             })}
           </div>
         </div>
-
-        <Footer t={t} />
       </div>
     </>
   );
